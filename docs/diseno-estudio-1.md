@@ -69,7 +69,7 @@ Viene de: `docs/prd-paso-1.md`, `docs/hipotesis.md`, `docs/estudios/verificacion
 
 - **Los 7 pares principales:** EUR/USD, USD/JPY, GBP/USD, USD/CHF, AUD/USD, USD/CAD y NZD/USD. La misma regla en
   todos; **juntos cuentan como UNA variante**. Prohibido quedarse despues solo con los pares que salgan bien.
-- **Datos: Dukascopy** (banco suizo regulado), velas diarias con **precio de compra y de venta por separado**; el dia,
+- **Datos: OANDA** (antes Dukascopy, ver seccion 9), velas diarias con **precio de compra y de venta por separado**; el dia,
   de **17:00 a 17:00 de Nueva York**. El coste sale del diferencial real (se compra al precio de venta del mercado y se
   vende al de compra), no de un porcentaje supuesto. Contraste con una segunda fuente antes de medir, como en la
   seccion 2. Los tramos, los de la seccion 1 (la exploracion empieza cuando haya datos de los siete).
@@ -191,3 +191,13 @@ acaba igual: indexado mantenido.
   real, bonos de todo el mundo cubiertos a euros: indices distintos, y no hay serie gratuita de bonos mundiales antes
   de 2013. Se decidio despues de ver el numero, y se dice: es una comprobacion de datos, no de la estrategia.
 - **Error del borrador:** la comparacion diaria debio preverse inservible por las horas de cierre.
+
+**12/10/2026. La fuente de H2 pasa de Dukascopy a OANDA (opcion A del propietario), antes de medir nada.**
+
+- **Motivo:** el servidor de Dukascopy tarda ~1 minuto por fichero (y corta a menudo); los ~4.000 ficheros de velas
+  de 1 hora de los siete pares tardarian ~3 dias. Los primeros meses de 2003 venian vacios.
+- **OANDA** (broker regulado), cuenta de **practica** sin dinero: su API da velas **diarias ya cortadas a las 17:00 de
+  Nueva York**, con **compra y venta por separado**. Cumple la definicion de H2 sin cambiarla.
+  (`estudios/estudio1/bajar_oanda.py`; el token lo pone el propietario en el `.env`.)
+- **Por verificar al bajar:** desde que anyo hay datos de cada par. Como ya decia H2, la exploracion empieza cuando
+  haya datos de los siete. Contraste con una segunda fuente antes de medir, como en la seccion 2.
