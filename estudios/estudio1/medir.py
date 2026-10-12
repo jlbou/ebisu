@@ -2,7 +2,8 @@
 
   --ensayo                         todo el camino con datos INVENTADOS (no mide nada real); para validar
   --exploracion --confirmo         mide la EXPLORACION (2001-2014) con las 5 variantes y escribe el veredicto del juez
-  (la reserva se anyadira despues, solo si alguna variante pasa: se mira UNA vez)
+  --reserva --confirmo             mide la RESERVA (2015-2026) UNA vez, solo con la ganadora de la exploracion
+  --ensayo-reserva                 el camino de la reserva con datos INVENTADOS
 
 Antes de medir de verdad se niega si: faltan ficheros de divisas, ya existe un veredicto de la exploracion, o no se
 pasa --confirmo. Nada se retoca despues de ver el resultado.
@@ -26,6 +27,9 @@ from simulador import Variante, referencia, simular  # noqa: E402
 RAIZ = Path(__file__).resolve().parents[2]
 PIEZAS = RAIZ / "var" / "estudio1" / "piezas_eur.csv"
 VEREDICTO = RAIZ / "docs" / "estudios" / "estudio1-exploracion.md"
+GANADORA = RAIZ / "docs" / "estudios" / "estudio1-exploracion.json"
+VEREDICTO_RESERVA = RAIZ / "docs" / "estudios" / "estudio1-reserva.md"
+RESERVA = ("2015-01-01", "2026-09-30")
 EXPLORACION = ("2001-07-01", "2014-12-31")
 
 # Gasto anual extra = el del ETF o fondo real - el que ya lleva la serie larga (aprox. el actual de cada fondo de
@@ -85,6 +89,39 @@ def medir(piezas: pd.DataFrame, dias_fx: dict[str, pd.DataFrame], ini: str, fin:
     return {"tramo": (ini, fin), "inicio_h2": ini_h2, "var_sr": var_sr, "filas": filas, "ganadora": ganadora}
 
 
+def medir_reserva(piezas: pd.DataFrame, dias_fx: dict[str, pd.DataFrame], ganadora: str) -> dict:
+    """Solo la ganadora, solo condiciones 1 y 2 (el deflactado ya se exigio en la exploracion)."""
+    ini, fin = RESERVA
+    mon = piezas["monetario"]
+    ref = referencia(piezas, ini, fin)
+    m_ref = metricas(ref.valor, ref.bolsillo, mon)
+    if ganadora == "H2":
+        dias = sorted(set().union(*(d.index for d in dias_fx.values())))
+        mon_fx = mon.reindex(mon.index.union(pd.DatetimeIndex(dias))).ffill().reindex(pd.DatetimeIndex(dias))
+        r = simular_h2(dias_fx, mon_fx, ini, fin)
+        m = metricas(r.valor, r.bolsillo, mon_fx)
+        ops = int(sum(len(o) for o in r.por_operacion.values()))
+    else:
+        v = next(x for x in VARIANTES if x.nombre == ganadora)
+        r = simular(piezas, v, ini, fin)
+        m = metricas(r.valor, r.bolsillo, mon)
+        ops = r.operaciones
+    cond = pasa(m, m_ref, None)
+    return {"ganadora": ganadora, "m": m, "ref": m_ref, "ops": ops, "condiciones": cond, "pasa": all(cond.values())}
+
+
+def informe_reserva(res: dict, ensayo: bool) -> str:
+    m, r = res["m"], res["ref"]
+    ini, fin = RESERVA
+    lin = [f"# Estudio 1: veredicto de la RESERVA ({ini} a {fin})" + (" - ENSAYO CON DATOS INVENTADOS" if ensayo else ""),
+           "", f"Solo {res['ganadora']}, la ganadora de la exploracion. Se mira una sola vez. Sin retoques.", "",
+           "| Variante | TAE neta | Caida max. | Sharpe | Operaciones | Referencia: TAE / caida |", "|---|---|---|---|---|---|",
+           f"| {res['ganadora']} | {m.tae:.2%} | {m.caida:.1%} | {m.sharpe:.2f} | {res['ops']} | {r.tae:.2%} / {r.caida:.1%} |",
+           "", "; ".join(f"{k}: {'si' if v else 'NO'}" for k, v in res["condiciones"].items()), "",
+           f"**Veredicto: {'PASA: va al papel hacia adelante' if res['pasa'] else 'NO PASA: la conclusion es el indexado mantenido'}.**"]
+    return chr(10).join(lin) + chr(10)
+
+
 def informe(res: dict, ensayo: bool) -> str:
     ini, fin = res["tramo"]
     lin = [f"# Estudio 1: veredicto de la EXPLORACION ({ini} a {fin})" + (" - ENSAYO CON DATOS INVENTADOS" if ensayo else ""),
@@ -107,9 +144,9 @@ def informe(res: dict, ensayo: bool) -> str:
     return "\n".join(lin) + "\n"
 
 
-def datos_inventados() -> tuple[pd.DataFrame, dict]:
+def datos_inventados(hasta: str = "2014-12-31") -> tuple[pd.DataFrame, dict]:
     rng = np.random.default_rng(11)
-    f = pd.bdate_range("2000-08-30", "2014-12-31")
+    f = pd.bdate_range("2000-08-30", hasta)
     piezas = pd.DataFrame({a: 100 * np.exp(np.cumsum(rng.normal(0.0002, 0.01, len(f)))) for a in ("bolsa", "bonos", "oro")},
                           index=f)
     piezas["monetario"] = 100 * np.cumprod(np.full(len(f), 1.00008))
@@ -130,7 +167,35 @@ def main() -> None:
     ap.add_argument("--ensayo", action="store_true")
     ap.add_argument("--exploracion", action="store_true")
     ap.add_argument("--confirmo", action="store_true")
+    ap.add_argument("--reserva", action="store_true")
+    ap.add_argument("--ensayo-reserva", action="store_true")
     a = ap.parse_args()
+    if a.ensayo_reserva:
+        piezas, fx = datos_inventados(hasta="2026-09-30")
+        for g in ("H1-M", "H2"):
+            res = medir_reserva(piezas, {p: d.loc["2014-10-01":] for p, d in fx.items()}, g)
+            print(informe_reserva(res, ensayo=True))
+        print("ENSAYO DE LA RESERVA: OK (una variante, condiciones 1 y 2, veredicto solo en pantalla)")
+        sys.exit(0)
+    if a.reserva:
+        if not a.confirmo:
+            sys.exit("Para medir la reserva: --reserva --confirmo (una sola vez).")
+        if not GANADORA.exists():
+            sys.exit("No hay veredicto de la exploracion: primero --exploracion --confirmo.")
+        if VEREDICTO_RESERVA.exists():
+            sys.exit(f"Ya hay un veredicto de la reserva ({VEREDICTO_RESERVA.name}): no se vuelve a medir.")
+        ganadora = json.loads(GANADORA.read_text(encoding="utf-8"))["ganadora"]
+        if not ganadora:
+            sys.exit("En la exploracion no paso ninguna: la reserva queda sin tocar (indexado mantenido).")
+        piezas = pd.read_csv(PIEZAS, index_col=0, parse_dates=True)
+        try:
+            fx = {p: dias_de_par(p) for p in PARES} if ganadora == "H2" else {}
+        except ValueError as exc:
+            sys.exit(f"No se mide: {exc}")
+        res = medir_reserva(piezas, fx, ganadora)
+        VEREDICTO_RESERVA.write_text(informe_reserva(res, ensayo=False), encoding="utf-8")
+        print(VEREDICTO_RESERVA.read_text(encoding="utf-8"))
+        sys.exit(0)
     if a.ensayo:
         piezas, fx = datos_inventados()
         res = medir(piezas, fx, *EXPLORACION)
@@ -150,6 +215,7 @@ def main() -> None:
         sys.exit(f"No se mide: {exc}")
     res = medir(piezas, fx, *EXPLORACION)
     VEREDICTO.write_text(informe(res, ensayo=False), encoding="utf-8")
+    GANADORA.write_text(json.dumps({"ganadora": res["ganadora"], "tramo": res["tramo"]}), encoding="utf-8")
     print(VEREDICTO.read_text(encoding="utf-8"))
 
 
