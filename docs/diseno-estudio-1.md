@@ -47,7 +47,7 @@ Viene de: `docs/prd-paso-1.md`, `docs/hipotesis.md`, `docs/estudios/verificacion
 
 ## 3. Las hipotesis y sus variantes (lista cerrada)
 
-### H1. Tendencia en tres piezas (la principal)
+### H1. Tendencia en tres piezas (la principal) (APROBADA con sus cuatro variantes, 12/10/2026, opcion A)
 
 - **Senyal** (de L y de la literatura: varios plazos juntos): para cada pieza, cuantas de sus medias de **20, 50, 100 y
   200 dias** estan por debajo del precio (0 a 4).
@@ -136,7 +136,7 @@ acaba igual: indexado mantenido.
 ## 8. Decisiones del propietario para aprobar este borrador
 
 1. ~~Los periodos (seccion 1)~~: **aprobados** (12/10, opcion A).
-2. La regla de H1 y sus cuatro variantes (seccion 3).
+2. ~~La regla de H1 y sus cuatro variantes (seccion 3)~~: **aprobadas** (12/10, opcion A).
 3. Costes e impuestos (seccion 4) y la referencia (seccion 5).
 4. Cuando pasa: los umbrales (seccion 6).
 5. H2 tal cual y H3 fuera (seccion 3).
