@@ -82,7 +82,7 @@ No entra aqui: no se puede probar con la historia (decision 8). Va al papel, des
 
 **Total de variantes que cuentan para el liston: N = 5** (H1-M, H1-S, H1-MB, H1-F y H2).
 
-## 4. Costes e impuestos
+## 4. Costes e impuestos (APROBADO, 12/10/2026, opcion A)
 
 - **ETF (Trading 212):** 0 € de comision; **0,10 % por lado** de diferencial y deslizamiento (conservador); sin cambio
   de divisa (todo cotiza en euros); gasto anual de los ETF reales descontado a diario (bolsa 0,19 %, bonos 0,10 %,
@@ -94,7 +94,7 @@ No entra aqui: no se puede probar con la historia (decision 8). Va al papel, des
   - Fondos: nada hasta el final.
   - **Al final de cada tramo se liquida todo** y se paga lo pendiente: se compara lo que quedaria en el bolsillo.
 
-## 5. La referencia
+## 5. La referencia (APROBADA, 12/10/2026, opcion A)
 
 - **Principal (decision 1):** la bolsa mundial de la seccion 2 en un **fondo indexado mantenido**, comprado el primer
   dia del tramo, sin operar, con gasto anual del 0,15 % y **todo el impuesto al final**.
@@ -137,6 +137,6 @@ acaba igual: indexado mantenido.
 
 1. ~~Los periodos (seccion 1)~~: **aprobados** (12/10, opcion A).
 2. ~~La regla de H1 y sus cuatro variantes (seccion 3)~~: **aprobadas** (12/10, opcion A).
-3. Costes e impuestos (seccion 4) y la referencia (seccion 5).
+3. ~~Costes e impuestos (seccion 4) y la referencia (seccion 5)~~: **aprobados** (12/10, opcion A).
 4. Cuando pasa: los umbrales (seccion 6).
 5. H2 tal cual y H3 fuera (seccion 3).
