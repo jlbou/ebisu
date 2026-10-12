@@ -2,6 +2,11 @@
 .env
 .env.*
 !.env.example
+*.pem
+*.key
+*.p12
+*.pfx
+secrets/
 
 # Entornos, datos y salidas pesadas
 .venv/
@@ -10,10 +15,23 @@ __pycache__/
 *.pyc
 .pytest_cache/
 .ruff_cache/
+.coverage
+htmlcov/
 *.db
 *.db-wal
 *.db-shm
+*.log
+*.tmp
+*.bundle
 
 # Privado: nunca a git (repositorio publico)
 CLAUDE.local.md
 privado/
+.claude/settings.local.json
+
+# Sistema y editores
+Thumbs.db
+desktop.ini
+.DS_Store
+.vscode/
+.idea/
