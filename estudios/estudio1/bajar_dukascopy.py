@@ -29,7 +29,7 @@ PARES = ["EURUSD", "USDJPY", "GBPUSD", "USDCHF", "AUDUSD", "USDCAD", "NZDUSD"]
 LADOS = ["BID", "ASK"]
 DESDE = (2003, 1)
 HASTA = (2026, 9)  # ultimo mes cerrado del criterio (reserva hasta el 30/09/2026)
-PAUSA = 1.0  # segundos entre peticiones
+PAUSA = 3.0  # segundos entre peticiones (con menos, el servidor responde 503)
 REINTENTOS = 8
 
 
@@ -46,7 +46,7 @@ def pedir(url: str) -> bytes | None:
     for _ in range(REINTENTOS):
         try:
             pet = urllib.request.Request(url, headers={"User-Agent": "ebisu-estudio"})
-            with urllib.request.urlopen(pet, timeout=60) as resp:
+            with urllib.request.urlopen(pet, timeout=90) as resp:
                 return resp.read()
         except urllib.error.HTTPError as exc:
             if exc.code == 404:

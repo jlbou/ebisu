@@ -38,7 +38,7 @@ Viene de: `docs/prd-paso-1.md`, `docs/hipotesis.md`, `docs/estudios/verificacion
 | Oro | Futuro del oro (GC=F) | Sin cubrir (como Xetra-Gold): se aplica el cambio |
 | Monetario (refugio) | EONIA hasta 2019 y STR desde entonces (BCE), devengo diario | Ya en euros |
 | Cambio euro/dolar | Tipo de referencia del BCE | Fuente oficial (Yahoo solo llega a 2003) |
-| Tipo del dolar | Letra a 13 semanas (^IRX) | Para la cobertura de los bonos |
+| Tipo del dolar | Letra a 3 meses de la Reserva Federal (FRED, DTB3; antes ^IRX, ver seccion 9) | Para la cobertura de los bonos |
 
 - **Comprobacion antes de medir** (no es medir): desde que existan, las series largas en euros tienen que parecerse a
   los ETF reales (VWCE o EUNL, EUNA, Xetra-Gold, XEON): correlacion diaria >= 0,95. Si alguna no llega, se para y se
@@ -151,3 +151,29 @@ acaba igual: indexado mantenido.
 4. ~~Cuando pasa: los umbrales (seccion 6)~~: **aprobados** (12/10, opcion A).
 5. ~~H2 y H3 (seccion 3)~~: **aprobado** (12/10, opcion A): H2 con los 7 pares principales como una variante y datos de
    Dukascopy; segunda fuente para todo lo de Yahoo; Kronos fuera.
+
+## 9. Cambios despues de aprobar (cada uno con fecha y motivo; ninguno toca reglas, variantes ni umbrales)
+
+**12/10/2026. Arbitraje de las fuentes (opcion A del propietario), antes de medir nada.**
+
+- **El contraste encontro diferencias** entre Yahoo y Nasdaq (`estudios/estudio1/segunda_fuente.py`): en VGTSX
+  (177 dias) y VBMFX (82 dias), casi todas de 05/2002 a 01/2003 (hasta un 23 %); dias sueltos en VTSMX (7) y GLD (1).
+- **Tercera fuente, oficial: los informes de Vanguard en la SEC** (valor liquidativo al cierre de cada periodo):
+
+  | Fondo | Fecha | Oficial (SEC) | Yahoo | Nasdaq |
+  |---|---|---|---|---|
+  | VGTSX | 31/10/2002 | 7,79 | 7,79 | 7,76 |
+  | VGTSX | 31/10/2001 | 8,99 | 9,00 | 9,00 |
+  | VGTSX | 31/12/2000 | 11,83 | 11,83 | - |
+  | VBMFX | 30/06/2002 | 10,13 | 10,13 | 10,14 |
+  | VBMFX | 31/12/2001 | 10,15 | 10,14 | 10,14 |
+  | VBMFX | 31/12/2000 | 9,96 | 9,96 | 9,96 |
+
+  Fuentes: [informe anual de Vanguard International Equity Index Funds a 31/10/2002](https://www.sec.gov/Archives/edgar/data/857489/000093247103000009/intrnlstockindex.txt)
+  y [semestral de Vanguard Bond Index Funds a 30/06/2002](https://www.sec.gov/Archives/edgar/data/794105/000093247102000763/bonds2002ascii.txt).
+- **Decision: se usa Yahoo**, que coincide con lo oficial (a un centimo como mucho) en los seis puntos; Nasdaq es la que
+  falla en 2002 (no es un simple desfase de fechas). Los dias sueltos de VTSMX y GLD quedan anotados: con una decision
+  al mes, su efecto es menor.
+- **El tipo del dolar pasa de ^IRX (Yahoo) a DTB3 de la Reserva Federal (FRED)**, la serie oficial de la letra a 3
+  meses: las dos difieren hasta 0,51 puntos en 261 dias porque no son exactamente el mismo indice.
+- Stooq no sirvio como segunda fuente: pide una verificacion de navegador, y no se salta.
