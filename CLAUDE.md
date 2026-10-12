@@ -114,6 +114,8 @@ estrategia de operar activamente ganaba. La unica que vale la pena es "L" (rotac
 | 12/10/2026 | **IA como analista con freno:** explica cada mes y puede reducir o aplazar compras, nunca anyadir riesgo; el filtro se prueba en papel contra el bot sin IA (opcion A) | `docs/decisiones/08-ia.md` |
 | 12/10/2026 | **Criterio del estudio 1 APROBADO** (por partes): exploracion 2001-2014, reserva 2015-2026; H1 en 4 variantes y H2 en los 7 pares principales (N = 5); Kronos fuera; costes, impuestos al 19 % y referencia (indexado mantenido); umbrales | `docs/diseno-estudio-1.md` |
 | 12/10/2026 | **Identidad y panel:** logo cana-grafico con anzuelo en verde mar; social preview; panel de una pagina tipo informe con 6 secciones (solo disenyo, se construye si una estrategia pasa) | `docs/decisiones/09-identidad-y-panel.md`, `assets/logo/` |
+| 12/10/2026 | **Telegram (solo disenyo):** 7 tipos de mensaje (con un todo bien semanal), comandos /estado, /detalle, /pausa y /reanudar; mensajes cortos | `docs/decisiones/10-telegram.md` |
+| 13/10/2026 | **Papel (fijado antes de medir):** semanal 3 meses, mensual 6; pasa con fidelidad al simulador, sin incidencias, sin caer mas que la peor caida historica y con el si del propietario; el freno de la IA en sombra hasta 5 casos con acierto medio | `docs/decisiones/11-papel.md` |
 
 ## Pendiente
 
