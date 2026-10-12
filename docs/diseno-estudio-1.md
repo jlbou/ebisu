@@ -16,7 +16,7 @@ Viene de: `docs/prd-paso-1.md`, `docs/hipotesis.md`, `docs/estudios/verificacion
 5. **Sin apalancamiento.** La version 2x se calcula solo como informacion y nunca se juzga ni se elige.
 6. Un juez automatico (`estudios/estudio1/juez.py`) aplica este documento y escribe el veredicto; nadie lo interpreta.
 
-## 1. Periodos
+## 1. Periodos (APROBADO por el propietario, 12/10/2026, opcion A)
 
 | Tramo | Fechas | Para que |
 |---|---|---|
@@ -135,7 +135,7 @@ acaba igual: indexado mantenido.
 
 ## 8. Decisiones del propietario para aprobar este borrador
 
-1. Los periodos (seccion 1).
+1. ~~Los periodos (seccion 1)~~: **aprobados** (12/10, opcion A).
 2. La regla de H1 y sus cuatro variantes (seccion 3).
 3. Costes e impuestos (seccion 4) y la referencia (seccion 5).
 4. Cuando pasa: los umbrales (seccion 6).
