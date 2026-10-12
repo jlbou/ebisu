@@ -1,3 +1,5 @@
+<p align="center"><img src="assets/logo/ebisu-512.png" width="140" alt="Logo de Ebisu"></p>
+
 # Ebisu
 
 Bot de trading **sin apalancamiento** con activos que no son cripto: bolsa, bonos y oro, siguiendo la tendencia.
