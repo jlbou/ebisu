@@ -17,6 +17,7 @@ import datetime as dt
 import http.client
 import lzma
 import random
+import sys
 import time
 from pathlib import Path
 
@@ -89,6 +90,12 @@ def sano(f: Path) -> bool:
 
 
 def main() -> None:
+    # Mientras baja, Windows no se duerme por inactividad (peticion del programa, no cambia ninguna configuracion;
+    # se acaba sola al parar el programa). Tapa cerrada o "Suspender" a mano siguen durmiendo el equipo.
+    if sys.platform == "win32":
+        import ctypes
+
+        ctypes.windll.kernel32.SetThreadExecutionState(0x80000000 | 0x00000001)  # ES_CONTINUOUS | ES_SYSTEM_REQUIRED
     # Se puede parar en cualquier momento: cada fichero se escribe con un nombre temporal y se renombra al final.
     # Al arrancar se borran los temporales y los ficheros danyados, y se vuelven a pedir.
     for f in DATOS.glob("*/*.tmp"):
