@@ -16,3 +16,15 @@ Disenyo que sirve gane la variante que gane (mensual, semanal o diaria):
 | Aviso de incidencia | Cuando pasa: sin precios, broker desconectado, orden no ejecutada, bot parado |
 | El bot se aleja del criterio | Cuando pasa: en papel va peor de lo que decia el estudio |
 | Recordatorio de la renta | Una vez al anyo, en abril, con el resumen fiscal |
+
+## 10.2 Comandos (opcion A, 12/10)
+
+| Comando | Que hace |
+|---|---|
+| `/estado` | Responde con el resumen: valor, piezas, proxima revision y salud |
+| `/pausa` | Sin compras nuevas; lo que hay se mantiene y se sigue vendiendo si la regla lo dice |
+| `/reanudar` | Quita la pausa, con confirmacion (`/si` en 60 s), como en Ploutos |
+
+**Fuera a proposito:** vender todo desde el movil (un error de dedo o el panico en una caida es lo que el bot debe
+evitar; si hace falta, en la app del broker) y ordenes de compra manuales (el bot sigue la regla). Solo responde al
+chat del propietario (`TELEGRAM_CHAT_ID`).
