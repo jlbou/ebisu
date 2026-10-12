@@ -111,6 +111,7 @@ estrategia de operar activamente ganaba. La unica que vale la pena es "L" (rotac
 | 12/10/2026 | **Lista cerrada de hipotesis** (si ninguna pasa, indexado sin bot); los 250 € no se necesitan en 3 anyos; sin aportaciones periodicas | `docs/decisiones/07-cierre-paso-1.md` |
 | 12/10/2026 | **IA como analista con freno:** explica cada mes y puede reducir o aplazar compras, nunca anyadir riesgo; el filtro se prueba en papel contra el bot sin IA (opcion A) | `docs/decisiones/08-ia.md` |
 | 12/10/2026 | **Criterio del estudio 1 APROBADO** (por partes): exploracion 2001-2014, reserva 2015-2026; H1 en 4 variantes y H2 en los 7 pares principales (N = 5); Kronos fuera; costes, impuestos al 19 % y referencia (indexado mantenido); umbrales | `docs/diseno-estudio-1.md` |
+| 12/10/2026 | **Identidad y panel:** logo cana-grafico con anzuelo en verde mar; social preview; panel de una pagina tipo informe con 6 secciones (solo disenyo, se construye si una estrategia pasa) | `docs/decisiones/09-identidad-y-panel.md`, `assets/logo/` |
 
 ## Pendiente
 
