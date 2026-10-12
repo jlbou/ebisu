@@ -107,9 +107,37 @@ Los cuatro existen en Xetra en euros; falta confirmar en la app el oro y el mone
 - Una fuente cita una consulta de Hacienda (DGT) que abriria el traspaso a algunos ETF UCITS, pero la ley 11/2021 los
   excluyo; **se trata como "los ETF no se traspasan"** salvo que se confirme lo contrario con la norma.
 
+## 5.4 Los documentos de alta de Trading 212 (leidos el 12/10/2026, al abrir la cuenta)
+
+Once documentos que la app pide aceptar: garantias (inversor y depositos), cuentas omnibus, condiciones de Invest,
+politica de ejecucion, aviso de divulgacion, privacidad, cookies y la privacidad del verificador de identidad
+(Fourthline). Lo que importa para Ebisu:
+
+- **Entidad, CONFIRMADA:** Trading 212 EU GmbH, Ratingen (Alemania), **BaFin n.º 10109603**. Ley y tribunales alemanes.
+- **Garantias:** valores, el 90 % hasta **20.000 €** (fondo alemán EdW); efectivo en cuentas omnibus en **J.P. Morgan
+  SE y Sparkasse**, hasta **100.000 €** por banco. No cubren perdidas de mercado.
+- **Custodia:** las inversiones estan en cuentas omnibus con subcustodios (a menudo fuera de Alemania); el derecho del
+  cliente es **contractual** (entrega de valores iguales), no copropiedad directa. En una quiebra de un subcustodio
+  se podria compartir un deficit. Riesgo bajo, pero real.
+- **Ejecucion:** sin comision; las ordenes van a Trading 212 IE (Irlanda, del grupo), que puede ejecutarlas **contra si
+  misma** (internalizador sistematico), sobre todo las fracciones. Conflicto de intereses declarado; "mejor ejecucion".
+- **Fracciones:** no se pueden traspasar a otro broker; **cerrar la cuenta las vende** (y eso tributa).
+- **Divisa principal: se elige al abrir y NO se puede cambiar.** Tiene que ser **EUR** (la API solo opera en la
+  divisa principal; los ETF elegidos cotizan en euros).
+- **Sin ventas en corto ni margen** en la cuenta Invest; orden maxima, el 95 % de lo disponible.
+- **Impuestos:** a un residente fuera de Alemania **no le retienen**; dan un resumen anual. Todo se declara en la renta.
+- **Intereses del efectivo:** solo si se activa el programa de reparto de intereses (si no, se los quedan). Los
+  intereses tributan como rendimientos del capital.
+- **Cierre:** pueden cerrar una cuenta con saldo 0 y sin operaciones durante 6 meses; cambios del contrato con 30 dias
+  de aviso.
+- **Datos personales:** se guardan 10 anyos tras cerrar (ley contra el blanqueo); el verificador de identidad trata
+  datos biometricos (selfie) por obligacion legal. No venden datos a terceros para marketing sin consentimiento.
+- **Cookies:** solo son obligatorias las esenciales y de rendimiento; las de publicidad se pueden rechazar.
+- **La API no aparece en las condiciones:** tiene sus propias condiciones (por leer al generar la clave).
+
 ## 6. Pendiente de verificar (antes de fijar el criterio)
 
-1. ~~Entidad de Trading 212~~: lo mas probable, Trading 212 EU GmbH (BaFin); confirmar en los documentos de la cuenta.
+1. ~~Entidad de Trading 212~~: **confirmada, Trading 212 EU GmbH (BaFin)** (5.4).
 2. Que ordenes acepta de verdad la API en real (se ve en el demo, sin dinero; la cuenta la abriria el propietario).
 3. En la app de Trading 212: si estan el ETC de oro y el monetario en euros.
 4. En la plataforma de fondos: la clase minorista de un indexado de bonos y un monetario, con sus costes.
