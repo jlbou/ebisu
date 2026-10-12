@@ -198,6 +198,25 @@ Buscados por ISIN en la app por el propietario (sin comprar nada):
 - **Por verificar si se llega a operar:** que las fracciones funcionen en estos cuatro; que la tasa italiana sobre
   transacciones no se aplique al ETC de oro (en principio solo grava acciones italianas).
 
+## 5.7 Fondos indexados con traspaso para H1-F (12/10/2026; solo lectura, fuentes secundarias)
+
+Plataforma de referencia: **MyInvestor** (Andbank Espanya): segun su web, **0 € por comprar, vender, custodiar y
+traspasar**; minimo de **1 €** en los indexados (con excepciones: mirar la ficha de cada fondo). Los traspasos sin
+impuestos solo entre fondos comercializados por entidades que operan en Espanya.
+
+| Pieza | Candidato | ISIN | Gasto anual | Notas |
+|---|---|---|---|---|
+| Bolsa mundial | iShares Developed World Index Fund (IE) D Acc EUR | IE00BD0NCM55 | ~0,12 % | Citado en MyInvestor; minimo sin confirmar |
+| Bolsa mundial | Vanguard Global Stock Index Fund EUR Acc | IE00B03HD191 | ~0,18 % | Rankia da un minimo de 1 M€ (de la gestora); MyInvestor dice quitar minimos de Vanguard |
+| Bonos | Vanguard Global Bond Index Fund EUR Hedged Acc | IE00B18GC888 | ~0,15 % | Visto en MyInvestor en fuentes de 2025-2026 (otras mas antiguas decian que no) |
+| Monetario | AXA Tresor Court Terme C | FR0000447823 | ~0,04 % de gestion | Fondo monetario en euros, sin suscripcion ni reembolso |
+| Monetario | Groupama Tresorerie IC | FR0000989626 | ~0,11 % de gestion | Alternativa |
+| Oro | - | - | - | **No hay** fondo de oro traspasable (solo mineras): H1-F va sin oro, como fija el criterio |
+
+- El criterio supone un gasto del 0,15 % al anyo para los fondos: encaja (el monetario seria mas barato: conservador).
+- **Por verificar (solo si gana H1-F):** en la ficha de MyInvestor de cada ISIN, el minimo real, que sea traspasable y
+  la clase exacta. Se puede mirar en su buscador publico sin abrir cuenta.
+
 ## 6. Pendiente de verificar (antes de fijar el criterio)
 
 1. ~~Entidad de Trading 212~~: **confirmada, Trading 212 EU GmbH (BaFin)** (5.4).
