@@ -41,7 +41,7 @@ Viene de: `docs/prd-paso-1.md`, `docs/hipotesis.md`, `docs/estudios/verificacion
 | Tipo del dolar | Letra a 3 meses de la Reserva Federal (FRED, DTB3; antes ^IRX, ver seccion 9) | Para la cobertura de los bonos |
 
 - **Comprobacion antes de medir** (no es medir): desde que existan, las series largas en euros tienen que parecerse a
-  los ETF reales (VWCE o EUNL, EUNA, Xetra-Gold, XEON): correlacion diaria >= 0,95. Si alguna no llega, se para y se
+  los ETF reales (VWCE o EUNL, EUNA, Xetra-Gold, XEON): correlacion **mensual** >= 0,95 (era diaria: ver seccion 9). Si alguna no llega, se para y se
   decide antes de seguir.
 - **Segunda fuente para los precios de Yahoo:** antes de medir, cada serie de Yahoo se contrasta con otra fuente
   independiente (p. ej. Stooq o el valor liquidativo de la gestora) en las fechas en que coincidan. Si difieren mas del
@@ -177,3 +177,17 @@ acaba igual: indexado mantenido.
 - **El tipo del dolar pasa de ^IRX (Yahoo) a DTB3 de la Reserva Federal (FRED)**, la serie oficial de la letra a 3
   meses: las dos difieren hasta 0,51 puntos en 261 dias porque no son exactamente el mismo indice.
 - Stooq no sirvio como segunda fuente: pide una verificacion de navegador, y no se salta.
+
+**12/10/2026. La comprobacion de parecido pasa de diaria a mensual (opcion A del propietario), antes de medir nada.**
+
+- **Lo que salio** (`estudios/estudio1/montar_series.py`, solo correlaciones): diaria 0,30-0,83 en las cinco
+  comparaciones; semanal 0,87-0,94; **mensual 0,96-0,99**, salvo los bonos (**0,943**).
+- **Por que la diaria no sirve:** las series largas cierran en Nueva York (22:00 en Espanya), los ETF reales en
+  Frankfurt (17:30) y el cambio del BCE es de las 14:15: un dia se compara con trozos de dos. A la misma hora, la bolsa
+  casa a 0,98-0,99 (60/40 frente a VT y ACWI, en dolares). En el monetario, el ruido diario de compraventa del ETF
+  sobre un rendimiento casi plano hace la diaria inutil.
+- **Decision:** la comprobacion es **mensual >= 0,95**, el horizonte en que decide la estrategia.
+- **Bonos (0,943): se aceptan como limitacion conocida.** La serie larga son bonos de EE. UU. cubiertos a euros; el ETF
+  real, bonos de todo el mundo cubiertos a euros: indices distintos, y no hay serie gratuita de bonos mundiales antes
+  de 2013. Se decidio despues de ver el numero, y se dice: es una comprobacion de datos, no de la estrategia.
+- **Error del borrador:** la comparacion diaria debio preverse inservible por las horas de cierre.

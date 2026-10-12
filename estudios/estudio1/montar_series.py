@@ -7,8 +7,9 @@ Piezas (indices diarios, base 1 el primer dia; NO se ensenya ningun rendimiento)
 - monetario: EONIA hasta el 30/09/2019 y STR desde el 01/10/2019 (BCE), devengo por dias naturales / 360.
 Cambio: tipo de referencia del BCE (dolares por euro). Tipo del dolar: DTB3 de la Reserva Federal (seccion 9).
 
-Comprobacion antes de medir (seccion 2): correlacion DIARIA >= 0,95 con los ETF reales desde que existen. Se da
-tambien la semanal como informacion. Solo correlaciones: ni niveles, ni rendimientos, ni curvas.
+Comprobacion antes de medir (seccion 2, cambiada en la 9 el 12/10/2026): correlacion MENSUAL >= 0,95 con los ETF
+reales desde que existen (la diaria y la semanal, como informacion: las distorsiona la hora de cierre). Bonos: se
+aceptan por debajo como limitacion conocida (EE. UU. frente a mundo). Solo correlaciones: ni niveles, ni rendimientos.
 
 Uso: .venv/Scripts/python.exe estudios/estudio1/montar_series.py
 Salida: var/estudio1/piezas_eur.csv y un resumen por pantalla.
@@ -91,7 +92,8 @@ def parecido(piezas: pd.DataFrame) -> list[tuple]:
         a, b = piezas[pieza].reindex(comun), real.reindex(comun)
         diaria = a.pct_change().corr(b.pct_change())
         semanal = a.resample("W-FRI").last().pct_change().corr(b.resample("W-FRI").last().pct_change())
-        filas.append((pieza, etf.replace("_DE", ".DE"), comun.min().date(), len(comun), diaria, semanal))
+        mensual = a.resample("ME").last().pct_change().corr(b.resample("ME").last().pct_change())
+        filas.append((pieza, etf.replace("_DE", ".DE"), comun.min().date(), len(comun), diaria, semanal, mensual))
     return filas
 
 
@@ -100,9 +102,10 @@ def main() -> None:
     piezas.to_csv(E1 / "piezas_eur.csv")
     print(f"Piezas en euros: {piezas.index.min().date()} a {piezas.index.max().date()}, {len(piezas)} dias, "
           f"huecos: {int(piezas.isna().sum().sum())}")
-    print(f"{'pieza':10} {'ETF real':9} {'desde':10} {'dias':>5} {'corr. diaria':>13} {'corr. semanal':>14}  >= 0,95")
-    for pieza, etf, desde, n, d, s in parecido(piezas):
-        print(f"{pieza:10} {etf:9} {desde!s:10} {n:5d} {d:13.3f} {s:14.3f}  {'si' if d >= UMBRAL else 'NO'}")
+    print(f"{'pieza':10} {'ETF real':9} {'desde':10} {'dias':>5} {'diaria':>7} {'semanal':>8} {'MENSUAL':>8}  >= 0,95")
+    for pieza, etf, desde, n, d, s, m in parecido(piezas):
+        nota = "si" if m >= UMBRAL else ("aceptada (limitacion conocida)" if pieza == "bonos" else "NO")
+        print(f"{pieza:10} {etf:9} {desde!s:10} {n:5d} {d:7.3f} {s:8.3f} {m:8.3f}  {nota}")
 
 
 if __name__ == "__main__":
