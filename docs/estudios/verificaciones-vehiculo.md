@@ -156,6 +156,21 @@ politica de ejecucion, aviso de divulgacion, privacidad, cookies y la privacidad
 - **Cookies:** solo son obligatorias las esenciales y de rendimiento; las de publicidad se pueden rechazar.
 - **La API no aparece en las condiciones:** tiene sus propias condiciones (por leer al generar la clave).
 
+## 5.5 Respuesta del soporte de Trading 212 (12/10/2026)
+
+La cuenta del propietario es Invest con Trading 212 EU GmbH (identidad ya verificada). Pregunta por el chat de soporte:
+si hay cuenta de practica y como se saca su clave de API. Respuesta (resumida):
+
+- **La cuenta de practica (demo) NO esta disponible para clientes de Trading 212 EU GmbH.**
+- La API solo es para cuentas Invest; la clave de la cuenta real y la de practica pueden ser versiones distintas.
+
+**Consecuencias:**
+- Las pruebas de la API con ordenes no se pueden hacer con dinero ficticio en Trading 212. El papel de Ebisu (si una
+  estrategia pasa) sera **papel propio**, simulado por el bot con precios reales, como en Ploutos.
+- Lo que falta de la API (ordenes que acepta, oro y monetario en euros) solo se puede comprobar con la **cuenta real**:
+  con una clave de solo lectura y sin dinero (sin ordenes), o con ordenes reales de importe minimo. Las dos son
+  decision del propietario.
+
 ## 6. Pendiente de verificar (antes de fijar el criterio)
 
 1. ~~Entidad de Trading 212~~: **confirmada, Trading 212 EU GmbH (BaFin)** (5.4).
