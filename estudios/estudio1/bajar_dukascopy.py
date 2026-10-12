@@ -77,7 +77,27 @@ class Conexion:
         return None
 
 
+def sano(f: Path) -> bool:
+    """Un fichero bajado esta bien si esta vacio (mes sin datos) o se descomprime en registros de 24 bytes."""
+    datos = f.read_bytes()
+    if not datos:
+        return True
+    try:
+        return len(lzma.decompress(datos)) % 24 == 0
+    except lzma.LZMAError:
+        return False
+
+
 def main() -> None:
+    # Se puede parar en cualquier momento: cada fichero se escribe con un nombre temporal y se renombra al final.
+    # Al arrancar se borran los temporales y los ficheros danyados, y se vuelven a pedir.
+    for f in DATOS.glob("*/*.tmp"):
+        f.unlink()
+    malos = [f for f in DATOS.glob("*/*.bi5") if not sano(f)]
+    for f in malos:
+        f.unlink()
+    if malos:
+        print(f"{dt.datetime.now():%d/%m %H:%M} ficheros danyados borrados (se vuelven a pedir): {len(malos)}", flush=True)
     pendientes = []
     for par in PARES:
         (DATOS / par).mkdir(parents=True, exist_ok=True)
@@ -92,7 +112,9 @@ def main() -> None:
     for i, (destino, ruta) in enumerate(pendientes):
         while (datos := con.pedir(ruta)) is None:
             pass  # se reintenta hasta que el servidor responda; la espera crece sola
-        destino.write_bytes(datos)
+        tmp = destino.with_suffix(".tmp")
+        tmp.write_bytes(datos)
+        tmp.replace(destino)
         time.sleep(0.5)
         if (i + 1) % 50 == 0:
             print(f"{dt.datetime.now():%d/%m %H:%M} bajados {i + 1}/{len(pendientes)}, 503: {CUENTA['503']}, "
