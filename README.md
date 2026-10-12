@@ -1,4 +1,4 @@
-<p align="center"><img src="assets/logo/ebisu-512.png" width="140" alt="Logo de Ebisu"></p>
+<p align="center"><img src="assets/logo/social-preview-1280x640.png" width="640" alt="Ebisu: bolsa, bonos y oro. Un bot que sigue la tendencia; no la adivina."></p>
 
 # Ebisu
 
