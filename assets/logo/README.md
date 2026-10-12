@@ -12,6 +12,7 @@ rondas (concepto, forma del anzuelo y color).
 | `ebisu-perfil.svg`, `ebisu-perfil-512.png` | foto de perfil (GitHub, Telegram): cuadrado lleno; ellos lo recortan en circulo y el dibujo cabe |
 | `ebisu-signo.svg` | solo el dibujo, del color del texto (`currentColor`): sobre cualquier fondo |
 | `favicon.svg`, `favicon-32.png`, `favicon-180.png` | pestanya del navegador e icono del movil: trazos mas gruesos y sin el remate del anzuelo, para que se lea a 16-32 px |
+| `social-preview-1280x640.png` (de `social-preview.html`) | GitHub, *Settings -> Social preview*: lo que se ve al compartir el enlace del repositorio. Texto elegido el 12/10: "Bolsa, bonos y oro. Un bot que sigue la tendencia; no la adivina." |
 
 Los PNG salen de los SVG con Chrome sin ventana (sin dependencias nuevas). Si se cambia un SVG, regenerarlos. En lo que
 ve el propietario no se nombra a Claude: se dice "la IA".
