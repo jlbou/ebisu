@@ -54,6 +54,12 @@ def dias_de_par(par: str) -> pd.DataFrame:
     Solo cuentan las horas que tienen precio de compra Y de venta (si no, en el cambio de mes el cierre de un lado y
     el del otro podian ser de horas distintas)."""
     divisor = 1e3 if par.endswith("JPY") else 1e5
+    bid = {f.name[:7] for f in (DUKAS / par).glob("*_BID.bi5")}
+    ask = {f.name[:7] for f in (DUKAS / par).glob("*_ASK.bi5")}
+    if bid != ask:
+        faltan = sorted(bid ^ ask)
+        raise ValueError(f"{par}: faltan ficheros de un lado en {len(faltan)} meses (p. ej. {faltan[:3]}): "
+                         "termina la bajada antes de montar los dias")
     horas = {}
     for lado in ("BID", "ASK"):
         trozos = []

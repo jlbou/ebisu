@@ -14,15 +14,11 @@ Salida: var/estudio1/dukascopy/<PAR>/<anyo>-<mes>_<LADO>.bi5 y un resumen por pa
 from __future__ import annotations
 
 import datetime as dt
+import http.client
 import lzma
-import os
-import threading
-from concurrent.futures import ThreadPoolExecutor
 import random
 import struct
 import time
-import urllib.error
-import urllib.request
 from pathlib import Path
 
 RAIZ = Path(__file__).resolve().parents[2]
@@ -32,11 +28,7 @@ PARES = ["EURUSD", "USDJPY", "GBPUSD", "USDCHF", "AUDUSD", "USDCAD", "NZDUSD"]
 LADOS = ["BID", "ASK"]
 DESDE = (2003, 1)
 HASTA = (2026, 9)  # ultimo mes cerrado del criterio (reserva hasta el 30/09/2026)
-PAUSA = 3.0  # segundos entre peticiones (con menos, el servidor responde 503)
-REINTENTOS = 8
-HILOS = int(os.environ.get("EBISU_HILOS", "1"))  # peticiones a la vez (prueba con 2, 12/10/2026)
 CUENTA = {"ok": 0, "503": 0, "red": 0}
-_CERROJO = threading.Lock()
 
 
 def meses():
@@ -46,48 +38,47 @@ def meses():
         a, m = (a + 1, 1) if m == 12 else (a, m + 1)
 
 
-def pedir(url: str) -> bytes | None:
-    """Devuelve el fichero (b'' si el mes no tiene datos) o None si no se pudo tras los reintentos."""
-    espera = 5.0
-    for _ in range(REINTENTOS):
-        try:
-            pet = urllib.request.Request(url, headers={"User-Agent": "ebisu-estudio"})
-            with urllib.request.urlopen(pet, timeout=90) as resp:
-                return resp.read()
-        except urllib.error.HTTPError as exc:
-            if exc.code == 404:
-                return b""
-            with _CERROJO:
-                CUENTA["503" if exc.code == 503 else "red"] += 1
-        except (urllib.error.URLError, TimeoutError, ConnectionError):
-            with _CERROJO:
-                CUENTA["red"] += 1
-        time.sleep(espera + random.uniform(0, 2))
-        espera = min(espera * 2, 120)
-    return None
-
-
 def velas(datos: bytes) -> int:
     return len(lzma.decompress(datos)) // 24 if datos else 0
 
 
-def tarea(destino: Path, url: str, fallos: list) -> None:
-    datos = pedir(url)
-    time.sleep(PAUSA)
-    if datos is None:
-        fallos.append(destino.name)
-        print("FALLO", destino.parent.name, destino.name, flush=True)
-        return
-    destino.write_bytes(datos)
-    with _CERROJO:
-        CUENTA["ok"] += 1
-        if CUENTA["ok"] % 5 == 0:
-            print(f"{dt.datetime.now():%H:%M} bajados {CUENTA['ok']}, 503: {CUENTA['503']}, red: {CUENTA['red']}",
-                  flush=True)
+class Conexion:
+    """Una sola conexion reutilizada (12/10/2026): abrirla tarda 20-30 s o falla, pero abierta responde al instante.
+    El servidor frena a oleadas (503 o corta): entonces se espera cada vez mas (30 s a 5 min) y se reconecta."""
+
+    def __init__(self) -> None:
+        self.c: http.client.HTTPSConnection | None = None
+        self.espera = 30.0
+
+    def pedir(self, ruta: str) -> bytes | None:
+        try:
+            if self.c is None:
+                self.c = http.client.HTTPSConnection("datafeed.dukascopy.com", timeout=90)
+            self.c.request("GET", ruta, headers={"User-Agent": "ebisu-estudio"})
+            r = self.c.getresponse()
+            datos = r.read()
+            if r.will_close:
+                self.c.close()
+                self.c = None
+            if r.status == 200:
+                self.espera = 30.0
+                CUENTA["ok"] += 1
+                return datos
+            if r.status == 404:
+                CUENTA["ok"] += 1
+                return b""
+            CUENTA["503" if r.status == 503 else "red"] += 1
+        except (OSError, http.client.HTTPException):
+            CUENTA["red"] += 1
+            if self.c is not None:
+                self.c.close()
+            self.c = None
+        time.sleep(self.espera + random.uniform(0, 5))
+        self.espera = min(self.espera * 1.5, 300.0)
+        return None
 
 
 def main() -> None:
-    fallos: list = []
     pendientes = []
     for par in PARES:
         (DATOS / par).mkdir(parents=True, exist_ok=True)
@@ -95,16 +86,21 @@ def main() -> None:
             for lado in LADOS:
                 destino = DATOS / par / f"{anyo}-{mes:02d}_{lado}.bi5"
                 if not destino.exists():
-                    pendientes.append((destino, URL.format(par=par, anyo=anyo, mes0=mes - 1, lado=lado)))
-    print(f"{dt.datetime.now():%H:%M} pendientes: {len(pendientes)}, hilos: {HILOS}", flush=True)
-    with ThreadPoolExecutor(max_workers=HILOS) as ex:
-        for destino, url in pendientes:
-            ex.submit(tarea, destino, url, fallos)
+                    ruta = URL.format(par=par, anyo=anyo, mes0=mes - 1, lado=lado).split("dukascopy.com", 1)[1]
+                    pendientes.append((destino, ruta))
+    print(f"{dt.datetime.now():%d/%m %H:%M} pendientes: {len(pendientes)} (una conexion reutilizada)", flush=True)
+    con = Conexion()
+    for i, (destino, ruta) in enumerate(pendientes):
+        while (datos := con.pedir(ruta)) is None:
+            pass  # se reintenta hasta que el servidor responda; la espera crece sola
+        destino.write_bytes(datos)
+        time.sleep(0.5)
+        if (i + 1) % 50 == 0:
+            print(f"{dt.datetime.now():%d/%m %H:%M} bajados {i + 1}/{len(pendientes)}, 503: {CUENTA['503']}, "
+                  f"red: {CUENTA['red']}", flush=True)
     for par in PARES:
         con_datos = sorted(f.name[:7] for f in (DATOS / par).glob("*_BID.bi5") if velas(f.read_bytes()) > 0)
         print(f"{par}: {len(con_datos)} meses con datos, desde {con_datos[0] if con_datos else '-'}", flush=True)
-    print(f"Fallos (se reintentan al volver a lanzar): {len(fallos)}; 503: {CUENTA['503']}, red: {CUENTA['red']}",
-          flush=True)
     print("Terminado", dt.datetime.now().isoformat(timespec="seconds"), flush=True)
 
 
