@@ -101,7 +101,7 @@ No entra aqui: no se puede probar con la historia (decision 8). Va al papel, des
 - **Informativas** (no deciden): las tres piezas a partes iguales rebalanceadas una vez al anyo; y la bolsa mundial
   mantenida en un ETF.
 
-## 6. Cuando pasa
+## 6. Cuando pasa (APROBADO, 12/10/2026, opcion A)
 
 En cada tramo se mide, sobre lo que quedaria en el bolsillo: **rendimiento anual (TAE)**, **caida maxima** y
 **Sharpe** (con el monetario como tipo sin riesgo).
@@ -138,5 +138,5 @@ acaba igual: indexado mantenido.
 1. ~~Los periodos (seccion 1)~~: **aprobados** (12/10, opcion A).
 2. ~~La regla de H1 y sus cuatro variantes (seccion 3)~~: **aprobadas** (12/10, opcion A).
 3. ~~Costes e impuestos (seccion 4) y la referencia (seccion 5)~~: **aprobados** (12/10, opcion A).
-4. Cuando pasa: los umbrales (seccion 6).
+4. ~~Cuando pasa: los umbrales (seccion 6)~~: **aprobados** (12/10, opcion A).
 5. H2 tal cual y H3 fuera (seccion 3).
