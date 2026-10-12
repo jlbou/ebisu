@@ -15,6 +15,9 @@ from __future__ import annotations
 
 import datetime as dt
 import lzma
+import os
+import threading
+from concurrent.futures import ThreadPoolExecutor
 import random
 import struct
 import time
@@ -31,6 +34,9 @@ DESDE = (2003, 1)
 HASTA = (2026, 9)  # ultimo mes cerrado del criterio (reserva hasta el 30/09/2026)
 PAUSA = 3.0  # segundos entre peticiones (con menos, el servidor responde 503)
 REINTENTOS = 8
+HILOS = int(os.environ.get("EBISU_HILOS", "1"))  # peticiones a la vez (prueba con 2, 12/10/2026)
+CUENTA = {"ok": 0, "503": 0, "red": 0}
+_CERROJO = threading.Lock()
 
 
 def meses():
@@ -51,8 +57,11 @@ def pedir(url: str) -> bytes | None:
         except urllib.error.HTTPError as exc:
             if exc.code == 404:
                 return b""
+            with _CERROJO:
+                CUENTA["503" if exc.code == 503 else "red"] += 1
         except (urllib.error.URLError, TimeoutError, ConnectionError):
-            pass
+            with _CERROJO:
+                CUENTA["red"] += 1
         time.sleep(espera + random.uniform(0, 2))
         espera = min(espera * 2, 120)
     return None
@@ -62,29 +71,40 @@ def velas(datos: bytes) -> int:
     return len(lzma.decompress(datos)) // 24 if datos else 0
 
 
+def tarea(destino: Path, url: str, fallos: list) -> None:
+    datos = pedir(url)
+    time.sleep(PAUSA)
+    if datos is None:
+        fallos.append(destino.name)
+        print("FALLO", destino.parent.name, destino.name, flush=True)
+        return
+    destino.write_bytes(datos)
+    with _CERROJO:
+        CUENTA["ok"] += 1
+        if CUENTA["ok"] % 5 == 0:
+            print(f"{dt.datetime.now():%H:%M} bajados {CUENTA['ok']}, 503: {CUENTA['503']}, red: {CUENTA['red']}",
+                  flush=True)
+
+
 def main() -> None:
-    fallos = []
+    fallos: list = []
+    pendientes = []
     for par in PARES:
-        carpeta = DATOS / par
-        carpeta.mkdir(parents=True, exist_ok=True)
-        con_datos = []
+        (DATOS / par).mkdir(parents=True, exist_ok=True)
         for anyo, mes in meses():
             for lado in LADOS:
-                destino = carpeta / f"{anyo}-{mes:02d}_{lado}.bi5"
+                destino = DATOS / par / f"{anyo}-{mes:02d}_{lado}.bi5"
                 if not destino.exists():
-                    url = URL.format(par=par, anyo=anyo, mes0=mes - 1, lado=lado)
-                    datos = pedir(url)
-                    time.sleep(PAUSA)
-                    if datos is None:
-                        fallos.append(destino.name)
-                        print("FALLO", par, destino.name, flush=True)
-                        continue
-                    destino.write_bytes(datos)
-                if lado == "BID" and velas(destino.read_bytes()) > 0:
-                    con_datos.append((anyo, mes))
-        primero = f"{con_datos[0][0]}-{con_datos[0][1]:02d}" if con_datos else "-"
-        print(f"{par}: {len(con_datos)} meses con datos, desde {primero}", flush=True)
-    print(f"Fallos (se reintentan al volver a lanzar): {len(fallos)}", flush=True)
+                    pendientes.append((destino, URL.format(par=par, anyo=anyo, mes0=mes - 1, lado=lado)))
+    print(f"{dt.datetime.now():%H:%M} pendientes: {len(pendientes)}, hilos: {HILOS}", flush=True)
+    with ThreadPoolExecutor(max_workers=HILOS) as ex:
+        for destino, url in pendientes:
+            ex.submit(tarea, destino, url, fallos)
+    for par in PARES:
+        con_datos = sorted(f.name[:7] for f in (DATOS / par).glob("*_BID.bi5") if velas(f.read_bytes()) > 0)
+        print(f"{par}: {len(con_datos)} meses con datos, desde {con_datos[0] if con_datos else '-'}", flush=True)
+    print(f"Fallos (se reintentan al volver a lanzar): {len(fallos)}; 503: {CUENTA['503']}, red: {CUENTA['red']}",
+          flush=True)
     print("Terminado", dt.datetime.now().isoformat(timespec="seconds"), flush=True)
 
 
