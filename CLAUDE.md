@@ -111,6 +111,7 @@ estrategia de operar activamente ganaba. La unica que vale la pena es "L" (rotac
 ## Pendiente
 
 - **Paso 1 CERRADO (12/10): `docs/prd-paso-1.md`.** Verificaciones hechas (`docs/estudios/verificaciones-vehiculo.md`):
-  con fondos no hay oro ni API; Trading 212 tiene API y ETF sin comision. Quedan 5 puntos por verificar.
+  con fondos no hay oro (solo mineras) ni API; Trading 212 (probablemente la alemana, BaFin) tiene API y ETF en euros
+  sin comision. Quedan 4 puntos: dos en la app o el demo (los abre el propietario) y los datos (hay que bajarlos).
 - **Clave para el paso 2:** los impuestos cuentan operacion por operacion, y la referencia es el indexado con
   traspasos (`docs/decisiones/02-mercado.md`).

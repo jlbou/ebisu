@@ -74,12 +74,45 @@ extranjero **no retiene**: las ganancias se declaran a mano en la renta (el bot 
 | Coste por operar | 0 € | 0 € (sin cambio de divisa si cotiza en euros) |
 | Supervisor | Entidades espanyolas (CNMV) | Extranjero (Chipre o Alemania; por verificar) |
 
-## 5. Pendiente de verificar (antes de fijar el criterio)
+## 5. Segunda ronda (12/10): los puntos 1-3 de la lista, solo lectura
 
-1. Que entidad de Trading 212 contrata con clientes espanyoles, y su registro en la CNMV.
-2. Que ordenes acepta de verdad la API en real (se puede ver en el demo, sin dinero).
-3. Que ETF UCITS en euros hay en Trading 212 para bolsa mundial, bonos, oro y monetario.
-4. Que fondos indexados traspasables concretos hay para bolsa, bonos y monetario, y si existe alguno de oro.
+**5.1 Con que entidad de Trading 212 se contrata.** Dos fuentes espanyolas (Rankia, Finantres) dicen que un residente
+en Espanya abre cuenta con **Trading 212 EU GmbH** (Alemania, supervisada por la **BaFin**); otra (Awake Trader), con la
+chipriota o la bulgara. En el registro de la CNMV aparecen tres entidades del grupo como empresas extranjeras en libre
+prestacion: Trading 212 Ltd (n.º 3044), Trading 212 Markets Ltd (n.º 5059) y **Trading 212 EU GmbH (n.º 5014)** (segun
+Finantres, a 11/05/2026). **Lo mas probable: la alemana, con la BaFin; no la CNMV.** Solo se confirma en los documentos
+legales de la propia cuenta (al abrir el demo se pueden leer).
+
+**5.2 ETF en euros en Trading 212 (Xetra).** Fuentes de terceros (la mas reciente, de julio de 2026):
+
+| Pieza | Candidato | Visto en Trading 212 |
+|---|---|---|
+| Bolsa mundial | Vanguard FTSE All-World (VWCE), acumulacion, 0,19 % al anyo | Si (guia de 07/2026) |
+| Bonos | iShares Core Global Aggregate Bond, cubierto a euros, acumulacion (EUNA) | Si (guia de 07/2026) |
+| Oro | db Physical Gold ETC en euros, o Invesco Physical Gold ETC | En una lista de la comunidad sin fecha: **por confirmar** |
+| Monetario | Xtrackers EUR Overnight Rate Swap (XEON), cotiza en Xetra | **No confirmado** en Trading 212 |
+
+Los cuatro existen en Xetra en euros; falta confirmar en la app el oro y el monetario (sin dinero: buscando el ISIN).
+
+**5.3 Fondos indexados traspasables.**
+- **Bolsa mundial: si, varios.** MyInvestor dice ofrecer los indexados de Vanguard, iShares, Fidelity, Amundi y NN **sin
+  minimo**; ejemplos citados por terceros: iShares Developed World Index (0,12 %), Fidelity MSCI World Index (0,12 %),
+  Vanguard Global Stock Index (0,18 %). Sin contrastar con la ficha oficial.
+- **Bonos: existen** (p. ej. Vanguard Global Bond Index cubierto a euros, ~0,15 %), pero las clases encontradas tienen
+  minimos institucionales; falta ver que clase vende una plataforma minorista.
+- **Monetario:** no se encontro un indexado concreto; hay monetarios gestionados en las plataformas (por verificar).
+- **Oro: no hay.** Los fondos de oro traspasables invierten en **mineras** (acciones de empresas, no el metal); el unico
+  "sin mineras" encontrado mezcla oro, plata, platino y paladio (Ofi Invest Precious Metals, sin confirmar si es
+  traspasable). **Confirmado lo que se sospechaba: con fondos, el oro se queda fuera.**
+- Una fuente cita una consulta de Hacienda (DGT) que abriria el traspaso a algunos ETF UCITS, pero la ley 11/2021 los
+  excluyo; **se trata como "los ETF no se traspasan"** salvo que se confirme lo contrario con la norma.
+
+## 6. Pendiente de verificar (antes de fijar el criterio)
+
+1. ~~Entidad de Trading 212~~: lo mas probable, Trading 212 EU GmbH (BaFin); confirmar en los documentos de la cuenta.
+2. Que ordenes acepta de verdad la API en real (se ve en el demo, sin dinero; la cuenta la abriria el propietario).
+3. En la app de Trading 212: si estan el ETC de oro y el monetario en euros.
+4. En la plataforma de fondos: la clase minorista de un indexado de bonos y un monetario, con sus costes.
 5. Las fuentes de datos: primera fecha y si los precios incluyen dividendos (requiere bajar datos).
 
 ## Fuentes (leidas el 12/10/2026)
@@ -96,5 +129,16 @@ extranjero **no retiene**: las ganancias se declaran a mano en la renta (el bot 
   [Curvo](https://curvo.eu/article/trading-212-review),
   [Finantres, Trading 212 y la CNMV](https://finantres.com/trading-212-cnmv/),
   [Awake Trader](https://www.awaketrader.com/educacion/trading-212-espana-review),
-  [Rankia](https://www.rankia.com/brokers/trading-212).
+  [Rankia](https://www.rankia.com/brokers/trading-212),
+  [Finantres, mejores ETF en Trading 212 (07/2026)](https://finantresnoticias.com/etfs/trading-212-etf/),
+  [comunidad de Trading 212, ETF en euros](https://community.trading212.com/t/request-add-these-eur-denominated-etfs/34572),
+  [TradingView, XEON en Xetra](https://www.tradingview.com/symbols/XETR-XEON/chart),
+  [Deutsche Borse, ETC de oro de Xtrackers](https://www.deutsche-boerse-cash-market.com/dbcm-en/newsroom/press-releases/New-Xtrackers-ETC-on-Xetra-Direct-access-to-gold-2019456).
+- Fondos: [MyInvestor, indexados de iShares](https://myinvestor.es/inversion/fondos-indexados/myinvestor-blackrock/),
+  [Bankkers, mejores indexados](https://bankkers.com/inversion/fondos/indexados/),
+  [Finect, Vanguard Global Bond Index EUR Hedged](https://www.finect.com/fondos-inversion/IE00BN6QDH02-Vanguard_global_bond_index_eur_h_dist),
+  [Openbank, fondos de oro](https://www.openbank.es/inversiones/fondos-de-oro),
+  [Finect, como invertir en oro en 2026](https://www.finect.com/usuario/Josetrecet/articulos/Como_invertir_en_oro_y_plata),
+  [EY, los ETF de la UE salen del regimen de traspasos (2021)](https://globaltaxnews.ey.com/news/2021-5775-spain-eu-etfs-no-longer-qualify-for-traspasos-regime),
+  [guia fiscal de ETF 2026](https://guiafiscal.es/inversiones/etf-fiscalidad-2026-guia/).
 - Datos: [BEKKs, StocksBonds (R)](https://search.r-project.org/CRAN/refmans/BEKKs/html/StocksBonds.html).
