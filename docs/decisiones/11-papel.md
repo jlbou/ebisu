@@ -12,3 +12,17 @@ tiene cuenta demo.
 | H1-S | cada semana | **3 meses** (~13 revisiones) |
 | H1-M, H1-MB, H1-F | cada mes | **6 meses** (~6 revisiones) |
 | H2 | cada dia | por decidir |
+
+## 11.2 Que tiene que cumplir el papel para pasar a dinero real (opcion A, 13/10)
+
+Las cuatro, todas:
+
+1. **Fidelidad:** con los mismos precios, el bot en papel toma **exactamente** las decisiones del simulador del estudio
+   (fechas, pesos, compras y ventas). Si no coinciden, es un error del bot: se arregla antes de seguir.
+2. **Sin incidencias graves sin resolver** (p. ej. una revision saltada por falta de precios o con el bot parado).
+3. **No caer mas que la peor caida historica** de la variante (la mayor entre exploracion y reserva). Si cae mas, se
+   para y se revisa.
+4. **Decision expresa del propietario.** Aunque se cumpla todo, el dinero real solo con su si.
+
+**Fuera, a proposito:** exigir que gane dinero en el papel. En 3 o 6 meses es sobre todo suerte; eso ya lo juzgo el
+estudio con ~25 anyos de datos.
