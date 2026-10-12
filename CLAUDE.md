@@ -119,5 +119,9 @@ estrategia de operar activamente ganaba. La unica que vale la pena es "L" (rotac
   sin comision. Inventario hecho (ventana comun desde 2000). **Criterio del estudio 1 aprobado**; siguiente: bajar
   BCE, Dukascopy y la segunda fuente y montar las series en euros (`docs/diseno-estudio-1.md` 7). Faltan
   dos puntos en la app o el demo de Trading 212 (cuenta abierta, esperando la verificacion de identidad).
+- **Trading 212 (12/10):** sin cuenta demo para Trading 212 EU; preguntas de la API (tipos de orden, fracciones, clave de
+  solo lectura, limites, tasa italiana del oro) enviadas a un agente del chat: respuesta en 1 dia habil. Anotarla en
+  `docs/estudios/verificaciones-vehiculo.md` 5.6.
+- **Dukascopy:** bajando en segundo plano (~4-5 dias desde el 12/10); al acabar, contraste con segunda fuente y medir.
 - **Clave para el paso 2:** los impuestos cuentan operacion por operacion, y la referencia es el indexado con
   traspasos (`docs/decisiones/02-mercado.md`).
