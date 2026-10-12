@@ -69,7 +69,7 @@ Viene de: `docs/prd-paso-1.md`, `docs/hipotesis.md`, `docs/estudios/verificacion
 
 - **Los 7 pares principales:** EUR/USD, USD/JPY, GBP/USD, USD/CHF, AUD/USD, USD/CAD y NZD/USD. La misma regla en
   todos; **juntos cuentan como UNA variante**. Prohibido quedarse despues solo con los pares que salgan bien.
-- **Datos: OANDA** (antes Dukascopy, ver seccion 9), velas diarias con **precio de compra y de venta por separado**; el dia,
+- **Datos: Dukascopy** (banco suizo regulado; ver seccion 9), velas diarias con **precio de compra y de venta por separado**; el dia,
   de **17:00 a 17:00 de Nueva York**. El coste sale del diferencial real (se compra al precio de venta del mercado y se
   vende al de compra), no de un porcentaje supuesto. Contraste con una segunda fuente antes de medir, como en la
   seccion 2. Los tramos, los de la seccion 1 (la exploracion empieza cuando haya datos de los siete).
@@ -201,3 +201,10 @@ acaba igual: indexado mantenido.
   (`estudios/estudio1/bajar_oanda.py`; el token lo pone el propietario en el `.env`.)
 - **Por verificar al bajar:** desde que anyo hay datos de cada par. Como ya decia H2, la exploracion empieza cuando
   haya datos de los siete. Contraste con una segunda fuente antes de medir, como en la seccion 2.
+
+**12/10/2026. Se deshace el cambio a OANDA: H2 vuelve a Dukascopy (opcion A del propietario), antes de medir nada.**
+
+- **Motivo:** desde 2023 los clientes de la UE de OANDA pasan a OANDA TMS Brokers (Polonia), que **no tiene la API
+  v20**; para Espanya solo se ofrece la cuenta de acciones. Se debio verificar antes de proponerlo.
+- **Dukascopy, velas de 1 hora, despacio:** ~3 dias de descarga en segundo plano, que se reanuda donde lo dejo. Cumple
+  H2 tal cual (dia de 17:00 a 17:00 de Nueva York, compra y venta reales). Se borra `bajar_oanda.py` y sus variables.
