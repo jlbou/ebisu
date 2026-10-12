@@ -171,6 +171,33 @@ si hay cuenta de practica y como se saca su clave de API. Respuesta (resumida):
   con una clave de solo lectura y sin dinero (sin ordenes), o con ordenes reales de importe minimo. Las dos son
   decision del propietario.
 
+## 5.6 Instrumentos en Trading 212 y respuesta del bot de soporte (12/10/2026)
+
+Buscados por ISIN en la app por el propietario (sin comprar nada):
+
+| Pieza | Instrumento | ISIN | En Trading 212 |
+|---|---|---|---|
+| Bolsa | Vanguard FTSE All-World (Acc), VWCE | IE00BK5BQT80 | **Si**, Xetra, EUR |
+| Bolsa | iShares Core MSCI World (Acc), EUNL | IE00B4L5Y983 | **Si**, Xetra, EUR |
+| Bonos | iShares Core Global Aggregate Bond EUR Hedged (Acc), EUNA | IE00BDBRDM35 | **Si**, Xetra, EUR |
+| Oro | Xetra-Gold | DE000A0S9GB0 | **No** |
+| Oro | Xtrackers Physical Gold ETC | DE000A1E0HR8 | **No** |
+| Oro | EUWAX Gold II | DE000EWG2LD7 | **No** |
+| Oro | **Invesco Physical Gold (Acc), SGLD** | IE00B579F325 | **Si, Borsa Italiana (MIL), EUR** |
+| Oro | iShares Physical Gold, EGLN | IE00B4ND3602 | Si, Londres (LSE), en EUR |
+| Monetario | Xtrackers II EUR Overnight Rate Swap (Acc), XEON | LU0290358497 | **Si**, Xetra, EUR |
+
+- **Oro: el candidato pasa a ser Invesco Physical Gold en Milan (EUR).** No cambia el estudio (los datos del oro son
+  los mismos); el coste supuesto del 0,25 % al anyo para el oro sigue siendo conservador.
+- **Cuidado:** al buscar salen tambien lineas "5X - CFD" (CFD apalancados 5 veces). **Nunca** se compran: solo la
+  linea de la bolsa (XETR, MIL). Cuando haya bot, regla dura en el codigo.
+- **Bot de soporte sobre la API:** la cuenta real admite **ordenes de mercado** por la API; de los demas tipos, de
+  las fracciones por API, de las claves de solo lectura y de los limites de peticiones no sabe nada (se puede
+  preguntar a un agente si hace falta). **Unica comision de Trading 212: el 0,15 % al cambiar de divisa** (con
+  instrumentos en euros y cuenta en euros, no se paga); las bolsas y Hacienda pueden cobrar lo suyo.
+- **Por verificar si se llega a operar:** que las fracciones funcionen en estos cuatro; que la tasa italiana sobre
+  transacciones no se aplique al ETC de oro (en principio solo grava acciones italianas).
+
 ## 6. Pendiente de verificar (antes de fijar el criterio)
 
 1. ~~Entidad de Trading 212~~: **confirmada, Trading 212 EU GmbH (BaFin)** (5.4).
