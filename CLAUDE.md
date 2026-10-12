@@ -55,6 +55,9 @@ estrategia de operar activamente ganaba. La unica que vale la pena es "L" (rotac
     `.gitignore`.
   - Autor de los commits: `jlbou <292183709+jlbou@users.noreply.github.com>` (configurado en el repo).
   - Antes de cada commit, mirar el diff buscando datos personales. Licencia MIT.
+- **Stack:** Python 3.12 en `.venv/` (`.venv/Scripts/python.exe`), dependencias fijadas en `requirements.txt`
+  (pandas, yfinance). Dependencia nueva = justificarla antes. Datos descargados, en `var/` (fuera de git).
+  En Git Bash, `python` a secas abre el de la tienda de Windows y se queda colgado: usar siempre la ruta del venv.
 - **Formato de commit (fijo).** Las secciones opcionales se omiten ENTERAS si no aplican.
 
   ```
@@ -112,6 +115,7 @@ estrategia de operar activamente ganaba. La unica que vale la pena es "L" (rotac
 
 - **Paso 1 CERRADO (12/10): `docs/prd-paso-1.md`.** Verificaciones hechas (`docs/estudios/verificaciones-vehiculo.md`):
   con fondos no hay oro (solo mineras) ni API; Trading 212 (probablemente la alemana, BaFin) tiene API y ETF en euros
-  sin comision. Quedan 4 puntos: dos en la app o el demo (los abre el propietario) y los datos (hay que bajarlos).
+  sin comision. Inventario de datos hecho (`docs/estudios/inventario-datos.md`: ventana comun desde 2000). Faltan
+  dos puntos en la app o el demo de Trading 212 (cuenta abierta, esperando la verificacion de identidad).
 - **Clave para el paso 2:** los impuestos cuentan operacion por operacion, y la referencia es el indexado con
   traspasos (`docs/decisiones/02-mercado.md`).

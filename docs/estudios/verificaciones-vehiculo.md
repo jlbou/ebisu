@@ -64,6 +64,27 @@ extranjero **no retiene**: las ganancias se declaran a mano en la renta (el bot 
 - **Para la reserva larga** que pidio el council (decision 2) hacen falta **~20 anyos o mas**: habra que empalmar
   series y decir como en el criterio.
 
+### 3.1 Inventario hecho (12/10/2026): `docs/estudios/inventario-datos.md`
+
+Sin mirar ningun rendimiento. Lo que sale:
+
+- **Series largas con dividendos incluidos:** bolsa de EE. UU. desde **1980** (VFINX) y 1992 (VTSMX), bolsa
+  internacional desde 1996 (VGTSX), bonos de EE. UU. desde **1986** (VBMFX). Con eso hay **~30 anyos** para las tres
+  piezas juntas si el oro llega.
+- **Oro:** el futuro desde **2000**, GLD desde 2004, Xetra-Gold (EUR) desde 2009. Antes de 2000 no hay oro diario en
+  esta fuente: o el estudio empieza en 2000, o el oro anterior sale de otra fuente (p. ej. precios mensuales).
+- **Vehiculos reales en euros:** EUNL/IWDA (bolsa mundial) desde 2009, EUNA (bonos cubiertos) desde 2017, VWCE desde
+  2019, XEON (monetario en euros) desde 2008. Son de acumulacion: el "no ajustado" es lo esperado.
+- **Monetario largo:** el tipo de la letra a 13 semanas de EE. UU. desde 1960 (es un tipo, no un precio).
+- **Euro/dolar desde 2003** en esta fuente (un hueco de 18 dias en agosto de 2008). **Para 1999-2003 hay que ir a otra
+  fuente** (el BCE o la Reserva Federal; antes de 1999, el marco aleman como aproximacion).
+- **EWG2.DE no existe en Yahoo**; sobra (Xetra-Gold cubre el oro en euros).
+- Huecos de 5-7 dias en todas: festivos y fines de semana largos, nada raro. La ultima fila de los de Xetra es de
+  hoy (12/10), aun sin cerrar: el estudio solo usa dias cerrados.
+
+**Para el criterio:** con oro diario, la ventana comun empieza en **2000**: ~26 anyos, que dan para una exploracion y
+una reserva larga. Las series en dolares hay que pasarlas a euros (el inversor es de la zona euro).
+
 ## 4. Lo que cambia para la decision del vehiculo
 
 | | Fondos con traspaso | ETF en Trading 212 |
