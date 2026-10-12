@@ -1,0 +1,19 @@
+# Secretos: solo en local, nunca en git
+.env
+.env.*
+!.env.example
+
+# Entornos, datos y salidas pesadas
+.venv/
+var/
+__pycache__/
+*.pyc
+.pytest_cache/
+.ruff_cache/
+*.db
+*.db-wal
+*.db-shm
+
+# Privado: nunca a git (repositorio publico)
+CLAUDE.local.md
+privado/
