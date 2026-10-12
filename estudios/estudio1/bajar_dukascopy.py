@@ -68,13 +68,17 @@ class Conexion:
                 CUENTA["ok"] += 1
                 return b""
             CUENTA["503" if r.status == 503 else "red"] += 1
+            # 13/10: una conexion que recibe 503 parece quedar castigada (las nuevas si responden): se cierra.
+            if self.c is not None:
+                self.c.close()
+            self.c = None
         except (OSError, http.client.HTTPException):
             CUENTA["red"] += 1
             if self.c is not None:
                 self.c.close()
             self.c = None
         time.sleep(self.espera + random.uniform(0, 5))
-        self.espera = min(self.espera * 1.5, 300.0)
+        self.espera = min(self.espera * 1.5, 120.0)
         return None
 
 
