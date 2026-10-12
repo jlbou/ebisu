@@ -197,6 +197,17 @@ Buscados por ISIN en la app por el propietario (sin comprar nada):
   instrumentos en euros y cuenta en euros, no se paga); las bolsas y Hacienda pueden cobrar lo suyo.
 - **Por verificar si se llega a operar:** que las fracciones funcionen en estos cuatro; que la tasa italiana sobre
   transacciones no se aplique al ETC de oro (en principio solo grava acciones italianas).
+- **Respuesta de un agente del chat de Trading 212 (13/10/2026):**
+  - Por la API de la cuenta real: ordenes **de mercado, limitadas, stop y stop limitadas**.
+  - **Fracciones si** (p. ej. 0,5 participaciones), **pero no ordenes por importe en euros**: el bot tendra que
+    calcular la cantidad (importe / precio) y redondearla a lo que admita cada instrumento.
+  - **Claves de solo lectura posibles** con permisos concretos (p. ej. `orders:read`, `account`). **La API no permite
+    retirar dinero** (lo mismo que la regla 19 de Ploutos).
+  - Limites por cuenta y por punto de la API: p. ej. 50 peticiones por minuto para ordenes de mercado y una cada 2 s
+    para limitadas. De sobra para una revision al mes (o a la semana).
+  - VWCE, EUNA, XEON y SGLD: fracciones si el instrumento las tiene habilitadas; impuestos y costes de cada uno, en su
+    ficha de la app o en los metadatos de la API. **La tasa italiana del oro sigue sin respuesta concreta**: mirarla en
+    la ficha de SGLD si se llega a operar.
 
 ## 5.7 Fondos indexados con traspaso para H1-F (12/10/2026; solo lectura, fuentes secundarias)
 
