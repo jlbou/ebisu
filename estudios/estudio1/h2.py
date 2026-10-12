@@ -101,7 +101,7 @@ def simular_h2(dias: dict[str, pd.DataFrame], monetario: pd.Series, inicio: str,
     fechas = monetario.loc[inicio:fin].index
     r_mon = monetario.reindex(fechas).pct_change().fillna(0)
     n = len(dias)
-    valor, v, neto, pagado, arrastre, serie = 1.0, 1.0, 0.0, 0.0, deque(), []
+    v, neto, pagado, arrastre, serie = 1.0, 0.0, 0.0, deque(), []
 
     def impuesto_anyo(anyo: int) -> float:
         nonlocal neto

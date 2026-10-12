@@ -17,7 +17,6 @@ import datetime as dt
 import http.client
 import lzma
 import random
-import struct
 import time
 from pathlib import Path
 

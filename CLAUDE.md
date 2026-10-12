@@ -58,6 +58,8 @@ estrategia de operar activamente ganaba. La unica que vale la pena es "L" (rotac
 - **Stack:** Python 3.12 en `.venv/` (`.venv/Scripts/python.exe`), dependencias fijadas en `requirements.txt`
   (pandas, yfinance). Dependencia nueva = justificarla antes. Datos descargados, en `var/` (fuera de git).
   En Git Bash, `python` a secas abre el de la tienda de Windows y se queda colgado: usar siempre la ruta del venv.
+- **Pruebas:** `.venv/Scripts/ruff.exe check .` y `.venv/Scripts/python.exe -m pytest -q` (las validaciones con datos
+  inventados) ANTES de cada commit con codigo. GitHub las repite en cada push (`.github/workflows/pruebas.yml`).
 - **Formato de commit (fijo).** Las secciones opcionales se omiten ENTERAS si no aplican.
 
   ```

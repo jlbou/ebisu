@@ -80,7 +80,7 @@ def medir(piezas: pd.DataFrame, dias_fx: dict[str, pd.DataFrame], ini: str, fin:
                    "costes": float("nan"), "dos_x": None, "h2": pasa_h2(h2.por_operacion)}
 
     var_sr = float(np.var([f["m"].sharpe_diario for f in filas.values()], ddof=1))
-    for nombre, f in filas.items():
+    for f in filas.values():
         f["dsr"] = sharpe_deflactado(f["m"], var_sr, N_VARIANTES)
         f["condiciones"] = {**pasa(f["m"], f["ref"], f["dsr"]), **f.get("h2", {})}
         f["pasa"] = all(f["condiciones"].values())
