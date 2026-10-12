@@ -24,7 +24,17 @@ Disenyo que sirve gane la variante que gane (mensual, semanal o diaria):
 | `/estado` | Responde con el resumen: valor, piezas, proxima revision y salud |
 | `/pausa` | Sin compras nuevas; lo que hay se mantiene y se sigue vendiendo si la regla lo dice |
 | `/reanudar` | Quita la pausa, con confirmacion (`/si` en 60 s), como en Ploutos |
+| `/detalle` | La version larga (anyadido el 12/10, ver 10.3) |
 
 **Fuera a proposito:** vender todo desde el movil (un error de dedo o el panico en una caida es lo que el bot debe
 evitar; si hace falta, en la app del broker) y ordenes de compra manuales (el bot sigue la regla). Solo responde al
 chat del propietario (`TELEGRAM_CHAT_ID`).
+
+## 10.3 Formato de los mensajes (opcion A, 12/10)
+
+- **Corto, las cifras primero y la IA en una o dos frases.** Resumen mensual: valor, frente al indexado, peor caida,
+  las piezas con sus puntos (medias superadas) y pesos, la IA y la proxima revision. Operaciones: vendido, comprado,
+  coste y ganancia realizada. "Todo bien" semanal: una linea.
+- **`/detalle`** (pedido por el propietario): la version larga bajo demanda. Un grafico (imagen) del valor frente al
+  indexado y de cada pieza con sus 4 medias; la explicacion completa de la IA; las operaciones del mes; y Hacienda del
+  anyo (ganancias, perdidas y lo que tocaria pagar).
