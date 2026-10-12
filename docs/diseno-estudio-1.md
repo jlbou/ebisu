@@ -1,8 +1,8 @@
-# Diseno del estudio 1: criterio fijado ANTES de medir (BORRADOR, 12/10/2026)
+# Diseno del estudio 1: criterio fijado ANTES de medir (APROBADO, 12/10/2026)
 
-**Estado: BORRADOR, sin aprobar. No se ha medido nada.** Cuando el propietario lo apruebe, se sube a git y desde ese
-commit no se cambia nada de lo que aqui se fija; cualquier cambio posterior se anota con fecha y motivo, y cuenta como
-una prueba mas.
+**Estado: APROBADO por el propietario el 12/10/2026, por partes (seccion 8). No se ha medido nada.** Desde el commit
+que lo aprueba no se cambia nada de lo que aqui se fija; cualquier cambio posterior se anota con fecha y motivo, y
+cuenta como una prueba mas.
 
 Viene de: `docs/prd-paso-1.md`, `docs/hipotesis.md`, `docs/estudios/verificaciones-vehiculo.md`,
 `docs/estudios/inventario-datos.md`.
@@ -43,6 +43,9 @@ Viene de: `docs/prd-paso-1.md`, `docs/hipotesis.md`, `docs/estudios/verificacion
 - **Comprobacion antes de medir** (no es medir): desde que existan, las series largas en euros tienen que parecerse a
   los ETF reales (VWCE o EUNL, EUNA, Xetra-Gold, XEON): correlacion diaria >= 0,95. Si alguna no llega, se para y se
   decide antes de seguir.
+- **Segunda fuente para los precios de Yahoo:** antes de medir, cada serie de Yahoo se contrasta con otra fuente
+  independiente (p. ej. Stooq o el valor liquidativo de la gestora) en las fechas en que coincidan. Si difieren mas del
+  0,5 % en algun dia sin explicacion (festivo, reparto), se para y se decide antes de seguir.
 - Solo dias cerrados. Precio de ejecucion: el **cierre del dia habil siguiente** a la senyal.
 
 ## 3. Las hipotesis y sus variantes (lista cerrada)
@@ -62,19 +65,24 @@ Viene de: `docs/prd-paso-1.md`, `docs/hipotesis.md`, `docs/estudios/verificacion
 | H1-MB | mensual | todo o nada (dentro con >= 2 de 4, como el filtro de L) | ETF |
 | H1-F | mensual | escalonada | **Fondos con traspaso**: sin oro (mitad bolsa, mitad bonos), ejecucion **6 dias habiles** despues, sin impuestos hasta el final |
 
-### H2. Rango del dia anterior en divisas (la idea de una persona conocida)
+### H2. Rango del dia anterior en divisas (la idea de una persona conocida) (APROBADA, 12/10/2026, opcion A)
 
-- USD/CAD diario (OHLC de Yahoo). Si el precio baja del **minimo de ayer**, compra a ese precio; vende al **maximo de
-  ayer** si se toca ese dia, y si no, al cierre. Sin apalancamiento.
+- **Los 7 pares principales:** EUR/USD, USD/JPY, GBP/USD, USD/CHF, AUD/USD, USD/CAD y NZD/USD. La misma regla en
+  todos; **juntos cuentan como UNA variante**. Prohibido quedarse despues solo con los pares que salgan bien.
+- **Datos: Dukascopy** (banco suizo regulado), velas diarias con **precio de compra y de venta por separado**; el dia,
+  de **17:00 a 17:00 de Nueva York**. El coste sale del diferencial real (se compra al precio de venta del mercado y se
+  vende al de compra), no de un porcentaje supuesto. Contraste con una segunda fuente antes de medir, como en la
+  seccion 2. Los tramos, los de la seccion 1 (la exploracion empieza cuando haya datos de los siete).
+- **Regla:** si el precio baja del **minimo de ayer**, compra a ese precio; vende al **maximo de ayer** si se toca ese
+  dia, y si no, al cierre. Sin apalancamiento; capital repartido a partes iguales entre los siete, pasado a euros.
 - Con velas diarias no se sabe que se toco antes: **si el mismo dia se tocan el minimo y el maximo, se cuenta lo peor**.
-- Coste: un diferencial de 0,02 % por lado (sin el minimo de 2 $ de IBKR: con 250 € no seria viable de ninguna forma,
-  y se dice).
-- Una sola variante (H2).
+- Sin el minimo de 2 $ por orden de IBKR: con 250 € no seria viable de ninguna forma, y se dice. Aqui se mide si la
+  idea tiene ventaja.
 
-### H3. Kronos
+### H3. Kronos: FUERA de este estudio (12/10/2026, opcion A)
 
-**Propuesta: no se prueba en este estudio.** Esta hecho para velas de horas o dias y para ordenar muchos activos; H1
-decide una vez al mes entre tres piezas. Sacarlo de la lista es decision del propietario (decision 7).
+Esta hecho para velas de horas o dias y para ordenar muchos activos; H1 decide una vez al mes entre tres piezas, y en
+cripto no acerto. El entorno sigue guardado en Ploutos por si aparece un uso que encaje.
 
 ### H4. La IA como filtro
 
@@ -113,7 +121,8 @@ En cada tramo se mide, sobre lo que quedaria en el bolsillo: **rendimiento anual
 2. **No pierde dinero** en el tramo (TAE > 0).
 3. **No es suerte:** Sharpe deflactado >= **0,95** con N = 5.
 
-H2 pasa si ademas el **rendimiento medio por operacion, neto, tiene el IC del 90 % por encima de 0**.
+H2 pasa si ademas, **juntando las operaciones de los siete pares**, el **rendimiento medio por operacion, neto, tiene
+el IC del 90 % por encima de 0**, **y** ese rendimiento medio es positivo en **al menos 5 de los 7 pares**.
 
 **Si pasa mas de una, va a la reserva la de mayor Sharpe deflactado** (solo una). Si no pasa ninguna, el estudio
 termina ahi: **la conclusion es el indexado mantenido** (decision 7), y la reserva queda sin tocar.
@@ -125,9 +134,10 @@ acaba igual: indexado mantenido.
 
 ## 7. Orden de trabajo (cada paso, con su commit)
 
-1. Aprobar este documento (por partes) y subirlo.
-2. Bajar las fuentes oficiales (BCE: euro/dolar, EONIA, STR) y montar las series en euros.
-3. La comprobacion de la seccion 2 (parecido con los ETF reales). Sin mirar rendimientos.
+1. ~~Aprobar este documento (por partes) y subirlo~~: hecho (12/10).
+2. Bajar las fuentes oficiales (BCE: euro/dolar, EONIA, STR), las divisas de Dukascopy y la segunda fuente, y montar
+   las series en euros.
+3. Las comprobaciones de la seccion 2 (parecido con los ETF reales y segunda fuente). Sin mirar rendimientos.
 4. Escribir el simulador y el juez, y **validarlos antes de medir**: con pesos fijos tiene que dar exactamente comprar
    y mantener (como en Ploutos).
 5. Medir la exploracion. Veredicto del juez.
@@ -139,4 +149,5 @@ acaba igual: indexado mantenido.
 2. ~~La regla de H1 y sus cuatro variantes (seccion 3)~~: **aprobadas** (12/10, opcion A).
 3. ~~Costes e impuestos (seccion 4) y la referencia (seccion 5)~~: **aprobados** (12/10, opcion A).
 4. ~~Cuando pasa: los umbrales (seccion 6)~~: **aprobados** (12/10, opcion A).
-5. H2 tal cual y H3 fuera (seccion 3).
+5. ~~H2 y H3 (seccion 3)~~: **aprobado** (12/10, opcion A): H2 con los 7 pares principales como una variante y datos de
+   Dukascopy; segunda fuente para todo lo de Yahoo; Kronos fuera.

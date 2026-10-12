@@ -110,12 +110,14 @@ estrategia de operar activamente ganaba. La unica que vale la pena es "L" (rotac
 | 12/10/2026 | **Tiempo: sin ritmo fijo** mientras se hace; cuando funcione, que el propietario no tenga que hacer nada (opcion C) | `docs/decisiones/06-tiempo.md` |
 | 12/10/2026 | **Lista cerrada de hipotesis** (si ninguna pasa, indexado sin bot); los 250 € no se necesitan en 3 anyos; sin aportaciones periodicas | `docs/decisiones/07-cierre-paso-1.md` |
 | 12/10/2026 | **IA como analista con freno:** explica cada mes y puede reducir o aplazar compras, nunca anyadir riesgo; el filtro se prueba en papel contra el bot sin IA (opcion A) | `docs/decisiones/08-ia.md` |
+| 12/10/2026 | **Criterio del estudio 1 APROBADO** (por partes): exploracion 2001-2014, reserva 2015-2026; H1 en 4 variantes y H2 en los 7 pares principales (N = 5); Kronos fuera; costes, impuestos al 19 % y referencia (indexado mantenido); umbrales | `docs/diseno-estudio-1.md` |
 
 ## Pendiente
 
 - **Paso 1 CERRADO (12/10): `docs/prd-paso-1.md`.** Verificaciones hechas (`docs/estudios/verificaciones-vehiculo.md`):
   con fondos no hay oro (solo mineras) ni API; Trading 212 (probablemente la alemana, BaFin) tiene API y ETF en euros
-  sin comision. Inventario de datos hecho (`docs/estudios/inventario-datos.md`: ventana comun desde 2000). Faltan
+  sin comision. Inventario hecho (ventana comun desde 2000). **Criterio del estudio 1 aprobado**; siguiente: bajar
+  BCE, Dukascopy y la segunda fuente y montar las series en euros (`docs/diseno-estudio-1.md` 7). Faltan
   dos puntos en la app o el demo de Trading 212 (cuenta abierta, esperando la verificacion de identidad).
 - **Clave para el paso 2:** los impuestos cuentan operacion por operacion, y la referencia es el indexado con
   traspasos (`docs/decisiones/02-mercado.md`).
