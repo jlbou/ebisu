@@ -17,6 +17,7 @@ import html
 import re
 import time
 import urllib.error
+import urllib.parse
 import urllib.request
 from pathlib import Path
 
@@ -299,8 +300,99 @@ def boc() -> list[dict]:
     return list({f["fecha"]: f for f in out}.values())
 
 
+ARTICULOS = {  # articulo de Wikipedia de cada eleccion general y referendum nacional (anexo de la decision 4)
+    "USD": [f"{y} United States presidential election" for y in range(2004, 2025, 4)]
+           + [f"{y} United States elections" for y in range(2006, 2023, 4)],
+    "EUR": [f"{y} German federal election" for y in (2005, 2009, 2013, 2017, 2021, 2025)]
+           + [f"{y} French presidential election" for y in (2007, 2012, 2017, 2022)]
+           + [f"{y} French legislative election" for y in (2007, 2012, 2017, 2022, 2024)]
+           + ["2005 French European Constitution referendum"]
+           + [f"{y} Italian general election" for y in (2006, 2008, 2013, 2018, 2022)]
+           + ["2005 Italian fertility laws referendum", "2006 Italian constitutional referendum", "2009 Italian electoral law referendum",
+              "2011 Italian referendum", "2016 Italian oil drilling referendum", "2016 Italian constitutional referendum",
+              "2020 Italian constitutional referendum", "2022 Italian referendum", "2025 Italian referendum"]
+           + [f"{y} Spanish general election" for y in ("2004", "2008", "2011", "2015", "2016", "April 2019",
+                                                         "November 2019", "2023", "2026")]
+           + ["2005 Spanish European Constitution referendum", "2015 Greek bailout referendum"],
+    "GBP": [f"{y} United Kingdom general election" for y in (2005, 2010, 2015, 2017, 2019, 2024)]
+           + ["2011 United Kingdom Alternative Vote referendum", "2014 Scottish independence referendum",
+              "2016 United Kingdom European Union membership referendum"],
+    "JPY": [f"{y} Japanese general election" for y in (2003, 2005, 2009, 2012, 2014, 2017, 2021, 2024, 2026)]
+           + [f"{y} Japanese House of Councillors election" for y in range(2004, 2026, 3)],
+    "CHF": [f"{y} Swiss federal election" for y in range(2003, 2024, 4)],
+    "AUD": [f"{y} Australian federal election" for y in (2004, 2007, 2010, 2013, 2016, 2019, 2022, 2025)]
+           + ["2023 Australian Indigenous Voice referendum"],
+    "CAD": [f"{y} Canadian federal election" for y in (2004, 2006, 2008, 2011, 2015, 2019, 2021, 2025)],
+    "NZD": [f"{y} New Zealand general election" for y in (2005, 2008, 2011, 2014, 2017, 2020, 2023, 2026)],
+}
+
+
+def fechas_wikitexto(w: str) -> list[pd.Timestamp]:
+    """Fechas del campo de fecha del cuadro del articulo (election_date, date...), en sus formatos habituales."""
+    # election_date (a veces en la misma linea que otros campos); en las de EE. UU., election_day sin anyo + year;
+    # "date" solo al principio de linea (arriba suele haber {{Use dmy dates|date=...}}).
+    m = re.search(r"\|\s*election_date\s*=(.*?)(?=\n|\s\|\s*\w+\s*=|$)", w)
+    dia = re.search(r"\|\s*election_day\s*=\s*(.*)", w)
+    anyo = re.search(r"\|\s*year\s*=\s*(\d{4})", w)
+    if not m and dia and anyo:
+        return fechas_wikitexto(f"| election_date = {dia.group(1).strip()}, {anyo.group(1)}")
+    m = m or re.search(r"^\s*\|\s*date\s*=(.*)", w, re.M)
+    if not m:  # sin cuadro con fecha: la primera frase "held on 21 and 22 June 2009" del articulo
+        m = re.search(r"held (?:in \[*\w+\]* )?on (\d{1,2}(?:(?:-|–| and )\d{1,2})? \w+ \d{4})", w)
+    if not m:
+        return []
+    s = re.sub(r"(\d{1,2})(?:-|–| and )(\d{1,2}) ", r"\2 ", m.group(1))  # "9-10 April": el ultimo dia
+    out = [pd.Timestamp(int(a), int(b), int(c)) for a, b, c in re.findall(r"(\d{4})\|(\d{1,2})\|(\d{1,2})", s)]
+    nombres = "|".join(MESES)
+    for m2 in re.finditer(rf"(\d{{1,2}}) ({nombres})(?:,? (\d{{4}}))?", s, re.I):
+        # "10 June and 17 June 2007": a la primera le falta el anyo; es el siguiente que aparece
+        y = m2.group(3) or (re.search(r"\d{4}", s[m2.end():]) or [None])[0]
+        if y:
+            out.append(pd.Timestamp(int(y), MESES[m2.group(2).lower()], int(m2.group(1))))
+    for mes, d, y in re.findall(rf"({nombres}) (\d{{1,2}}),? (\d{{4}})", s, re.I):
+        out.append(pd.Timestamp(int(y), MESES[mes.lower()], int(d)))
+    return sorted(set(out))
+
+
+def elecciones() -> list[dict]:
+    """Elecciones generales y referendums nacionales (decision 4, anexo): la fecha sale del cuadro del articulo de
+    Wikipedia de cada una (no se escribe a mano). Las votaciones populares suizas, de la lista de Wikipedia."""
+    out = []
+    for divisa, titulos in ARTICULOS.items():
+        for titulo in titulos:
+            url = "https://en.wikipedia.org/w/index.php?title=" + urllib.parse.quote(titulo.replace(" ", "_")) \
+                + "&action=raw"
+            w = bajar_o_nada(url, "wiki_" + re.sub(r"\W+", "_", titulo) + ".txt")
+            if w is None:
+                print(f"  NO EXISTE: {titulo}")
+                continue
+            r = re.match(r"#REDIRECT\s*\[\[([^\]]+)\]\]", w, re.I)
+            if r:
+                destino = r.group(1)
+                url = "https://en.wikipedia.org/w/index.php?title=" + urllib.parse.quote(destino.replace(" ", "_")) \
+                    + "&action=raw"
+                w = bajar(url, "wiki_" + re.sub(r"\W+", "_", destino) + ".txt")
+            fs = [f for f in fechas_wikitexto(w) if DESDE <= f.year <= HASTA]
+            if not fs:
+                print(f"  SIN FECHA: {titulo}")
+            for f in fs:
+                out.append(fila(f, divisa, "Elecciones", url))
+    nombres = "|".join(m.capitalize() for m in MESES)
+    url = "https://en.wikipedia.org/w/index.php?title=List_of_Swiss_federal_referendums&action=raw"
+    lista = bajar(url, "wiki_suiza_referendums.txt")
+    for f in re.findall(rf"^\|\s*(?:rowspan=\"?\d+\"?\s*\|\s*)?((?:{nombres}) \d{{1,2}}, 20\d\d)\s*$", lista, re.M):
+        if DESDE <= int(f[-4:]) <= HASTA:
+            out.append(fila(pd.Timestamp(f), "CHF", "Votacion popular", url))
+    # 2025 y 2026 no estan en la lista: de sus articulos ("national votes on 9 February, 28 September and 30 November")
+    for f, art in (("2025-09-28", "2025"), ("2025-11-30", "2025"), ("2026-03-08", "2026"), ("2026-06-14", "2026"),
+                   ("2026-09-27", "2026")):
+        out.append(fila(pd.Timestamp(f), "CHF", "Votacion popular",
+                        f"https://en.wikipedia.org/wiki/{art}_Swiss_referendums"))
+    return list({(f["fecha"], f["divisa"], f["evento"]): f for f in out}.values())
+
+
 FUENTES_EVENTOS = {"fed": fed, "empleo": empleo_eeuu, "bce": bce, "boe": boe, "boj": boj, "snb": snb, "rbnz": rbnz,
-                   "rba": rba, "boc": boc}
+                   "rba": rba, "boc": boc, "elecciones": elecciones}
 
 
 def main() -> None:

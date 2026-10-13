@@ -10,6 +10,7 @@ fecha,divisa,evento,fuente
 2003-02-06,EUR,BCE,https://www.ecb.europa.eu/press/press_conference/monetary-policy-statement/2003/html/index_include.en.html
 2003-02-06,GBP,BoE,https://www.bankofengland.co.uk/sitemap/minutes
 2003-02-07,USD,Empleo EE. UU.,https://www.bls.gov/bls/news-release/empsit.htm
+2003-02-09,CHF,Votacion popular,https://en.wikipedia.org/w/index.php?title=List_of_Swiss_federal_referendums&action=raw
 2003-02-14,JPY,BoJ,https://www.boj.or.jp/en/mopo/mpmsche_minu/minu_2003/index.htm
 2003-03-04,CAD,BoC,https://www.bankofcanada.ca/2002/08/bank-canada-releases-2003-schedule/
 2003-03-05,AUD,RBA,https://www.rba.gov.au/monetary-policy/int-rate-decisions/(regla)
@@ -34,6 +35,7 @@ fecha,divisa,evento,fuente
 2003-05-07,AUD,RBA,https://www.rba.gov.au/monetary-policy/int-rate-decisions/(regla)
 2003-05-08,EUR,BCE,https://www.ecb.europa.eu/press/press_conference/monetary-policy-statement/2003/html/index_include.en.html
 2003-05-08,GBP,BoE,https://www.bankofengland.co.uk/sitemap/minutes
+2003-05-18,CHF,Votacion popular,https://en.wikipedia.org/w/index.php?title=List_of_Swiss_federal_referendums&action=raw
 2003-05-20,JPY,BoJ,https://www.boj.or.jp/en/mopo/mpmsche_minu/minu_2003/index.htm
 2003-06-03,CAD,BoC,https://www.bankofcanada.ca/2002/08/bank-canada-releases-2003-schedule/
 2003-06-04,AUD,RBA,https://www.rba.gov.au/monetary-policy/int-rate-decisions/(regla)
@@ -74,6 +76,7 @@ fecha,divisa,evento,fuente
 2003-10-10,JPY,BoJ,https://www.boj.or.jp/en/mopo/mpmsche_minu/minu_2003/index.htm
 2003-10-13,EUR,BCE,https://www.ecb.europa.eu/press/press_conference/monetary-policy-statement/2003/html/index_include.en.html
 2003-10-15,CAD,BoC,https://www.bankofcanada.ca/2002/08/bank-canada-releases-2003-schedule/
+2003-10-19,CHF,Elecciones,https://en.wikipedia.org/w/index.php?title=2003_Swiss_federal_election&action=raw
 2003-10-23,NZD,RBNZ,https://www.rbnz.govt.nz/monetary-policy/monetary-policy-decisions
 2003-10-28,USD,Fed,https://www.federalreserve.gov/monetarypolicy/fomchistorical2003.htm
 2003-10-31,JPY,BoJ,https://www.boj.or.jp/en/mopo/mpmsche_minu/minu_2003/index.htm
@@ -81,6 +84,7 @@ fecha,divisa,evento,fuente
 2003-11-06,EUR,BCE,https://www.ecb.europa.eu/press/press_conference/monetary-policy-statement/2003/html/index_include.en.html
 2003-11-06,GBP,BoE,https://www.bankofengland.co.uk/sitemap/minutes
 2003-11-07,USD,Empleo EE. UU.,https://www.bls.gov/bls/news-release/empsit.htm
+2003-11-09,JPY,Elecciones,https://en.wikipedia.org/w/index.php?title=2003_Japanese_general_election&action=raw
 2003-11-21,JPY,BoJ,https://www.boj.or.jp/en/mopo/mpmsche_minu/minu_2003/index.htm
 2003-12-02,CAD,BoC,https://www.bankofcanada.ca/2002/08/bank-canada-releases-2003-schedule/
 2003-12-03,AUD,RBA,https://www.rba.gov.au/monetary-policy/int-rate-decisions/(regla)
@@ -103,6 +107,7 @@ fecha,divisa,evento,fuente
 2004-02-05,GBP,BoE,https://www.bankofengland.co.uk/sitemap/minutes
 2004-02-05,JPY,BoJ,https://www.boj.or.jp/en/mopo/mpmsche_minu/minu_2004/index.htm
 2004-02-06,USD,Empleo EE. UU.,https://www.bls.gov/bls/news-release/empsit.htm
+2004-02-08,CHF,Votacion popular,https://en.wikipedia.org/w/index.php?title=List_of_Swiss_federal_referendums&action=raw
 2004-02-26,JPY,BoJ,https://www.boj.or.jp/en/mopo/mpmsche_minu/minu_2004/index.htm
 2004-03-02,CAD,BoC,https://www.bankofcanada.ca/2003/07/bank-canada-releases-2004-schedule/
 2004-03-03,AUD,RBA,https://www.rba.gov.au/monetary-policy/int-rate-decisions/(regla)
@@ -110,6 +115,7 @@ fecha,divisa,evento,fuente
 2004-03-04,GBP,BoE,https://www.bankofengland.co.uk/sitemap/minutes
 2004-03-05,USD,Empleo EE. UU.,https://www.bls.gov/bls/news-release/empsit.htm
 2004-03-11,NZD,RBNZ,https://www.rbnz.govt.nz/monetary-policy/monetary-policy-decisions
+2004-03-14,EUR,Elecciones,https://en.wikipedia.org/w/index.php?title=2004_Spanish_general_election&action=raw
 2004-03-16,JPY,BoJ,https://www.boj.or.jp/en/mopo/mpmsche_minu/minu_2004/index.htm
 2004-03-16,USD,Fed,https://www.federalreserve.gov/monetarypolicy/fomchistorical2004.htm
 2004-03-18,CHF,SNB,https://www.snb.ch/en/the-snb/mandates-goals/monetary-policy/decisions
@@ -126,6 +132,7 @@ fecha,divisa,evento,fuente
 2004-05-06,EUR,BCE,https://www.ecb.europa.eu/press/press_conference/monetary-policy-statement/2004/html/index_include.en.html
 2004-05-06,GBP,BoE,https://www.bankofengland.co.uk/sitemap/minutes
 2004-05-07,USD,Empleo EE. UU.,https://www.bls.gov/bls/news-release/empsit.htm
+2004-05-16,CHF,Votacion popular,https://en.wikipedia.org/w/index.php?title=List_of_Swiss_federal_referendums&action=raw
 2004-05-20,JPY,BoJ,https://www.boj.or.jp/en/mopo/mpmsche_minu/minu_2004/index.htm
 2004-06-02,AUD,RBA,https://www.rba.gov.au/monetary-policy/int-rate-decisions/(regla)
 2004-06-03,EUR,BCE,https://www.ecb.europa.eu/press/press_conference/monetary-policy-statement/2004/html/index_include.en.html
@@ -136,11 +143,13 @@ fecha,divisa,evento,fuente
 2004-06-15,JPY,BoJ,https://www.boj.or.jp/en/mopo/mpmsche_minu/minu_2004/index.htm
 2004-06-17,CHF,SNB,https://www.snb.ch/en/the-snb/mandates-goals/monetary-policy/decisions
 2004-06-25,JPY,BoJ,https://www.boj.or.jp/en/mopo/mpmsche_minu/minu_2004/index.htm
+2004-06-28,CAD,Elecciones,https://en.wikipedia.org/w/index.php?title=2004_Canadian_federal_election&action=raw
 2004-06-30,USD,Fed,https://www.federalreserve.gov/monetarypolicy/fomchistorical2004.htm
 2004-07-01,EUR,BCE,https://www.ecb.europa.eu/press/press_conference/monetary-policy-statement/2004/html/index_include.en.html
 2004-07-02,USD,Empleo EE. UU.,https://www.bls.gov/bls/news-release/empsit.htm
 2004-07-07,AUD,RBA,https://www.rba.gov.au/monetary-policy/int-rate-decisions/(regla)
 2004-07-08,GBP,BoE,https://www.bankofengland.co.uk/sitemap/minutes
+2004-07-11,JPY,Elecciones,https://en.wikipedia.org/w/index.php?title=2004_Japanese_House_of_Councillors_election&action=raw
 2004-07-13,JPY,BoJ,https://www.boj.or.jp/en/mopo/mpmsche_minu/minu_2004/index.htm
 2004-07-20,CAD,BoC,https://www.bankofcanada.ca/2003/07/bank-canada-releases-2004-schedule/
 2004-07-29,NZD,RBNZ,https://www.rbnz.govt.nz/monetary-policy/monetary-policy-decisions
@@ -158,20 +167,24 @@ fecha,divisa,evento,fuente
 2004-09-09,NZD,RBNZ,https://www.rbnz.govt.nz/monetary-policy/monetary-policy-decisions
 2004-09-16,CHF,SNB,https://www.snb.ch/en/the-snb/mandates-goals/monetary-policy/decisions
 2004-09-21,USD,Fed,https://www.federalreserve.gov/monetarypolicy/fomchistorical2004.htm
+2004-09-26,CHF,Votacion popular,https://en.wikipedia.org/w/index.php?title=List_of_Swiss_federal_referendums&action=raw
 2004-10-06,AUD,RBA,https://www.rba.gov.au/monetary-policy/int-rate-decisions/(regla)
 2004-10-07,EUR,BCE,https://www.ecb.europa.eu/press/press_conference/monetary-policy-statement/2004/html/index_include.en.html
 2004-10-07,GBP,BoE,https://www.bankofengland.co.uk/sitemap/minutes
 2004-10-08,USD,Empleo EE. UU.,https://www.bls.gov/bls/news-release/empsit.htm
+2004-10-09,AUD,Elecciones,https://en.wikipedia.org/w/index.php?title=2004_Australian_federal_election&action=raw
 2004-10-13,JPY,BoJ,https://www.boj.or.jp/en/mopo/mpmsche_minu/minu_2004/index.htm
 2004-10-19,CAD,BoC,https://www.bankofcanada.ca/2003/07/bank-canada-releases-2004-schedule/
 2004-10-28,NZD,RBNZ,https://www.rbnz.govt.nz/monetary-policy/monetary-policy-decisions
 2004-10-29,JPY,BoJ,https://www.boj.or.jp/en/mopo/mpmsche_minu/minu_2004/index.htm
+2004-11-02,USD,Elecciones,https://en.wikipedia.org/w/index.php?title=2004_United_States_presidential_election&action=raw
 2004-11-03,AUD,RBA,https://www.rba.gov.au/monetary-policy/int-rate-decisions/(regla)
 2004-11-04,EUR,BCE,https://www.ecb.europa.eu/press/press_conference/monetary-policy-statement/2004/html/index_include.en.html
 2004-11-04,GBP,BoE,https://www.bankofengland.co.uk/sitemap/minutes
 2004-11-05,USD,Empleo EE. UU.,https://www.bls.gov/bls/news-release/empsit.htm
 2004-11-10,USD,Fed,https://www.federalreserve.gov/monetarypolicy/fomchistorical2004.htm
 2004-11-18,JPY,BoJ,https://www.boj.or.jp/en/mopo/mpmsche_minu/minu_2004/index.htm
+2004-11-28,CHF,Votacion popular,https://en.wikipedia.org/w/index.php?title=List_of_Swiss_federal_referendums&action=raw
 2004-12-02,EUR,BCE,https://www.ecb.europa.eu/press/press_conference/monetary-policy-statement/2004/html/index_include.en.html
 2004-12-03,USD,Empleo EE. UU.,https://www.bls.gov/bls/news-release/empsit.htm
 2004-12-07,CAD,BoC,https://www.bankofcanada.ca/2003/07/bank-canada-releases-2004-schedule/
@@ -193,6 +206,7 @@ fecha,divisa,evento,fuente
 2005-02-04,USD,Empleo EE. UU.,https://www.bls.gov/bls/news-release/empsit.htm
 2005-02-10,GBP,BoE,https://www.bankofengland.co.uk/sitemap/minutes
 2005-02-17,JPY,BoJ,https://www.boj.or.jp/en/mopo/mpmsche_minu/minu_2005/index.htm
+2005-02-20,EUR,Elecciones,https://en.wikipedia.org/w/index.php?title=2005_Spanish_European_Constitution_referendum&action=raw
 2005-03-01,CAD,BoC,https://www.bankofcanada.ca/2004/07/bank-canada-releases-2005-schedule/
 2005-03-02,AUD,RBA,https://www.rba.gov.au/monetary-policy/int-rate-decisions/(regla)
 2005-03-03,EUR,BCE,https://www.ecb.europa.eu/press/press_conference/monetary-policy-statement/2005/html/index_include.en.html
@@ -213,15 +227,19 @@ fecha,divisa,evento,fuente
 2005-05-03,USD,Fed,https://www.federalreserve.gov/monetarypolicy/fomchistorical2005.htm
 2005-05-04,AUD,RBA,https://www.rba.gov.au/monetary-policy/int-rate-decisions/(regla)
 2005-05-04,EUR,BCE,https://www.ecb.europa.eu/press/press_conference/monetary-policy-statement/2005/html/index_include.en.html
+2005-05-05,GBP,Elecciones,https://en.wikipedia.org/w/index.php?title=2005_United_Kingdom_general_election&action=raw
 2005-05-06,USD,Empleo EE. UU.,https://www.bls.gov/bls/news-release/empsit.htm
 2005-05-09,GBP,BoE,https://www.bankofengland.co.uk/sitemap/minutes
 2005-05-20,JPY,BoJ,https://www.boj.or.jp/en/mopo/mpmsche_minu/minu_2005/index.htm
 2005-05-25,CAD,BoC,https://www.bankofcanada.ca/2004/07/bank-canada-releases-2005-schedule/
+2005-05-29,EUR,Elecciones,https://en.wikipedia.org/w/index.php?title=2005_French_European_Constitution_referendum&action=raw
 2005-06-02,EUR,BCE,https://www.ecb.europa.eu/press/press_conference/monetary-policy-statement/2005/html/index_include.en.html
 2005-06-03,USD,Empleo EE. UU.,https://www.bls.gov/bls/news-release/empsit.htm
+2005-06-05,CHF,Votacion popular,https://en.wikipedia.org/w/index.php?title=List_of_Swiss_federal_referendums&action=raw
 2005-06-08,AUD,RBA,https://www.rba.gov.au/monetary-policy/int-rate-decisions/(regla)
 2005-06-09,GBP,BoE,https://www.bankofengland.co.uk/sitemap/minutes
 2005-06-09,NZD,RBNZ,https://www.rbnz.govt.nz/monetary-policy/monetary-policy-decisions
+2005-06-12,EUR,Elecciones,https://en.wikipedia.org/w/index.php?title=2005_Italian_fertility_laws_referendum&action=raw
 2005-06-15,JPY,BoJ,https://www.boj.or.jp/en/mopo/mpmsche_minu/minu_2005/index.htm
 2005-06-16,CHF,SNB,https://www.snb.ch/en/the-snb/mandates-goals/monetary-policy/decisions
 2005-06-30,USD,Fed,https://www.federalreserve.gov/monetarypolicy/fomchistorical2005.htm
@@ -244,9 +262,13 @@ fecha,divisa,evento,fuente
 2005-09-07,CAD,BoC,https://www.bankofcanada.ca/2004/07/bank-canada-releases-2005-schedule/
 2005-09-08,GBP,BoE,https://www.bankofengland.co.uk/sitemap/minutes
 2005-09-08,JPY,BoJ,https://www.boj.or.jp/en/mopo/mpmsche_minu/minu_2005/index.htm
+2005-09-11,JPY,Elecciones,https://en.wikipedia.org/w/index.php?title=2005_Japanese_general_election&action=raw
 2005-09-15,CHF,SNB,https://www.snb.ch/en/the-snb/mandates-goals/monetary-policy/decisions
 2005-09-15,NZD,RBNZ,https://www.rbnz.govt.nz/monetary-policy/monetary-policy-decisions
+2005-09-17,NZD,Elecciones,https://en.wikipedia.org/w/index.php?title=2005_New_Zealand_general_election&action=raw
+2005-09-18,EUR,Elecciones,https://en.wikipedia.org/w/index.php?title=2005_German_federal_election&action=raw
 2005-09-20,USD,Fed,https://www.federalreserve.gov/monetarypolicy/fomchistorical2005.htm
+2005-09-25,CHF,Votacion popular,https://en.wikipedia.org/w/index.php?title=List_of_Swiss_federal_referendums&action=raw
 2005-10-05,AUD,RBA,https://www.rba.gov.au/monetary-policy/int-rate-decisions/(regla)
 2005-10-06,EUR,BCE,https://www.ecb.europa.eu/press/press_conference/monetary-policy-statement/2005/html/index_include.en.html
 2005-10-06,GBP,BoE,https://www.bankofengland.co.uk/sitemap/minutes
@@ -261,6 +283,7 @@ fecha,divisa,evento,fuente
 2005-11-04,USD,Empleo EE. UU.,https://www.bls.gov/bls/news-release/empsit.htm
 2005-11-10,GBP,BoE,https://www.bankofengland.co.uk/sitemap/minutes
 2005-11-18,JPY,BoJ,https://www.boj.or.jp/en/mopo/mpmsche_minu/minu_2005/index.htm
+2005-11-27,CHF,Votacion popular,https://en.wikipedia.org/w/index.php?title=List_of_Swiss_federal_referendums&action=raw
 2005-12-01,EUR,BCE,https://www.ecb.europa.eu/press/press_conference/monetary-policy-statement/2005/html/index_include.en.html
 2005-12-02,USD,Empleo EE. UU.,https://www.bls.gov/bls/news-release/empsit.htm
 2005-12-06,CAD,BoC,https://www.bankofcanada.ca/2004/07/bank-canada-releases-2005-schedule/
@@ -274,6 +297,7 @@ fecha,divisa,evento,fuente
 2006-01-12,EUR,BCE,https://www.ecb.europa.eu/press/press_conference/monetary-policy-statement/2006/html/index_include.en.html
 2006-01-12,GBP,BoE,https://www.bankofengland.co.uk/sitemap/minutes
 2006-01-20,JPY,BoJ,https://www.boj.or.jp/en/mopo/mpmsche_minu/minu_2006/index.htm
+2006-01-23,CAD,Elecciones,https://en.wikipedia.org/w/index.php?title=2006_Canadian_federal_election&action=raw
 2006-01-24,CAD,BoC,https://www.bankofcanada.ca/2005/08/bank-canada-releases-2006-schedule-dates/
 2006-01-26,NZD,RBNZ,https://www.rbnz.govt.nz/monetary-policy/monetary-policy-decisions
 2006-01-31,USD,Fed,https://www.federalreserve.gov/monetarypolicy/fomchistorical2006.htm
@@ -295,6 +319,7 @@ fecha,divisa,evento,fuente
 2006-04-06,EUR,BCE,https://www.ecb.europa.eu/press/press_conference/monetary-policy-statement/2006/html/index_include.en.html
 2006-04-06,GBP,BoE,https://www.bankofengland.co.uk/sitemap/minutes
 2006-04-07,USD,Empleo EE. UU.,https://www.bls.gov/bls/news-release/empsit.htm
+2006-04-10,EUR,Elecciones,https://en.wikipedia.org/w/index.php?title=2006_Italian_general_election&action=raw
 2006-04-11,JPY,BoJ,https://www.boj.or.jp/en/mopo/mpmsche_minu/minu_2006/index.htm
 2006-04-25,CAD,BoC,https://www.bankofcanada.ca/2005/08/bank-canada-releases-2006-schedule-dates/
 2006-04-27,NZD,RBNZ,https://www.rbnz.govt.nz/monetary-policy/monetary-policy-decisions
@@ -305,6 +330,7 @@ fecha,divisa,evento,fuente
 2006-05-05,USD,Empleo EE. UU.,https://www.bls.gov/bls/news-release/empsit.htm
 2006-05-10,USD,Fed,https://www.federalreserve.gov/monetarypolicy/fomchistorical2006.htm
 2006-05-19,JPY,BoJ,https://www.boj.or.jp/en/mopo/mpmsche_minu/minu_2006/index.htm
+2006-05-21,CHF,Votacion popular,https://en.wikipedia.org/w/index.php?title=List_of_Swiss_federal_referendums&action=raw
 2006-05-24,CAD,BoC,https://www.bankofcanada.ca/2005/08/bank-canada-releases-2006-schedule-dates/
 2006-06-02,USD,Empleo EE. UU.,https://www.bls.gov/bls/news-release/empsit.htm
 2006-06-07,AUD,RBA,https://www.rba.gov.au/monetary-policy/int-rate-decisions/(regla)
@@ -313,6 +339,7 @@ fecha,divisa,evento,fuente
 2006-06-08,NZD,RBNZ,https://www.rbnz.govt.nz/monetary-policy/monetary-policy-decisions
 2006-06-15,CHF,SNB,https://www.snb.ch/en/the-snb/mandates-goals/monetary-policy/decisions
 2006-06-15,JPY,BoJ,https://www.boj.or.jp/en/mopo/mpmsche_minu/minu_2006/index.htm
+2006-06-26,EUR,Elecciones,https://en.wikipedia.org/w/index.php?title=2006_Italian_constitutional_referendum&action=raw
 2006-06-29,USD,Fed,https://www.federalreserve.gov/monetarypolicy/fomchistorical2006.htm
 2006-07-05,AUD,RBA,https://www.rba.gov.au/monetary-policy/int-rate-decisions/(regla)
 2006-07-06,EUR,BCE,https://www.ecb.europa.eu/press/press_conference/monetary-policy-statement/2006/html/index_include.en.html
@@ -336,6 +363,7 @@ fecha,divisa,evento,fuente
 2006-09-14,CHF,SNB,https://www.snb.ch/en/the-snb/mandates-goals/monetary-policy/decisions
 2006-09-14,NZD,RBNZ,https://www.rbnz.govt.nz/monetary-policy/monetary-policy-decisions
 2006-09-20,USD,Fed,https://www.federalreserve.gov/monetarypolicy/fomchistorical2006.htm
+2006-09-24,CHF,Votacion popular,https://en.wikipedia.org/w/index.php?title=List_of_Swiss_federal_referendums&action=raw
 2006-10-04,AUD,RBA,https://www.rba.gov.au/monetary-policy/int-rate-decisions/(regla)
 2006-10-05,EUR,BCE,https://www.ecb.europa.eu/press/press_conference/monetary-policy-statement/2006/html/index_include.en.html
 2006-10-05,GBP,BoE,https://www.bankofengland.co.uk/sitemap/minutes
@@ -347,9 +375,11 @@ fecha,divisa,evento,fuente
 2006-10-31,JPY,BoJ,https://www.boj.or.jp/en/mopo/mpmsche_minu/minu_2006/index.htm
 2006-11-02,EUR,BCE,https://www.ecb.europa.eu/press/press_conference/monetary-policy-statement/2006/html/index_include.en.html
 2006-11-03,USD,Empleo EE. UU.,https://www.bls.gov/bls/news-release/empsit.htm
+2006-11-07,USD,Elecciones,https://en.wikipedia.org/w/index.php?title=2006_United_States_elections&action=raw
 2006-11-08,AUD,RBA,https://www.rba.gov.au/monetary-policy/int-rate-decisions/(regla)
 2006-11-09,GBP,BoE,https://www.bankofengland.co.uk/sitemap/minutes
 2006-11-16,JPY,BoJ,https://www.boj.or.jp/en/mopo/mpmsche_minu/minu_2006/index.htm
+2006-11-26,CHF,Votacion popular,https://en.wikipedia.org/w/index.php?title=List_of_Swiss_federal_referendums&action=raw
 2006-12-05,CAD,BoC,https://www.bankofcanada.ca/2005/08/bank-canada-releases-2006-schedule-dates/
 2006-12-06,AUD,RBA,https://www.rba.gov.au/monetary-policy/int-rate-decisions/(regla)
 2006-12-07,EUR,BCE,https://www.ecb.europa.eu/press/press_conference/monetary-policy-statement/2006/html/index_include.en.html
@@ -377,6 +407,7 @@ fecha,divisa,evento,fuente
 2007-03-08,GBP,BoE,https://www.bankofengland.co.uk/sitemap/minutes
 2007-03-08,NZD,RBNZ,https://www.rbnz.govt.nz/monetary-policy/monetary-policy-decisions
 2007-03-09,USD,Empleo EE. UU.,https://www.bls.gov/bls/news-release/empsit.htm
+2007-03-11,CHF,Votacion popular,https://en.wikipedia.org/w/index.php?title=List_of_Swiss_federal_referendums&action=raw
 2007-03-15,CHF,SNB,https://www.snb.ch/en/the-snb/mandates-goals/monetary-policy/decisions
 2007-03-20,JPY,BoJ,https://www.boj.or.jp/en/mopo/mpmsche_minu/minu_2007/index.htm
 2007-03-21,USD,Fed,https://www.federalreserve.gov/monetarypolicy/fomchistorical2007.htm
@@ -385,11 +416,13 @@ fecha,divisa,evento,fuente
 2007-04-06,USD,Empleo EE. UU.,https://www.bls.gov/bls/news-release/empsit.htm
 2007-04-10,JPY,BoJ,https://www.boj.or.jp/en/mopo/mpmsche_minu/minu_2007/index.htm
 2007-04-12,EUR,BCE,https://www.ecb.europa.eu/press/press_conference/monetary-policy-statement/2007/html/index_include.en.html
+2007-04-22,EUR,Elecciones,https://en.wikipedia.org/w/index.php?title=2007_French_presidential_election&action=raw
 2007-04-24,CAD,BoC,https://www.bankofcanada.ca/2006/07/bank-canada-releases-2007-schedule/
 2007-04-26,NZD,RBNZ,https://www.rbnz.govt.nz/monetary-policy/monetary-policy-decisions
 2007-04-27,JPY,BoJ,https://www.boj.or.jp/en/mopo/mpmsche_minu/minu_2007/index.htm
 2007-05-02,AUD,RBA,https://www.rba.gov.au/monetary-policy/int-rate-decisions/(regla)
 2007-05-04,USD,Empleo EE. UU.,https://www.bls.gov/bls/news-release/empsit.htm
+2007-05-06,EUR,Elecciones,https://en.wikipedia.org/w/index.php?title=2007_French_presidential_election&action=raw
 2007-05-09,USD,Fed,https://www.federalreserve.gov/monetarypolicy/fomchistorical2007.htm
 2007-05-10,EUR,BCE,https://www.ecb.europa.eu/press/press_conference/monetary-policy-statement/2007/html/index_include.en.html
 2007-05-10,GBP,BoE,https://www.bankofengland.co.uk/sitemap/minutes
@@ -400,8 +433,11 @@ fecha,divisa,evento,fuente
 2007-06-06,EUR,BCE,https://www.ecb.europa.eu/press/press_conference/monetary-policy-statement/2007/html/index_include.en.html
 2007-06-07,GBP,BoE,https://www.bankofengland.co.uk/sitemap/minutes
 2007-06-07,NZD,RBNZ,https://www.rbnz.govt.nz/monetary-policy/monetary-policy-decisions
+2007-06-10,EUR,Elecciones,https://en.wikipedia.org/w/index.php?title=2007_French_legislative_election&action=raw
 2007-06-14,CHF,SNB,https://www.snb.ch/en/the-snb/mandates-goals/monetary-policy/decisions
 2007-06-15,JPY,BoJ,https://www.boj.or.jp/en/mopo/mpmsche_minu/minu_2007/index.htm
+2007-06-17,CHF,Votacion popular,https://en.wikipedia.org/w/index.php?title=List_of_Swiss_federal_referendums&action=raw
+2007-06-17,EUR,Elecciones,https://en.wikipedia.org/w/index.php?title=2007_French_legislative_election&action=raw
 2007-06-28,USD,Fed,https://www.federalreserve.gov/monetarypolicy/fomchistorical2007.htm
 2007-07-04,AUD,RBA,https://www.rba.gov.au/monetary-policy/int-rate-decisions/(regla)
 2007-07-05,EUR,BCE,https://www.ecb.europa.eu/press/press_conference/monetary-policy-statement/2007/html/index_include.en.html
@@ -410,6 +446,7 @@ fecha,divisa,evento,fuente
 2007-07-10,CAD,BoC,https://www.bankofcanada.ca/2006/07/bank-canada-releases-2007-schedule/
 2007-07-12,JPY,BoJ,https://www.boj.or.jp/en/mopo/mpmsche_minu/minu_2007/index.htm
 2007-07-26,NZD,RBNZ,https://www.rbnz.govt.nz/monetary-policy/monetary-policy-decisions
+2007-07-29,JPY,Elecciones,https://en.wikipedia.org/w/index.php?title=2007_Japanese_House_of_Councillors_election&action=raw
 2007-08-02,EUR,BCE,https://www.ecb.europa.eu/press/press_conference/monetary-policy-statement/2007/html/index_include.en.html
 2007-08-02,GBP,BoE,https://www.bankofengland.co.uk/sitemap/minutes
 2007-08-03,USD,Empleo EE. UU.,https://www.bls.gov/bls/news-release/empsit.htm
@@ -431,6 +468,7 @@ fecha,divisa,evento,fuente
 2007-10-05,USD,Empleo EE. UU.,https://www.bls.gov/bls/news-release/empsit.htm
 2007-10-11,JPY,BoJ,https://www.boj.or.jp/en/mopo/mpmsche_minu/minu_2007/index.htm
 2007-10-16,CAD,BoC,https://www.bankofcanada.ca/2006/07/bank-canada-releases-2007-schedule/
+2007-10-21,CHF,Elecciones,https://en.wikipedia.org/w/index.php?title=2007_Swiss_federal_election&action=raw
 2007-10-25,NZD,RBNZ,https://www.rbnz.govt.nz/monetary-policy/monetary-policy-decisions
 2007-10-31,JPY,BoJ,https://www.boj.or.jp/en/mopo/mpmsche_minu/minu_2007/index.htm
 2007-10-31,USD,Fed,https://www.federalreserve.gov/monetarypolicy/fomchistorical2007.htm
@@ -439,6 +477,7 @@ fecha,divisa,evento,fuente
 2007-11-08,EUR,BCE,https://www.ecb.europa.eu/press/press_conference/monetary-policy-statement/2007/html/index_include.en.html
 2007-11-08,GBP,BoE,https://www.bankofengland.co.uk/sitemap/minutes
 2007-11-13,JPY,BoJ,https://www.boj.or.jp/en/mopo/mpmsche_minu/minu_2007/index.htm
+2007-11-24,AUD,Elecciones,https://en.wikipedia.org/w/index.php?title=2007_Australian_federal_election&action=raw
 2007-12-04,CAD,BoC,https://www.bankofcanada.ca/2006/07/bank-canada-releases-2007-schedule/
 2007-12-05,AUD,RBA,https://www.rba.gov.au/monetary-policy/int-rate-decisions/2007/
 2007-12-06,EUR,BCE,https://www.ecb.europa.eu/press/press_conference/monetary-policy-statement/2007/html/index_include.en.html
@@ -460,6 +499,7 @@ fecha,divisa,evento,fuente
 2008-02-07,EUR,BCE,https://www.ecb.europa.eu/press/press_conference/monetary-policy-statement/2008/html/index_include.en.html
 2008-02-07,GBP,BoE,https://www.bankofengland.co.uk/sitemap/minutes
 2008-02-15,JPY,BoJ,https://www.boj.or.jp/en/mopo/mpmsche_minu/minu_2008/index.htm
+2008-02-24,CHF,Votacion popular,https://en.wikipedia.org/w/index.php?title=List_of_Swiss_federal_referendums&action=raw
 2008-03-04,AUD,RBA,https://www.rba.gov.au/monetary-policy/int-rate-decisions/2008/
 2008-03-04,CAD,BoC,https://www.bankofcanada.ca/2007/07/bank-canada-releases-2008-schedule-dates/
 2008-03-06,EUR,BCE,https://www.ecb.europa.eu/press/press_conference/monetary-policy-statement/2008/html/index_include.en.html
@@ -467,6 +507,7 @@ fecha,divisa,evento,fuente
 2008-03-06,NZD,RBNZ,https://www.rbnz.govt.nz/monetary-policy/monetary-policy-decisions
 2008-03-07,JPY,BoJ,https://www.boj.or.jp/en/mopo/mpmsche_minu/minu_2008/index.htm
 2008-03-07,USD,Empleo EE. UU.,https://www.bls.gov/bls/news-release/empsit.htm
+2008-03-09,EUR,Elecciones,https://en.wikipedia.org/w/index.php?title=2008_Spanish_general_election&action=raw
 2008-03-13,CHF,SNB,https://www.snb.ch/en/the-snb/mandates-goals/monetary-policy/decisions
 2008-03-18,USD,Fed,https://www.federalreserve.gov/monetarypolicy/fomchistorical2008.htm
 2008-04-01,AUD,RBA,https://www.rba.gov.au/monetary-policy/int-rate-decisions/2008/
@@ -474,6 +515,7 @@ fecha,divisa,evento,fuente
 2008-04-09,JPY,BoJ,https://www.boj.or.jp/en/mopo/mpmsche_minu/minu_2008/index.htm
 2008-04-10,EUR,BCE,https://www.ecb.europa.eu/press/press_conference/monetary-policy-statement/2008/html/index_include.en.html
 2008-04-10,GBP,BoE,https://www.bankofengland.co.uk/sitemap/minutes
+2008-04-14,EUR,Elecciones,https://en.wikipedia.org/w/index.php?title=2008_Italian_general_election&action=raw
 2008-04-22,CAD,BoC,https://www.bankofcanada.ca/2007/07/bank-canada-releases-2008-schedule-dates/
 2008-04-24,NZD,RBNZ,https://www.rbnz.govt.nz/monetary-policy/monetary-policy-decisions
 2008-04-30,JPY,BoJ,https://www.boj.or.jp/en/mopo/mpmsche_minu/minu_2008/index.htm
@@ -483,6 +525,7 @@ fecha,divisa,evento,fuente
 2008-05-08,EUR,BCE,https://www.ecb.europa.eu/press/press_conference/monetary-policy-statement/2008/html/index_include.en.html
 2008-05-08,GBP,BoE,https://www.bankofengland.co.uk/sitemap/minutes
 2008-05-20,JPY,BoJ,https://www.boj.or.jp/en/mopo/mpmsche_minu/minu_2008/index.htm
+2008-06-01,CHF,Votacion popular,https://en.wikipedia.org/w/index.php?title=List_of_Swiss_federal_referendums&action=raw
 2008-06-03,AUD,RBA,https://www.rba.gov.au/monetary-policy/int-rate-decisions/2008/
 2008-06-05,EUR,BCE,https://www.ecb.europa.eu/press/press_conference/monetary-policy-statement/2008/html/index_include.en.html
 2008-06-05,GBP,BoE,https://www.bankofengland.co.uk/sitemap/minutes
@@ -518,15 +561,19 @@ fecha,divisa,evento,fuente
 2008-10-03,USD,Empleo EE. UU.,https://www.bls.gov/bls/news-release/empsit.htm
 2008-10-07,AUD,RBA,https://www.rba.gov.au/monetary-policy/int-rate-decisions/2008/
 2008-10-07,JPY,BoJ,https://www.boj.or.jp/en/mopo/mpmsche_minu/minu_2008/index.htm
+2008-10-14,CAD,Elecciones,https://en.wikipedia.org/w/index.php?title=2008_Canadian_federal_election&action=raw
 2008-10-21,CAD,BoC,https://www.bankofcanada.ca/2007/07/bank-canada-releases-2008-schedule-dates/
 2008-10-23,NZD,RBNZ,https://www.rbnz.govt.nz/monetary-policy/monetary-policy-decisions
 2008-10-29,USD,Fed,https://www.federalreserve.gov/monetarypolicy/fomchistorical2008.htm
 2008-10-31,JPY,BoJ,https://www.boj.or.jp/en/mopo/mpmsche_minu/minu_2008/index.htm
 2008-11-04,AUD,RBA,https://www.rba.gov.au/monetary-policy/int-rate-decisions/2008/
+2008-11-04,USD,Elecciones,https://en.wikipedia.org/w/index.php?title=2008_United_States_presidential_election&action=raw
 2008-11-06,EUR,BCE,https://www.ecb.europa.eu/press/press_conference/monetary-policy-statement/2008/html/index_include.en.html
 2008-11-06,GBP,BoE,https://www.bankofengland.co.uk/sitemap/minutes
 2008-11-07,USD,Empleo EE. UU.,https://www.bls.gov/bls/news-release/empsit.htm
+2008-11-08,NZD,Elecciones,https://en.wikipedia.org/w/index.php?title=2008_New_Zealand_general_election&action=raw
 2008-11-21,JPY,BoJ,https://www.boj.or.jp/en/mopo/mpmsche_minu/minu_2008/index.htm
+2008-11-30,CHF,Votacion popular,https://en.wikipedia.org/w/index.php?title=List_of_Swiss_federal_referendums&action=raw
 2008-12-02,AUD,RBA,https://www.rba.gov.au/monetary-policy/int-rate-decisions/2008/
 2008-12-04,EUR,BCE,https://www.ecb.europa.eu/press/press_conference/monetary-policy-statement/2008/html/index_include.en.html
 2008-12-04,GBP,BoE,https://www.bankofengland.co.uk/sitemap/minutes
@@ -547,6 +594,7 @@ fecha,divisa,evento,fuente
 2009-02-05,EUR,BCE,https://www.ecb.europa.eu/press/press_conference/monetary-policy-statement/2009/html/index_include.en.html
 2009-02-05,GBP,BoE,https://www.bankofengland.co.uk/sitemap/minutes
 2009-02-06,USD,Empleo EE. UU.,https://www.bls.gov/bls/news-release/empsit.htm
+2009-02-08,CHF,Votacion popular,https://en.wikipedia.org/w/index.php?title=List_of_Swiss_federal_referendums&action=raw
 2009-02-19,JPY,BoJ,https://www.boj.or.jp/en/mopo/mpmsche_minu/minu_2009/index.htm
 2009-03-03,AUD,RBA,https://www.rba.gov.au/monetary-policy/int-rate-decisions/2009/
 2009-03-03,CAD,BoC,https://www.bankofcanada.ca/2008/07/bank-canada-releases-2009-schedule/
@@ -570,6 +618,7 @@ fecha,divisa,evento,fuente
 2009-05-07,EUR,BCE,https://www.ecb.europa.eu/press/press_conference/monetary-policy-statement/2009/html/index_include.en.html
 2009-05-07,GBP,BoE,https://www.bankofengland.co.uk/sitemap/minutes
 2009-05-08,USD,Empleo EE. UU.,https://www.bls.gov/bls/news-release/empsit.htm
+2009-05-17,CHF,Votacion popular,https://en.wikipedia.org/w/index.php?title=List_of_Swiss_federal_referendums&action=raw
 2009-05-22,JPY,BoJ,https://www.boj.or.jp/en/mopo/mpmsche_minu/minu_2009/index.htm
 2009-06-02,AUD,RBA,https://www.rba.gov.au/monetary-policy/int-rate-decisions/2009/
 2009-06-04,CAD,BoC,https://www.bankofcanada.ca/2008/07/bank-canada-releases-2009-schedule/
@@ -579,6 +628,7 @@ fecha,divisa,evento,fuente
 2009-06-11,NZD,RBNZ,https://www.rbnz.govt.nz/monetary-policy/monetary-policy-decisions
 2009-06-16,JPY,BoJ,https://www.boj.or.jp/en/mopo/mpmsche_minu/minu_2009/index.htm
 2009-06-18,CHF,SNB,https://www.snb.ch/en/the-snb/mandates-goals/monetary-policy/decisions
+2009-06-22,EUR,Elecciones,https://en.wikipedia.org/w/index.php?title=2009_Italian_electoral_law_referendum&action=raw
 2009-06-24,USD,Fed,https://www.federalreserve.gov/monetarypolicy/fomchistorical2009.htm
 2009-07-02,EUR,BCE,https://www.ecb.europa.eu/press/press_conference/monetary-policy-statement/2009/html/index_include.en.html
 2009-07-02,USD,Empleo EE. UU.,https://www.bls.gov/bls/news-release/empsit.htm
@@ -593,6 +643,7 @@ fecha,divisa,evento,fuente
 2009-08-07,USD,Empleo EE. UU.,https://www.bls.gov/bls/news-release/empsit.htm
 2009-08-11,JPY,BoJ,https://www.boj.or.jp/en/mopo/mpmsche_minu/minu_2009/index.htm
 2009-08-12,USD,Fed,https://www.federalreserve.gov/monetarypolicy/fomchistorical2009.htm
+2009-08-30,JPY,Elecciones,https://en.wikipedia.org/w/index.php?title=2009_Japanese_general_election&action=raw
 2009-09-01,AUD,RBA,https://www.rba.gov.au/monetary-policy/int-rate-decisions/2009/
 2009-09-03,EUR,BCE,https://www.ecb.europa.eu/press/press_conference/monetary-policy-statement/2009/html/index_include.en.html
 2009-09-04,USD,Empleo EE. UU.,https://www.bls.gov/bls/news-release/empsit.htm
@@ -602,6 +653,8 @@ fecha,divisa,evento,fuente
 2009-09-17,CHF,SNB,https://www.snb.ch/en/the-snb/mandates-goals/monetary-policy/decisions
 2009-09-17,JPY,BoJ,https://www.boj.or.jp/en/mopo/mpmsche_minu/minu_2009/index.htm
 2009-09-23,USD,Fed,https://www.federalreserve.gov/monetarypolicy/fomchistorical2009.htm
+2009-09-27,CHF,Votacion popular,https://en.wikipedia.org/w/index.php?title=List_of_Swiss_federal_referendums&action=raw
+2009-09-27,EUR,Elecciones,https://en.wikipedia.org/w/index.php?title=2009_German_federal_election&action=raw
 2009-10-02,USD,Empleo EE. UU.,https://www.bls.gov/bls/news-release/empsit.htm
 2009-10-06,AUD,RBA,https://www.rba.gov.au/monetary-policy/int-rate-decisions/2009/
 2009-10-08,EUR,BCE,https://www.ecb.europa.eu/press/press_conference/monetary-policy-statement/2009/html/index_include.en.html
@@ -616,6 +669,7 @@ fecha,divisa,evento,fuente
 2009-11-05,GBP,BoE,https://www.bankofengland.co.uk/sitemap/minutes
 2009-11-06,USD,Empleo EE. UU.,https://www.bls.gov/bls/news-release/empsit.htm
 2009-11-20,JPY,BoJ,https://www.boj.or.jp/en/mopo/mpmsche_minu/minu_2009/index.htm
+2009-11-29,CHF,Votacion popular,https://en.wikipedia.org/w/index.php?title=List_of_Swiss_federal_referendums&action=raw
 2009-12-01,AUD,RBA,https://www.rba.gov.au/monetary-policy/int-rate-decisions/2009/
 2009-12-03,EUR,BCE,https://www.ecb.europa.eu/press/press_conference/monetary-policy-statement/2009/html/index_include.en.html
 2009-12-04,USD,Empleo EE. UU.,https://www.bls.gov/bls/news-release/empsit.htm
@@ -642,6 +696,7 @@ fecha,divisa,evento,fuente
 2010-03-04,EUR,BCE,https://www.ecb.europa.eu/press/press_conference/monetary-policy-statement/2010/html/index_include.en.html
 2010-03-04,GBP,BoE,https://www.bankofengland.co.uk/sitemap/minutes
 2010-03-05,USD,Empleo EE. UU.,https://www.bls.gov/bls/news-release/empsit.htm
+2010-03-07,CHF,Votacion popular,https://en.wikipedia.org/w/index.php?title=List_of_Swiss_federal_referendums&action=raw
 2010-03-11,CHF,SNB,https://www.snb.ch/en/the-snb/mandates-goals/monetary-policy/decisions
 2010-03-11,NZD,RBNZ,https://www.rbnz.govt.nz/monetary-policy/monetary-policy-decisions
 2010-03-16,USD,Fed,https://www.federalreserve.gov/monetarypolicy/fomchistorical2010.htm
@@ -657,6 +712,7 @@ fecha,divisa,evento,fuente
 2010-04-30,JPY,BoJ,https://www.boj.or.jp/en/mopo/mpmsche_minu/minu_2010/index.htm
 2010-05-04,AUD,RBA,https://www.rba.gov.au/monetary-policy/int-rate-decisions/2010/
 2010-05-06,EUR,BCE,https://www.ecb.europa.eu/press/press_conference/monetary-policy-statement/2010/html/index_include.en.html
+2010-05-06,GBP,Elecciones,https://en.wikipedia.org/w/index.php?title=2010_United_Kingdom_general_election&action=raw
 2010-05-07,USD,Empleo EE. UU.,https://www.bls.gov/bls/news-release/empsit.htm
 2010-05-10,GBP,BoE,https://www.bankofengland.co.uk/sitemap/minutes
 2010-05-21,JPY,BoJ,https://www.boj.or.jp/en/mopo/mpmsche_minu/minu_2010/index.htm
@@ -673,6 +729,7 @@ fecha,divisa,evento,fuente
 2010-07-06,AUD,RBA,https://www.rba.gov.au/monetary-policy/int-rate-decisions/2010/
 2010-07-08,EUR,BCE,https://www.ecb.europa.eu/press/press_conference/monetary-policy-statement/2010/html/index_include.en.html
 2010-07-08,GBP,BoE,https://www.bankofengland.co.uk/sitemap/minutes
+2010-07-11,JPY,Elecciones,https://en.wikipedia.org/w/index.php?title=2010_Japanese_House_of_Councillors_election&action=raw
 2010-07-15,JPY,BoJ,https://www.boj.or.jp/en/mopo/mpmsche_minu/minu_2010/index.htm
 2010-07-20,CAD,BoC,https://www.bankofcanada.ca/2009/07/bank-canada-releases-2010-schedule-dates/
 2010-07-29,NZD,RBNZ,https://www.rbnz.govt.nz/monetary-policy/monetary-policy-decisions
@@ -682,6 +739,7 @@ fecha,divisa,evento,fuente
 2010-08-06,USD,Empleo EE. UU.,https://www.bls.gov/bls/news-release/empsit.htm
 2010-08-10,JPY,BoJ,https://www.boj.or.jp/en/mopo/mpmsche_minu/minu_2010/index.htm
 2010-08-10,USD,Fed,https://www.federalreserve.gov/monetarypolicy/fomchistorical2010.htm
+2010-08-21,AUD,Elecciones,https://en.wikipedia.org/w/index.php?title=2010_Australian_federal_election&action=raw
 2010-09-02,EUR,BCE,https://www.ecb.europa.eu/press/press_conference/monetary-policy-statement/2010/html/index_include.en.html
 2010-09-03,USD,Empleo EE. UU.,https://www.bls.gov/bls/news-release/empsit.htm
 2010-09-07,AUD,RBA,https://www.rba.gov.au/monetary-policy/int-rate-decisions/2010/
@@ -691,6 +749,7 @@ fecha,divisa,evento,fuente
 2010-09-16,CHF,SNB,https://www.snb.ch/en/the-snb/mandates-goals/monetary-policy/decisions
 2010-09-16,NZD,RBNZ,https://www.rbnz.govt.nz/monetary-policy/monetary-policy-decisions
 2010-09-21,USD,Fed,https://www.federalreserve.gov/monetarypolicy/fomchistorical2010.htm
+2010-09-26,CHF,Votacion popular,https://en.wikipedia.org/w/index.php?title=List_of_Swiss_federal_referendums&action=raw
 2010-10-05,AUD,RBA,https://www.rba.gov.au/monetary-policy/int-rate-decisions/2010/
 2010-10-05,JPY,BoJ,https://www.boj.or.jp/en/mopo/mpmsche_minu/minu_2010/index.htm
 2010-10-07,EUR,BCE,https://www.ecb.europa.eu/press/press_conference/monetary-policy-statement/2010/html/index_include.en.html
@@ -700,11 +759,13 @@ fecha,divisa,evento,fuente
 2010-10-28,JPY,BoJ,https://www.boj.or.jp/en/mopo/mpmsche_minu/minu_2010/index.htm
 2010-10-28,NZD,RBNZ,https://www.rbnz.govt.nz/monetary-policy/monetary-policy-decisions
 2010-11-02,AUD,RBA,https://www.rba.gov.au/monetary-policy/int-rate-decisions/2010/
+2010-11-02,USD,Elecciones,https://en.wikipedia.org/w/index.php?title=2010_United_States_elections&action=raw
 2010-11-03,USD,Fed,https://www.federalreserve.gov/monetarypolicy/fomchistorical2010.htm
 2010-11-04,EUR,BCE,https://www.ecb.europa.eu/press/press_conference/monetary-policy-statement/2010/html/index_include.en.html
 2010-11-04,GBP,BoE,https://www.bankofengland.co.uk/sitemap/minutes
 2010-11-05,JPY,BoJ,https://www.boj.or.jp/en/mopo/mpmsche_minu/minu_2010/index.htm
 2010-11-05,USD,Empleo EE. UU.,https://www.bls.gov/bls/news-release/empsit.htm
+2010-11-28,CHF,Votacion popular,https://en.wikipedia.org/w/index.php?title=List_of_Swiss_federal_referendums&action=raw
 2010-12-02,EUR,BCE,https://www.ecb.europa.eu/press/press_conference/monetary-policy-statement/2010/html/index_include.en.html
 2010-12-03,USD,Empleo EE. UU.,https://www.bls.gov/bls/news-release/empsit.htm
 2010-12-07,AUD,RBA,https://www.rba.gov.au/monetary-policy/int-rate-decisions/2010/
@@ -725,6 +786,7 @@ fecha,divisa,evento,fuente
 2011-02-03,EUR,BCE,https://www.ecb.europa.eu/press/press_conference/monetary-policy-statement/2011/html/index_include.en.html
 2011-02-04,USD,Empleo EE. UU.,https://www.bls.gov/bls/news-release/empsit.htm
 2011-02-10,GBP,BoE,https://www.bankofengland.co.uk/sitemap/minutes
+2011-02-13,CHF,Votacion popular,https://en.wikipedia.org/w/index.php?title=List_of_Swiss_federal_referendums&action=raw
 2011-02-15,JPY,BoJ,https://www.boj.or.jp/en/mopo/mpmsche_minu/minu_2011/index.htm
 2011-03-01,AUD,RBA,https://www.rba.gov.au/monetary-policy/int-rate-decisions/2011/
 2011-03-01,CAD,BoC,https://www.bankofcanada.ca/2010/07/bank-canada-releases-2011-schedule-dates/
@@ -744,9 +806,11 @@ fecha,divisa,evento,fuente
 2011-04-27,USD,Fed,https://www.federalreserve.gov/monetarypolicy/fomchistorical2011.htm
 2011-04-28,JPY,BoJ,https://www.boj.or.jp/en/mopo/mpmsche_minu/minu_2011/index.htm
 2011-04-28,NZD,RBNZ,https://www.rbnz.govt.nz/monetary-policy/monetary-policy-decisions
+2011-05-02,CAD,Elecciones,https://en.wikipedia.org/w/index.php?title=2011_Canadian_federal_election&action=raw
 2011-05-03,AUD,RBA,https://www.rba.gov.au/monetary-policy/int-rate-decisions/2011/
 2011-05-05,EUR,BCE,https://www.ecb.europa.eu/press/press_conference/monetary-policy-statement/2011/html/index_include.en.html
 2011-05-05,GBP,BoE,https://www.bankofengland.co.uk/sitemap/minutes
+2011-05-05,GBP,Elecciones,https://en.wikipedia.org/w/index.php?title=2011_United_Kingdom_Alternative_Vote_referendum&action=raw
 2011-05-06,USD,Empleo EE. UU.,https://www.bls.gov/bls/news-release/empsit.htm
 2011-05-20,JPY,BoJ,https://www.boj.or.jp/en/mopo/mpmsche_minu/minu_2011/index.htm
 2011-05-31,CAD,BoC,https://www.bankofcanada.ca/2010/07/bank-canada-releases-2011-schedule-dates/
@@ -755,6 +819,8 @@ fecha,divisa,evento,fuente
 2011-06-09,EUR,BCE,https://www.ecb.europa.eu/press/press_conference/monetary-policy-statement/2011/html/index_include.en.html
 2011-06-09,GBP,BoE,https://www.bankofengland.co.uk/sitemap/minutes
 2011-06-09,NZD,RBNZ,https://www.rbnz.govt.nz/monetary-policy/monetary-policy-decisions
+2011-06-12,EUR,Elecciones,https://en.wikipedia.org/w/index.php?title=2011_Italian_referendums&action=raw
+2011-06-13,EUR,Elecciones,https://en.wikipedia.org/w/index.php?title=2011_Italian_referendums&action=raw
 2011-06-14,JPY,BoJ,https://www.boj.or.jp/en/mopo/mpmsche_minu/minu_2011/index.htm
 2011-06-16,CHF,SNB,https://www.snb.ch/en/the-snb/mandates-goals/monetary-policy/decisions
 2011-06-22,USD,Fed,https://www.federalreserve.gov/monetarypolicy/fomchistorical2011.htm
@@ -785,6 +851,7 @@ fecha,divisa,evento,fuente
 2011-10-06,GBP,BoE,https://www.bankofengland.co.uk/sitemap/minutes
 2011-10-07,JPY,BoJ,https://www.boj.or.jp/en/mopo/mpmsche_minu/minu_2011/index.htm
 2011-10-07,USD,Empleo EE. UU.,https://www.bls.gov/bls/news-release/empsit.htm
+2011-10-23,CHF,Elecciones,https://en.wikipedia.org/w/index.php?title=2011_Swiss_federal_election&action=raw
 2011-10-25,CAD,BoC,https://www.bankofcanada.ca/2010/07/bank-canada-releases-2011-schedule-dates/
 2011-10-27,JPY,BoJ,https://www.boj.or.jp/en/mopo/mpmsche_minu/minu_2011/index.htm
 2011-10-27,NZD,RBNZ,https://www.rbnz.govt.nz/monetary-policy/monetary-policy-decisions
@@ -794,6 +861,8 @@ fecha,divisa,evento,fuente
 2011-11-04,USD,Empleo EE. UU.,https://www.bls.gov/bls/news-release/empsit.htm
 2011-11-10,GBP,BoE,https://www.bankofengland.co.uk/sitemap/minutes
 2011-11-16,JPY,BoJ,https://www.boj.or.jp/en/mopo/mpmsche_minu/minu_2011/index.htm
+2011-11-20,EUR,Elecciones,https://en.wikipedia.org/w/index.php?title=2011_Spanish_general_election&action=raw
+2011-11-26,NZD,Elecciones,https://en.wikipedia.org/w/index.php?title=2011_New_Zealand_general_election&action=raw
 2011-11-30,JPY,BoJ,https://www.boj.or.jp/en/mopo/mpmsche_minu/minu_2011/index.htm
 2011-12-02,USD,Empleo EE. UU.,https://www.bls.gov/bls/news-release/empsit.htm
 2011-12-06,AUD,RBA,https://www.rba.gov.au/monetary-policy/int-rate-decisions/2011/
@@ -822,6 +891,7 @@ fecha,divisa,evento,fuente
 2012-03-08,GBP,BoE,https://www.bankofengland.co.uk/sitemap/minutes
 2012-03-08,NZD,RBNZ,https://www.rbnz.govt.nz/monetary-policy/monetary-policy-decisions
 2012-03-09,USD,Empleo EE. UU.,https://www.bls.gov/bls/news-release/empsit.htm
+2012-03-11,CHF,Votacion popular,https://en.wikipedia.org/w/index.php?title=List_of_Swiss_federal_referendums&action=raw
 2012-03-13,JPY,BoJ,https://www.boj.or.jp/en/mopo/mpmsche_minu/minu_2012/index.htm
 2012-03-13,USD,Fed,https://www.federalreserve.gov/monetarypolicy/fomchistorical2012.htm
 2012-03-15,CHF,SNB,https://www.snb.ch/en/the-snb/mandates-goals/monetary-policy/decisions
@@ -831,12 +901,14 @@ fecha,divisa,evento,fuente
 2012-04-06,USD,Empleo EE. UU.,https://www.bls.gov/bls/news-release/empsit.htm
 2012-04-10,JPY,BoJ,https://www.boj.or.jp/en/mopo/mpmsche_minu/minu_2012/index.htm
 2012-04-17,CAD,BoC,https://www.bankofcanada.ca/2011/07/bank-canada-2012-schedule-fad-mpr/
+2012-04-22,EUR,Elecciones,https://en.wikipedia.org/w/index.php?title=2012_French_presidential_election&action=raw
 2012-04-25,USD,Fed,https://www.federalreserve.gov/monetarypolicy/fomchistorical2012.htm
 2012-04-26,NZD,RBNZ,https://www.rbnz.govt.nz/monetary-policy/monetary-policy-decisions
 2012-04-27,JPY,BoJ,https://www.boj.or.jp/en/mopo/mpmsche_minu/minu_2012/index.htm
 2012-05-01,AUD,RBA,https://www.rba.gov.au/monetary-policy/int-rate-decisions/2012/
 2012-05-03,EUR,BCE,https://www.ecb.europa.eu/press/press_conference/monetary-policy-statement/2012/html/index_include.en.html
 2012-05-04,USD,Empleo EE. UU.,https://www.bls.gov/bls/news-release/empsit.htm
+2012-05-06,EUR,Elecciones,https://en.wikipedia.org/w/index.php?title=2012_French_presidential_election&action=raw
 2012-05-10,GBP,BoE,https://www.bankofengland.co.uk/sitemap/minutes
 2012-05-23,JPY,BoJ,https://www.boj.or.jp/en/mopo/mpmsche_minu/minu_2012/index.htm
 2012-06-01,USD,Empleo EE. UU.,https://www.bls.gov/bls/news-release/empsit.htm
@@ -844,9 +916,12 @@ fecha,divisa,evento,fuente
 2012-06-05,CAD,BoC,https://www.bankofcanada.ca/2011/07/bank-canada-2012-schedule-fad-mpr/
 2012-06-06,EUR,BCE,https://www.ecb.europa.eu/press/press_conference/monetary-policy-statement/2012/html/index_include.en.html
 2012-06-07,GBP,BoE,https://www.bankofengland.co.uk/sitemap/minutes
+2012-06-10,EUR,Elecciones,https://en.wikipedia.org/w/index.php?title=2012_French_legislative_election&action=raw
 2012-06-14,CHF,SNB,https://www.snb.ch/en/the-snb/mandates-goals/monetary-policy/decisions
 2012-06-14,NZD,RBNZ,https://www.rbnz.govt.nz/monetary-policy/monetary-policy-decisions
 2012-06-15,JPY,BoJ,https://www.boj.or.jp/en/mopo/mpmsche_minu/minu_2012/index.htm
+2012-06-17,CHF,Votacion popular,https://en.wikipedia.org/w/index.php?title=List_of_Swiss_federal_referendums&action=raw
+2012-06-17,EUR,Elecciones,https://en.wikipedia.org/w/index.php?title=2012_French_legislative_election&action=raw
 2012-06-20,USD,Fed,https://www.federalreserve.gov/monetarypolicy/fomchistorical2012.htm
 2012-07-03,AUD,RBA,https://www.rba.gov.au/monetary-policy/int-rate-decisions/2012/
 2012-07-05,EUR,BCE,https://www.ecb.europa.eu/press/press_conference/monetary-policy-statement/2012/html/index_include.en.html
@@ -870,6 +945,7 @@ fecha,divisa,evento,fuente
 2012-09-13,NZD,RBNZ,https://www.rbnz.govt.nz/monetary-policy/monetary-policy-decisions
 2012-09-13,USD,Fed,https://www.federalreserve.gov/monetarypolicy/fomchistorical2012.htm
 2012-09-19,JPY,BoJ,https://www.boj.or.jp/en/mopo/mpmsche_minu/minu_2012/index.htm
+2012-09-23,CHF,Votacion popular,https://en.wikipedia.org/w/index.php?title=List_of_Swiss_federal_referendums&action=raw
 2012-10-02,AUD,RBA,https://www.rba.gov.au/monetary-policy/int-rate-decisions/2012/
 2012-10-04,EUR,BCE,https://www.ecb.europa.eu/press/press_conference/monetary-policy-statement/2012/html/index_include.en.html
 2012-10-04,GBP,BoE,https://www.bankofengland.co.uk/sitemap/minutes
@@ -881,9 +957,11 @@ fecha,divisa,evento,fuente
 2012-10-30,JPY,BoJ,https://www.boj.or.jp/en/mopo/mpmsche_minu/minu_2012/index.htm
 2012-11-02,USD,Empleo EE. UU.,https://www.bls.gov/bls/news-release/empsit.htm
 2012-11-06,AUD,RBA,https://www.rba.gov.au/monetary-policy/int-rate-decisions/2012/
+2012-11-06,USD,Elecciones,https://en.wikipedia.org/w/index.php?title=2012_United_States_presidential_election&action=raw
 2012-11-08,EUR,BCE,https://www.ecb.europa.eu/press/press_conference/monetary-policy-statement/2012/html/index_include.en.html
 2012-11-08,GBP,BoE,https://www.bankofengland.co.uk/sitemap/minutes
 2012-11-20,JPY,BoJ,https://www.boj.or.jp/en/mopo/mpmsche_minu/minu_2012/index.htm
+2012-11-25,CHF,Votacion popular,https://en.wikipedia.org/w/index.php?title=List_of_Swiss_federal_referendums&action=raw
 2012-12-04,AUD,RBA,https://www.rba.gov.au/monetary-policy/int-rate-decisions/2012/
 2012-12-04,CAD,BoC,https://www.bankofcanada.ca/2011/07/bank-canada-2012-schedule-fad-mpr/
 2012-12-06,EUR,BCE,https://www.ecb.europa.eu/press/press_conference/monetary-policy-statement/2012/html/index_include.en.html
@@ -892,6 +970,7 @@ fecha,divisa,evento,fuente
 2012-12-07,USD,Empleo EE. UU.,https://www.bls.gov/bls/news-release/empsit.htm
 2012-12-12,USD,Fed,https://www.federalreserve.gov/monetarypolicy/fomchistorical2012.htm
 2012-12-13,CHF,SNB,https://www.snb.ch/en/the-snb/mandates-goals/monetary-policy/decisions
+2012-12-16,JPY,Elecciones,https://en.wikipedia.org/w/index.php?title=2012_Japanese_general_election&action=raw
 2012-12-20,JPY,BoJ,https://www.boj.or.jp/en/mopo/mpmsche_minu/minu_2012/index.htm
 2013-01-04,USD,Empleo EE. UU.,https://www.bls.gov/bls/news-release/empsit.htm
 2013-01-10,EUR,BCE,https://www.ecb.europa.eu/press/press_conference/monetary-policy-statement/2013/html/index_include.en.html
@@ -905,6 +984,8 @@ fecha,divisa,evento,fuente
 2013-02-07,EUR,BCE,https://www.ecb.europa.eu/press/press_conference/monetary-policy-statement/2013/html/index_include.en.html
 2013-02-07,GBP,BoE,https://www.bankofengland.co.uk/sitemap/minutes
 2013-02-14,JPY,BoJ,https://www.boj.or.jp/en/mopo/mpmsche_minu/minu_2013/index.htm
+2013-02-25,EUR,Elecciones,https://en.wikipedia.org/w/index.php?title=2013_Italian_general_election&action=raw
+2013-03-03,CHF,Votacion popular,https://en.wikipedia.org/w/index.php?title=List_of_Swiss_federal_referendums&action=raw
 2013-03-05,AUD,RBA,https://www.rba.gov.au/monetary-policy/int-rate-decisions/2013/
 2013-03-06,CAD,BoC,https://www.bankofcanada.ca/2012/08/2013-schedule-policy-interest-rate-announcements-monetary-policy-report/
 2013-03-07,EUR,BCE,https://www.ecb.europa.eu/press/press_conference/monetary-policy-statement/2013/html/index_include.en.html
@@ -933,6 +1014,7 @@ fecha,divisa,evento,fuente
 2013-06-06,EUR,BCE,https://www.ecb.europa.eu/press/press_conference/monetary-policy-statement/2013/html/index_include.en.html
 2013-06-06,GBP,BoE,https://www.bankofengland.co.uk/sitemap/minutes
 2013-06-07,USD,Empleo EE. UU.,https://www.bls.gov/bls/news-release/empsit.htm
+2013-06-09,CHF,Votacion popular,https://en.wikipedia.org/w/index.php?title=List_of_Swiss_federal_referendums&action=raw
 2013-06-11,JPY,BoJ,https://www.boj.or.jp/en/mopo/mpmsche_minu/minu_2013/index.htm
 2013-06-13,NZD,RBNZ,https://www.rbnz.govt.nz/monetary-policy/monetary-policy-decisions
 2013-06-19,USD,Fed,https://www.federalreserve.gov/monetarypolicy/fomchistorical2013.htm
@@ -943,6 +1025,7 @@ fecha,divisa,evento,fuente
 2013-07-05,USD,Empleo EE. UU.,https://www.bls.gov/bls/news-release/empsit.htm
 2013-07-11,JPY,BoJ,https://www.boj.or.jp/en/mopo/mpmsche_minu/minu_2013/index.htm
 2013-07-17,CAD,BoC,https://www.bankofcanada.ca/2012/08/2013-schedule-policy-interest-rate-announcements-monetary-policy-report/
+2013-07-21,JPY,Elecciones,https://en.wikipedia.org/w/index.php?title=2013_Japanese_House_of_Councillors_election&action=raw
 2013-07-25,NZD,RBNZ,https://www.rbnz.govt.nz/monetary-policy/monetary-policy-decisions
 2013-07-31,USD,Fed,https://www.federalreserve.gov/monetarypolicy/fomchistorical2013.htm
 2013-08-01,EUR,BCE,https://www.ecb.europa.eu/press/press_conference/monetary-policy-statement/2013/html/index_include.en.html
@@ -956,9 +1039,12 @@ fecha,divisa,evento,fuente
 2013-09-05,EUR,BCE,https://www.ecb.europa.eu/press/press_conference/monetary-policy-statement/2013/html/index_include.en.html
 2013-09-05,JPY,BoJ,https://www.boj.or.jp/en/mopo/mpmsche_minu/minu_2013/index.htm
 2013-09-06,USD,Empleo EE. UU.,https://www.bls.gov/bls/news-release/empsit.htm
+2013-09-07,AUD,Elecciones,https://en.wikipedia.org/w/index.php?title=2013_Australian_federal_election&action=raw
 2013-09-12,NZD,RBNZ,https://www.rbnz.govt.nz/monetary-policy/monetary-policy-decisions
 2013-09-18,USD,Fed,https://www.federalreserve.gov/monetarypolicy/fomchistorical2013.htm
 2013-09-19,CHF,SNB,https://www.snb.ch/en/the-snb/mandates-goals/monetary-policy/decisions
+2013-09-22,CHF,Votacion popular,https://en.wikipedia.org/w/index.php?title=List_of_Swiss_federal_referendums&action=raw
+2013-09-22,EUR,Elecciones,https://en.wikipedia.org/w/index.php?title=2013_German_federal_election&action=raw
 2013-10-01,AUD,RBA,https://www.rba.gov.au/monetary-policy/int-rate-decisions/2013/
 2013-10-02,EUR,BCE,https://www.ecb.europa.eu/press/press_conference/monetary-policy-statement/2013/html/index_include.en.html
 2013-10-04,JPY,BoJ,https://www.boj.or.jp/en/mopo/mpmsche_minu/minu_2013/index.htm
@@ -973,6 +1059,7 @@ fecha,divisa,evento,fuente
 2013-11-07,GBP,BoE,https://www.bankofengland.co.uk/sitemap/minutes
 2013-11-08,USD,Empleo EE. UU.,https://www.bls.gov/bls/news-release/empsit.htm
 2013-11-21,JPY,BoJ,https://www.boj.or.jp/en/mopo/mpmsche_minu/minu_2013/index.htm
+2013-11-24,CHF,Votacion popular,https://en.wikipedia.org/w/index.php?title=List_of_Swiss_federal_referendums&action=raw
 2013-12-03,AUD,RBA,https://www.rba.gov.au/monetary-policy/int-rate-decisions/2013/
 2013-12-04,CAD,BoC,https://www.bankofcanada.ca/2012/08/2013-schedule-policy-interest-rate-announcements-monetary-policy-report/
 2013-12-05,EUR,BCE,https://www.ecb.europa.eu/press/press_conference/monetary-policy-statement/2013/html/index_include.en.html
@@ -993,6 +1080,7 @@ fecha,divisa,evento,fuente
 2014-02-06,EUR,BCE,https://www.ecb.europa.eu/press/press_conference/monetary-policy-statement/2014/html/index_include.en.html
 2014-02-06,GBP,BoE,https://www.bankofengland.co.uk/sitemap/minutes
 2014-02-07,USD,Empleo EE. UU.,https://www.bls.gov/bls/news-release/empsit.htm
+2014-02-09,CHF,Votacion popular,https://en.wikipedia.org/w/index.php?title=List_of_Swiss_federal_referendums&action=raw
 2014-02-18,JPY,BoJ,https://www.boj.or.jp/en/mopo/mpmsche_minu/minu_2014/index.htm
 2014-03-04,AUD,RBA,https://www.rba.gov.au/monetary-policy/int-rate-decisions/2014/
 2014-03-05,CAD,BoC,https://www.bankofcanada.ca/2013/07/bofc-publishes-2014-schedule-fad-and-mpr-releases/
@@ -1016,6 +1104,7 @@ fecha,divisa,evento,fuente
 2014-05-06,AUD,RBA,https://www.rba.gov.au/monetary-policy/int-rate-decisions/2014/
 2014-05-08,EUR,BCE,https://www.ecb.europa.eu/press/press_conference/monetary-policy-statement/2014/html/index_include.en.html
 2014-05-08,GBP,BoE,https://www.bankofengland.co.uk/sitemap/minutes
+2014-05-18,CHF,Votacion popular,https://en.wikipedia.org/w/index.php?title=List_of_Swiss_federal_referendums&action=raw
 2014-05-21,JPY,BoJ,https://www.boj.or.jp/en/mopo/mpmsche_minu/minu_2014/index.htm
 2014-06-03,AUD,RBA,https://www.rba.gov.au/monetary-policy/int-rate-decisions/2014/
 2014-06-04,CAD,BoC,https://www.bankofcanada.ca/2013/07/bofc-publishes-2014-schedule-fad-and-mpr-releases/
@@ -1048,6 +1137,9 @@ fecha,divisa,evento,fuente
 2014-09-11,NZD,RBNZ,https://www.rbnz.govt.nz/monetary-policy/monetary-policy-decisions
 2014-09-17,USD,Fed,https://www.federalreserve.gov/monetarypolicy/fomchistorical2014.htm
 2014-09-18,CHF,SNB,https://www.snb.ch/en/the-snb/mandates-goals/monetary-policy/decisions
+2014-09-18,GBP,Elecciones,https://en.wikipedia.org/w/index.php?title=2014_Scottish_independence_referendum&action=raw
+2014-09-20,NZD,Elecciones,https://en.wikipedia.org/w/index.php?title=2014_New_Zealand_general_election&action=raw
+2014-09-28,CHF,Votacion popular,https://en.wikipedia.org/w/index.php?title=List_of_Swiss_federal_referendums&action=raw
 2014-10-02,EUR,BCE,https://www.ecb.europa.eu/press/press_conference/monetary-policy-statement/2014/html/index_include.en.html
 2014-10-03,USD,Empleo EE. UU.,https://www.bls.gov/bls/news-release/empsit.htm
 2014-10-07,AUD,RBA,https://www.rba.gov.au/monetary-policy/int-rate-decisions/2014/
@@ -1058,10 +1150,12 @@ fecha,divisa,evento,fuente
 2014-10-30,NZD,RBNZ,https://www.rbnz.govt.nz/monetary-policy/monetary-policy-decisions
 2014-10-31,JPY,BoJ,https://www.boj.or.jp/en/mopo/mpmsche_minu/minu_2014/index.htm
 2014-11-04,AUD,RBA,https://www.rba.gov.au/monetary-policy/int-rate-decisions/2014/
+2014-11-04,USD,Elecciones,https://en.wikipedia.org/w/index.php?title=2014_United_States_elections&action=raw
 2014-11-06,EUR,BCE,https://www.ecb.europa.eu/press/press_conference/monetary-policy-statement/2014/html/index_include.en.html
 2014-11-06,GBP,BoE,https://www.bankofengland.co.uk/sitemap/minutes
 2014-11-07,USD,Empleo EE. UU.,https://www.bls.gov/bls/news-release/empsit.htm
 2014-11-19,JPY,BoJ,https://www.boj.or.jp/en/mopo/mpmsche_minu/minu_2014/index.htm
+2014-11-30,CHF,Votacion popular,https://en.wikipedia.org/w/index.php?title=List_of_Swiss_federal_referendums&action=raw
 2014-12-02,AUD,RBA,https://www.rba.gov.au/monetary-policy/int-rate-decisions/2014/
 2014-12-03,CAD,BoC,https://www.bankofcanada.ca/2013/07/bofc-publishes-2014-schedule-fad-and-mpr-releases/
 2014-12-04,EUR,BCE,https://www.ecb.europa.eu/press/press_conference/monetary-policy-statement/2014/html/index_include.en.html
@@ -1069,6 +1163,7 @@ fecha,divisa,evento,fuente
 2014-12-05,USD,Empleo EE. UU.,https://www.bls.gov/bls/news-release/empsit.htm
 2014-12-11,CHF,SNB,https://www.snb.ch/en/the-snb/mandates-goals/monetary-policy/decisions
 2014-12-11,NZD,RBNZ,https://www.rbnz.govt.nz/monetary-policy/monetary-policy-decisions
+2014-12-14,JPY,Elecciones,https://en.wikipedia.org/w/index.php?title=2014_Japanese_general_election&action=raw
 2014-12-17,USD,Fed,https://www.federalreserve.gov/monetarypolicy/fomchistorical2014.htm
 2014-12-19,JPY,BoJ,https://www.boj.or.jp/en/mopo/mpmsche_minu/minu_2014/index.htm
 2015-01-08,GBP,BoE,https://www.bankofengland.co.uk/sitemap/minutes
@@ -1087,6 +1182,7 @@ fecha,divisa,evento,fuente
 2015-03-05,EUR,BCE,https://www.ecb.europa.eu/press/press_conference/monetary-policy-statement/2015/html/index_include.en.html
 2015-03-05,GBP,BoE,https://www.bankofengland.co.uk/sitemap/minutes
 2015-03-06,USD,Empleo EE. UU.,https://www.bls.gov/bls/news-release/empsit.htm
+2015-03-08,CHF,Votacion popular,https://en.wikipedia.org/w/index.php?title=List_of_Swiss_federal_referendums&action=raw
 2015-03-12,NZD,RBNZ,https://www.rbnz.govt.nz/monetary-policy/monetary-policy-decisions
 2015-03-17,JPY,BoJ,https://www.boj.or.jp/en/mopo/mpmsche_minu/minu_2015/index.htm
 2015-03-18,USD,Fed,https://www.federalreserve.gov/monetarypolicy/fomchistorical2015.htm
@@ -1101,6 +1197,7 @@ fecha,divisa,evento,fuente
 2015-04-30,JPY,BoJ,https://www.boj.or.jp/en/mopo/mpmsche_minu/minu_2015/index.htm
 2015-04-30,NZD,RBNZ,https://www.rbnz.govt.nz/monetary-policy/monetary-policy-decisions
 2015-05-05,AUD,RBA,https://www.rba.gov.au/monetary-policy/int-rate-decisions/2015/
+2015-05-07,GBP,Elecciones,https://en.wikipedia.org/w/index.php?title=2015_United_Kingdom_general_election&action=raw
 2015-05-08,GBP,BoE,https://www.bankofengland.co.uk/sitemap/minutes
 2015-05-08,USD,Empleo EE. UU.,https://www.bls.gov/bls/news-release/empsit.htm
 2015-05-22,JPY,BoJ,https://www.boj.or.jp/en/mopo/mpmsche_minu/minu_2015/index.htm
@@ -1110,10 +1207,12 @@ fecha,divisa,evento,fuente
 2015-06-04,GBP,BoE,https://www.bankofengland.co.uk/sitemap/minutes
 2015-06-05,USD,Empleo EE. UU.,https://www.bls.gov/bls/news-release/empsit.htm
 2015-06-11,NZD,RBNZ,https://www.rbnz.govt.nz/monetary-policy/monetary-policy-decisions
+2015-06-14,CHF,Votacion popular,https://en.wikipedia.org/w/index.php?title=List_of_Swiss_federal_referendums&action=raw
 2015-06-17,USD,Fed,https://www.federalreserve.gov/monetarypolicy/fomchistorical2015.htm
 2015-06-18,CHF,SNB,https://www.snb.ch/en/the-snb/mandates-goals/monetary-policy/decisions
 2015-06-19,JPY,BoJ,https://www.boj.or.jp/en/mopo/mpmsche_minu/minu_2015/index.htm
 2015-07-02,USD,Empleo EE. UU.,https://www.bls.gov/bls/news-release/empsit.htm
+2015-07-05,EUR,Elecciones,https://en.wikipedia.org/w/index.php?title=2015_Greek_bailout_referendum&action=raw
 2015-07-07,AUD,RBA,https://www.rba.gov.au/monetary-policy/int-rate-decisions/2015/
 2015-07-09,GBP,BoE,https://www.bankofengland.co.uk/sitemap/minutes
 2015-07-15,CAD,BoC,https://www.bankofcanada.ca/2014/07/boc-2015-schedule-fad-mpr-releases/
@@ -1138,6 +1237,8 @@ fecha,divisa,evento,fuente
 2015-10-06,AUD,RBA,https://www.rba.gov.au/monetary-policy/int-rate-decisions/2015/
 2015-10-07,JPY,BoJ,https://www.boj.or.jp/en/mopo/mpmsche_minu/minu_2015/index.htm
 2015-10-08,GBP,BoE,https://www.bankofengland.co.uk/monetary-policy-summary-and-minutes/2015/mpc-october-2015
+2015-10-18,CHF,Elecciones,https://en.wikipedia.org/w/index.php?title=2015_Swiss_federal_election&action=raw
+2015-10-19,CAD,Elecciones,https://en.wikipedia.org/w/index.php?title=2015_Canadian_federal_election&action=raw
 2015-10-21,CAD,BoC,https://www.bankofcanada.ca/2014/07/boc-2015-schedule-fad-mpr-releases/
 2015-10-22,EUR,BCE,https://www.ecb.europa.eu/press/press_conference/monetary-policy-statement/2015/html/index_include.en.html
 2015-10-28,USD,Fed,https://www.federalreserve.gov/monetarypolicy/fomchistorical2015.htm
@@ -1156,6 +1257,7 @@ fecha,divisa,evento,fuente
 2015-12-10,NZD,RBNZ,https://www.rbnz.govt.nz/monetary-policy/monetary-policy-decisions
 2015-12-16,USD,Fed,https://www.federalreserve.gov/monetarypolicy/fomchistorical2015.htm
 2015-12-18,JPY,BoJ,https://www.boj.or.jp/en/mopo/mpmsche_minu/minu_2015/index.htm
+2015-12-20,EUR,Elecciones,https://en.wikipedia.org/w/index.php?title=2015_Spanish_general_election&action=raw
 2016-01-08,USD,Empleo EE. UU.,https://www.bls.gov/bls/news-release/empsit.htm
 2016-01-14,GBP,BoE,https://www.bankofengland.co.uk/monetary-policy-summary-and-minutes/2016/mpc-january-2016
 2016-01-20,CAD,BoC,https://www.bankofcanada.ca/2015/07/boc-2016-schedule-fad-mpr-releases/
@@ -1166,6 +1268,7 @@ fecha,divisa,evento,fuente
 2016-02-02,AUD,RBA,https://www.rba.gov.au/monetary-policy/int-rate-decisions/2016/
 2016-02-04,GBP,BoE,https://www.bankofengland.co.uk/monetary-policy-summary-and-minutes/2016/mpc-february-2016
 2016-02-05,USD,Empleo EE. UU.,https://www.bls.gov/bls/news-release/empsit.htm
+2016-02-28,CHF,Votacion popular,https://en.wikipedia.org/w/index.php?title=List_of_Swiss_federal_referendums&action=raw
 2016-03-01,AUD,RBA,https://www.rba.gov.au/monetary-policy/int-rate-decisions/2016/
 2016-03-04,USD,Empleo EE. UU.,https://www.bls.gov/bls/news-release/empsit.htm
 2016-03-09,CAD,BoC,https://www.bankofcanada.ca/2015/07/boc-2016-schedule-fad-mpr-releases/
@@ -1179,6 +1282,7 @@ fecha,divisa,evento,fuente
 2016-04-05,AUD,RBA,https://www.rba.gov.au/monetary-policy/int-rate-decisions/2016/
 2016-04-13,CAD,BoC,https://www.bankofcanada.ca/2015/07/boc-2016-schedule-fad-mpr-releases/
 2016-04-14,GBP,BoE,https://www.bankofengland.co.uk/monetary-policy-summary-and-minutes/2016/mpc-april-2016
+2016-04-17,EUR,Elecciones,https://en.wikipedia.org/w/index.php?title=2016_Italian_oil_drilling_referendum&action=raw
 2016-04-21,EUR,BCE,https://www.ecb.europa.eu/press/press_conference/monetary-policy-statement/2016/html/index_include.en.html
 2016-04-27,USD,Fed,https://www.federalreserve.gov/monetarypolicy/fomchistorical2016.htm
 2016-04-28,JPY,BoJ,https://www.boj.or.jp/en/mopo/mpmsche_minu/minu_2016/index.htm
@@ -1189,14 +1293,19 @@ fecha,divisa,evento,fuente
 2016-05-25,CAD,BoC,https://www.bankofcanada.ca/2015/07/boc-2016-schedule-fad-mpr-releases/
 2016-06-02,EUR,BCE,https://www.ecb.europa.eu/press/press_conference/monetary-policy-statement/2016/html/index_include.en.html
 2016-06-03,USD,Empleo EE. UU.,https://www.bls.gov/bls/news-release/empsit.htm
+2016-06-05,CHF,Votacion popular,https://en.wikipedia.org/w/index.php?title=List_of_Swiss_federal_referendums&action=raw
 2016-06-07,AUD,RBA,https://www.rba.gov.au/monetary-policy/int-rate-decisions/2016/
 2016-06-09,NZD,RBNZ,https://www.rbnz.govt.nz/monetary-policy/monetary-policy-decisions
 2016-06-15,USD,Fed,https://www.federalreserve.gov/monetarypolicy/fomchistorical2016.htm
 2016-06-16,CHF,SNB,https://www.snb.ch/en/the-snb/mandates-goals/monetary-policy/decisions
 2016-06-16,GBP,BoE,https://www.bankofengland.co.uk/monetary-policy-summary-and-minutes/2016/mpc-june-2016
 2016-06-16,JPY,BoJ,https://www.boj.or.jp/en/mopo/mpmsche_minu/minu_2016/index.htm
+2016-06-23,GBP,Elecciones,https://en.wikipedia.org/w/index.php?title=2016_United_Kingdom_European_Union_membership_referendum&action=raw
+2016-06-26,EUR,Elecciones,https://en.wikipedia.org/w/index.php?title=2016_Spanish_general_election&action=raw
+2016-07-02,AUD,Elecciones,https://en.wikipedia.org/w/index.php?title=2016_Australian_federal_election&action=raw
 2016-07-05,AUD,RBA,https://www.rba.gov.au/monetary-policy/int-rate-decisions/2016/
 2016-07-08,USD,Empleo EE. UU.,https://www.bls.gov/bls/news-release/empsit.htm
+2016-07-10,JPY,Elecciones,https://en.wikipedia.org/w/index.php?title=2016_Japanese_House_of_Councillors_election&action=raw
 2016-07-13,CAD,BoC,https://www.bankofcanada.ca/2015/07/boc-2016-schedule-fad-mpr-releases/
 2016-07-14,GBP,BoE,https://www.bankofengland.co.uk/monetary-policy-summary-and-minutes/2016/mpc-july-2016
 2016-07-21,EUR,BCE,https://www.ecb.europa.eu/press/press_conference/monetary-policy-statement/2016/html/index_include.en.html
@@ -1215,6 +1324,7 @@ fecha,divisa,evento,fuente
 2016-09-21,JPY,BoJ,https://www.boj.or.jp/en/mopo/mpmsche_minu/minu_2016/index.htm
 2016-09-21,USD,Fed,https://www.federalreserve.gov/monetarypolicy/fomchistorical2016.htm
 2016-09-22,NZD,RBNZ,https://www.rbnz.govt.nz/monetary-policy/monetary-policy-decisions
+2016-09-25,CHF,Votacion popular,https://en.wikipedia.org/w/index.php?title=List_of_Swiss_federal_referendums&action=raw
 2016-10-04,AUD,RBA,https://www.rba.gov.au/monetary-policy/int-rate-decisions/2016/
 2016-10-07,USD,Empleo EE. UU.,https://www.bls.gov/bls/news-release/empsit.htm
 2016-10-19,CAD,BoC,https://www.bankofcanada.ca/2015/07/boc-2016-schedule-fad-mpr-releases/
@@ -1224,8 +1334,11 @@ fecha,divisa,evento,fuente
 2016-11-02,USD,Fed,https://www.federalreserve.gov/monetarypolicy/fomchistorical2016.htm
 2016-11-03,GBP,BoE,https://www.bankofengland.co.uk/monetary-policy-summary-and-minutes/2016/mpc-november-2016
 2016-11-04,USD,Empleo EE. UU.,https://www.bls.gov/bls/news-release/empsit.htm
+2016-11-08,USD,Elecciones,https://en.wikipedia.org/w/index.php?title=2016_United_States_presidential_election&action=raw
 2016-11-10,NZD,RBNZ,https://www.rbnz.govt.nz/monetary-policy/monetary-policy-decisions
+2016-11-27,CHF,Votacion popular,https://en.wikipedia.org/w/index.php?title=List_of_Swiss_federal_referendums&action=raw
 2016-12-02,USD,Empleo EE. UU.,https://www.bls.gov/bls/news-release/empsit.htm
+2016-12-04,EUR,Elecciones,https://en.wikipedia.org/w/index.php?title=2016_Italian_constitutional_referendum&action=raw
 2016-12-06,AUD,RBA,https://www.rba.gov.au/monetary-policy/int-rate-decisions/2016/
 2016-12-07,CAD,BoC,https://www.bankofcanada.ca/2015/07/boc-2016-schedule-fad-mpr-releases/
 2016-12-08,EUR,BCE,https://www.ecb.europa.eu/press/press_conference/monetary-policy-statement/2016/html/index_include.en.html
@@ -1242,6 +1355,7 @@ fecha,divisa,evento,fuente
 2017-02-03,USD,Empleo EE. UU.,https://www.bls.gov/bls/news-release/empsit.htm
 2017-02-07,AUD,RBA,https://www.rba.gov.au/monetary-policy/int-rate-decisions/2017/
 2017-02-09,NZD,RBNZ,https://www.rbnz.govt.nz/monetary-policy/monetary-policy-decisions
+2017-02-12,CHF,Votacion popular,https://en.wikipedia.org/w/index.php?title=List_of_Swiss_federal_referendums&action=raw
 2017-03-01,CAD,BoC,https://www.bankofcanada.ca/2016/07/boc-2017-schedule-fad-mpr-releases/
 2017-03-07,AUD,RBA,https://www.rba.gov.au/monetary-policy/int-rate-decisions/2017/
 2017-03-09,EUR,BCE,https://www.ecb.europa.eu/press/press_conference/monetary-policy-statement/2017/html/index_include.en.html
@@ -1254,21 +1368,27 @@ fecha,divisa,evento,fuente
 2017-04-04,AUD,RBA,https://www.rba.gov.au/monetary-policy/int-rate-decisions/2017/
 2017-04-07,USD,Empleo EE. UU.,https://www.bls.gov/bls/news-release/empsit.htm
 2017-04-12,CAD,BoC,https://www.bankofcanada.ca/2016/07/boc-2017-schedule-fad-mpr-releases/
+2017-04-23,EUR,Elecciones,https://en.wikipedia.org/w/index.php?title=2017_French_presidential_election&action=raw
 2017-04-27,EUR,BCE,https://www.ecb.europa.eu/press/press_conference/monetary-policy-statement/2017/html/index_include.en.html
 2017-04-27,JPY,BoJ,https://www.boj.or.jp/en/mopo/mpmsche_minu/minu_2017/index.htm
 2017-05-02,AUD,RBA,https://www.rba.gov.au/monetary-policy/int-rate-decisions/2017/
 2017-05-03,USD,Fed,https://www.federalreserve.gov/monetarypolicy/fomchistorical2017.htm
 2017-05-05,USD,Empleo EE. UU.,https://www.bls.gov/bls/news-release/empsit.htm
+2017-05-07,EUR,Elecciones,https://en.wikipedia.org/w/index.php?title=2017_French_presidential_election&action=raw
 2017-05-11,GBP,BoE,https://www.bankofengland.co.uk/monetary-policy-summary-and-minutes/2017/may-2017
 2017-05-11,NZD,RBNZ,https://www.rbnz.govt.nz/monetary-policy/monetary-policy-decisions
+2017-05-21,CHF,Votacion popular,https://en.wikipedia.org/w/index.php?title=List_of_Swiss_federal_referendums&action=raw
 2017-05-24,CAD,BoC,https://www.bankofcanada.ca/2016/07/boc-2017-schedule-fad-mpr-releases/
 2017-06-02,USD,Empleo EE. UU.,https://www.bls.gov/bls/news-release/empsit.htm
 2017-06-06,AUD,RBA,https://www.rba.gov.au/monetary-policy/int-rate-decisions/2017/
 2017-06-08,EUR,BCE,https://www.ecb.europa.eu/press/press_conference/monetary-policy-statement/2017/html/index_include.en.html
+2017-06-08,GBP,Elecciones,https://en.wikipedia.org/w/index.php?title=2017_United_Kingdom_general_election&action=raw
+2017-06-11,EUR,Elecciones,https://en.wikipedia.org/w/index.php?title=2017_French_legislative_election&action=raw
 2017-06-14,USD,Fed,https://www.federalreserve.gov/monetarypolicy/fomchistorical2017.htm
 2017-06-15,CHF,SNB,https://www.snb.ch/en/the-snb/mandates-goals/monetary-policy/decisions
 2017-06-15,GBP,BoE,https://www.bankofengland.co.uk/monetary-policy-summary-and-minutes/2017/june-2017
 2017-06-16,JPY,BoJ,https://www.boj.or.jp/en/mopo/mpmsche_minu/minu_2017/index.htm
+2017-06-18,EUR,Elecciones,https://en.wikipedia.org/w/index.php?title=2017_French_legislative_election&action=raw
 2017-06-22,NZD,RBNZ,https://www.rbnz.govt.nz/monetary-policy/monetary-policy-decisions
 2017-07-04,AUD,RBA,https://www.rba.gov.au/monetary-policy/int-rate-decisions/2017/
 2017-07-07,USD,Empleo EE. UU.,https://www.bls.gov/bls/news-release/empsit.htm
@@ -1288,9 +1408,13 @@ fecha,divisa,evento,fuente
 2017-09-14,GBP,BoE,https://www.bankofengland.co.uk/monetary-policy-summary-and-minutes/2017/september-2017
 2017-09-20,USD,Fed,https://www.federalreserve.gov/monetarypolicy/fomchistorical2017.htm
 2017-09-21,JPY,BoJ,https://www.boj.or.jp/en/mopo/mpmsche_minu/minu_2017/index.htm
+2017-09-23,NZD,Elecciones,https://en.wikipedia.org/w/index.php?title=2017_New_Zealand_general_election&action=raw
+2017-09-24,CHF,Votacion popular,https://en.wikipedia.org/w/index.php?title=List_of_Swiss_federal_referendums&action=raw
+2017-09-24,EUR,Elecciones,https://en.wikipedia.org/w/index.php?title=2017_German_federal_election&action=raw
 2017-09-28,NZD,RBNZ,https://www.rbnz.govt.nz/monetary-policy/monetary-policy-decisions
 2017-10-03,AUD,RBA,https://www.rba.gov.au/monetary-policy/int-rate-decisions/2017/
 2017-10-06,USD,Empleo EE. UU.,https://www.bls.gov/bls/news-release/empsit.htm
+2017-10-22,JPY,Elecciones,https://en.wikipedia.org/w/index.php?title=2017_Japanese_general_election&action=raw
 2017-10-25,CAD,BoC,https://www.bankofcanada.ca/2016/07/boc-2017-schedule-fad-mpr-releases/
 2017-10-26,EUR,BCE,https://www.ecb.europa.eu/press/press_conference/monetary-policy-statement/2017/html/index_include.en.html
 2017-10-31,JPY,BoJ,https://www.boj.or.jp/en/mopo/mpmsche_minu/minu_2017/index.htm
@@ -1316,6 +1440,8 @@ fecha,divisa,evento,fuente
 2018-02-06,AUD,RBA,https://www.rba.gov.au/monetary-policy/int-rate-decisions/2018/
 2018-02-08,GBP,BoE,https://www.bankofengland.co.uk/monetary-policy-summary-and-minutes/2018/february-2018
 2018-02-08,NZD,RBNZ,https://www.rbnz.govt.nz/monetary-policy/monetary-policy-decisions
+2018-03-04,CHF,Votacion popular,https://en.wikipedia.org/w/index.php?title=List_of_Swiss_federal_referendums&action=raw
+2018-03-04,EUR,Elecciones,https://en.wikipedia.org/w/index.php?title=2018_Italian_general_election&action=raw
 2018-03-06,AUD,RBA,https://www.rba.gov.au/monetary-policy/int-rate-decisions/2018/
 2018-03-07,CAD,BoC,https://www.bankofcanada.ca/2017/07/boc-2018-schedule-fad-mpr-releases/
 2018-03-08,EUR,BCE,https://www.ecb.europa.eu/press/press_conference/monetary-policy-statement/2018/html/index_include.en.html
@@ -1338,6 +1464,7 @@ fecha,divisa,evento,fuente
 2018-05-30,CAD,BoC,https://www.bankofcanada.ca/2017/07/boc-2018-schedule-fad-mpr-releases/
 2018-06-01,USD,Empleo EE. UU.,https://www.bls.gov/bls/news-release/empsit.htm
 2018-06-05,AUD,RBA,https://www.rba.gov.au/monetary-policy/int-rate-decisions/2018/
+2018-06-10,CHF,Votacion popular,https://en.wikipedia.org/w/index.php?title=List_of_Swiss_federal_referendums&action=raw
 2018-06-13,USD,Fed,https://www.federalreserve.gov/monetarypolicy/fomchistorical2018.htm
 2018-06-14,EUR,BCE,https://www.ecb.europa.eu/press/press_conference/monetary-policy-statement/2018/html/index_include.en.html
 2018-06-15,JPY,BoJ,https://www.boj.or.jp/en/mopo/mpmsche_minu/minu_2018/index.htm
@@ -1361,6 +1488,7 @@ fecha,divisa,evento,fuente
 2018-09-13,GBP,BoE,https://www.bankofengland.co.uk/monetary-policy-summary-and-minutes/2018/september-2018
 2018-09-19,JPY,BoJ,https://www.boj.or.jp/en/mopo/mpmsche_minu/minu_2018/index.htm
 2018-09-20,CHF,SNB,https://www.snb.ch/en/the-snb/mandates-goals/monetary-policy/decisions
+2018-09-23,CHF,Votacion popular,https://en.wikipedia.org/w/index.php?title=List_of_Swiss_federal_referendums&action=raw
 2018-09-26,USD,Fed,https://www.federalreserve.gov/monetarypolicy/fomchistorical2018.htm
 2018-09-27,NZD,RBNZ,https://www.rbnz.govt.nz/monetary-policy/monetary-policy-decisions
 2018-10-02,AUD,RBA,https://www.rba.gov.au/monetary-policy/int-rate-decisions/2018/
@@ -1371,8 +1499,10 @@ fecha,divisa,evento,fuente
 2018-11-01,GBP,BoE,https://www.bankofengland.co.uk/monetary-policy-summary-and-minutes/2018/november-2018
 2018-11-02,USD,Empleo EE. UU.,https://www.bls.gov/bls/news-release/empsit.htm
 2018-11-06,AUD,RBA,https://www.rba.gov.au/monetary-policy/int-rate-decisions/2018/
+2018-11-06,USD,Elecciones,https://en.wikipedia.org/w/index.php?title=2018_United_States_elections&action=raw
 2018-11-08,NZD,RBNZ,https://www.rbnz.govt.nz/monetary-policy/monetary-policy-decisions
 2018-11-08,USD,Fed,https://www.federalreserve.gov/monetarypolicy/fomchistorical2018.htm
+2018-11-25,CHF,Votacion popular,https://en.wikipedia.org/w/index.php?title=List_of_Swiss_federal_referendums&action=raw
 2018-12-04,AUD,RBA,https://www.rba.gov.au/monetary-policy/int-rate-decisions/2018/
 2018-12-05,CAD,BoC,https://www.bankofcanada.ca/2017/07/boc-2018-schedule-fad-mpr-releases/
 2018-12-07,USD,Empleo EE. UU.,https://www.bls.gov/bls/news-release/empsit.htm
@@ -1389,6 +1519,7 @@ fecha,divisa,evento,fuente
 2019-02-01,USD,Empleo EE. UU.,https://www.bls.gov/bls/news-release/empsit.htm
 2019-02-05,AUD,RBA,https://www.rba.gov.au/monetary-policy/int-rate-decisions/2019/
 2019-02-07,GBP,BoE,https://www.bankofengland.co.uk/monetary-policy-summary-and-minutes/2019/february-2019
+2019-02-10,CHF,Votacion popular,https://en.wikipedia.org/w/index.php?title=List_of_Swiss_federal_referendums&action=raw
 2019-02-13,NZD,RBNZ,https://www.rbnz.govt.nz/monetary-policy/monetary-policy-decisions
 2019-03-05,AUD,RBA,https://www.rba.gov.au/monetary-policy/int-rate-decisions/2019/
 2019-03-06,CAD,BoC,https://www.bankofcanada.ca/2018/07/bank-canada-publishes-2019-schedule-fad-announcements-release-mpr-bos-slos/
@@ -1404,11 +1535,14 @@ fecha,divisa,evento,fuente
 2019-04-10,EUR,BCE,https://www.ecb.europa.eu/press/press_conference/monetary-policy-statement/2019/html/index_include.en.html
 2019-04-24,CAD,BoC,https://www.bankofcanada.ca/2018/07/bank-canada-publishes-2019-schedule-fad-announcements-release-mpr-bos-slos/
 2019-04-25,JPY,BoJ,https://www.boj.or.jp/en/mopo/mpmsche_minu/minu_2019/index.htm
+2019-04-28,EUR,Elecciones,https://en.wikipedia.org/w/index.php?title=April_2019_Spanish_general_election&action=raw
 2019-05-01,USD,Fed,https://www.federalreserve.gov/monetarypolicy/fomchistorical2019.htm
 2019-05-02,GBP,BoE,https://www.bankofengland.co.uk/monetary-policy-summary-and-minutes/2019/may-2019
 2019-05-03,USD,Empleo EE. UU.,https://www.bls.gov/bls/news-release/empsit.htm
 2019-05-07,AUD,RBA,https://www.rba.gov.au/monetary-policy/int-rate-decisions/2019/
 2019-05-08,NZD,RBNZ,https://www.rbnz.govt.nz/monetary-policy/monetary-policy-decisions
+2019-05-18,AUD,Elecciones,https://en.wikipedia.org/w/index.php?title=2019_Australian_federal_election&action=raw
+2019-05-19,CHF,Votacion popular,https://en.wikipedia.org/w/index.php?title=List_of_Swiss_federal_referendums&action=raw
 2019-05-29,CAD,BoC,https://www.bankofcanada.ca/2018/07/bank-canada-publishes-2019-schedule-fad-announcements-release-mpr-bos-slos/
 2019-06-04,AUD,RBA,https://www.rba.gov.au/monetary-policy/int-rate-decisions/2019/
 2019-06-06,EUR,BCE,https://www.ecb.europa.eu/press/press_conference/monetary-policy-statement/2019/html/index_include.en.html
@@ -1421,6 +1555,7 @@ fecha,divisa,evento,fuente
 2019-07-02,AUD,RBA,https://www.rba.gov.au/monetary-policy/int-rate-decisions/2019/
 2019-07-05,USD,Empleo EE. UU.,https://www.bls.gov/bls/news-release/empsit.htm
 2019-07-10,CAD,BoC,https://www.bankofcanada.ca/2018/07/bank-canada-publishes-2019-schedule-fad-announcements-release-mpr-bos-slos/
+2019-07-21,JPY,Elecciones,https://en.wikipedia.org/w/index.php?title=2019_Japanese_House_of_Councillors_election&action=raw
 2019-07-25,EUR,BCE,https://www.ecb.europa.eu/press/press_conference/monetary-policy-statement/2019/html/index_include.en.html
 2019-07-30,JPY,BoJ,https://www.boj.or.jp/en/mopo/mpmsche_minu/minu_2019/index.htm
 2019-07-31,USD,Fed,https://www.federalreserve.gov/monetarypolicy/fomchistorical2019.htm
@@ -1439,6 +1574,8 @@ fecha,divisa,evento,fuente
 2019-09-25,NZD,RBNZ,https://www.rbnz.govt.nz/monetary-policy/monetary-policy-decisions
 2019-10-01,AUD,RBA,https://www.rba.gov.au/monetary-policy/int-rate-decisions/2019/
 2019-10-04,USD,Empleo EE. UU.,https://www.bls.gov/bls/news-release/empsit.htm
+2019-10-20,CHF,Elecciones,https://en.wikipedia.org/w/index.php?title=2019_Swiss_federal_election&action=raw
+2019-10-21,CAD,Elecciones,https://en.wikipedia.org/w/index.php?title=2019_Canadian_federal_election&action=raw
 2019-10-24,EUR,BCE,https://www.ecb.europa.eu/press/press_conference/monetary-policy-statement/2019/html/index_include.en.html
 2019-10-30,CAD,BoC,https://www.bankofcanada.ca/2018/07/bank-canada-publishes-2019-schedule-fad-announcements-release-mpr-bos-slos/
 2019-10-30,USD,Fed,https://www.federalreserve.gov/monetarypolicy/fomchistorical2019.htm
@@ -1446,6 +1583,7 @@ fecha,divisa,evento,fuente
 2019-11-01,USD,Empleo EE. UU.,https://www.bls.gov/bls/news-release/empsit.htm
 2019-11-05,AUD,RBA,https://www.rba.gov.au/monetary-policy/int-rate-decisions/2019/
 2019-11-07,GBP,BoE,https://www.bankofengland.co.uk/monetary-policy-summary-and-minutes/2019/november-2019
+2019-11-10,EUR,Elecciones,https://en.wikipedia.org/w/index.php?title=November_2019_Spanish_general_election&action=raw
 2019-11-13,NZD,RBNZ,https://www.rbnz.govt.nz/monetary-policy/monetary-policy-decisions
 2019-12-03,AUD,RBA,https://www.rba.gov.au/monetary-policy/int-rate-decisions/2019/
 2019-12-04,CAD,BoC,https://www.bankofcanada.ca/2018/07/bank-canada-publishes-2019-schedule-fad-announcements-release-mpr-bos-slos/
@@ -1453,6 +1591,7 @@ fecha,divisa,evento,fuente
 2019-12-11,USD,Fed,https://www.federalreserve.gov/monetarypolicy/fomchistorical2019.htm
 2019-12-12,CHF,SNB,https://www.snb.ch/en/the-snb/mandates-goals/monetary-policy/decisions
 2019-12-12,EUR,BCE,https://www.ecb.europa.eu/press/press_conference/monetary-policy-statement/2019/html/index_include.en.html
+2019-12-12,GBP,Elecciones,https://en.wikipedia.org/w/index.php?title=2019_United_Kingdom_general_election&action=raw
 2019-12-19,GBP,BoE,https://www.bankofengland.co.uk/monetary-policy-summary-and-minutes/2019/december-2019
 2019-12-19,JPY,BoJ,https://www.boj.or.jp/en/mopo/mpmsche_minu/minu_2019/index.htm
 2020-01-10,USD,Empleo EE. UU.,https://www.bls.gov/bls/news-release/empsit.htm
@@ -1463,6 +1602,7 @@ fecha,divisa,evento,fuente
 2020-01-30,GBP,BoE,https://www.bankofengland.co.uk/monetary-policy-summary-and-minutes/2020/january-2020
 2020-02-04,AUD,RBA,https://www.rba.gov.au/monetary-policy/int-rate-decisions/2020/
 2020-02-07,USD,Empleo EE. UU.,https://www.bls.gov/bls/news-release/empsit.htm
+2020-02-09,CHF,Votacion popular,https://en.wikipedia.org/w/index.php?title=List_of_Swiss_federal_referendums&action=raw
 2020-02-12,NZD,RBNZ,https://www.rbnz.govt.nz/monetary-policy/monetary-policy-decisions
 2020-03-03,AUD,RBA,https://www.rba.gov.au/monetary-policy/int-rate-decisions/2020/
 2020-03-04,CAD,BoC,https://www.bankofcanada.ca/2019/07/bank-canada-publishes-2020-schedule-policy-interest-rate-announcements-release-mpr-other-major-publications/
@@ -1507,18 +1647,23 @@ fecha,divisa,evento,fuente
 2020-09-16,USD,Fed,https://www.federalreserve.gov/monetarypolicy/fomchistorical2020.htm
 2020-09-17,GBP,BoE,https://www.bankofengland.co.uk/monetary-policy-summary-and-minutes/2020/september-2020
 2020-09-17,JPY,BoJ,https://www.boj.or.jp/en/mopo/mpmsche_minu/minu_2020/index.htm
+2020-09-21,EUR,Elecciones,https://en.wikipedia.org/w/index.php?title=2020_Italian_constitutional_referendum&action=raw
 2020-09-23,NZD,RBNZ,https://www.rbnz.govt.nz/monetary-policy/monetary-policy-decisions
 2020-09-24,CHF,SNB,https://www.snb.ch/en/the-snb/mandates-goals/monetary-policy/decisions
+2020-09-27,CHF,Votacion popular,https://en.wikipedia.org/w/index.php?title=List_of_Swiss_federal_referendums&action=raw
 2020-10-02,USD,Empleo EE. UU.,https://www.bls.gov/bls/news-release/empsit.htm
 2020-10-06,AUD,RBA,https://www.rba.gov.au/monetary-policy/int-rate-decisions/2020/
+2020-10-17,NZD,Elecciones,https://en.wikipedia.org/w/index.php?title=2020_New_Zealand_general_election&action=raw
 2020-10-28,CAD,BoC,https://www.bankofcanada.ca/2019/07/bank-canada-publishes-2020-schedule-policy-interest-rate-announcements-release-mpr-other-major-publications/
 2020-10-29,EUR,BCE,https://www.ecb.europa.eu/press/press_conference/monetary-policy-statement/2020/html/index_include.en.html
 2020-10-29,JPY,BoJ,https://www.boj.or.jp/en/mopo/mpmsche_minu/minu_2020/index.htm
 2020-11-03,AUD,RBA,https://www.rba.gov.au/monetary-policy/int-rate-decisions/2020/
+2020-11-03,USD,Elecciones,https://en.wikipedia.org/w/index.php?title=2020_United_States_presidential_election&action=raw
 2020-11-05,GBP,BoE,https://www.bankofengland.co.uk/monetary-policy-summary-and-minutes/2020/november-2020
 2020-11-05,USD,Fed,https://www.federalreserve.gov/monetarypolicy/fomchistorical2020.htm
 2020-11-06,USD,Empleo EE. UU.,https://www.bls.gov/bls/news-release/empsit.htm
 2020-11-11,NZD,RBNZ,https://www.rbnz.govt.nz/monetary-policy/monetary-policy-decisions
+2020-11-29,CHF,Votacion popular,https://en.wikipedia.org/w/index.php?title=List_of_Swiss_federal_referendums&action=raw
 2020-12-01,AUD,RBA,https://www.rba.gov.au/monetary-policy/int-rate-decisions/2020/
 2020-12-04,USD,Empleo EE. UU.,https://www.bls.gov/bls/news-release/empsit.htm
 2020-12-09,CAD,BoC,https://www.bankofcanada.ca/2019/07/bank-canada-publishes-2020-schedule-policy-interest-rate-announcements-release-mpr-other-major-publications/
@@ -1538,6 +1683,7 @@ fecha,divisa,evento,fuente
 2021-02-24,NZD,RBNZ,https://www.rbnz.govt.nz/monetary-policy/monetary-policy-decisions
 2021-03-02,AUD,RBA,https://www.rba.gov.au/monetary-policy/int-rate-decisions/2021/
 2021-03-05,USD,Empleo EE. UU.,https://www.bls.gov/bls/news-release/empsit.htm
+2021-03-07,CHF,Votacion popular,https://en.wikipedia.org/w/index.php?title=List_of_Swiss_federal_referendums&action=raw
 2021-03-10,CAD,BoC,https://www.bankofcanada.ca/2020/07/2021-schedule-policy-interest-rate-announcements/
 2021-03-11,EUR,BCE,https://www.ecb.europa.eu/press/press_conference/monetary-policy-statement/2021/html/index_include.en.html
 2021-03-17,USD,Fed,https://www.federalreserve.gov/monetarypolicy/fomccalendars.htm
@@ -1559,6 +1705,7 @@ fecha,divisa,evento,fuente
 2021-06-04,USD,Empleo EE. UU.,https://www.bls.gov/bls/news-release/empsit.htm
 2021-06-09,CAD,BoC,https://www.bankofcanada.ca/2020/07/2021-schedule-policy-interest-rate-announcements/
 2021-06-10,EUR,BCE,https://www.ecb.europa.eu/press/press_conference/monetary-policy-statement/2021/html/index_include.en.html
+2021-06-13,CHF,Votacion popular,https://en.wikipedia.org/w/index.php?title=List_of_Swiss_federal_referendums&action=raw
 2021-06-16,USD,Fed,https://www.federalreserve.gov/monetarypolicy/fomccalendars.htm
 2021-06-17,CHF,SNB,https://www.snb.ch/en/the-snb/mandates-goals/monetary-policy/decisions
 2021-06-18,JPY,BoJ,https://www.boj.or.jp/en/mopo/mpmsche_minu/minu_2021/index.htm
@@ -1578,21 +1725,26 @@ fecha,divisa,evento,fuente
 2021-09-07,AUD,RBA,https://www.rba.gov.au/monetary-policy/int-rate-decisions/2021/
 2021-09-08,CAD,BoC,https://www.bankofcanada.ca/2020/07/2021-schedule-policy-interest-rate-announcements/
 2021-09-09,EUR,BCE,https://www.ecb.europa.eu/press/press_conference/monetary-policy-statement/2021/html/index_include.en.html
+2021-09-20,CAD,Elecciones,https://en.wikipedia.org/w/index.php?title=2021_Canadian_federal_election&action=raw
 2021-09-22,JPY,BoJ,https://www.boj.or.jp/en/mopo/mpmsche_minu/minu_2021/index.htm
 2021-09-22,USD,Fed,https://www.federalreserve.gov/monetarypolicy/fomccalendars.htm
 2021-09-23,CHF,SNB,https://www.snb.ch/en/the-snb/mandates-goals/monetary-policy/decisions
 2021-09-23,GBP,BoE,https://www.bankofengland.co.uk/monetary-policy-summary-and-minutes/2021/september-2021
+2021-09-26,CHF,Votacion popular,https://en.wikipedia.org/w/index.php?title=List_of_Swiss_federal_referendums&action=raw
+2021-09-26,EUR,Elecciones,https://en.wikipedia.org/w/index.php?title=2021_German_federal_election&action=raw
 2021-10-05,AUD,RBA,https://www.rba.gov.au/monetary-policy/int-rate-decisions/2021/
 2021-10-06,NZD,RBNZ,https://www.rbnz.govt.nz/monetary-policy/monetary-policy-decisions
 2021-10-08,USD,Empleo EE. UU.,https://www.bls.gov/bls/news-release/empsit.htm
 2021-10-27,CAD,BoC,https://www.bankofcanada.ca/2020/07/2021-schedule-policy-interest-rate-announcements/
 2021-10-28,EUR,BCE,https://www.ecb.europa.eu/press/press_conference/monetary-policy-statement/2021/html/index_include.en.html
 2021-10-28,JPY,BoJ,https://www.boj.or.jp/en/mopo/mpmsche_minu/minu_2021/index.htm
+2021-10-31,JPY,Elecciones,https://en.wikipedia.org/w/index.php?title=2021_Japanese_general_election&action=raw
 2021-11-02,AUD,RBA,https://www.rba.gov.au/monetary-policy/int-rate-decisions/2021/
 2021-11-03,USD,Fed,https://www.federalreserve.gov/monetarypolicy/fomccalendars.htm
 2021-11-04,GBP,BoE,https://www.bankofengland.co.uk/monetary-policy-summary-and-minutes/2021/november-2021
 2021-11-05,USD,Empleo EE. UU.,https://www.bls.gov/bls/news-release/empsit.htm
 2021-11-24,NZD,RBNZ,https://www.rbnz.govt.nz/monetary-policy/monetary-policy-decisions
+2021-11-28,CHF,Votacion popular,https://en.wikipedia.org/w/index.php?title=List_of_Swiss_federal_referendums&action=raw
 2021-12-03,USD,Empleo EE. UU.,https://www.bls.gov/bls/news-release/empsit.htm
 2021-12-07,AUD,RBA,https://www.rba.gov.au/monetary-policy/int-rate-decisions/2021/
 2021-12-08,CAD,BoC,https://www.bankofcanada.ca/2020/07/2021-schedule-policy-interest-rate-announcements/
@@ -1609,6 +1761,7 @@ fecha,divisa,evento,fuente
 2022-02-03,EUR,BCE,https://www.ecb.europa.eu/press/press_conference/monetary-policy-statement/2022/html/index_include.en.html
 2022-02-03,GBP,BoE,https://www.bankofengland.co.uk/monetary-policy-summary-and-minutes/2022/february-2022
 2022-02-04,USD,Empleo EE. UU.,https://www.bls.gov/bls/news-release/empsit.htm
+2022-02-13,CHF,Votacion popular,https://en.wikipedia.org/w/index.php?title=List_of_Swiss_federal_referendums&action=raw
 2022-02-23,NZD,RBNZ,https://www.rbnz.govt.nz/monetary-policy/monetary-policy-decisions
 2022-03-01,AUD,RBA,https://www.rba.gov.au/monetary-policy/int-rate-decisions/2022/
 2022-03-02,CAD,BoC,https://www.bankofcanada.ca/2021/07/bank-canada-publishes-its-2022-schedule-policy-interest-rate-announcements-release-monetary-policy-report-other-major-publications/
@@ -1620,25 +1773,32 @@ fecha,divisa,evento,fuente
 2022-03-24,CHF,SNB,https://www.snb.ch/en/the-snb/mandates-goals/monetary-policy/decisions
 2022-04-01,USD,Empleo EE. UU.,https://www.bls.gov/bls/news-release/empsit.htm
 2022-04-05,AUD,RBA,https://www.rba.gov.au/monetary-policy/int-rate-decisions/2022/
+2022-04-10,EUR,Elecciones,https://en.wikipedia.org/w/index.php?title=2022_French_presidential_election&action=raw
 2022-04-13,CAD,BoC,https://www.bankofcanada.ca/2021/07/bank-canada-publishes-its-2022-schedule-policy-interest-rate-announcements-release-monetary-policy-report-other-major-publications/
 2022-04-13,NZD,RBNZ,https://www.rbnz.govt.nz/monetary-policy/monetary-policy-decisions
 2022-04-14,EUR,BCE,https://www.ecb.europa.eu/press/press_conference/monetary-policy-statement/2022/html/index_include.en.html
+2022-04-24,EUR,Elecciones,https://en.wikipedia.org/w/index.php?title=2022_French_presidential_election&action=raw
 2022-04-28,JPY,BoJ,https://www.boj.or.jp/en/mopo/mpmsche_minu/minu_2022/index.htm
 2022-05-03,AUD,RBA,https://www.rba.gov.au/monetary-policy/int-rate-decisions/2022/
 2022-05-04,USD,Fed,https://www.federalreserve.gov/monetarypolicy/fomccalendars.htm
 2022-05-05,GBP,BoE,https://www.bankofengland.co.uk/monetary-policy-summary-and-minutes/2022/may-2022
 2022-05-06,USD,Empleo EE. UU.,https://www.bls.gov/bls/news-release/empsit.htm
+2022-05-15,CHF,Votacion popular,https://en.wikipedia.org/w/index.php?title=List_of_Swiss_federal_referendums&action=raw
+2022-05-21,AUD,Elecciones,https://en.wikipedia.org/w/index.php?title=2022_Australian_federal_election&action=raw
 2022-05-25,NZD,RBNZ,https://www.rbnz.govt.nz/monetary-policy/monetary-policy-decisions
 2022-06-01,CAD,BoC,https://www.bankofcanada.ca/2021/07/bank-canada-publishes-its-2022-schedule-policy-interest-rate-announcements-release-monetary-policy-report-other-major-publications/
 2022-06-03,USD,Empleo EE. UU.,https://www.bls.gov/bls/news-release/empsit.htm
 2022-06-07,AUD,RBA,https://www.rba.gov.au/monetary-policy/int-rate-decisions/2022/
 2022-06-09,EUR,BCE,https://www.ecb.europa.eu/press/press_conference/monetary-policy-statement/2022/html/index_include.en.html
+2022-06-12,EUR,Elecciones,https://en.wikipedia.org/w/index.php?title=2022_Italian_referendum&action=raw
 2022-06-15,USD,Fed,https://www.federalreserve.gov/monetarypolicy/fomccalendars.htm
 2022-06-16,CHF,SNB,https://www.snb.ch/en/the-snb/mandates-goals/monetary-policy/decisions
 2022-06-16,GBP,BoE,https://www.bankofengland.co.uk/monetary-policy-summary-and-minutes/2022/june-2022
 2022-06-17,JPY,BoJ,https://www.boj.or.jp/en/mopo/mpmsche_minu/minu_2022/index.htm
+2022-06-19,EUR,Elecciones,https://en.wikipedia.org/w/index.php?title=2022_French_legislative_election&action=raw
 2022-07-05,AUD,RBA,https://www.rba.gov.au/monetary-policy/int-rate-decisions/2022/
 2022-07-08,USD,Empleo EE. UU.,https://www.bls.gov/bls/news-release/empsit.htm
+2022-07-10,JPY,Elecciones,https://en.wikipedia.org/w/index.php?title=2022_Japanese_House_of_Councillors_election&action=raw
 2022-07-13,CAD,BoC,https://www.bankofcanada.ca/2021/07/bank-canada-publishes-its-2022-schedule-policy-interest-rate-announcements-release-monetary-policy-report-other-major-publications/
 2022-07-13,NZD,RBNZ,https://www.rbnz.govt.nz/monetary-policy/monetary-policy-decisions
 2022-07-21,EUR,BCE,https://www.ecb.europa.eu/press/press_conference/monetary-policy-statement/2022/html/index_include.en.html
@@ -1656,6 +1816,8 @@ fecha,divisa,evento,fuente
 2022-09-22,CHF,SNB,https://www.snb.ch/en/the-snb/mandates-goals/monetary-policy/decisions
 2022-09-22,GBP,BoE,https://www.bankofengland.co.uk/monetary-policy-summary-and-minutes/2022/september-2022
 2022-09-22,JPY,BoJ,https://www.boj.or.jp/en/mopo/mpmsche_minu/minu_2022/index.htm
+2022-09-25,CHF,Votacion popular,https://en.wikipedia.org/w/index.php?title=List_of_Swiss_federal_referendums&action=raw
+2022-09-25,EUR,Elecciones,https://en.wikipedia.org/w/index.php?title=2022_Italian_general_election&action=raw
 2022-10-04,AUD,RBA,https://www.rba.gov.au/monetary-policy/int-rate-decisions/2022/
 2022-10-05,NZD,RBNZ,https://www.rbnz.govt.nz/monetary-policy/monetary-policy-decisions
 2022-10-07,USD,Empleo EE. UU.,https://www.bls.gov/bls/news-release/empsit.htm
@@ -1666,6 +1828,7 @@ fecha,divisa,evento,fuente
 2022-11-02,USD,Fed,https://www.federalreserve.gov/monetarypolicy/fomccalendars.htm
 2022-11-03,GBP,BoE,https://www.bankofengland.co.uk/monetary-policy-summary-and-minutes/2022/november-2022
 2022-11-04,USD,Empleo EE. UU.,https://www.bls.gov/bls/news-release/empsit.htm
+2022-11-08,USD,Elecciones,https://en.wikipedia.org/w/index.php?title=2022_United_States_elections&action=raw
 2022-11-23,NZD,RBNZ,https://www.rbnz.govt.nz/monetary-policy/monetary-policy-decisions
 2022-12-02,USD,Empleo EE. UU.,https://www.bls.gov/bls/news-release/empsit.htm
 2022-12-06,AUD,RBA,https://www.rba.gov.au/monetary-policy/int-rate-decisions/2022/
@@ -1709,12 +1872,14 @@ fecha,divisa,evento,fuente
 2023-06-14,USD,Fed,https://www.federalreserve.gov/monetarypolicy/fomccalendars.htm
 2023-06-15,EUR,BCE,https://www.ecb.europa.eu/press/press_conference/monetary-policy-statement/2023/html/index_include.en.html
 2023-06-16,JPY,BoJ,https://www.boj.or.jp/en/mopo/mpmsche_minu/minu_2023/index.htm
+2023-06-18,CHF,Votacion popular,https://en.wikipedia.org/w/index.php?title=List_of_Swiss_federal_referendums&action=raw
 2023-06-22,CHF,SNB,https://www.snb.ch/en/the-snb/mandates-goals/monetary-policy/decisions
 2023-06-22,GBP,BoE,https://www.bankofengland.co.uk/monetary-policy-summary-and-minutes/2023/june-2023
 2023-07-04,AUD,RBA,https://www.rba.gov.au/monetary-policy/int-rate-decisions/2023/
 2023-07-07,USD,Empleo EE. UU.,https://www.bls.gov/bls/news-release/empsit.htm
 2023-07-12,CAD,BoC,https://www.bankofcanada.ca/2022/07/2023-schedule-interest-rate-announcements/
 2023-07-12,NZD,RBNZ,https://www.rbnz.govt.nz/monetary-policy/monetary-policy-decisions
+2023-07-23,EUR,Elecciones,https://en.wikipedia.org/w/index.php?title=2023_Spanish_general_election&action=raw
 2023-07-26,USD,Fed,https://www.federalreserve.gov/monetarypolicy/fomccalendars.htm
 2023-07-27,EUR,BCE,https://www.ecb.europa.eu/press/press_conference/monetary-policy-statement/2023/html/index_include.en.html
 2023-07-28,JPY,BoJ,https://www.boj.or.jp/en/mopo/mpmsche_minu/minu_2023/index.htm
@@ -1733,6 +1898,9 @@ fecha,divisa,evento,fuente
 2023-10-03,AUD,RBA,https://www.rba.gov.au/monetary-policy/int-rate-decisions/2023/
 2023-10-04,NZD,RBNZ,https://www.rbnz.govt.nz/monetary-policy/monetary-policy-decisions
 2023-10-06,USD,Empleo EE. UU.,https://www.bls.gov/bls/news-release/empsit.htm
+2023-10-14,AUD,Elecciones,https://en.wikipedia.org/w/index.php?title=2023_Australian_Indigenous_Voice_referendum&action=raw
+2023-10-14,NZD,Elecciones,https://en.wikipedia.org/w/index.php?title=2023_New_Zealand_general_election&action=raw
+2023-10-22,CHF,Elecciones,https://en.wikipedia.org/w/index.php?title=2023_Swiss_federal_election&action=raw
 2023-10-25,CAD,BoC,https://www.bankofcanada.ca/2022/07/2023-schedule-interest-rate-announcements/
 2023-10-26,EUR,BCE,https://www.ecb.europa.eu/press/press_conference/monetary-policy-statement/2023/html/index_include.en.html
 2023-10-31,JPY,BoJ,https://www.boj.or.jp/en/mopo/mpmsche_minu/minu_2023/index.htm
@@ -1757,7 +1925,9 @@ fecha,divisa,evento,fuente
 2024-02-01,GBP,BoE,https://www.bankofengland.co.uk/monetary-policy-summary-and-minutes/2024/february-2024
 2024-02-02,USD,Empleo EE. UU.,https://www.bls.gov/bls/news-release/empsit.htm
 2024-02-06,AUD,RBA,https://www.rba.gov.au/monetary-policy/int-rate-decisions/2024/
+2024-02-11,EUR,Elecciones,https://en.wikipedia.org/w/index.php?title=2021_German_federal_election&action=raw
 2024-02-28,NZD,RBNZ,https://www.rbnz.govt.nz/monetary-policy/monetary-policy-decisions
+2024-03-03,CHF,Votacion popular,https://en.wikipedia.org/w/index.php?title=List_of_Swiss_federal_referendums&action=raw
 2024-03-06,CAD,BoC,https://www.bankofcanada.ca/2023/07/2024-schedule-policy-interest-rate-announcements-major-publications/
 2024-03-07,EUR,BCE,https://www.ecb.europa.eu/press/press_conference/monetary-policy-statement/2024/html/index_include.en.html
 2024-03-08,USD,Empleo EE. UU.,https://www.bls.gov/bls/news-release/empsit.htm
@@ -1779,12 +1949,16 @@ fecha,divisa,evento,fuente
 2024-06-05,CAD,BoC,https://www.bankofcanada.ca/2023/07/2024-schedule-policy-interest-rate-announcements-major-publications/
 2024-06-06,EUR,BCE,https://www.ecb.europa.eu/press/press_conference/monetary-policy-statement/2024/html/index_include.en.html
 2024-06-07,USD,Empleo EE. UU.,https://www.bls.gov/bls/news-release/empsit.htm
+2024-06-09,CHF,Votacion popular,https://en.wikipedia.org/w/index.php?title=List_of_Swiss_federal_referendums&action=raw
 2024-06-12,USD,Fed,https://www.federalreserve.gov/monetarypolicy/fomccalendars.htm
 2024-06-14,JPY,BoJ,https://www.boj.or.jp/en/mopo/mpmsche_minu/minu_2024/index.htm
 2024-06-18,AUD,RBA,https://www.rba.gov.au/monetary-policy/int-rate-decisions/2024/
 2024-06-20,CHF,SNB,https://www.snb.ch/en/the-snb/mandates-goals/monetary-policy/decisions
 2024-06-20,GBP,BoE,https://www.bankofengland.co.uk/monetary-policy-summary-and-minutes/2024/june-2024
+2024-06-30,EUR,Elecciones,https://en.wikipedia.org/w/index.php?title=2024_French_legislative_election&action=raw
+2024-07-04,GBP,Elecciones,https://en.wikipedia.org/w/index.php?title=2024_United_Kingdom_general_election&action=raw
 2024-07-05,USD,Empleo EE. UU.,https://www.bls.gov/bls/news-release/empsit.htm
+2024-07-07,EUR,Elecciones,https://en.wikipedia.org/w/index.php?title=2024_French_legislative_election&action=raw
 2024-07-10,NZD,RBNZ,https://www.rbnz.govt.nz/monetary-policy/monetary-policy-decisions
 2024-07-18,EUR,BCE,https://www.ecb.europa.eu/press/press_conference/monetary-policy-statement/2024/html/index_include.en.html
 2024-07-24,CAD,BoC,https://www.bankofcanada.ca/2023/07/2024-schedule-policy-interest-rate-announcements-major-publications/
@@ -1800,17 +1974,21 @@ fecha,divisa,evento,fuente
 2024-09-18,USD,Fed,https://www.federalreserve.gov/monetarypolicy/fomccalendars.htm
 2024-09-19,GBP,BoE,https://www.bankofengland.co.uk/monetary-policy-summary-and-minutes/2024/september-2024
 2024-09-20,JPY,BoJ,https://www.boj.or.jp/en/mopo/mpmsche_minu/minu_2024/index.htm
+2024-09-22,CHF,Votacion popular,https://en.wikipedia.org/w/index.php?title=List_of_Swiss_federal_referendums&action=raw
 2024-09-24,AUD,RBA,https://www.rba.gov.au/monetary-policy/int-rate-decisions/2024/
 2024-09-26,CHF,SNB,https://www.snb.ch/en/the-snb/mandates-goals/monetary-policy/decisions
 2024-10-04,USD,Empleo EE. UU.,https://www.bls.gov/bls/news-release/empsit.htm
 2024-10-09,NZD,RBNZ,https://www.rbnz.govt.nz/monetary-policy/monetary-policy-decisions
 2024-10-17,EUR,BCE,https://www.ecb.europa.eu/press/press_conference/monetary-policy-statement/2024/html/index_include.en.html
 2024-10-23,CAD,BoC,https://www.bankofcanada.ca/2023/07/2024-schedule-policy-interest-rate-announcements-major-publications/
+2024-10-27,JPY,Elecciones,https://en.wikipedia.org/w/index.php?title=2024_Japanese_general_election&action=raw
 2024-10-31,JPY,BoJ,https://www.boj.or.jp/en/mopo/mpmsche_minu/minu_2024/index.htm
 2024-11-01,USD,Empleo EE. UU.,https://www.bls.gov/bls/news-release/empsit.htm
 2024-11-05,AUD,RBA,https://www.rba.gov.au/monetary-policy/int-rate-decisions/2024/
+2024-11-05,USD,Elecciones,https://en.wikipedia.org/w/index.php?title=2024_United_States_presidential_election&action=raw
 2024-11-07,GBP,BoE,https://www.bankofengland.co.uk/monetary-policy-summary-and-minutes/2024/november-2024
 2024-11-07,USD,Fed,https://www.federalreserve.gov/monetarypolicy/fomccalendars.htm
+2024-11-24,CHF,Votacion popular,https://en.wikipedia.org/w/index.php?title=List_of_Swiss_federal_referendums&action=raw
 2024-11-27,NZD,RBNZ,https://www.rbnz.govt.nz/monetary-policy/monetary-policy-decisions
 2024-12-06,USD,Empleo EE. UU.,https://www.bls.gov/bls/news-release/empsit.htm
 2024-12-10,AUD,RBA,https://www.rba.gov.au/monetary-policy/int-rate-decisions/2024/
@@ -1827,8 +2005,10 @@ fecha,divisa,evento,fuente
 2025-01-30,EUR,BCE,https://www.ecb.europa.eu/press/press_conference/monetary-policy-statement/2025/html/index_include.en.html
 2025-02-06,GBP,BoE,https://www.bankofengland.co.uk/monetary-policy-summary-and-minutes/2025/february-2025
 2025-02-07,USD,Empleo EE. UU.,https://www.bls.gov/bls/news-release/empsit.htm
+2025-02-09,CHF,Votacion popular,https://en.wikipedia.org/w/index.php?title=List_of_Swiss_federal_referendums&action=raw
 2025-02-18,AUD,RBA,https://www.rba.gov.au/monetary-policy/int-rate-decisions/2025/
 2025-02-19,NZD,RBNZ,https://www.rbnz.govt.nz/monetary-policy/monetary-policy-decisions
+2025-02-23,EUR,Elecciones,https://en.wikipedia.org/w/index.php?title=2025_German_federal_election&action=raw
 2025-03-06,EUR,BCE,https://www.ecb.europa.eu/press/press_conference/monetary-policy-statement/2025/html/index_include.en.html
 2025-03-07,USD,Empleo EE. UU.,https://www.bls.gov/bls/news-release/empsit.htm
 2025-03-12,CAD,BoC,https://www.bankofcanada.ca/2024/08/bank-canada-publishes-2025-schedule-policy-interest-rate-announcements-other-major-publications/
@@ -1841,8 +2021,10 @@ fecha,divisa,evento,fuente
 2025-04-09,NZD,RBNZ,https://www.rbnz.govt.nz/monetary-policy/monetary-policy-decisions
 2025-04-16,CAD,BoC,https://www.bankofcanada.ca/2024/08/bank-canada-publishes-2025-schedule-policy-interest-rate-announcements-other-major-publications/
 2025-04-17,EUR,BCE,https://www.ecb.europa.eu/press/press_conference/monetary-policy-statement/2025/html/index_include.en.html
+2025-04-28,CAD,Elecciones,https://en.wikipedia.org/w/index.php?title=2025_Canadian_federal_election&action=raw
 2025-04-30,JPY,BoJ,https://www.boj.or.jp/en/mopo/mpmsche_minu/minu_2025/index.htm
 2025-05-02,USD,Empleo EE. UU.,https://www.bls.gov/bls/news-release/empsit.htm
+2025-05-03,AUD,Elecciones,https://en.wikipedia.org/w/index.php?title=2025_Australian_federal_election&action=raw
 2025-05-07,USD,Fed,https://www.federalreserve.gov/monetarypolicy/fomccalendars.htm
 2025-05-08,GBP,BoE,https://www.bankofengland.co.uk/monetary-policy-summary-and-minutes/2025/may-2025
 2025-05-20,AUD,RBA,https://www.rba.gov.au/monetary-policy/int-rate-decisions/2025/
@@ -1850,6 +2032,8 @@ fecha,divisa,evento,fuente
 2025-06-04,CAD,BoC,https://www.bankofcanada.ca/2024/08/bank-canada-publishes-2025-schedule-policy-interest-rate-announcements-other-major-publications/
 2025-06-05,EUR,BCE,https://www.ecb.europa.eu/press/press_conference/monetary-policy-statement/2025/html/index_include.en.html
 2025-06-06,USD,Empleo EE. UU.,https://www.bls.gov/bls/news-release/empsit.htm
+2025-06-08,EUR,Elecciones,https://en.wikipedia.org/w/index.php?title=2025_Italian_referendum&action=raw
+2025-06-09,EUR,Elecciones,https://en.wikipedia.org/w/index.php?title=2025_Italian_referendum&action=raw
 2025-06-17,JPY,BoJ,https://www.boj.or.jp/en/mopo/mpmsche_minu/minu_2025/index.htm
 2025-06-18,USD,Fed,https://www.federalreserve.gov/monetarypolicy/fomccalendars.htm
 2025-06-19,CHF,SNB,https://www.snb.ch/en/the-snb/mandates-goals/monetary-policy/decisions
@@ -1857,6 +2041,7 @@ fecha,divisa,evento,fuente
 2025-07-03,USD,Empleo EE. UU.,https://www.bls.gov/bls/news-release/empsit.htm
 2025-07-08,AUD,RBA,https://www.rba.gov.au/monetary-policy/int-rate-decisions/2025/
 2025-07-09,NZD,RBNZ,https://www.rbnz.govt.nz/monetary-policy/monetary-policy-decisions
+2025-07-20,JPY,Elecciones,https://en.wikipedia.org/w/index.php?title=2025_Japanese_House_of_Councillors_election&action=raw
 2025-07-24,EUR,BCE,https://www.ecb.europa.eu/press/press_conference/monetary-policy-statement/2025/html/index_include.en.html
 2025-07-30,CAD,BoC,https://www.bankofcanada.ca/2024/08/bank-canada-publishes-2025-schedule-policy-interest-rate-announcements-other-major-publications/
 2025-07-30,USD,Fed,https://www.federalreserve.gov/monetarypolicy/fomccalendars.htm
@@ -1872,6 +2057,7 @@ fecha,divisa,evento,fuente
 2025-09-18,GBP,BoE,https://www.bankofengland.co.uk/monetary-policy-summary-and-minutes/2025/september-2025
 2025-09-19,JPY,BoJ,https://www.boj.or.jp/en/mopo/mpmsche_minu/minu_2025/index.htm
 2025-09-25,CHF,SNB,https://www.snb.ch/en/the-snb/mandates-goals/monetary-policy/decisions
+2025-09-28,CHF,Votacion popular,https://en.wikipedia.org/wiki/2025_Swiss_referendums
 2025-09-30,AUD,RBA,https://www.rba.gov.au/monetary-policy/int-rate-decisions/2025/
 2025-10-08,NZD,RBNZ,https://www.rbnz.govt.nz/monetary-policy/monetary-policy-decisions
 2025-10-29,CAD,BoC,https://www.bankofcanada.ca/2024/08/bank-canada-publishes-2025-schedule-policy-interest-rate-announcements-other-major-publications/
@@ -1882,6 +2068,7 @@ fecha,divisa,evento,fuente
 2025-11-06,GBP,BoE,https://www.bankofengland.co.uk/monetary-policy-summary-and-minutes/2025/november-2025
 2025-11-20,USD,Empleo EE. UU.,https://www.bls.gov/bls/news-release/empsit.htm
 2025-11-26,NZD,RBNZ,https://www.rbnz.govt.nz/monetary-policy/monetary-policy-decisions
+2025-11-30,CHF,Votacion popular,https://en.wikipedia.org/wiki/2025_Swiss_referendums
 2025-12-09,AUD,RBA,https://www.rba.gov.au/monetary-policy/int-rate-decisions/2025/
 2025-12-10,CAD,BoC,https://www.bankofcanada.ca/2024/08/bank-canada-publishes-2025-schedule-policy-interest-rate-announcements-other-major-publications/
 2025-12-10,USD,Fed,https://www.federalreserve.gov/monetarypolicy/fomccalendars.htm
@@ -1897,9 +2084,11 @@ fecha,divisa,evento,fuente
 2026-02-03,AUD,RBA,https://www.rba.gov.au/monetary-policy/int-rate-decisions/2026/
 2026-02-05,EUR,BCE,https://www.ecb.europa.eu/press/press_conference/monetary-policy-statement/2026/html/index_include.en.html
 2026-02-05,GBP,BoE,https://www.bankofengland.co.uk/monetary-policy-summary-and-minutes/2026/february-2026
+2026-02-08,JPY,Elecciones,https://en.wikipedia.org/w/index.php?title=2026_Japanese_general_election&action=raw
 2026-02-11,USD,Empleo EE. UU.,https://www.bls.gov/bls/news-release/empsit.htm
 2026-02-18,NZD,RBNZ,https://www.rbnz.govt.nz/monetary-policy/monetary-policy-decisions
 2026-03-06,USD,Empleo EE. UU.,https://www.bls.gov/bls/news-release/empsit.htm
+2026-03-08,CHF,Votacion popular,https://en.wikipedia.org/wiki/2026_Swiss_referendums
 2026-03-17,AUD,RBA,https://www.rba.gov.au/monetary-policy/int-rate-decisions/2026/
 2026-03-18,CAD,BoC,https://www.bankofcanada.ca/2025/08/bank-canada-publishes-2026-schedule-policy-interest-rate-announcements-other-major-publications/
 2026-03-18,USD,Fed,https://www.federalreserve.gov/monetarypolicy/fomccalendars.htm
@@ -1920,6 +2109,7 @@ fecha,divisa,evento,fuente
 2026-06-05,USD,Empleo EE. UU.,https://www.bls.gov/bls/news-release/empsit.htm
 2026-06-10,CAD,BoC,https://www.bankofcanada.ca/2025/08/bank-canada-publishes-2026-schedule-policy-interest-rate-announcements-other-major-publications/
 2026-06-11,EUR,BCE,https://www.ecb.europa.eu/press/press_conference/monetary-policy-statement/2026/html/index_include.en.html
+2026-06-14,CHF,Votacion popular,https://en.wikipedia.org/wiki/2026_Swiss_referendums
 2026-06-16,AUD,RBA,https://www.rba.gov.au/monetary-policy/int-rate-decisions/2026/
 2026-06-16,JPY,BoJ,https://www.boj.or.jp/en/mopo/mpmsche_minu/m_ref/mref250731a.pdf
 2026-06-17,USD,Fed,https://www.federalreserve.gov/monetarypolicy/fomccalendars.htm
@@ -1942,12 +2132,15 @@ fecha,divisa,evento,fuente
 2026-09-17,GBP,BoE,https://www.bankofengland.co.uk/monetary-policy-summary-and-minutes/2026/september-2026
 2026-09-18,JPY,BoJ,https://www.boj.or.jp/en/mopo/mpmsche_minu/m_ref/mref250731a.pdf
 2026-09-24,CHF,SNB,https://www.snb.ch/en/the-snb/mandates-goals/monetary-policy/decisions
+2026-09-27,CHF,Votacion popular,https://en.wikipedia.org/wiki/2026_Swiss_referendums
 2026-09-29,AUD,RBA,https://www.rba.gov.au/monetary-policy/int-rate-decisions/2026/
 2026-10-02,USD,Empleo EE. UU.,https://www.bls.gov/bls/news-release/empsit.htm
 2026-10-28,CAD,BoC,https://www.bankofcanada.ca/2025/08/bank-canada-publishes-2026-schedule-policy-interest-rate-announcements-other-major-publications/
 2026-10-28,USD,Fed,https://www.federalreserve.gov/monetarypolicy/fomccalendars.htm
 2026-10-30,JPY,BoJ,https://www.boj.or.jp/en/mopo/mpmsche_minu/m_ref/mref250731a.pdf
 2026-11-05,GBP,BoE,https://www.bankofengland.co.uk/monetary-policy-summary-and-minutes/2026/november-2026
+2026-11-07,NZD,Elecciones,https://en.wikipedia.org/w/index.php?title=2026_New_Zealand_general_election&action=raw
+2026-11-29,EUR,Elecciones,https://en.wikipedia.org/w/index.php?title=2026_Spanish_general_election&action=raw
 2026-12-09,CAD,BoC,https://www.bankofcanada.ca/2025/08/bank-canada-publishes-2026-schedule-policy-interest-rate-announcements-other-major-publications/
 2026-12-09,USD,Fed,https://www.federalreserve.gov/monetarypolicy/fomccalendars.htm
 2026-12-17,GBP,BoE,https://www.bankofengland.co.uk/monetary-policy-summary-and-minutes/2026/december-2026
