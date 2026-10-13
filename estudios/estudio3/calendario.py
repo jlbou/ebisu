@@ -184,7 +184,24 @@ def boj() -> list[dict]:
     return [f for f in {f["fecha"]: f for f in out}.values() if f["fecha"] not in urgencia]
 
 
-FUENTES_EVENTOS = {"fed": fed, "empleo": empleo_eeuu, "bce": bce, "boe": boe, "boj": boj}
+def snb() -> list[dict]:
+    """Banco Nacional Suizo (CHF): evaluaciones trimestrales ("Monetary policy assessment of 13 September 2007").
+    Las decisiones fuera de calendario (p. ej. el suelo de 6/09/2011 o su fin el 15/01/2015) tienen otro titulo y no
+    entran (T1)."""
+    url = "https://www.snb.ch/en/the-snb/mandates-goals/monetary-policy/decisions"
+    out = []
+    h = bajar(url, "snb_decisiones.html")
+    for d, mes, y in re.findall(r"assessment of (\d{1,2}) (\w+) (\d{4})", texto(h)):
+        if mes.lower() in MESES and DESDE <= int(y) <= HASTA:
+            out.append(fila(pd.Timestamp(int(y), MESES[mes.lower()], int(d)), "CHF", "SNB", url))
+    # Hasta 2006 el titulo no lleva la fecha: se toma la del enlace (pre_AAAAMMDD) de cada "Monetary policy assessment"
+    for f, titulo in re.findall(r"<a[^>]*pre_(\d{8})[^>]*>(.*?)</a>", h, re.S):
+        if texto(titulo).startswith("Monetary policy assessment") and DESDE <= int(f[:4]) <= HASTA:
+            out.append(fila(pd.Timestamp(f), "CHF", "SNB", url))
+    return list({f["fecha"]: f for f in out}.values())
+
+
+FUENTES_EVENTOS = {"fed": fed, "empleo": empleo_eeuu, "bce": bce, "boe": boe, "boj": boj, "snb": snb}
 
 
 def main() -> None:

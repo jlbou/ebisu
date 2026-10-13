@@ -13,6 +13,7 @@ fecha,divisa,evento,fuente
 2003-03-06,GBP,BoE,https://www.bankofengland.co.uk/sitemap/minutes
 2003-03-07,USD,Empleo EE. UU.,https://www.bls.gov/bls/news-release/empsit.htm
 2003-03-18,USD,Fed,https://www.federalreserve.gov/monetarypolicy/fomchistorical2003.htm
+2003-03-20,CHF,SNB,https://www.snb.ch/en/the-snb/mandates-goals/monetary-policy/decisions
 2003-03-25,JPY,BoJ,https://www.boj.or.jp/en/mopo/mpmsche_minu/minu_2003/index.htm
 2003-04-03,EUR,BCE,https://www.ecb.europa.eu/press/press_conference/monetary-policy-statement/2003/html/index_include.en.html
 2003-04-04,USD,Empleo EE. UU.,https://www.bls.gov/bls/news-release/empsit.htm
@@ -28,6 +29,7 @@ fecha,divisa,evento,fuente
 2003-06-05,GBP,BoE,https://www.bankofengland.co.uk/sitemap/minutes
 2003-06-06,USD,Empleo EE. UU.,https://www.bls.gov/bls/news-release/empsit.htm
 2003-06-11,JPY,BoJ,https://www.boj.or.jp/en/mopo/mpmsche_minu/minu_2003/index.htm
+2003-06-13,CHF,SNB,https://www.snb.ch/en/the-snb/mandates-goals/monetary-policy/decisions
 2003-06-25,JPY,BoJ,https://www.boj.or.jp/en/mopo/mpmsche_minu/minu_2003/index.htm
 2003-06-25,USD,Fed,https://www.federalreserve.gov/monetarypolicy/fomchistorical2003.htm
 2003-07-03,USD,Empleo EE. UU.,https://www.bls.gov/bls/news-release/empsit.htm
@@ -44,6 +46,7 @@ fecha,divisa,evento,fuente
 2003-09-12,JPY,BoJ,https://www.boj.or.jp/en/mopo/mpmsche_minu/minu_2003/index.htm
 2003-09-15,USD,Fed,https://www.federalreserve.gov/monetarypolicy/fomchistorical2003.htm
 2003-09-16,USD,Fed,https://www.federalreserve.gov/monetarypolicy/fomchistorical2003.htm
+2003-09-18,CHF,SNB,https://www.snb.ch/en/the-snb/mandates-goals/monetary-policy/decisions
 2003-10-02,EUR,BCE,https://www.ecb.europa.eu/press/press_conference/monetary-policy-statement/2003/html/index_include.en.html
 2003-10-03,USD,Empleo EE. UU.,https://www.bls.gov/bls/news-release/empsit.htm
 2003-10-09,GBP,BoE,https://www.bankofengland.co.uk/sitemap/minutes
@@ -59,6 +62,7 @@ fecha,divisa,evento,fuente
 2003-12-04,GBP,BoE,https://www.bankofengland.co.uk/sitemap/minutes
 2003-12-05,USD,Empleo EE. UU.,https://www.bls.gov/bls/news-release/empsit.htm
 2003-12-09,USD,Fed,https://www.federalreserve.gov/monetarypolicy/fomchistorical2003.htm
+2003-12-12,CHF,SNB,https://www.snb.ch/en/the-snb/mandates-goals/monetary-policy/decisions
 2003-12-16,JPY,BoJ,https://www.boj.or.jp/en/mopo/mpmsche_minu/minu_2003/index.htm
 2004-01-08,EUR,BCE,https://www.ecb.europa.eu/press/press_conference/monetary-policy-statement/2004/html/index_include.en.html
 2004-01-08,GBP,BoE,https://www.bankofengland.co.uk/sitemap/minutes
@@ -75,6 +79,7 @@ fecha,divisa,evento,fuente
 2004-03-05,USD,Empleo EE. UU.,https://www.bls.gov/bls/news-release/empsit.htm
 2004-03-16,JPY,BoJ,https://www.boj.or.jp/en/mopo/mpmsche_minu/minu_2004/index.htm
 2004-03-16,USD,Fed,https://www.federalreserve.gov/monetarypolicy/fomchistorical2004.htm
+2004-03-18,CHF,SNB,https://www.snb.ch/en/the-snb/mandates-goals/monetary-policy/decisions
 2004-04-01,EUR,BCE,https://www.ecb.europa.eu/press/press_conference/monetary-policy-statement/2004/html/index_include.en.html
 2004-04-02,USD,Empleo EE. UU.,https://www.bls.gov/bls/news-release/empsit.htm
 2004-04-08,GBP,BoE,https://www.bankofengland.co.uk/sitemap/minutes
@@ -89,6 +94,7 @@ fecha,divisa,evento,fuente
 2004-06-04,USD,Empleo EE. UU.,https://www.bls.gov/bls/news-release/empsit.htm
 2004-06-10,GBP,BoE,https://www.bankofengland.co.uk/sitemap/minutes
 2004-06-15,JPY,BoJ,https://www.boj.or.jp/en/mopo/mpmsche_minu/minu_2004/index.htm
+2004-06-17,CHF,SNB,https://www.snb.ch/en/the-snb/mandates-goals/monetary-policy/decisions
 2004-06-25,JPY,BoJ,https://www.boj.or.jp/en/mopo/mpmsche_minu/minu_2004/index.htm
 2004-06-30,USD,Fed,https://www.federalreserve.gov/monetarypolicy/fomchistorical2004.htm
 2004-07-01,EUR,BCE,https://www.ecb.europa.eu/press/press_conference/monetary-policy-statement/2004/html/index_include.en.html
@@ -103,6 +109,7 @@ fecha,divisa,evento,fuente
 2004-09-03,USD,Empleo EE. UU.,https://www.bls.gov/bls/news-release/empsit.htm
 2004-09-09,GBP,BoE,https://www.bankofengland.co.uk/sitemap/minutes
 2004-09-09,JPY,BoJ,https://www.boj.or.jp/en/mopo/mpmsche_minu/minu_2004/index.htm
+2004-09-16,CHF,SNB,https://www.snb.ch/en/the-snb/mandates-goals/monetary-policy/decisions
 2004-09-21,USD,Fed,https://www.federalreserve.gov/monetarypolicy/fomchistorical2004.htm
 2004-10-07,EUR,BCE,https://www.ecb.europa.eu/press/press_conference/monetary-policy-statement/2004/html/index_include.en.html
 2004-10-07,GBP,BoE,https://www.bankofengland.co.uk/sitemap/minutes
@@ -118,6 +125,7 @@ fecha,divisa,evento,fuente
 2004-12-03,USD,Empleo EE. UU.,https://www.bls.gov/bls/news-release/empsit.htm
 2004-12-09,GBP,BoE,https://www.bankofengland.co.uk/sitemap/minutes
 2004-12-14,USD,Fed,https://www.federalreserve.gov/monetarypolicy/fomchistorical2004.htm
+2004-12-16,CHF,SNB,https://www.snb.ch/en/the-snb/mandates-goals/monetary-policy/decisions
 2004-12-17,JPY,BoJ,https://www.boj.or.jp/en/mopo/mpmsche_minu/minu_2004/index.htm
 2005-01-07,USD,Empleo EE. UU.,https://www.bls.gov/bls/news-release/empsit.htm
 2005-01-13,EUR,BCE,https://www.ecb.europa.eu/press/press_conference/monetary-policy-statement/2005/html/index_include.en.html
@@ -132,6 +140,7 @@ fecha,divisa,evento,fuente
 2005-03-04,USD,Empleo EE. UU.,https://www.bls.gov/bls/news-release/empsit.htm
 2005-03-10,GBP,BoE,https://www.bankofengland.co.uk/sitemap/minutes
 2005-03-16,JPY,BoJ,https://www.boj.or.jp/en/mopo/mpmsche_minu/minu_2005/index.htm
+2005-03-17,CHF,SNB,https://www.snb.ch/en/the-snb/mandates-goals/monetary-policy/decisions
 2005-03-22,USD,Fed,https://www.federalreserve.gov/monetarypolicy/fomchistorical2005.htm
 2005-04-01,USD,Empleo EE. UU.,https://www.bls.gov/bls/news-release/empsit.htm
 2005-04-06,JPY,BoJ,https://www.boj.or.jp/en/mopo/mpmsche_minu/minu_2005/index.htm
@@ -147,6 +156,7 @@ fecha,divisa,evento,fuente
 2005-06-03,USD,Empleo EE. UU.,https://www.bls.gov/bls/news-release/empsit.htm
 2005-06-09,GBP,BoE,https://www.bankofengland.co.uk/sitemap/minutes
 2005-06-15,JPY,BoJ,https://www.boj.or.jp/en/mopo/mpmsche_minu/minu_2005/index.htm
+2005-06-16,CHF,SNB,https://www.snb.ch/en/the-snb/mandates-goals/monetary-policy/decisions
 2005-06-30,USD,Fed,https://www.federalreserve.gov/monetarypolicy/fomchistorical2005.htm
 2005-07-07,EUR,BCE,https://www.ecb.europa.eu/press/press_conference/monetary-policy-statement/2005/html/index_include.en.html
 2005-07-07,GBP,BoE,https://www.bankofengland.co.uk/sitemap/minutes
@@ -161,6 +171,7 @@ fecha,divisa,evento,fuente
 2005-09-02,USD,Empleo EE. UU.,https://www.bls.gov/bls/news-release/empsit.htm
 2005-09-08,GBP,BoE,https://www.bankofengland.co.uk/sitemap/minutes
 2005-09-08,JPY,BoJ,https://www.boj.or.jp/en/mopo/mpmsche_minu/minu_2005/index.htm
+2005-09-15,CHF,SNB,https://www.snb.ch/en/the-snb/mandates-goals/monetary-policy/decisions
 2005-09-20,USD,Fed,https://www.federalreserve.gov/monetarypolicy/fomchistorical2005.htm
 2005-10-06,EUR,BCE,https://www.ecb.europa.eu/press/press_conference/monetary-policy-statement/2005/html/index_include.en.html
 2005-10-06,GBP,BoE,https://www.bankofengland.co.uk/sitemap/minutes
@@ -176,6 +187,7 @@ fecha,divisa,evento,fuente
 2005-12-02,USD,Empleo EE. UU.,https://www.bls.gov/bls/news-release/empsit.htm
 2005-12-08,GBP,BoE,https://www.bankofengland.co.uk/sitemap/minutes
 2005-12-13,USD,Fed,https://www.federalreserve.gov/monetarypolicy/fomchistorical2005.htm
+2005-12-15,CHF,SNB,https://www.snb.ch/en/the-snb/mandates-goals/monetary-policy/decisions
 2005-12-16,JPY,BoJ,https://www.boj.or.jp/en/mopo/mpmsche_minu/minu_2005/index.htm
 2006-01-06,USD,Empleo EE. UU.,https://www.bls.gov/bls/news-release/empsit.htm
 2006-01-12,EUR,BCE,https://www.ecb.europa.eu/press/press_conference/monetary-policy-statement/2006/html/index_include.en.html
@@ -190,6 +202,7 @@ fecha,divisa,evento,fuente
 2006-03-09,GBP,BoE,https://www.bankofengland.co.uk/sitemap/minutes
 2006-03-09,JPY,BoJ,https://www.boj.or.jp/en/mopo/mpmsche_minu/minu_2006/index.htm
 2006-03-10,USD,Empleo EE. UU.,https://www.bls.gov/bls/news-release/empsit.htm
+2006-03-16,CHF,SNB,https://www.snb.ch/en/the-snb/mandates-goals/monetary-policy/decisions
 2006-03-28,USD,Fed,https://www.federalreserve.gov/monetarypolicy/fomchistorical2006.htm
 2006-04-06,EUR,BCE,https://www.ecb.europa.eu/press/press_conference/monetary-policy-statement/2006/html/index_include.en.html
 2006-04-06,GBP,BoE,https://www.bankofengland.co.uk/sitemap/minutes
@@ -204,6 +217,7 @@ fecha,divisa,evento,fuente
 2006-06-02,USD,Empleo EE. UU.,https://www.bls.gov/bls/news-release/empsit.htm
 2006-06-08,EUR,BCE,https://www.ecb.europa.eu/press/press_conference/monetary-policy-statement/2006/html/index_include.en.html
 2006-06-08,GBP,BoE,https://www.bankofengland.co.uk/sitemap/minutes
+2006-06-15,CHF,SNB,https://www.snb.ch/en/the-snb/mandates-goals/monetary-policy/decisions
 2006-06-15,JPY,BoJ,https://www.boj.or.jp/en/mopo/mpmsche_minu/minu_2006/index.htm
 2006-06-29,USD,Fed,https://www.federalreserve.gov/monetarypolicy/fomchistorical2006.htm
 2006-07-06,EUR,BCE,https://www.ecb.europa.eu/press/press_conference/monetary-policy-statement/2006/html/index_include.en.html
@@ -219,6 +233,7 @@ fecha,divisa,evento,fuente
 2006-09-01,USD,Empleo EE. UU.,https://www.bls.gov/bls/news-release/empsit.htm
 2006-09-07,GBP,BoE,https://www.bankofengland.co.uk/sitemap/minutes
 2006-09-08,JPY,BoJ,https://www.boj.or.jp/en/mopo/mpmsche_minu/minu_2006/index.htm
+2006-09-14,CHF,SNB,https://www.snb.ch/en/the-snb/mandates-goals/monetary-policy/decisions
 2006-09-20,USD,Fed,https://www.federalreserve.gov/monetarypolicy/fomchistorical2006.htm
 2006-10-05,EUR,BCE,https://www.ecb.europa.eu/press/press_conference/monetary-policy-statement/2006/html/index_include.en.html
 2006-10-05,GBP,BoE,https://www.bankofengland.co.uk/sitemap/minutes
@@ -234,6 +249,7 @@ fecha,divisa,evento,fuente
 2006-12-07,GBP,BoE,https://www.bankofengland.co.uk/sitemap/minutes
 2006-12-08,USD,Empleo EE. UU.,https://www.bls.gov/bls/news-release/empsit.htm
 2006-12-12,USD,Fed,https://www.federalreserve.gov/monetarypolicy/fomchistorical2006.htm
+2006-12-14,CHF,SNB,https://www.snb.ch/en/the-snb/mandates-goals/monetary-policy/decisions
 2006-12-19,JPY,BoJ,https://www.boj.or.jp/en/mopo/mpmsche_minu/minu_2006/index.htm
 2007-01-05,USD,Empleo EE. UU.,https://www.bls.gov/bls/news-release/empsit.htm
 2007-01-11,EUR,BCE,https://www.ecb.europa.eu/press/press_conference/monetary-policy-statement/2007/html/index_include.en.html
@@ -247,6 +263,7 @@ fecha,divisa,evento,fuente
 2007-03-08,EUR,BCE,https://www.ecb.europa.eu/press/press_conference/monetary-policy-statement/2007/html/index_include.en.html
 2007-03-08,GBP,BoE,https://www.bankofengland.co.uk/sitemap/minutes
 2007-03-09,USD,Empleo EE. UU.,https://www.bls.gov/bls/news-release/empsit.htm
+2007-03-15,CHF,SNB,https://www.snb.ch/en/the-snb/mandates-goals/monetary-policy/decisions
 2007-03-20,JPY,BoJ,https://www.boj.or.jp/en/mopo/mpmsche_minu/minu_2007/index.htm
 2007-03-21,USD,Fed,https://www.federalreserve.gov/monetarypolicy/fomchistorical2007.htm
 2007-04-05,GBP,BoE,https://www.bankofengland.co.uk/sitemap/minutes
@@ -262,6 +279,7 @@ fecha,divisa,evento,fuente
 2007-06-01,USD,Empleo EE. UU.,https://www.bls.gov/bls/news-release/empsit.htm
 2007-06-06,EUR,BCE,https://www.ecb.europa.eu/press/press_conference/monetary-policy-statement/2007/html/index_include.en.html
 2007-06-07,GBP,BoE,https://www.bankofengland.co.uk/sitemap/minutes
+2007-06-14,CHF,SNB,https://www.snb.ch/en/the-snb/mandates-goals/monetary-policy/decisions
 2007-06-15,JPY,BoJ,https://www.boj.or.jp/en/mopo/mpmsche_minu/minu_2007/index.htm
 2007-06-28,USD,Fed,https://www.federalreserve.gov/monetarypolicy/fomchistorical2007.htm
 2007-07-05,EUR,BCE,https://www.ecb.europa.eu/press/press_conference/monetary-policy-statement/2007/html/index_include.en.html
@@ -276,6 +294,7 @@ fecha,divisa,evento,fuente
 2007-09-06,EUR,BCE,https://www.ecb.europa.eu/press/press_conference/monetary-policy-statement/2007/html/index_include.en.html
 2007-09-06,GBP,BoE,https://www.bankofengland.co.uk/sitemap/minutes
 2007-09-07,USD,Empleo EE. UU.,https://www.bls.gov/bls/news-release/empsit.htm
+2007-09-13,CHF,SNB,https://www.snb.ch/en/the-snb/mandates-goals/monetary-policy/decisions
 2007-09-18,USD,Fed,https://www.federalreserve.gov/monetarypolicy/fomchistorical2007.htm
 2007-09-19,JPY,BoJ,https://www.boj.or.jp/en/mopo/mpmsche_minu/minu_2007/index.htm
 2007-10-04,EUR,BCE,https://www.ecb.europa.eu/press/press_conference/monetary-policy-statement/2007/html/index_include.en.html
@@ -292,6 +311,7 @@ fecha,divisa,evento,fuente
 2007-12-06,GBP,BoE,https://www.bankofengland.co.uk/sitemap/minutes
 2007-12-07,USD,Empleo EE. UU.,https://www.bls.gov/bls/news-release/empsit.htm
 2007-12-11,USD,Fed,https://www.federalreserve.gov/monetarypolicy/fomchistorical2007.htm
+2007-12-13,CHF,SNB,https://www.snb.ch/en/the-snb/mandates-goals/monetary-policy/decisions
 2007-12-20,JPY,BoJ,https://www.boj.or.jp/en/mopo/mpmsche_minu/minu_2007/index.htm
 2008-01-04,USD,Empleo EE. UU.,https://www.bls.gov/bls/news-release/empsit.htm
 2008-01-10,EUR,BCE,https://www.ecb.europa.eu/press/press_conference/monetary-policy-statement/2008/html/index_include.en.html
@@ -306,6 +326,7 @@ fecha,divisa,evento,fuente
 2008-03-06,GBP,BoE,https://www.bankofengland.co.uk/sitemap/minutes
 2008-03-07,JPY,BoJ,https://www.boj.or.jp/en/mopo/mpmsche_minu/minu_2008/index.htm
 2008-03-07,USD,Empleo EE. UU.,https://www.bls.gov/bls/news-release/empsit.htm
+2008-03-13,CHF,SNB,https://www.snb.ch/en/the-snb/mandates-goals/monetary-policy/decisions
 2008-03-18,USD,Fed,https://www.federalreserve.gov/monetarypolicy/fomchistorical2008.htm
 2008-04-04,USD,Empleo EE. UU.,https://www.bls.gov/bls/news-release/empsit.htm
 2008-04-09,JPY,BoJ,https://www.boj.or.jp/en/mopo/mpmsche_minu/minu_2008/index.htm
@@ -321,6 +342,7 @@ fecha,divisa,evento,fuente
 2008-06-05,GBP,BoE,https://www.bankofengland.co.uk/sitemap/minutes
 2008-06-06,USD,Empleo EE. UU.,https://www.bls.gov/bls/news-release/empsit.htm
 2008-06-13,JPY,BoJ,https://www.boj.or.jp/en/mopo/mpmsche_minu/minu_2008/index.htm
+2008-06-19,CHF,SNB,https://www.snb.ch/en/the-snb/mandates-goals/monetary-policy/decisions
 2008-06-25,USD,Fed,https://www.federalreserve.gov/monetarypolicy/fomchistorical2008.htm
 2008-07-03,EUR,BCE,https://www.ecb.europa.eu/press/press_conference/monetary-policy-statement/2008/html/index_include.en.html
 2008-07-03,USD,Empleo EE. UU.,https://www.bls.gov/bls/news-release/empsit.htm
@@ -336,6 +358,7 @@ fecha,divisa,evento,fuente
 2008-09-05,USD,Empleo EE. UU.,https://www.bls.gov/bls/news-release/empsit.htm
 2008-09-16,USD,Fed,https://www.federalreserve.gov/monetarypolicy/fomchistorical2008.htm
 2008-09-17,JPY,BoJ,https://www.boj.or.jp/en/mopo/mpmsche_minu/minu_2008/index.htm
+2008-09-18,CHF,SNB,https://www.snb.ch/en/the-snb/mandates-goals/monetary-policy/decisions
 2008-10-02,EUR,BCE,https://www.ecb.europa.eu/press/press_conference/monetary-policy-statement/2008/html/index_include.en.html
 2008-10-03,USD,Empleo EE. UU.,https://www.bls.gov/bls/news-release/empsit.htm
 2008-10-07,JPY,BoJ,https://www.boj.or.jp/en/mopo/mpmsche_minu/minu_2008/index.htm
@@ -348,6 +371,7 @@ fecha,divisa,evento,fuente
 2008-12-04,EUR,BCE,https://www.ecb.europa.eu/press/press_conference/monetary-policy-statement/2008/html/index_include.en.html
 2008-12-04,GBP,BoE,https://www.bankofengland.co.uk/sitemap/minutes
 2008-12-05,USD,Empleo EE. UU.,https://www.bls.gov/bls/news-release/empsit.htm
+2008-12-11,CHF,SNB,https://www.snb.ch/en/the-snb/mandates-goals/monetary-policy/decisions
 2008-12-16,USD,Fed,https://www.federalreserve.gov/monetarypolicy/fomchistorical2008.htm
 2008-12-19,JPY,BoJ,https://www.boj.or.jp/en/mopo/mpmsche_minu/minu_2008/index.htm
 2009-01-08,GBP,BoE,https://www.bankofengland.co.uk/sitemap/minutes
@@ -362,6 +386,7 @@ fecha,divisa,evento,fuente
 2009-03-05,EUR,BCE,https://www.ecb.europa.eu/press/press_conference/monetary-policy-statement/2009/html/index_include.en.html
 2009-03-05,GBP,BoE,https://www.bankofengland.co.uk/sitemap/minutes
 2009-03-06,USD,Empleo EE. UU.,https://www.bls.gov/bls/news-release/empsit.htm
+2009-03-12,CHF,SNB,https://www.snb.ch/en/the-snb/mandates-goals/monetary-policy/decisions
 2009-03-18,JPY,BoJ,https://www.boj.or.jp/en/mopo/mpmsche_minu/minu_2009/index.htm
 2009-03-18,USD,Fed,https://www.federalreserve.gov/monetarypolicy/fomchistorical2009.htm
 2009-04-02,EUR,BCE,https://www.ecb.europa.eu/press/press_conference/monetary-policy-statement/2009/html/index_include.en.html
@@ -378,6 +403,7 @@ fecha,divisa,evento,fuente
 2009-06-04,GBP,BoE,https://www.bankofengland.co.uk/sitemap/minutes
 2009-06-05,USD,Empleo EE. UU.,https://www.bls.gov/bls/news-release/empsit.htm
 2009-06-16,JPY,BoJ,https://www.boj.or.jp/en/mopo/mpmsche_minu/minu_2009/index.htm
+2009-06-18,CHF,SNB,https://www.snb.ch/en/the-snb/mandates-goals/monetary-policy/decisions
 2009-06-24,USD,Fed,https://www.federalreserve.gov/monetarypolicy/fomchistorical2009.htm
 2009-07-02,EUR,BCE,https://www.ecb.europa.eu/press/press_conference/monetary-policy-statement/2009/html/index_include.en.html
 2009-07-02,USD,Empleo EE. UU.,https://www.bls.gov/bls/news-release/empsit.htm
@@ -391,6 +417,7 @@ fecha,divisa,evento,fuente
 2009-09-03,EUR,BCE,https://www.ecb.europa.eu/press/press_conference/monetary-policy-statement/2009/html/index_include.en.html
 2009-09-04,USD,Empleo EE. UU.,https://www.bls.gov/bls/news-release/empsit.htm
 2009-09-10,GBP,BoE,https://www.bankofengland.co.uk/sitemap/minutes
+2009-09-17,CHF,SNB,https://www.snb.ch/en/the-snb/mandates-goals/monetary-policy/decisions
 2009-09-17,JPY,BoJ,https://www.boj.or.jp/en/mopo/mpmsche_minu/minu_2009/index.htm
 2009-09-23,USD,Fed,https://www.federalreserve.gov/monetarypolicy/fomchistorical2009.htm
 2009-10-02,USD,Empleo EE. UU.,https://www.bls.gov/bls/news-release/empsit.htm
@@ -405,6 +432,7 @@ fecha,divisa,evento,fuente
 2009-11-20,JPY,BoJ,https://www.boj.or.jp/en/mopo/mpmsche_minu/minu_2009/index.htm
 2009-12-03,EUR,BCE,https://www.ecb.europa.eu/press/press_conference/monetary-policy-statement/2009/html/index_include.en.html
 2009-12-04,USD,Empleo EE. UU.,https://www.bls.gov/bls/news-release/empsit.htm
+2009-12-10,CHF,SNB,https://www.snb.ch/en/the-snb/mandates-goals/monetary-policy/decisions
 2009-12-10,GBP,BoE,https://www.bankofengland.co.uk/sitemap/minutes
 2009-12-16,USD,Fed,https://www.federalreserve.gov/monetarypolicy/fomchistorical2009.htm
 2009-12-18,JPY,BoJ,https://www.boj.or.jp/en/mopo/mpmsche_minu/minu_2009/index.htm
@@ -420,6 +448,7 @@ fecha,divisa,evento,fuente
 2010-03-04,EUR,BCE,https://www.ecb.europa.eu/press/press_conference/monetary-policy-statement/2010/html/index_include.en.html
 2010-03-04,GBP,BoE,https://www.bankofengland.co.uk/sitemap/minutes
 2010-03-05,USD,Empleo EE. UU.,https://www.bls.gov/bls/news-release/empsit.htm
+2010-03-11,CHF,SNB,https://www.snb.ch/en/the-snb/mandates-goals/monetary-policy/decisions
 2010-03-16,USD,Fed,https://www.federalreserve.gov/monetarypolicy/fomchistorical2010.htm
 2010-03-17,JPY,BoJ,https://www.boj.or.jp/en/mopo/mpmsche_minu/minu_2010/index.htm
 2010-04-02,USD,Empleo EE. UU.,https://www.bls.gov/bls/news-release/empsit.htm
@@ -436,6 +465,7 @@ fecha,divisa,evento,fuente
 2010-06-10,EUR,BCE,https://www.ecb.europa.eu/press/press_conference/monetary-policy-statement/2010/html/index_include.en.html
 2010-06-10,GBP,BoE,https://www.bankofengland.co.uk/sitemap/minutes
 2010-06-15,JPY,BoJ,https://www.boj.or.jp/en/mopo/mpmsche_minu/minu_2010/index.htm
+2010-06-17,CHF,SNB,https://www.snb.ch/en/the-snb/mandates-goals/monetary-policy/decisions
 2010-06-23,USD,Fed,https://www.federalreserve.gov/monetarypolicy/fomchistorical2010.htm
 2010-07-02,USD,Empleo EE. UU.,https://www.bls.gov/bls/news-release/empsit.htm
 2010-07-08,EUR,BCE,https://www.ecb.europa.eu/press/press_conference/monetary-policy-statement/2010/html/index_include.en.html
@@ -450,6 +480,7 @@ fecha,divisa,evento,fuente
 2010-09-03,USD,Empleo EE. UU.,https://www.bls.gov/bls/news-release/empsit.htm
 2010-09-07,JPY,BoJ,https://www.boj.or.jp/en/mopo/mpmsche_minu/minu_2010/index.htm
 2010-09-09,GBP,BoE,https://www.bankofengland.co.uk/sitemap/minutes
+2010-09-16,CHF,SNB,https://www.snb.ch/en/the-snb/mandates-goals/monetary-policy/decisions
 2010-09-21,USD,Fed,https://www.federalreserve.gov/monetarypolicy/fomchistorical2010.htm
 2010-10-05,JPY,BoJ,https://www.boj.or.jp/en/mopo/mpmsche_minu/minu_2010/index.htm
 2010-10-07,EUR,BCE,https://www.ecb.europa.eu/press/press_conference/monetary-policy-statement/2010/html/index_include.en.html
@@ -465,6 +496,7 @@ fecha,divisa,evento,fuente
 2010-12-03,USD,Empleo EE. UU.,https://www.bls.gov/bls/news-release/empsit.htm
 2010-12-09,GBP,BoE,https://www.bankofengland.co.uk/sitemap/minutes
 2010-12-14,USD,Fed,https://www.federalreserve.gov/monetarypolicy/fomchistorical2010.htm
+2010-12-16,CHF,SNB,https://www.snb.ch/en/the-snb/mandates-goals/monetary-policy/decisions
 2010-12-21,JPY,BoJ,https://www.boj.or.jp/en/mopo/mpmsche_minu/minu_2010/index.htm
 2011-01-07,USD,Empleo EE. UU.,https://www.bls.gov/bls/news-release/empsit.htm
 2011-01-13,EUR,BCE,https://www.ecb.europa.eu/press/press_conference/monetary-policy-statement/2011/html/index_include.en.html
@@ -480,6 +512,7 @@ fecha,divisa,evento,fuente
 2011-03-10,GBP,BoE,https://www.bankofengland.co.uk/sitemap/minutes
 2011-03-14,JPY,BoJ,https://www.boj.or.jp/en/mopo/mpmsche_minu/minu_2011/index.htm
 2011-03-15,USD,Fed,https://www.federalreserve.gov/monetarypolicy/fomchistorical2011.htm
+2011-03-17,CHF,SNB,https://www.snb.ch/en/the-snb/mandates-goals/monetary-policy/decisions
 2011-04-01,USD,Empleo EE. UU.,https://www.bls.gov/bls/news-release/empsit.htm
 2011-04-07,EUR,BCE,https://www.ecb.europa.eu/press/press_conference/monetary-policy-statement/2011/html/index_include.en.html
 2011-04-07,GBP,BoE,https://www.bankofengland.co.uk/sitemap/minutes
@@ -494,6 +527,7 @@ fecha,divisa,evento,fuente
 2011-06-09,EUR,BCE,https://www.ecb.europa.eu/press/press_conference/monetary-policy-statement/2011/html/index_include.en.html
 2011-06-09,GBP,BoE,https://www.bankofengland.co.uk/sitemap/minutes
 2011-06-14,JPY,BoJ,https://www.boj.or.jp/en/mopo/mpmsche_minu/minu_2011/index.htm
+2011-06-16,CHF,SNB,https://www.snb.ch/en/the-snb/mandates-goals/monetary-policy/decisions
 2011-06-22,USD,Fed,https://www.federalreserve.gov/monetarypolicy/fomchistorical2011.htm
 2011-07-07,EUR,BCE,https://www.ecb.europa.eu/press/press_conference/monetary-policy-statement/2011/html/index_include.en.html
 2011-07-07,GBP,BoE,https://www.bankofengland.co.uk/sitemap/minutes
@@ -508,6 +542,7 @@ fecha,divisa,evento,fuente
 2011-09-07,JPY,BoJ,https://www.boj.or.jp/en/mopo/mpmsche_minu/minu_2011/index.htm
 2011-09-08,EUR,BCE,https://www.ecb.europa.eu/press/press_conference/monetary-policy-statement/2011/html/index_include.en.html
 2011-09-08,GBP,BoE,https://www.bankofengland.co.uk/sitemap/minutes
+2011-09-15,CHF,SNB,https://www.snb.ch/en/the-snb/mandates-goals/monetary-policy/decisions
 2011-09-21,USD,Fed,https://www.federalreserve.gov/monetarypolicy/fomchistorical2011.htm
 2011-10-06,EUR,BCE,https://www.ecb.europa.eu/press/press_conference/monetary-policy-statement/2011/html/index_include.en.html
 2011-10-06,GBP,BoE,https://www.bankofengland.co.uk/sitemap/minutes
@@ -524,6 +559,7 @@ fecha,divisa,evento,fuente
 2011-12-08,EUR,BCE,https://www.ecb.europa.eu/press/press_conference/monetary-policy-statement/2011/html/index_include.en.html
 2011-12-08,GBP,BoE,https://www.bankofengland.co.uk/sitemap/minutes
 2011-12-13,USD,Fed,https://www.federalreserve.gov/monetarypolicy/fomchistorical2011.htm
+2011-12-15,CHF,SNB,https://www.snb.ch/en/the-snb/mandates-goals/monetary-policy/decisions
 2011-12-21,JPY,BoJ,https://www.boj.or.jp/en/mopo/mpmsche_minu/minu_2011/index.htm
 2012-01-06,USD,Empleo EE. UU.,https://www.bls.gov/bls/news-release/empsit.htm
 2012-01-12,EUR,BCE,https://www.ecb.europa.eu/press/press_conference/monetary-policy-statement/2012/html/index_include.en.html
@@ -539,6 +575,7 @@ fecha,divisa,evento,fuente
 2012-03-09,USD,Empleo EE. UU.,https://www.bls.gov/bls/news-release/empsit.htm
 2012-03-13,JPY,BoJ,https://www.boj.or.jp/en/mopo/mpmsche_minu/minu_2012/index.htm
 2012-03-13,USD,Fed,https://www.federalreserve.gov/monetarypolicy/fomchistorical2012.htm
+2012-03-15,CHF,SNB,https://www.snb.ch/en/the-snb/mandates-goals/monetary-policy/decisions
 2012-04-04,EUR,BCE,https://www.ecb.europa.eu/press/press_conference/monetary-policy-statement/2012/html/index_include.en.html
 2012-04-05,GBP,BoE,https://www.bankofengland.co.uk/sitemap/minutes
 2012-04-06,USD,Empleo EE. UU.,https://www.bls.gov/bls/news-release/empsit.htm
@@ -552,6 +589,7 @@ fecha,divisa,evento,fuente
 2012-06-01,USD,Empleo EE. UU.,https://www.bls.gov/bls/news-release/empsit.htm
 2012-06-06,EUR,BCE,https://www.ecb.europa.eu/press/press_conference/monetary-policy-statement/2012/html/index_include.en.html
 2012-06-07,GBP,BoE,https://www.bankofengland.co.uk/sitemap/minutes
+2012-06-14,CHF,SNB,https://www.snb.ch/en/the-snb/mandates-goals/monetary-policy/decisions
 2012-06-15,JPY,BoJ,https://www.boj.or.jp/en/mopo/mpmsche_minu/minu_2012/index.htm
 2012-06-20,USD,Fed,https://www.federalreserve.gov/monetarypolicy/fomchistorical2012.htm
 2012-07-05,EUR,BCE,https://www.ecb.europa.eu/press/press_conference/monetary-policy-statement/2012/html/index_include.en.html
@@ -566,6 +604,7 @@ fecha,divisa,evento,fuente
 2012-09-06,EUR,BCE,https://www.ecb.europa.eu/press/press_conference/monetary-policy-statement/2012/html/index_include.en.html
 2012-09-06,GBP,BoE,https://www.bankofengland.co.uk/sitemap/minutes
 2012-09-07,USD,Empleo EE. UU.,https://www.bls.gov/bls/news-release/empsit.htm
+2012-09-13,CHF,SNB,https://www.snb.ch/en/the-snb/mandates-goals/monetary-policy/decisions
 2012-09-13,USD,Fed,https://www.federalreserve.gov/monetarypolicy/fomchistorical2012.htm
 2012-09-19,JPY,BoJ,https://www.boj.or.jp/en/mopo/mpmsche_minu/minu_2012/index.htm
 2012-10-04,EUR,BCE,https://www.ecb.europa.eu/press/press_conference/monetary-policy-statement/2012/html/index_include.en.html
@@ -582,6 +621,7 @@ fecha,divisa,evento,fuente
 2012-12-06,GBP,BoE,https://www.bankofengland.co.uk/sitemap/minutes
 2012-12-07,USD,Empleo EE. UU.,https://www.bls.gov/bls/news-release/empsit.htm
 2012-12-12,USD,Fed,https://www.federalreserve.gov/monetarypolicy/fomchistorical2012.htm
+2012-12-13,CHF,SNB,https://www.snb.ch/en/the-snb/mandates-goals/monetary-policy/decisions
 2012-12-20,JPY,BoJ,https://www.boj.or.jp/en/mopo/mpmsche_minu/minu_2012/index.htm
 2013-01-04,USD,Empleo EE. UU.,https://www.bls.gov/bls/news-release/empsit.htm
 2013-01-10,EUR,BCE,https://www.ecb.europa.eu/press/press_conference/monetary-policy-statement/2013/html/index_include.en.html
@@ -596,6 +636,7 @@ fecha,divisa,evento,fuente
 2013-03-07,GBP,BoE,https://www.bankofengland.co.uk/sitemap/minutes
 2013-03-07,JPY,BoJ,https://www.boj.or.jp/en/mopo/mpmsche_minu/minu_2013/index.htm
 2013-03-08,USD,Empleo EE. UU.,https://www.bls.gov/bls/news-release/empsit.htm
+2013-03-14,CHF,SNB,https://www.snb.ch/en/the-snb/mandates-goals/monetary-policy/decisions
 2013-03-20,USD,Fed,https://www.federalreserve.gov/monetarypolicy/fomchistorical2013.htm
 2013-04-04,EUR,BCE,https://www.ecb.europa.eu/press/press_conference/monetary-policy-statement/2013/html/index_include.en.html
 2013-04-04,GBP,BoE,https://www.bankofengland.co.uk/sitemap/minutes
@@ -612,6 +653,7 @@ fecha,divisa,evento,fuente
 2013-06-07,USD,Empleo EE. UU.,https://www.bls.gov/bls/news-release/empsit.htm
 2013-06-11,JPY,BoJ,https://www.boj.or.jp/en/mopo/mpmsche_minu/minu_2013/index.htm
 2013-06-19,USD,Fed,https://www.federalreserve.gov/monetarypolicy/fomchistorical2013.htm
+2013-06-20,CHF,SNB,https://www.snb.ch/en/the-snb/mandates-goals/monetary-policy/decisions
 2013-07-04,EUR,BCE,https://www.ecb.europa.eu/press/press_conference/monetary-policy-statement/2013/html/index_include.en.html
 2013-07-04,GBP,BoE,https://www.bankofengland.co.uk/sitemap/minutes
 2013-07-05,USD,Empleo EE. UU.,https://www.bls.gov/bls/news-release/empsit.htm
@@ -626,6 +668,7 @@ fecha,divisa,evento,fuente
 2013-09-05,JPY,BoJ,https://www.boj.or.jp/en/mopo/mpmsche_minu/minu_2013/index.htm
 2013-09-06,USD,Empleo EE. UU.,https://www.bls.gov/bls/news-release/empsit.htm
 2013-09-18,USD,Fed,https://www.federalreserve.gov/monetarypolicy/fomchistorical2013.htm
+2013-09-19,CHF,SNB,https://www.snb.ch/en/the-snb/mandates-goals/monetary-policy/decisions
 2013-10-02,EUR,BCE,https://www.ecb.europa.eu/press/press_conference/monetary-policy-statement/2013/html/index_include.en.html
 2013-10-04,JPY,BoJ,https://www.boj.or.jp/en/mopo/mpmsche_minu/minu_2013/index.htm
 2013-10-09,GBP,BoE,https://www.bankofengland.co.uk/sitemap/minutes
@@ -639,6 +682,7 @@ fecha,divisa,evento,fuente
 2013-12-05,EUR,BCE,https://www.ecb.europa.eu/press/press_conference/monetary-policy-statement/2013/html/index_include.en.html
 2013-12-05,GBP,BoE,https://www.bankofengland.co.uk/sitemap/minutes
 2013-12-06,USD,Empleo EE. UU.,https://www.bls.gov/bls/news-release/empsit.htm
+2013-12-12,CHF,SNB,https://www.snb.ch/en/the-snb/mandates-goals/monetary-policy/decisions
 2013-12-18,USD,Fed,https://www.federalreserve.gov/monetarypolicy/fomchistorical2013.htm
 2013-12-20,JPY,BoJ,https://www.boj.or.jp/en/mopo/mpmsche_minu/minu_2013/index.htm
 2014-01-09,EUR,BCE,https://www.ecb.europa.eu/press/press_conference/monetary-policy-statement/2014/html/index_include.en.html
@@ -655,6 +699,7 @@ fecha,divisa,evento,fuente
 2014-03-07,USD,Empleo EE. UU.,https://www.bls.gov/bls/news-release/empsit.htm
 2014-03-11,JPY,BoJ,https://www.boj.or.jp/en/mopo/mpmsche_minu/minu_2014/index.htm
 2014-03-19,USD,Fed,https://www.federalreserve.gov/monetarypolicy/fomchistorical2014.htm
+2014-03-20,CHF,SNB,https://www.snb.ch/en/the-snb/mandates-goals/monetary-policy/decisions
 2014-04-03,EUR,BCE,https://www.ecb.europa.eu/press/press_conference/monetary-policy-statement/2014/html/index_include.en.html
 2014-04-04,USD,Empleo EE. UU.,https://www.bls.gov/bls/news-release/empsit.htm
 2014-04-08,JPY,BoJ,https://www.boj.or.jp/en/mopo/mpmsche_minu/minu_2014/index.htm
@@ -670,6 +715,7 @@ fecha,divisa,evento,fuente
 2014-06-06,USD,Empleo EE. UU.,https://www.bls.gov/bls/news-release/empsit.htm
 2014-06-13,JPY,BoJ,https://www.boj.or.jp/en/mopo/mpmsche_minu/minu_2014/index.htm
 2014-06-18,USD,Fed,https://www.federalreserve.gov/monetarypolicy/fomchistorical2014.htm
+2014-06-19,CHF,SNB,https://www.snb.ch/en/the-snb/mandates-goals/monetary-policy/decisions
 2014-07-03,EUR,BCE,https://www.ecb.europa.eu/press/press_conference/monetary-policy-statement/2014/html/index_include.en.html
 2014-07-03,USD,Empleo EE. UU.,https://www.bls.gov/bls/news-release/empsit.htm
 2014-07-10,GBP,BoE,https://www.bankofengland.co.uk/sitemap/minutes
@@ -684,6 +730,7 @@ fecha,divisa,evento,fuente
 2014-09-04,JPY,BoJ,https://www.boj.or.jp/en/mopo/mpmsche_minu/minu_2014/index.htm
 2014-09-05,USD,Empleo EE. UU.,https://www.bls.gov/bls/news-release/empsit.htm
 2014-09-17,USD,Fed,https://www.federalreserve.gov/monetarypolicy/fomchistorical2014.htm
+2014-09-18,CHF,SNB,https://www.snb.ch/en/the-snb/mandates-goals/monetary-policy/decisions
 2014-10-02,EUR,BCE,https://www.ecb.europa.eu/press/press_conference/monetary-policy-statement/2014/html/index_include.en.html
 2014-10-03,USD,Empleo EE. UU.,https://www.bls.gov/bls/news-release/empsit.htm
 2014-10-07,JPY,BoJ,https://www.boj.or.jp/en/mopo/mpmsche_minu/minu_2014/index.htm
@@ -697,6 +744,7 @@ fecha,divisa,evento,fuente
 2014-12-04,EUR,BCE,https://www.ecb.europa.eu/press/press_conference/monetary-policy-statement/2014/html/index_include.en.html
 2014-12-04,GBP,BoE,https://www.bankofengland.co.uk/sitemap/minutes
 2014-12-05,USD,Empleo EE. UU.,https://www.bls.gov/bls/news-release/empsit.htm
+2014-12-11,CHF,SNB,https://www.snb.ch/en/the-snb/mandates-goals/monetary-policy/decisions
 2014-12-17,USD,Fed,https://www.federalreserve.gov/monetarypolicy/fomchistorical2014.htm
 2014-12-19,JPY,BoJ,https://www.boj.or.jp/en/mopo/mpmsche_minu/minu_2014/index.htm
 2015-01-08,GBP,BoE,https://www.bankofengland.co.uk/sitemap/minutes
@@ -712,6 +760,7 @@ fecha,divisa,evento,fuente
 2015-03-06,USD,Empleo EE. UU.,https://www.bls.gov/bls/news-release/empsit.htm
 2015-03-17,JPY,BoJ,https://www.boj.or.jp/en/mopo/mpmsche_minu/minu_2015/index.htm
 2015-03-18,USD,Fed,https://www.federalreserve.gov/monetarypolicy/fomchistorical2015.htm
+2015-03-19,CHF,SNB,https://www.snb.ch/en/the-snb/mandates-goals/monetary-policy/decisions
 2015-04-03,USD,Empleo EE. UU.,https://www.bls.gov/bls/news-release/empsit.htm
 2015-04-08,JPY,BoJ,https://www.boj.or.jp/en/mopo/mpmsche_minu/minu_2015/index.htm
 2015-04-09,GBP,BoE,https://www.bankofengland.co.uk/sitemap/minutes
@@ -725,6 +774,7 @@ fecha,divisa,evento,fuente
 2015-06-04,GBP,BoE,https://www.bankofengland.co.uk/sitemap/minutes
 2015-06-05,USD,Empleo EE. UU.,https://www.bls.gov/bls/news-release/empsit.htm
 2015-06-17,USD,Fed,https://www.federalreserve.gov/monetarypolicy/fomchistorical2015.htm
+2015-06-18,CHF,SNB,https://www.snb.ch/en/the-snb/mandates-goals/monetary-policy/decisions
 2015-06-19,JPY,BoJ,https://www.boj.or.jp/en/mopo/mpmsche_minu/minu_2015/index.htm
 2015-07-02,USD,Empleo EE. UU.,https://www.bls.gov/bls/news-release/empsit.htm
 2015-07-09,GBP,BoE,https://www.bankofengland.co.uk/sitemap/minutes
@@ -738,6 +788,7 @@ fecha,divisa,evento,fuente
 2015-09-04,USD,Empleo EE. UU.,https://www.bls.gov/bls/news-release/empsit.htm
 2015-09-10,GBP,BoE,https://www.bankofengland.co.uk/monetary-policy-summary-and-minutes/2015/mpc-september-2015
 2015-09-15,JPY,BoJ,https://www.boj.or.jp/en/mopo/mpmsche_minu/minu_2015/index.htm
+2015-09-17,CHF,SNB,https://www.snb.ch/en/the-snb/mandates-goals/monetary-policy/decisions
 2015-09-17,USD,Fed,https://www.federalreserve.gov/monetarypolicy/fomchistorical2015.htm
 2015-10-02,USD,Empleo EE. UU.,https://www.bls.gov/bls/news-release/empsit.htm
 2015-10-07,JPY,BoJ,https://www.boj.or.jp/en/mopo/mpmsche_minu/minu_2015/index.htm
@@ -750,6 +801,7 @@ fecha,divisa,evento,fuente
 2015-11-19,JPY,BoJ,https://www.boj.or.jp/en/mopo/mpmsche_minu/minu_2015/index.htm
 2015-12-03,EUR,BCE,https://www.ecb.europa.eu/press/press_conference/monetary-policy-statement/2015/html/index_include.en.html
 2015-12-04,USD,Empleo EE. UU.,https://www.bls.gov/bls/news-release/empsit.htm
+2015-12-10,CHF,SNB,https://www.snb.ch/en/the-snb/mandates-goals/monetary-policy/decisions
 2015-12-10,GBP,BoE,https://www.bankofengland.co.uk/monetary-policy-summary-and-minutes/2015/mpc-december-2015
 2015-12-16,USD,Fed,https://www.federalreserve.gov/monetarypolicy/fomchistorical2015.htm
 2015-12-18,JPY,BoJ,https://www.boj.or.jp/en/mopo/mpmsche_minu/minu_2015/index.htm
@@ -764,6 +816,7 @@ fecha,divisa,evento,fuente
 2016-03-10,EUR,BCE,https://www.ecb.europa.eu/press/press_conference/monetary-policy-statement/2016/html/index_include.en.html
 2016-03-15,JPY,BoJ,https://www.boj.or.jp/en/mopo/mpmsche_minu/minu_2016/index.htm
 2016-03-16,USD,Fed,https://www.federalreserve.gov/monetarypolicy/fomchistorical2016.htm
+2016-03-17,CHF,SNB,https://www.snb.ch/en/the-snb/mandates-goals/monetary-policy/decisions
 2016-03-17,GBP,BoE,https://www.bankofengland.co.uk/monetary-policy-summary-and-minutes/2016/mpc-march-2016
 2016-04-01,USD,Empleo EE. UU.,https://www.bls.gov/bls/news-release/empsit.htm
 2016-04-14,GBP,BoE,https://www.bankofengland.co.uk/monetary-policy-summary-and-minutes/2016/mpc-april-2016
@@ -775,6 +828,7 @@ fecha,divisa,evento,fuente
 2016-06-02,EUR,BCE,https://www.ecb.europa.eu/press/press_conference/monetary-policy-statement/2016/html/index_include.en.html
 2016-06-03,USD,Empleo EE. UU.,https://www.bls.gov/bls/news-release/empsit.htm
 2016-06-15,USD,Fed,https://www.federalreserve.gov/monetarypolicy/fomchistorical2016.htm
+2016-06-16,CHF,SNB,https://www.snb.ch/en/the-snb/mandates-goals/monetary-policy/decisions
 2016-06-16,GBP,BoE,https://www.bankofengland.co.uk/monetary-policy-summary-and-minutes/2016/mpc-june-2016
 2016-06-16,JPY,BoJ,https://www.boj.or.jp/en/mopo/mpmsche_minu/minu_2016/index.htm
 2016-07-08,USD,Empleo EE. UU.,https://www.bls.gov/bls/news-release/empsit.htm
@@ -786,6 +840,7 @@ fecha,divisa,evento,fuente
 2016-08-05,USD,Empleo EE. UU.,https://www.bls.gov/bls/news-release/empsit.htm
 2016-09-02,USD,Empleo EE. UU.,https://www.bls.gov/bls/news-release/empsit.htm
 2016-09-08,EUR,BCE,https://www.ecb.europa.eu/press/press_conference/monetary-policy-statement/2016/html/index_include.en.html
+2016-09-15,CHF,SNB,https://www.snb.ch/en/the-snb/mandates-goals/monetary-policy/decisions
 2016-09-15,GBP,BoE,https://www.bankofengland.co.uk/monetary-policy-summary-and-minutes/2016/mpc-september-2016
 2016-09-21,JPY,BoJ,https://www.boj.or.jp/en/mopo/mpmsche_minu/minu_2016/index.htm
 2016-09-21,USD,Fed,https://www.federalreserve.gov/monetarypolicy/fomchistorical2016.htm
@@ -798,6 +853,7 @@ fecha,divisa,evento,fuente
 2016-12-02,USD,Empleo EE. UU.,https://www.bls.gov/bls/news-release/empsit.htm
 2016-12-08,EUR,BCE,https://www.ecb.europa.eu/press/press_conference/monetary-policy-statement/2016/html/index_include.en.html
 2016-12-14,USD,Fed,https://www.federalreserve.gov/monetarypolicy/fomchistorical2016.htm
+2016-12-15,CHF,SNB,https://www.snb.ch/en/the-snb/mandates-goals/monetary-policy/decisions
 2016-12-15,GBP,BoE,https://www.bankofengland.co.uk/monetary-policy-summary-and-minutes/2016/mpc-december-2016
 2016-12-20,JPY,BoJ,https://www.boj.or.jp/en/mopo/mpmsche_minu/minu_2016/index.htm
 2017-01-06,USD,Empleo EE. UU.,https://www.bls.gov/bls/news-release/empsit.htm
@@ -809,6 +865,7 @@ fecha,divisa,evento,fuente
 2017-03-09,EUR,BCE,https://www.ecb.europa.eu/press/press_conference/monetary-policy-statement/2017/html/index_include.en.html
 2017-03-10,USD,Empleo EE. UU.,https://www.bls.gov/bls/news-release/empsit.htm
 2017-03-15,USD,Fed,https://www.federalreserve.gov/monetarypolicy/fomchistorical2017.htm
+2017-03-16,CHF,SNB,https://www.snb.ch/en/the-snb/mandates-goals/monetary-policy/decisions
 2017-03-16,GBP,BoE,https://www.bankofengland.co.uk/monetary-policy-summary-and-minutes/2017/march-2017
 2017-03-16,JPY,BoJ,https://www.boj.or.jp/en/mopo/mpmsche_minu/minu_2017/index.htm
 2017-04-07,USD,Empleo EE. UU.,https://www.bls.gov/bls/news-release/empsit.htm
@@ -820,6 +877,7 @@ fecha,divisa,evento,fuente
 2017-06-02,USD,Empleo EE. UU.,https://www.bls.gov/bls/news-release/empsit.htm
 2017-06-08,EUR,BCE,https://www.ecb.europa.eu/press/press_conference/monetary-policy-statement/2017/html/index_include.en.html
 2017-06-14,USD,Fed,https://www.federalreserve.gov/monetarypolicy/fomchistorical2017.htm
+2017-06-15,CHF,SNB,https://www.snb.ch/en/the-snb/mandates-goals/monetary-policy/decisions
 2017-06-15,GBP,BoE,https://www.bankofengland.co.uk/monetary-policy-summary-and-minutes/2017/june-2017
 2017-06-16,JPY,BoJ,https://www.boj.or.jp/en/mopo/mpmsche_minu/minu_2017/index.htm
 2017-07-07,USD,Empleo EE. UU.,https://www.bls.gov/bls/news-release/empsit.htm
@@ -830,6 +888,7 @@ fecha,divisa,evento,fuente
 2017-08-04,USD,Empleo EE. UU.,https://www.bls.gov/bls/news-release/empsit.htm
 2017-09-01,USD,Empleo EE. UU.,https://www.bls.gov/bls/news-release/empsit.htm
 2017-09-07,EUR,BCE,https://www.ecb.europa.eu/press/press_conference/monetary-policy-statement/2017/html/index_include.en.html
+2017-09-14,CHF,SNB,https://www.snb.ch/en/the-snb/mandates-goals/monetary-policy/decisions
 2017-09-14,GBP,BoE,https://www.bankofengland.co.uk/monetary-policy-summary-and-minutes/2017/september-2017
 2017-09-20,USD,Fed,https://www.federalreserve.gov/monetarypolicy/fomchistorical2017.htm
 2017-09-21,JPY,BoJ,https://www.boj.or.jp/en/mopo/mpmsche_minu/minu_2017/index.htm
@@ -841,6 +900,7 @@ fecha,divisa,evento,fuente
 2017-11-03,USD,Empleo EE. UU.,https://www.bls.gov/bls/news-release/empsit.htm
 2017-12-08,USD,Empleo EE. UU.,https://www.bls.gov/bls/news-release/empsit.htm
 2017-12-13,USD,Fed,https://www.federalreserve.gov/monetarypolicy/fomchistorical2017.htm
+2017-12-14,CHF,SNB,https://www.snb.ch/en/the-snb/mandates-goals/monetary-policy/decisions
 2017-12-14,EUR,BCE,https://www.ecb.europa.eu/press/press_conference/monetary-policy-statement/2017/html/index_include.en.html
 2017-12-14,GBP,BoE,https://www.bankofengland.co.uk/monetary-policy-summary-and-minutes/2017/december-2017
 2017-12-21,JPY,BoJ,https://www.boj.or.jp/en/mopo/mpmsche_minu/minu_2017/index.htm
@@ -853,6 +913,7 @@ fecha,divisa,evento,fuente
 2018-03-08,EUR,BCE,https://www.ecb.europa.eu/press/press_conference/monetary-policy-statement/2018/html/index_include.en.html
 2018-03-09,JPY,BoJ,https://www.boj.or.jp/en/mopo/mpmsche_minu/minu_2018/index.htm
 2018-03-09,USD,Empleo EE. UU.,https://www.bls.gov/bls/news-release/empsit.htm
+2018-03-15,CHF,SNB,https://www.snb.ch/en/the-snb/mandates-goals/monetary-policy/decisions
 2018-03-21,USD,Fed,https://www.federalreserve.gov/monetarypolicy/fomchistorical2018.htm
 2018-03-22,GBP,BoE,https://www.bankofengland.co.uk/monetary-policy-summary-and-minutes/2018/march-2018
 2018-04-06,USD,Empleo EE. UU.,https://www.bls.gov/bls/news-release/empsit.htm
@@ -865,6 +926,7 @@ fecha,divisa,evento,fuente
 2018-06-13,USD,Fed,https://www.federalreserve.gov/monetarypolicy/fomchistorical2018.htm
 2018-06-14,EUR,BCE,https://www.ecb.europa.eu/press/press_conference/monetary-policy-statement/2018/html/index_include.en.html
 2018-06-15,JPY,BoJ,https://www.boj.or.jp/en/mopo/mpmsche_minu/minu_2018/index.htm
+2018-06-21,CHF,SNB,https://www.snb.ch/en/the-snb/mandates-goals/monetary-policy/decisions
 2018-06-21,GBP,BoE,https://www.bankofengland.co.uk/monetary-policy-summary-and-minutes/2018/june-2018
 2018-07-06,USD,Empleo EE. UU.,https://www.bls.gov/bls/news-release/empsit.htm
 2018-07-26,EUR,BCE,https://www.ecb.europa.eu/press/press_conference/monetary-policy-statement/2018/html/index_include.en.html
@@ -876,6 +938,7 @@ fecha,divisa,evento,fuente
 2018-09-13,EUR,BCE,https://www.ecb.europa.eu/press/press_conference/monetary-policy-statement/2018/html/index_include.en.html
 2018-09-13,GBP,BoE,https://www.bankofengland.co.uk/monetary-policy-summary-and-minutes/2018/september-2018
 2018-09-19,JPY,BoJ,https://www.boj.or.jp/en/mopo/mpmsche_minu/minu_2018/index.htm
+2018-09-20,CHF,SNB,https://www.snb.ch/en/the-snb/mandates-goals/monetary-policy/decisions
 2018-09-26,USD,Fed,https://www.federalreserve.gov/monetarypolicy/fomchistorical2018.htm
 2018-10-05,USD,Empleo EE. UU.,https://www.bls.gov/bls/news-release/empsit.htm
 2018-10-25,EUR,BCE,https://www.ecb.europa.eu/press/press_conference/monetary-policy-statement/2018/html/index_include.en.html
@@ -884,6 +947,7 @@ fecha,divisa,evento,fuente
 2018-11-02,USD,Empleo EE. UU.,https://www.bls.gov/bls/news-release/empsit.htm
 2018-11-08,USD,Fed,https://www.federalreserve.gov/monetarypolicy/fomchistorical2018.htm
 2018-12-07,USD,Empleo EE. UU.,https://www.bls.gov/bls/news-release/empsit.htm
+2018-12-13,CHF,SNB,https://www.snb.ch/en/the-snb/mandates-goals/monetary-policy/decisions
 2018-12-13,EUR,BCE,https://www.ecb.europa.eu/press/press_conference/monetary-policy-statement/2018/html/index_include.en.html
 2018-12-19,USD,Fed,https://www.federalreserve.gov/monetarypolicy/fomchistorical2018.htm
 2018-12-20,GBP,BoE,https://www.bankofengland.co.uk/monetary-policy-summary-and-minutes/2018/december-2018
@@ -898,6 +962,7 @@ fecha,divisa,evento,fuente
 2019-03-08,USD,Empleo EE. UU.,https://www.bls.gov/bls/news-release/empsit.htm
 2019-03-15,JPY,BoJ,https://www.boj.or.jp/en/mopo/mpmsche_minu/minu_2019/index.htm
 2019-03-20,USD,Fed,https://www.federalreserve.gov/monetarypolicy/fomchistorical2019.htm
+2019-03-21,CHF,SNB,https://www.snb.ch/en/the-snb/mandates-goals/monetary-policy/decisions
 2019-03-21,GBP,BoE,https://www.bankofengland.co.uk/monetary-policy-summary-and-minutes/2019/march-2019
 2019-04-05,USD,Empleo EE. UU.,https://www.bls.gov/bls/news-release/empsit.htm
 2019-04-10,EUR,BCE,https://www.ecb.europa.eu/press/press_conference/monetary-policy-statement/2019/html/index_include.en.html
@@ -907,6 +972,7 @@ fecha,divisa,evento,fuente
 2019-05-03,USD,Empleo EE. UU.,https://www.bls.gov/bls/news-release/empsit.htm
 2019-06-06,EUR,BCE,https://www.ecb.europa.eu/press/press_conference/monetary-policy-statement/2019/html/index_include.en.html
 2019-06-07,USD,Empleo EE. UU.,https://www.bls.gov/bls/news-release/empsit.htm
+2019-06-13,CHF,SNB,https://www.snb.ch/en/the-snb/mandates-goals/monetary-policy/decisions
 2019-06-19,USD,Fed,https://www.federalreserve.gov/monetarypolicy/fomchistorical2019.htm
 2019-06-20,GBP,BoE,https://www.bankofengland.co.uk/monetary-policy-summary-and-minutes/2019/june-2019
 2019-06-20,JPY,BoJ,https://www.boj.or.jp/en/mopo/mpmsche_minu/minu_2019/index.htm
@@ -919,6 +985,7 @@ fecha,divisa,evento,fuente
 2019-09-06,USD,Empleo EE. UU.,https://www.bls.gov/bls/news-release/empsit.htm
 2019-09-12,EUR,BCE,https://www.ecb.europa.eu/press/press_conference/monetary-policy-statement/2019/html/index_include.en.html
 2019-09-18,USD,Fed,https://www.federalreserve.gov/monetarypolicy/fomchistorical2019.htm
+2019-09-19,CHF,SNB,https://www.snb.ch/en/the-snb/mandates-goals/monetary-policy/decisions
 2019-09-19,GBP,BoE,https://www.bankofengland.co.uk/monetary-policy-summary-and-minutes/2019/september-2019
 2019-09-19,JPY,BoJ,https://www.boj.or.jp/en/mopo/mpmsche_minu/minu_2019/index.htm
 2019-10-04,USD,Empleo EE. UU.,https://www.bls.gov/bls/news-release/empsit.htm
@@ -929,6 +996,7 @@ fecha,divisa,evento,fuente
 2019-11-07,GBP,BoE,https://www.bankofengland.co.uk/monetary-policy-summary-and-minutes/2019/november-2019
 2019-12-06,USD,Empleo EE. UU.,https://www.bls.gov/bls/news-release/empsit.htm
 2019-12-11,USD,Fed,https://www.federalreserve.gov/monetarypolicy/fomchistorical2019.htm
+2019-12-12,CHF,SNB,https://www.snb.ch/en/the-snb/mandates-goals/monetary-policy/decisions
 2019-12-12,EUR,BCE,https://www.ecb.europa.eu/press/press_conference/monetary-policy-statement/2019/html/index_include.en.html
 2019-12-19,GBP,BoE,https://www.bankofengland.co.uk/monetary-policy-summary-and-minutes/2019/december-2019
 2019-12-19,JPY,BoJ,https://www.boj.or.jp/en/mopo/mpmsche_minu/minu_2019/index.htm
@@ -941,6 +1009,7 @@ fecha,divisa,evento,fuente
 2020-03-06,USD,Empleo EE. UU.,https://www.bls.gov/bls/news-release/empsit.htm
 2020-03-12,EUR,BCE,https://www.ecb.europa.eu/press/press_conference/monetary-policy-statement/2020/html/index_include.en.html
 2020-03-18,USD,Fed,https://www.federalreserve.gov/monetarypolicy/fomchistorical2020.htm
+2020-03-19,CHF,SNB,https://www.snb.ch/en/the-snb/mandates-goals/monetary-policy/decisions
 2020-03-26,GBP,BoE,https://www.bankofengland.co.uk/monetary-policy-summary-and-minutes/2020/march-2020
 2020-04-03,USD,Empleo EE. UU.,https://www.bls.gov/bls/news-release/empsit.htm
 2020-04-27,JPY,BoJ,https://www.boj.or.jp/en/mopo/mpmsche_minu/minu_2020/index.htm
@@ -952,6 +1021,7 @@ fecha,divisa,evento,fuente
 2020-06-05,USD,Empleo EE. UU.,https://www.bls.gov/bls/news-release/empsit.htm
 2020-06-10,USD,Fed,https://www.federalreserve.gov/monetarypolicy/fomchistorical2020.htm
 2020-06-16,JPY,BoJ,https://www.boj.or.jp/en/mopo/mpmsche_minu/minu_2020/index.htm
+2020-06-18,CHF,SNB,https://www.snb.ch/en/the-snb/mandates-goals/monetary-policy/decisions
 2020-06-18,GBP,BoE,https://www.bankofengland.co.uk/monetary-policy-summary-and-minutes/2020/june-2020
 2020-07-02,USD,Empleo EE. UU.,https://www.bls.gov/bls/news-release/empsit.htm
 2020-07-15,JPY,BoJ,https://www.boj.or.jp/en/mopo/mpmsche_minu/minu_2020/index.htm
@@ -964,6 +1034,7 @@ fecha,divisa,evento,fuente
 2020-09-16,USD,Fed,https://www.federalreserve.gov/monetarypolicy/fomchistorical2020.htm
 2020-09-17,GBP,BoE,https://www.bankofengland.co.uk/monetary-policy-summary-and-minutes/2020/september-2020
 2020-09-17,JPY,BoJ,https://www.boj.or.jp/en/mopo/mpmsche_minu/minu_2020/index.htm
+2020-09-24,CHF,SNB,https://www.snb.ch/en/the-snb/mandates-goals/monetary-policy/decisions
 2020-10-02,USD,Empleo EE. UU.,https://www.bls.gov/bls/news-release/empsit.htm
 2020-10-29,EUR,BCE,https://www.ecb.europa.eu/press/press_conference/monetary-policy-statement/2020/html/index_include.en.html
 2020-10-29,JPY,BoJ,https://www.boj.or.jp/en/mopo/mpmsche_minu/minu_2020/index.htm
@@ -973,6 +1044,7 @@ fecha,divisa,evento,fuente
 2020-12-04,USD,Empleo EE. UU.,https://www.bls.gov/bls/news-release/empsit.htm
 2020-12-10,EUR,BCE,https://www.ecb.europa.eu/press/press_conference/monetary-policy-statement/2020/html/index_include.en.html
 2020-12-16,USD,Fed,https://www.federalreserve.gov/monetarypolicy/fomchistorical2020.htm
+2020-12-17,CHF,SNB,https://www.snb.ch/en/the-snb/mandates-goals/monetary-policy/decisions
 2020-12-17,GBP,BoE,https://www.bankofengland.co.uk/monetary-policy-summary-and-minutes/2020/december-2020
 2020-12-18,JPY,BoJ,https://www.boj.or.jp/en/mopo/mpmsche_minu/minu_2020/index.htm
 2021-01-08,USD,Empleo EE. UU.,https://www.bls.gov/bls/news-release/empsit.htm
@@ -986,6 +1058,7 @@ fecha,divisa,evento,fuente
 2021-03-17,USD,Fed,https://www.federalreserve.gov/monetarypolicy/fomccalendars.htm
 2021-03-18,GBP,BoE,https://www.bankofengland.co.uk/monetary-policy-summary-and-minutes/2021/march-2021
 2021-03-19,JPY,BoJ,https://www.boj.or.jp/en/mopo/mpmsche_minu/minu_2021/index.htm
+2021-03-25,CHF,SNB,https://www.snb.ch/en/the-snb/mandates-goals/monetary-policy/decisions
 2021-04-02,USD,Empleo EE. UU.,https://www.bls.gov/bls/news-release/empsit.htm
 2021-04-22,EUR,BCE,https://www.ecb.europa.eu/press/press_conference/monetary-policy-statement/2021/html/index_include.en.html
 2021-04-27,JPY,BoJ,https://www.boj.or.jp/en/mopo/mpmsche_minu/minu_2021/index.htm
@@ -995,6 +1068,7 @@ fecha,divisa,evento,fuente
 2021-06-04,USD,Empleo EE. UU.,https://www.bls.gov/bls/news-release/empsit.htm
 2021-06-10,EUR,BCE,https://www.ecb.europa.eu/press/press_conference/monetary-policy-statement/2021/html/index_include.en.html
 2021-06-16,USD,Fed,https://www.federalreserve.gov/monetarypolicy/fomccalendars.htm
+2021-06-17,CHF,SNB,https://www.snb.ch/en/the-snb/mandates-goals/monetary-policy/decisions
 2021-06-18,JPY,BoJ,https://www.boj.or.jp/en/mopo/mpmsche_minu/minu_2021/index.htm
 2021-06-24,GBP,BoE,https://www.bankofengland.co.uk/monetary-policy-summary-and-minutes/2021/june-2021
 2021-07-02,USD,Empleo EE. UU.,https://www.bls.gov/bls/news-release/empsit.htm
@@ -1007,6 +1081,7 @@ fecha,divisa,evento,fuente
 2021-09-09,EUR,BCE,https://www.ecb.europa.eu/press/press_conference/monetary-policy-statement/2021/html/index_include.en.html
 2021-09-22,JPY,BoJ,https://www.boj.or.jp/en/mopo/mpmsche_minu/minu_2021/index.htm
 2021-09-22,USD,Fed,https://www.federalreserve.gov/monetarypolicy/fomccalendars.htm
+2021-09-23,CHF,SNB,https://www.snb.ch/en/the-snb/mandates-goals/monetary-policy/decisions
 2021-09-23,GBP,BoE,https://www.bankofengland.co.uk/monetary-policy-summary-and-minutes/2021/september-2021
 2021-10-08,USD,Empleo EE. UU.,https://www.bls.gov/bls/news-release/empsit.htm
 2021-10-28,EUR,BCE,https://www.ecb.europa.eu/press/press_conference/monetary-policy-statement/2021/html/index_include.en.html
@@ -1016,6 +1091,7 @@ fecha,divisa,evento,fuente
 2021-11-05,USD,Empleo EE. UU.,https://www.bls.gov/bls/news-release/empsit.htm
 2021-12-03,USD,Empleo EE. UU.,https://www.bls.gov/bls/news-release/empsit.htm
 2021-12-15,USD,Fed,https://www.federalreserve.gov/monetarypolicy/fomccalendars.htm
+2021-12-16,CHF,SNB,https://www.snb.ch/en/the-snb/mandates-goals/monetary-policy/decisions
 2021-12-16,EUR,BCE,https://www.ecb.europa.eu/press/press_conference/monetary-policy-statement/2021/html/index_include.en.html
 2021-12-16,GBP,BoE,https://www.bankofengland.co.uk/monetary-policy-summary-and-minutes/2021/december-2021
 2021-12-17,JPY,BoJ,https://www.boj.or.jp/en/mopo/mpmsche_minu/minu_2021/index.htm
@@ -1030,6 +1106,7 @@ fecha,divisa,evento,fuente
 2022-03-16,USD,Fed,https://www.federalreserve.gov/monetarypolicy/fomccalendars.htm
 2022-03-17,GBP,BoE,https://www.bankofengland.co.uk/monetary-policy-summary-and-minutes/2022/march-2022
 2022-03-18,JPY,BoJ,https://www.boj.or.jp/en/mopo/mpmsche_minu/minu_2022/index.htm
+2022-03-24,CHF,SNB,https://www.snb.ch/en/the-snb/mandates-goals/monetary-policy/decisions
 2022-04-01,USD,Empleo EE. UU.,https://www.bls.gov/bls/news-release/empsit.htm
 2022-04-14,EUR,BCE,https://www.ecb.europa.eu/press/press_conference/monetary-policy-statement/2022/html/index_include.en.html
 2022-04-28,JPY,BoJ,https://www.boj.or.jp/en/mopo/mpmsche_minu/minu_2022/index.htm
@@ -1039,6 +1116,7 @@ fecha,divisa,evento,fuente
 2022-06-03,USD,Empleo EE. UU.,https://www.bls.gov/bls/news-release/empsit.htm
 2022-06-09,EUR,BCE,https://www.ecb.europa.eu/press/press_conference/monetary-policy-statement/2022/html/index_include.en.html
 2022-06-15,USD,Fed,https://www.federalreserve.gov/monetarypolicy/fomccalendars.htm
+2022-06-16,CHF,SNB,https://www.snb.ch/en/the-snb/mandates-goals/monetary-policy/decisions
 2022-06-16,GBP,BoE,https://www.bankofengland.co.uk/monetary-policy-summary-and-minutes/2022/june-2022
 2022-06-17,JPY,BoJ,https://www.boj.or.jp/en/mopo/mpmsche_minu/minu_2022/index.htm
 2022-07-08,USD,Empleo EE. UU.,https://www.bls.gov/bls/news-release/empsit.htm
@@ -1050,6 +1128,7 @@ fecha,divisa,evento,fuente
 2022-09-02,USD,Empleo EE. UU.,https://www.bls.gov/bls/news-release/empsit.htm
 2022-09-08,EUR,BCE,https://www.ecb.europa.eu/press/press_conference/monetary-policy-statement/2022/html/index_include.en.html
 2022-09-21,USD,Fed,https://www.federalreserve.gov/monetarypolicy/fomccalendars.htm
+2022-09-22,CHF,SNB,https://www.snb.ch/en/the-snb/mandates-goals/monetary-policy/decisions
 2022-09-22,GBP,BoE,https://www.bankofengland.co.uk/monetary-policy-summary-and-minutes/2022/september-2022
 2022-09-22,JPY,BoJ,https://www.boj.or.jp/en/mopo/mpmsche_minu/minu_2022/index.htm
 2022-10-07,USD,Empleo EE. UU.,https://www.bls.gov/bls/news-release/empsit.htm
@@ -1060,6 +1139,7 @@ fecha,divisa,evento,fuente
 2022-11-04,USD,Empleo EE. UU.,https://www.bls.gov/bls/news-release/empsit.htm
 2022-12-02,USD,Empleo EE. UU.,https://www.bls.gov/bls/news-release/empsit.htm
 2022-12-14,USD,Fed,https://www.federalreserve.gov/monetarypolicy/fomccalendars.htm
+2022-12-15,CHF,SNB,https://www.snb.ch/en/the-snb/mandates-goals/monetary-policy/decisions
 2022-12-15,EUR,BCE,https://www.ecb.europa.eu/press/press_conference/monetary-policy-statement/2022/html/index_include.en.html
 2022-12-15,GBP,BoE,https://www.bankofengland.co.uk/monetary-policy-summary-and-minutes/2022/december-2022
 2022-12-20,JPY,BoJ,https://www.boj.or.jp/en/mopo/mpmsche_minu/minu_2022/index.htm
@@ -1073,6 +1153,7 @@ fecha,divisa,evento,fuente
 2023-03-10,USD,Empleo EE. UU.,https://www.bls.gov/bls/news-release/empsit.htm
 2023-03-16,EUR,BCE,https://www.ecb.europa.eu/press/press_conference/monetary-policy-statement/2023/html/index_include.en.html
 2023-03-22,USD,Fed,https://www.federalreserve.gov/monetarypolicy/fomccalendars.htm
+2023-03-23,CHF,SNB,https://www.snb.ch/en/the-snb/mandates-goals/monetary-policy/decisions
 2023-03-23,GBP,BoE,https://www.bankofengland.co.uk/monetary-policy-summary-and-minutes/2023/march-2023
 2023-04-07,USD,Empleo EE. UU.,https://www.bls.gov/bls/news-release/empsit.htm
 2023-04-28,JPY,BoJ,https://www.boj.or.jp/en/mopo/mpmsche_minu/minu_2023/index.htm
@@ -1084,6 +1165,7 @@ fecha,divisa,evento,fuente
 2023-06-14,USD,Fed,https://www.federalreserve.gov/monetarypolicy/fomccalendars.htm
 2023-06-15,EUR,BCE,https://www.ecb.europa.eu/press/press_conference/monetary-policy-statement/2023/html/index_include.en.html
 2023-06-16,JPY,BoJ,https://www.boj.or.jp/en/mopo/mpmsche_minu/minu_2023/index.htm
+2023-06-22,CHF,SNB,https://www.snb.ch/en/the-snb/mandates-goals/monetary-policy/decisions
 2023-06-22,GBP,BoE,https://www.bankofengland.co.uk/monetary-policy-summary-and-minutes/2023/june-2023
 2023-07-07,USD,Empleo EE. UU.,https://www.bls.gov/bls/news-release/empsit.htm
 2023-07-26,USD,Fed,https://www.federalreserve.gov/monetarypolicy/fomccalendars.htm
@@ -1094,6 +1176,7 @@ fecha,divisa,evento,fuente
 2023-09-01,USD,Empleo EE. UU.,https://www.bls.gov/bls/news-release/empsit.htm
 2023-09-14,EUR,BCE,https://www.ecb.europa.eu/press/press_conference/monetary-policy-statement/2023/html/index_include.en.html
 2023-09-20,USD,Fed,https://www.federalreserve.gov/monetarypolicy/fomccalendars.htm
+2023-09-21,CHF,SNB,https://www.snb.ch/en/the-snb/mandates-goals/monetary-policy/decisions
 2023-09-21,GBP,BoE,https://www.bankofengland.co.uk/monetary-policy-summary-and-minutes/2023/september-2023
 2023-09-22,JPY,BoJ,https://www.boj.or.jp/en/mopo/mpmsche_minu/minu_2023/index.htm
 2023-10-06,USD,Empleo EE. UU.,https://www.bls.gov/bls/news-release/empsit.htm
@@ -1104,6 +1187,7 @@ fecha,divisa,evento,fuente
 2023-11-03,USD,Empleo EE. UU.,https://www.bls.gov/bls/news-release/empsit.htm
 2023-12-08,USD,Empleo EE. UU.,https://www.bls.gov/bls/news-release/empsit.htm
 2023-12-13,USD,Fed,https://www.federalreserve.gov/monetarypolicy/fomccalendars.htm
+2023-12-14,CHF,SNB,https://www.snb.ch/en/the-snb/mandates-goals/monetary-policy/decisions
 2023-12-14,EUR,BCE,https://www.ecb.europa.eu/press/press_conference/monetary-policy-statement/2023/html/index_include.en.html
 2023-12-14,GBP,BoE,https://www.bankofengland.co.uk/monetary-policy-summary-and-minutes/2023/december-2023
 2023-12-19,JPY,BoJ,https://www.boj.or.jp/en/mopo/mpmsche_minu/minu_2023/index.htm
@@ -1117,6 +1201,7 @@ fecha,divisa,evento,fuente
 2024-03-08,USD,Empleo EE. UU.,https://www.bls.gov/bls/news-release/empsit.htm
 2024-03-19,JPY,BoJ,https://www.boj.or.jp/en/mopo/mpmsche_minu/minu_2024/index.htm
 2024-03-20,USD,Fed,https://www.federalreserve.gov/monetarypolicy/fomccalendars.htm
+2024-03-21,CHF,SNB,https://www.snb.ch/en/the-snb/mandates-goals/monetary-policy/decisions
 2024-03-21,GBP,BoE,https://www.bankofengland.co.uk/monetary-policy-summary-and-minutes/2024/march-2024
 2024-04-05,USD,Empleo EE. UU.,https://www.bls.gov/bls/news-release/empsit.htm
 2024-04-11,EUR,BCE,https://www.ecb.europa.eu/press/press_conference/monetary-policy-statement/2024/html/index_include.en.html
@@ -1128,6 +1213,7 @@ fecha,divisa,evento,fuente
 2024-06-07,USD,Empleo EE. UU.,https://www.bls.gov/bls/news-release/empsit.htm
 2024-06-12,USD,Fed,https://www.federalreserve.gov/monetarypolicy/fomccalendars.htm
 2024-06-14,JPY,BoJ,https://www.boj.or.jp/en/mopo/mpmsche_minu/minu_2024/index.htm
+2024-06-20,CHF,SNB,https://www.snb.ch/en/the-snb/mandates-goals/monetary-policy/decisions
 2024-06-20,GBP,BoE,https://www.bankofengland.co.uk/monetary-policy-summary-and-minutes/2024/june-2024
 2024-07-05,USD,Empleo EE. UU.,https://www.bls.gov/bls/news-release/empsit.htm
 2024-07-18,EUR,BCE,https://www.ecb.europa.eu/press/press_conference/monetary-policy-statement/2024/html/index_include.en.html
@@ -1140,6 +1226,7 @@ fecha,divisa,evento,fuente
 2024-09-18,USD,Fed,https://www.federalreserve.gov/monetarypolicy/fomccalendars.htm
 2024-09-19,GBP,BoE,https://www.bankofengland.co.uk/monetary-policy-summary-and-minutes/2024/september-2024
 2024-09-20,JPY,BoJ,https://www.boj.or.jp/en/mopo/mpmsche_minu/minu_2024/index.htm
+2024-09-26,CHF,SNB,https://www.snb.ch/en/the-snb/mandates-goals/monetary-policy/decisions
 2024-10-04,USD,Empleo EE. UU.,https://www.bls.gov/bls/news-release/empsit.htm
 2024-10-17,EUR,BCE,https://www.ecb.europa.eu/press/press_conference/monetary-policy-statement/2024/html/index_include.en.html
 2024-10-31,JPY,BoJ,https://www.boj.or.jp/en/mopo/mpmsche_minu/minu_2024/index.htm
@@ -1147,6 +1234,7 @@ fecha,divisa,evento,fuente
 2024-11-07,GBP,BoE,https://www.bankofengland.co.uk/monetary-policy-summary-and-minutes/2024/november-2024
 2024-11-07,USD,Fed,https://www.federalreserve.gov/monetarypolicy/fomccalendars.htm
 2024-12-06,USD,Empleo EE. UU.,https://www.bls.gov/bls/news-release/empsit.htm
+2024-12-12,CHF,SNB,https://www.snb.ch/en/the-snb/mandates-goals/monetary-policy/decisions
 2024-12-12,EUR,BCE,https://www.ecb.europa.eu/press/press_conference/monetary-policy-statement/2024/html/index_include.en.html
 2024-12-18,USD,Fed,https://www.federalreserve.gov/monetarypolicy/fomccalendars.htm
 2024-12-19,GBP,BoE,https://www.bankofengland.co.uk/monetary-policy-summary-and-minutes/2024/december-2024
@@ -1161,6 +1249,7 @@ fecha,divisa,evento,fuente
 2025-03-07,USD,Empleo EE. UU.,https://www.bls.gov/bls/news-release/empsit.htm
 2025-03-19,JPY,BoJ,https://www.boj.or.jp/en/mopo/mpmsche_minu/minu_2025/index.htm
 2025-03-19,USD,Fed,https://www.federalreserve.gov/monetarypolicy/fomccalendars.htm
+2025-03-20,CHF,SNB,https://www.snb.ch/en/the-snb/mandates-goals/monetary-policy/decisions
 2025-03-20,GBP,BoE,https://www.bankofengland.co.uk/monetary-policy-summary-and-minutes/2025/march-2025
 2025-04-04,USD,Empleo EE. UU.,https://www.bls.gov/bls/news-release/empsit.htm
 2025-04-17,EUR,BCE,https://www.ecb.europa.eu/press/press_conference/monetary-policy-statement/2025/html/index_include.en.html
@@ -1172,6 +1261,7 @@ fecha,divisa,evento,fuente
 2025-06-06,USD,Empleo EE. UU.,https://www.bls.gov/bls/news-release/empsit.htm
 2025-06-17,JPY,BoJ,https://www.boj.or.jp/en/mopo/mpmsche_minu/minu_2025/index.htm
 2025-06-18,USD,Fed,https://www.federalreserve.gov/monetarypolicy/fomccalendars.htm
+2025-06-19,CHF,SNB,https://www.snb.ch/en/the-snb/mandates-goals/monetary-policy/decisions
 2025-06-19,GBP,BoE,https://www.bankofengland.co.uk/monetary-policy-summary-and-minutes/2025/june-2025
 2025-07-03,USD,Empleo EE. UU.,https://www.bls.gov/bls/news-release/empsit.htm
 2025-07-24,EUR,BCE,https://www.ecb.europa.eu/press/press_conference/monetary-policy-statement/2025/html/index_include.en.html
@@ -1184,12 +1274,14 @@ fecha,divisa,evento,fuente
 2025-09-17,USD,Fed,https://www.federalreserve.gov/monetarypolicy/fomccalendars.htm
 2025-09-18,GBP,BoE,https://www.bankofengland.co.uk/monetary-policy-summary-and-minutes/2025/september-2025
 2025-09-19,JPY,BoJ,https://www.boj.or.jp/en/mopo/mpmsche_minu/minu_2025/index.htm
+2025-09-25,CHF,SNB,https://www.snb.ch/en/the-snb/mandates-goals/monetary-policy/decisions
 2025-10-29,USD,Fed,https://www.federalreserve.gov/monetarypolicy/fomccalendars.htm
 2025-10-30,EUR,BCE,https://www.ecb.europa.eu/press/press_conference/monetary-policy-statement/2025/html/index_include.en.html
 2025-10-30,JPY,BoJ,https://www.boj.or.jp/en/mopo/mpmsche_minu/minu_2025/index.htm
 2025-11-06,GBP,BoE,https://www.bankofengland.co.uk/monetary-policy-summary-and-minutes/2025/november-2025
 2025-11-20,USD,Empleo EE. UU.,https://www.bls.gov/bls/news-release/empsit.htm
 2025-12-10,USD,Fed,https://www.federalreserve.gov/monetarypolicy/fomccalendars.htm
+2025-12-11,CHF,SNB,https://www.snb.ch/en/the-snb/mandates-goals/monetary-policy/decisions
 2025-12-16,USD,Empleo EE. UU.,https://www.bls.gov/bls/news-release/empsit.htm
 2025-12-18,EUR,BCE,https://www.ecb.europa.eu/press/press_conference/monetary-policy-statement/2025/html/index_include.en.html
 2025-12-18,GBP,BoE,https://www.bankofengland.co.uk/monetary-policy-summary-and-minutes/2025/december-2025
@@ -1202,6 +1294,7 @@ fecha,divisa,evento,fuente
 2026-02-11,USD,Empleo EE. UU.,https://www.bls.gov/bls/news-release/empsit.htm
 2026-03-06,USD,Empleo EE. UU.,https://www.bls.gov/bls/news-release/empsit.htm
 2026-03-18,USD,Fed,https://www.federalreserve.gov/monetarypolicy/fomccalendars.htm
+2026-03-19,CHF,SNB,https://www.snb.ch/en/the-snb/mandates-goals/monetary-policy/decisions
 2026-03-19,EUR,BCE,https://www.ecb.europa.eu/press/press_conference/monetary-policy-statement/2026/html/index_include.en.html
 2026-03-19,GBP,BoE,https://www.bankofengland.co.uk/monetary-policy-summary-and-minutes/2026/march-2026
 2026-03-19,JPY,BoJ,https://www.boj.or.jp/en/mopo/mpmsche_minu/m_ref/mref250731a.pdf
@@ -1215,6 +1308,7 @@ fecha,divisa,evento,fuente
 2026-06-11,EUR,BCE,https://www.ecb.europa.eu/press/press_conference/monetary-policy-statement/2026/html/index_include.en.html
 2026-06-16,JPY,BoJ,https://www.boj.or.jp/en/mopo/mpmsche_minu/m_ref/mref250731a.pdf
 2026-06-17,USD,Fed,https://www.federalreserve.gov/monetarypolicy/fomccalendars.htm
+2026-06-18,CHF,SNB,https://www.snb.ch/en/the-snb/mandates-goals/monetary-policy/decisions
 2026-06-18,GBP,BoE,https://www.bankofengland.co.uk/monetary-policy-summary-and-minutes/2026/june-2026
 2026-07-02,USD,Empleo EE. UU.,https://www.bls.gov/bls/news-release/empsit.htm
 2026-07-23,EUR,BCE,https://www.ecb.europa.eu/press/press_conference/monetary-policy-statement/2026/html/index_include.en.html
@@ -1227,6 +1321,7 @@ fecha,divisa,evento,fuente
 2026-09-16,USD,Fed,https://www.federalreserve.gov/monetarypolicy/fomccalendars.htm
 2026-09-17,GBP,BoE,https://www.bankofengland.co.uk/monetary-policy-summary-and-minutes/2026/september-2026
 2026-09-18,JPY,BoJ,https://www.boj.or.jp/en/mopo/mpmsche_minu/m_ref/mref250731a.pdf
+2026-09-24,CHF,SNB,https://www.snb.ch/en/the-snb/mandates-goals/monetary-policy/decisions
 2026-10-02,USD,Empleo EE. UU.,https://www.bls.gov/bls/news-release/empsit.htm
 2026-10-28,USD,Fed,https://www.federalreserve.gov/monetarypolicy/fomccalendars.htm
 2026-10-30,JPY,BoJ,https://www.boj.or.jp/en/mopo/mpmsche_minu/m_ref/mref250731a.pdf
