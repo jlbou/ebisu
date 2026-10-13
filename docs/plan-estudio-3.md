@@ -106,7 +106,8 @@ Si no pasa, se para aqui y se le explica al propietario. Si pasa, solo dice que 
 5. Robustez y estabilidad: > 60 % de la rejilla con Sharpe > 0; la mejora sale en la mayoria de pares, no solo en el
    total; perdida de rendimiento fuera de muestra < 30 % (y sospecha si es < 5 %: fuga).
 
-Despues: papel (decision 11: para una estrategia diaria, duracion por decidir) y solo entonces dinero real.
+Despues: **papel de 3 meses** (decidido el 13/10, opcion A) en la **cuenta demo del broker de CFD** (sus precios,
+diferenciales e intereses), con las condiciones de la decision 11; y solo entonces dinero real.
 
 ## 8. Pre-mortem: "ha fallado; por que?"
 
@@ -136,7 +137,7 @@ Despues: papel (decision 11: para una estrategia diaria, duracion por decidir) y
 5. ~~Barreras~~: rejilla de 9 y freno del 15 % (opcion A, 13/10).
 6. ~~Regla de una posicion~~: la primera en el tiempo (opcion A, 13/10).
 7. ~~Modelo y variables~~: regresion logistica con combinaciones a mano (opcion A, 13/10).
-8. Duracion del papel.
+8. ~~Duracion del papel~~: 3 meses en la demo del broker (opcion A, 13/10).
 
 ## 10. Orden de trabajo (cada paso con su commit; puertas que pueden parar)
 

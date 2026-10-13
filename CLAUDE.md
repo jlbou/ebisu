@@ -6,8 +6,8 @@ lee; nunca se toca nada**.
 
 **Este repositorio es PUBLICO** (`github.com/jlbou/ebisu`). Ver "Repositorio publico" mas abajo.
 
-**Estado (13/10/2026): estudios 1 y 2 sin ganadora** (reserva 2015-2026 ya usada: `docs/estudios/estudio2-reserva.md`).
-H2 tambien probada en la reserva de divisas: no pasa. Se aplica `docs/decisiones/12-si-no-pasa.md`: estudio 3 posible solo con datos anteriores al 2000; red de seguridad, el bot del indexado.
+**Estado (13/10/2026): estudios 1, 2 y H2 sin ganadora. Estudio 3 (divisas, 5 capas, ~4x) con el plan decidido**
+(`docs/plan-estudio-3.md`, las 8 decisiones tomadas); siguiente: verificaciones y diagnostico (puerta 1). Nada medido.
 
 ## La leccion de Ploutos que manda aqui
 

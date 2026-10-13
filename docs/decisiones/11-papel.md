@@ -12,6 +12,7 @@ tiene cuenta demo.
 | H1-S | cada semana | **3 meses** (~13 revisiones) |
 | H1-M, H1-MB, H1-F | cada mes | **6 meses** (~6 revisiones) |
 | H2 | cada dia | por decidir |
+| Estudio 3 (divisas, diario) | cada dia | **3 meses** en la demo del broker de CFD (13/10) |
 
 ## 11.2 Que tiene que cumplir el papel para pasar a dinero real (opcion A, 13/10)
 
