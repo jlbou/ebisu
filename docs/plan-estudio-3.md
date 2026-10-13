@@ -194,3 +194,40 @@ Todas con datos de antes de entrar (retrasadas), normalizadas con ventanas movil
 8. Hora, dia de la semana y diferencial relativo en la entrada.
 9. Combinaciones dadas a mano (la logistica no las ve sola): tendencia a la baja x volatilidad alta; tendencia a la
    baja x miedo alto; rotura del minimo de 20 dias x volatilidad alta.
+
+## 11. Revision del plan: agujeros encontrados (13/10/2026)
+
+Revision pedida por el propietario, con las skills `ml4t-model-validation`, `ml4t-cost-model`, `ml4t-data-leakage` y
+`ml4t-backtest-overfitting`. Los tecnicos se cierran asi (el propietario puede discutirlos); los de decision se le
+preguntan uno a uno.
+
+### Tecnicos (cerrados con el criterio prudente)
+
+| # | Agujero | Como se cierra |
+|---|---|---|
+| T1 | El calendario incluiria reuniones de urgencia (p. ej. la Fed en marzo de 2020), que nadie sabia de antemano: seria mirar el futuro | Solo reuniones **programadas** (publicadas antes); las de urgencia cuentan como sorpresa |
+| T2 | Elecciones anticipadas | Cuentan desde el dia en que se anuncian, no antes |
+| T3 | Cerca de las 17:00 de Nueva York (cambio de dia) y del 24/12 al 2/1 los diferenciales se disparan | No se abre entre las 16:00 y las 18:00 de Nueva York ni del 24/12 al 2/1 |
+| T4 | No estaba claro que va a la reserva | En la exploracion, cada candidata (5 capas y solo reglas = capas 1, 2 y 4) elige su mejor combinacion de las 9, y solo pasa a la reserva si >= 6 de 9 ganan dinero; a la reserva van las dos (liston de confianza corregido por ser dos, como en el estudio 2) |
+| T5 | Numero de pruebas sin cifrar | N = 30: 5 (estudio 1) + 2 (estudio 2) + 1 (H2 reserva) + 4 (miradas informales) + 18 (9 x 2 candidatas); la varianza, de las 18 de este estudio |
+| T6 | Con que datos aprende el modelo | Todos los pares (principales y nuevos), solo operaciones cerradas **10 dias antes** de cada reentreno (purga comun a todos los pares, porque el mismo dia afecta a todos) |
+| T7 | Que es "salir bien" | Resultado neto > 0 tras diferencial, intereses y recargos |
+| T8 | El resultado de cada operacion esta en otra divisa y el broker puede cobrar por pasarlo a euros | A verificar con el broker; se suma al coste |
+| T9 | El broker elegido quiza no tiene los 25 pares | Se fija la lista con los que tenga **antes** de bajar los datos |
+| T10 | Intereses: el miercoles se cobran 3 noches (fin de semana) | Se simula asi |
+| T11 | Fiscalidad de los CFD | A verificar antes de medir |
+| T12 | La referencia ya se conoce: el indexado hizo 10,54 % al anyo con una caida del 33,6 % en 2015-2026 | Condicion 2 en cifras: TAE >= 10,54 %, o >= 9,54 % con caida <= 22,4 % |
+| T13 | Los pares nuevos empiezan en 2004-2007 y el modelo necesita pasado | El primer modelo aprende con los principales desde 2003; se opera desde 2005 |
+| T14 | El freno mensual sobre que | Sobre el valor de la cuenta el primer dia del mes |
+| T15 | "Minimo de operaciones" sin cifrar | Al menos 30 operaciones al anyo de media en la exploracion |
+| T16 | El contraste de datos solo cubria los cruces del euro | Todos los pares se pueden contrastar con el BCE (cruces de sus cambios de referencia) |
+| T17 | La senyal "cruzar" sin cifrar | El ask tiene que bajar al menos 1 pip por debajo del minimo de ayer |
+
+### De decision del propietario (pendientes, en este orden)
+
+| # | Agujero | Por que importa |
+|---|---|---|
+| P1 | **Como se define la prueba de estres** | Si se supone "una posicion abierta en el peor par en el peor momento", EUR/CHF el 15/01/2015 (-30 % en minutos) a 4x deja la cuenta a cero y **ninguna estrategia pasaria nunca**. Hay que definirla de forma justa |
+| P2 | Solo compras, o tambien la version espejo (vender en el maximo de ayer) | Las divisas son simetricas; con solo compras la estrategia es la mitad |
+| P3 | Fin de semana: mantener o cerrar el viernes | El limite de 3-10 dias cruza fines de semana: riesgo de salto el lunes |
+| P4 | Que pasa si la cuenta baja de ~150 € y ya no se puede abrir nada | El bot se para y avisa; hay que decidir si es el final o si se rehace |
