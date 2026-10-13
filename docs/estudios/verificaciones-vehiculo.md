@@ -263,3 +263,39 @@ impuestos solo entre fondos comercializados por entidades que operan en Espanya.
   [EY, los ETF de la UE salen del regimen de traspasos (2021)](https://globaltaxnews.ey.com/news/2021-5775-spain-eu-etfs-no-longer-qualify-for-traspasos-regime),
   [guia fiscal de ETF 2026](https://guiafiscal.es/inversiones/etf-fiscalidad-2026-guia/).
 - Datos: [BEKKs, StocksBonds (R)](https://search.r-project.org/CRAN/refmans/BEKKs/html/StocksBonds.html).
+
+## 7. Divisas: que broker podria operar el estudio 3 (13/10/2026, busqueda en la web; nada contratado)
+
+Pregunta: operar divisas sin apalancamiento (1x), automatico (API) y con 250 €. Fuentes: paginas de cada broker y
+terceros (leidas el 13/10/2026); lo marcado "sin confirmar" viene de terceros o foros.
+
+| Broker (UE) | Como | API | Minimo por operacion | Coste | Con 250 € a 1x |
+|---|---|---|---|---|---|
+| Trading 212 | Solo CFD | La API publica es solo de Invest e ISA | - | - | No |
+| Interactive Brokers | Divisa real (IDEAL, < 25.000 $) | Si | Sin minimo de tamanyo; comision 0,01 % con **minimo de 2,50 $** | + 1-2 pb de peor precio | No (comision ~1 %); viable desde ~12.000 € por orden |
+| Dukascopy Europe | Al contado con margen | Si (JForex, FIX) | **1.000 unidades**; deposito minimo 100 $ | Diferencial + comision pequenya | No (1.000 € por compra = 4x); a 1x, ~1.000 € por par abierto |
+| Capital.com (CySEC) | CFD | Si | 0,01 lotes (sin confirmar si son 1.000 unidades) | Diferencial | Igual que Dukascopy |
+| IG Europe | CFD | Si (REST) | Contratos de 10.000-100.000 € segun pais (sin confirmar para Espanya) | Diferencial | No |
+| Saxo | Al contado con margen | Si (OpenAPI) | Sin confirmar; comision minima 1-3 $ | Diferencial + comision | Probablemente no |
+| eToro | CFD | API publica desde 10/2025; no consta que cubra divisas | **1.000 $** en divisas (sin fecha) | Diferencial | No |
+| OANDA (UE: OANDA TMS, Varsovia) | CFD | La API v20 no esta para la UE (foro; la nota oficial solo cita MT5 y web) | 1 unidad fuera de la UE | Diferencial | No (sin API) |
+| XTB | CFD | **API cerrada el 14/03/2025** | - | - | No |
+| Brokers con MetaTrader 5 (p. ej. IC Markets EU) | CFD | MT5 con el paquete de Python (solo Windows) | 0,01 lotes = 1.000 unidades | Diferencial (+ comision) | Igual que Dukascopy |
+
+**Conclusion:** el minimo del sector son **1.000 unidades** (~1.000 €). Los "nano lotes" (100 unidades) solo aparecen en
+brokers sin regulacion de la UE (foros): descartados. A 1x hacen falta ~1.000 € por par abierto a la vez; con 250 €,
+cualquier operacion de divisas ya es apalancada. Es una cuestion de capital, no de estrategia.
+
+Fuentes: [Trading 212, API](https://helpcentre.trading212.com/hc/en-us/articles/14584770928157-Trading-212-API-key);
+[IBKR, comisiones](https://www.interactivebrokers.com/download/newMark/PDFs/commissionsForex.pdf) y
+[ordenes pequenyas](https://ibkb.interactivebrokers.com/tag/forex?page=2);
+[Dukascopy, cuentas](https://www.dukascopy.com/swiss/spanish/forex/forex_trading_accounts/);
+[Capital.com](https://help.capital.com/hc/en-us/articles/4403989787538-What-is-the-minimum-trade-size);
+[IG, EUR/USD](https://www.ig.com/uk/forex/markets-forex/eur-usd);
+[Saxo](https://www.home.saxo/rates-and-conditions/forex/trading-conditions);
+[eToro, minimos](https://etoro.com/news-and-analysis/etoro-updates/introducing-lower-unified-minimum-trade-sizes) y
+[API](https://www.etoro.com/news-and-analysis/press-releases/etoro-marks-15-years-of-social-investing-with-launch-of-public-apis-and-expansion-of-copytradertm-to-the-us/);
+[OANDA UE](https://www.oanda.com/group/media-center/press-releases/new-operations-in-the-eu) y
+[foro](https://www.forexpeacearmy.com/community/threads/what-broker-after-oanda-eu-client-rest-api.79944/post-452044);
+[XTB](https://www.xtb.com/en/help-center/our-platforms/does-xtb-offer-investment-automation-tools);
+[nano lotes, foro](https://forums.babypips.com/t/europe-broker-with-nano-lots-or-units/1261989).
