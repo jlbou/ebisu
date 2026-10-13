@@ -82,7 +82,7 @@ Si no pasa, se para aqui y se le explica al propietario. Si pasa, solo dice que 
 |---|---|---|---|
 | 1. Senyal | Comprar cuando el ask toca el minimo de ayer | Si se exige que lo cruce (p. ej. 1 pip) para asegurar que se habria llenado la orden | La orden limite no siempre se llena al tocar: regla prudente |
 | Una sola posicion | Si saltan varios pares, cual | La primera en el tiempo (por horas) o la de mas probabilidad del modelo | Regla fijada antes |
-| 2. Reglas (veto) | Solo eventos programados: no se compra ese dia ni el anterior | Que eventos, cuantos dias alrededor | Calendario con fechas publicadas antes, no reconstruidas |
+| 2. Reglas (veto) | **Decidido (13/10, opcion A):** si hay evento hoy o manyana, no se abre; si hay una posicion abierta, se cierra el dia antes. Eventos: decisiones de los bancos centrales de las dos divisas del par, empleo de EE. UU. (todos los pares) y **todas** las elecciones generales y referendums nacionales de los paises de esas divisas (ver anexo) | - | Listas completas de fuentes publicas, sin elegir a mano cuales |
 | 3. Modelo | Probabilidad de que la compra salga bien; entra solo por encima de un umbral | Regresion logistica o arboles (dependencia: scikit-learn); variables; umbral | Validacion anidada y purgada, CPCV, PBO, SHAP, prueba con etiquetas al azar |
 | 4. Proteccion | Objetivo (mitad del rango de ayer), stop (multiplo del rango medio), limite de tiempo, freno mensual | Los cuatro valores | Rejilla pequenya fijada antes y robustez > 60 % |
 | 5. IA | Lee noticias; solo puede frenar | Que lee y cuando | No se puede probar con la historia: solo en papel, en sombra |
@@ -132,7 +132,7 @@ Despues: papel (decision 11: para una estrategia diaria, duracion por decidir) y
 1. ~~Si el objetivo de la decision 1 se aplica a las divisas~~: si, igual (opcion A, 13/10).
 2. ~~Maximo de apalancamiento por par~~: 4x sobre la cuenta del dia (opcion A, 13/10).
 3. ~~Umbral de la puerta del diagnostico~~: opcion A (13/10).
-4. Eventos del calendario y dias alrededor (tras verificar las fuentes).
+4. ~~Eventos del calendario~~: opcion A (13/10).
 5. Barreras: objetivo, stop, tiempo y freno mensual (rejilla pequenya).
 6. Regla de una posicion.
 7. Modelo y variables.
@@ -161,3 +161,20 @@ Primer mes con datos, mirando enero y julio de cada anyo (aproximado a medio any
 | 2007 | AUDNZD (enero), USDMXN (julio) |
 
 Los 25 tienen al menos ~7,5 anyos de exploracion (hasta 2014) y los 12 de reserva.
+
+## Anexo: calendario de eventos (decision 4, opcion A; 13/10/2026)
+
+Regla para no elegir a mano: se incluyen **todos** los de cada lista, salgan como salgan.
+
+| Divisa | Banco central | Elecciones y referendums nacionales |
+|---|---|---|
+| USD | Fed (FOMC) + empleo de EE. UU. (BLS) para todos los pares | Presidenciales y legislativas (midterms) |
+| EUR | BCE | Generales o presidenciales de Alemania, Francia, Italia y Espanya (las 4 mayores economias del euro) y sus referendums nacionales; referendum griego de 2015 |
+| GBP | Banco de Inglaterra | Generales; referendums del Reino Unido (2011, 2016) y el de independencia de Escocia (2014) |
+| JPY | Banco de Japon | Camara de Representantes y Camara de Consejeros |
+| CHF | Banco Nacional Suizo | Federales y **todas** las votaciones populares federales |
+| AUD, CAD, NZD, NOK, SEK | RBA, BoC, RBNZ, Norges Bank, Riksbank | Generales y referendums nacionales |
+| MXN, ZAR, SGD | Banxico, SARB, MAS | Generales (y presidenciales) |
+
+Fuentes: archivos oficiales de cada banco central y del BLS; elecciones, listas publicas por pais. Si alguna lista no se
+puede completar desde 2003, se dice y ese par se marca.
