@@ -13,7 +13,8 @@ Viene de: `docs/estudios/recerca-divisas.md`, `docs/estudios/estudio3-opciones.m
 ## 1. Lo decidido hasta ahora
 
 - Divisas; 5 capas (senyal, reglas, modelo, proteccion, IA); la de solo reglas como control.
-- ~4x (el minimo para 1.000 unidades con 250 €), una posicion abierta, calendario de eventos; liston de riesgo M.
+- ~4x (el minimo para 1.000 unidades con 250 €), exposicion total <= 4x sin divisas repetidas, calendario de eventos,
+  compras y ventas, cierre los viernes, frenos mensual (15 %) y de la cuenta (175 €); liston de riesgo M.
 - Exploracion y reserva con **pares no tratados**; los 7 principales (ya vistos) solo para disenyar.
 
 ## 2. Lo que las skills cambian del plan (hallazgos)
@@ -50,7 +51,7 @@ Viene de: `docs/estudios/recerca-divisas.md`, `docs/estudios/estudio3-opciones.m
 | Pieza | Plan | Riesgo / comprobacion |
 |---|---|---|
 | Pares nuevos | Dukascopy, velas de 1 hora, compra y venta | Fecha de inicio de cada par (comprobando); huecos; contraste con el BCE en los cruces del euro |
-| Tramos | Exploracion: desde el inicio de cada par hasta 2014; reserva: 2015-2026, una vez | Si un par empieza tarde, tiene poca exploracion: minimo por decidir |
+| Tramos | Exploracion: desde el inicio de cada par hasta 2014; reserva: 2015-2026, una vez | Todos tienen >= 7,5 anyos de exploracion (anexo); se opera desde 2005 (T13) |
 | Pares principales | Solo para disenyar y para el diagnostico | Ya vistos: nada de lo que digan es una prueba |
 | Apalancamiento por par | **Decidido (13/10, opcion A): un par solo se opera si 1.000 unidades de su divisa base valen como mucho 4 veces lo que hay en la cuenta ESE dia** (cambio del dia). Con el cambio del BCE del 12/10/2026 entran 19 de 25 (fuera los de base GBP y CHFJPY) | Si la cuenta baja, entran menos pares; por debajo de ~150 € no se puede abrir ninguno (freno natural) |
 | Calendario de eventos | Decisiones de bancos centrales (Fed, BCE, BoE, BoJ, SNB, RBA, BoC, RBNZ, Norges, Riksbank), empleo de EE. UU., referendums y elecciones, 2003-2026 | **Sin comprobar que existan calendarios historicos completos y gratuitos** |
@@ -58,7 +59,8 @@ Viene de: `docs/estudios/recerca-divisas.md`, `docs/estudios/estudio3-opciones.m
 
 ## 4. Diagnostico (puerta 1, antes de disenyar reglas o modelo)
 
-Con los 7 principales (ya vistos), compras en el minimo de ayer con las tres barreras y ~4x: clasificar las perdidas
+Con los 7 principales (ya vistos), compras en el minimo y ventas en el maximo de ayer, con las tres barreras, ~4x y
+las reglas fijas (cierre del viernes, horas y fechas sin abrir, pares con cambio fijado, veto de eventos aparte): clasificar las perdidas
 grandes por escenario y de cada peor perdida, que pasaba ese dia. Barreras provisionales solo para el diagnostico: objetivo
 en la mitad del rango de ayer, stop de un rango medio (20 dias), maximo 5 dias.
 
@@ -70,8 +72,8 @@ Escenarios marcados **antes** de comprar (umbrales de manual, fijados el 13/10):
 5. Rotura del minimo de las ultimas 20 sesiones.
 
 **Pasa la puerta (opcion A del propietario, 13/10)** si se cumplen las tres:
-- las compras no marcadas ganan de media tras costes (resultado medio por operacion > 0);
-- quedan al menos el 40 % de las compras;
+- las operaciones no marcadas ganan de media tras costes (resultado medio por operacion > 0);
+- quedan al menos el 40 % de las operaciones;
 - las marcadas contienen al menos la mitad de las peores perdidas (el 5 % peor de las operaciones).
 
 Si no pasa, se para aqui y se le explica al propietario. Si pasa, solo dice que vale la pena seguir (datos ya vistos).
@@ -80,12 +82,12 @@ Si no pasa, se para aqui y se le explica al propietario. Si pasa, solo dice que 
 
 | Capa | Que hace | Decisiones pendientes | Como no enganyarnos |
 |---|---|---|---|
-| 1. Senyal | Comprar cuando el ask toca el minimo de ayer | Si se exige que lo cruce (p. ej. 1 pip) para asegurar que se habria llenado la orden | La orden limite no siempre se llena al tocar: regla prudente |
+| 1. Senyal | Comprar si el ask baja 1 pip por debajo del minimo de ayer; vender si el bid sube 1 pip por encima del maximo (T17, P2) | - | Cruzar el nivel, no solo tocarlo |
 | Posiciones | **Decidido (13/10, opciones A y B):** exposicion total de todas las posiciones abiertas <= 4 veces la cuenta del dia y **ninguna divisa repetida** entre posiciones abiertas (con 250 €, una sola); si saltan varios pares, se coge **el primero que toca su minimo** (por horas) | - | Sin parametros ni datos del futuro |
 | 2. Reglas (veto) | **Decidido (13/10, opcion A):** si hay evento hoy o manyana, no se abre; si hay una posicion abierta, se cierra el dia antes. Eventos: decisiones de los bancos centrales de las dos divisas del par, empleo de EE. UU. (todos los pares) y **todas** las elecciones generales y referendums nacionales de los paises de esas divisas (ver anexo) | - | Listas completas de fuentes publicas, sin elegir a mano cuales |
 | 3. Modelo | **Decidido (13/10, opcion A): regresion logistica** (dependencia nueva: scikit-learn). Entra si la probabilidad supera el porcentaje medio de aciertos del entrenamiento (sin umbral que elegir). Se reentrena cada anyo con todo el pasado | - | Validacion anidada y purgada (purga 10 dias, el limite de tiempo maximo), CPCV, PBO, coeficientes estables, prueba con etiquetas al azar; ninguna variable > 40 % del peso |
 | 4. Proteccion | **Decidido (13/10, opcion A):** objetivo en la mitad del rango de ayer; stop a 0,75 / 1 / 1,5 rangos medios (20 dias) bajo la entrada; limite de 3 / 5 / 10 dias; freno mensual fijo: si el mes pierde > 15 %, no se opera mas ese mes y se avisa | - | Rejilla de 9 combinaciones (cuentan como pruebas); pasa si >= 6 de 9 ganan dinero, sin precipicios ni el optimo en el borde |
-| 5. IA | Lee noticias; solo puede frenar | Que lee y cuando | No se puede probar con la historia: solo en papel, en sombra |
+| 5. IA | Lee noticias; solo puede frenar | Que lee y cuando: se decide antes del papel (no entra en el estudio) | No se puede probar con la historia: solo en papel, en sombra |
 
 ## 6. Costes y fiscalidad reales
 
@@ -141,13 +143,14 @@ diferenciales e intereses), con las condiciones de la decision 11; y solo entonc
 
 ## 10. Orden de trabajo (cada paso con su commit; puertas que pueden parar)
 
-1. Fechas de inicio de los pares nuevos y fuentes del calendario y de los tipos (verificar).
-2. Decisiones 1-3; diagnostico con los 7 principales (**puerta 1**).
-3. Decisiones 4-8 y criterio completo **subido a git antes de bajar los pares nuevos**.
-4. Bajar los pares nuevos; contraste con el BCE.
+1. Verificaciones: calendarios (solo reuniones programadas) y elecciones, tipos de interes, un broker de CFD concreto
+   (pares, diferencial, recargos, conversion a euros, demo, API) y fiscalidad de los CFD.
+2. Diagnostico con los 7 principales (**puerta 1**).
+3. Criterio completo **subido a git antes de bajar los pares nuevos**.
+4. Bajar los pares nuevos (dias: Dukascopy es lento); contraste con el BCE.
 5. Exploracion (con las pruebas de fugas y de etiquetas al azar).
 6. Reserva, una vez (**puerta 2**).
-7. Papel (**puerta 3**). Despues, el bot.
+7. Papel de 3 meses en la demo (**puerta 3**). Despues, el bot.
 
 ## Anexo: inicio de los pares nuevos en Dukascopy (13/10/2026; solo tamanyo de ficheros, sin mirar precios)
 
@@ -231,3 +234,32 @@ preguntan uno a uno.
 | P2 | Solo compras, o tambien la version espejo — **decidido (13/10, opcion B): las dos, como una sola estrategia.** Compra si el ask baja 1 pip por debajo del minimo de ayer; vende si el bid sube 1 pip por encima del maximo de ayer; objetivo en la mitad del rango de ayer y stop al otro lado. Los escenarios y las variables se miran en el sentido de cada operacion (tendencia en contra, rotura del maximo de 20 dias para las ventas). El diagnostico informa compras y ventas por separado. Intereses de cada noche con el signo de cada lado | Las divisas son simetricas; con solo compras la estrategia es la mitad |
 | P3 | Fin de semana — **decidido (13/10, opcion B): todo se cierra el viernes antes de las 16:00 de Nueva York**, y el viernes a partir de esa hora no se abre nada | El limite de 3-10 dias cruza fines de semana: riesgo de salto el lunes |
 | P4 | Si la cuenta baja — **decidido (13/10, opcion B): freno de la cuenta en 175 € (-30 %)**: el bot cierra todo, se para y avisa; solo vuelve si el propietario lo decide tras revisar que paso. Nunca se anyade dinero automaticamente | El bot se para y avisa; hay que decidir si es el final o si se rehace |
+
+## 12. Segunda revision (13/10/2026)
+
+Pedida por el propietario. Busca contradicciones entre las decisiones nuevas (ventas, viernes, freno de la cuenta) y
+lo ya escrito. Corregidas en el texto: secciones 1, 3, 4, 5 y 10. Ademas:
+
+### Tecnicos (cerrados)
+
+| # | Agujero | Como se cierra |
+|---|---|---|
+| F1 | "Mejor combinacion" de la rejilla sin metrica | La de mayor Sharpe de la cuenta diaria neta en la exploracion |
+| F2 | El freno mensual no decia que pasa con lo abierto | Al saltar, se cierra todo y no se abre nada hasta el mes siguiente |
+| F3 | Los frenos, sobre que valor | Sobre el valor de la cuenta con lo abierto a precio de mercado (hora a hora) |
+| F4 | El 4x se mira al abrir; si la cuenta cae con una posicion abierta, el apalancamiento real sube | Se acepta: con el freno en 175 €, como mucho ~5,7x antes de cerrar todo. Se informa |
+| F5 | Dos senyales del mismo par (toca minimo y maximo el mismo dia) | Una posicion por par; mientras esta abierta, el par no da senyales |
+| F6 | Compras y ventas en el modelo | Un solo modelo; el sentido es una variable mas y todas las demas se miran en el sentido de la operacion |
+| F7 | Una rejilla, un modelo | Cada una de las 9 combinaciones tiene sus etiquetas y su modelo |
+| F8 | La logistica con ~20 variables se puede sobreajustar | Variables estandarizadas con datos de entrenamiento y regularizacion por defecto (L2, C = 1), sin buscarla |
+| F9 | El diferencial del broker de CFD suele ser mayor que el de Dukascopy | Se usa el mayor de los dos: el de los datos o el tipico publicado por el broker para ese par |
+| F10 | Los stops en movimientos rapidos dentro de la hora | El stop se ejecuta 1 diferencial peor; si la hora abre ya mas alla, al precio de apertura |
+| F11 | Los intereses historicos del broker no existen | Diferencia de tipos oficiales de cada dia + el recargo actual del broker aplicado a toda la historia |
+| F12 | El resultado de cada operacion esta en otra divisa | Se pasa a euros con el cambio del momento, mas el recargo de conversion del broker si lo cobra (T8) |
+| F13 | Volumen de datos | 25 pares x 2 lados x ~260 meses: ~13.000 ficheros; con la experiencia del estudio 1, varios dias |
+
+### De decision del propietario
+
+| # | Agujero | Por que importa |
+|---|---|---|
+| P5 | **El freno de la cuenta (175 €) esconde el riesgo en la condicion 1 del liston M** | Con el freno, la cuenta casi nunca puede llegar a 125 € (solo con un salto), asi que "perder la mitad" saldria casi siempre bien aunque la estrategia fuera muy arriesgada. Hay que decidir si el riesgo se mide con o sin la red |
