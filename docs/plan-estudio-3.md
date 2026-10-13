@@ -227,7 +227,7 @@ preguntan uno a uno.
 
 | # | Agujero | Por que importa |
 |---|---|---|
-| P1 | **Como se define la prueba de estres** | Si se supone "una posicion abierta en el peor par en el peor momento", EUR/CHF el 15/01/2015 (-30 % en minutos) a 4x deja la cuenta a cero y **ninguna estrategia pasaria nunca**. Hay que definirla de forma justa |
+| P1 | **Como se define la prueba de estres** — **decidido (13/10, opcion A):** se hace correr la estrategia real (reglas, veto, modelo, stops con salto) por una lista fija de crisis: 2008 (sept.-oct.), 6/05/2010, agosto de 2011, 15/01/2015, 24/06/2016, febrero de 2018, marzo de 2020, agosto de 2024 y abril de 2025; pasa si en ninguna pierde > 25 %. Ademas, **no se operan pares con un tipo de cambio fijado o con suelo oficial** mientras dure (EUR/CHF del 6/09/2011 al 15/01/2015). El peor caso imaginario (posicion en el peor par en el peor momento) se informa, no decide | Si se supone "una posicion abierta en el peor par en el peor momento", EUR/CHF el 15/01/2015 (-30 % en minutos) a 4x deja la cuenta a cero y **ninguna estrategia pasaria nunca**. Hay que definirla de forma justa |
 | P2 | Solo compras, o tambien la version espejo (vender en el maximo de ayer) | Las divisas son simetricas; con solo compras la estrategia es la mitad |
 | P3 | Fin de semana: mantener o cerrar el viernes | El limite de 3-10 dias cruza fines de semana: riesgo de salto el lunes |
 | P4 | Que pasa si la cuenta baja de ~150 € y ya no se puede abrir nada | El bot se para y avisa; hay que decidir si es el final o si se rehace |

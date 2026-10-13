@@ -26,6 +26,8 @@ Ademas de las condiciones de ganancia, la estrategia pasa solo si cumple las tre
 1. **Probabilidad de perder la mitad de la cuenta (bajar a 125 €) en algun momento de 3 anyos: menos del 3 %.**
 2. **Peor caida historica de la cuenta: menos del 30 %.**
 3. **Peor sorpresa no prevista (prueba de estres): pierde menos del 25 %.**
+   Definida el 13/10 (opcion A, antes de medir): la estrategia real por una lista fija de crisis
+   (`docs/plan-estudio-3.md` 11, P1); no se operan pares con tipo de cambio fijado o con suelo oficial.
 
 ### Como se mide la probabilidad (1)
 
