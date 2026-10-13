@@ -15,7 +15,9 @@ Cambia la decision 5 (sin apalancamiento) **solo para el estudio 3 de divisas**.
 - El apalancamiento minimo imprescindible para llegar al minimo de 1.000 unidades (~4x), nunca mas.
 - Una sola posicion abierta a la vez. **Cambiado el 13/10, antes de medir (opcion B del propietario):** exposicion total
   <= 4 veces la cuenta del dia y ninguna divisa repetida entre posiciones abiertas; con 250 € sigue siendo una sola.
-- Perdida maxima por operacion y freno mensual (el bot se para y avisa): valores por decidir antes de medir.
+- Perdida maxima por operacion y freno mensual (el bot se para y avisa). Fijados el 13/10: stop de 0,75-1,5 rangos
+  medios, freno mensual del 15 % y **freno de la cuenta en 175 € (-30 %)**: se cierra todo y solo se vuelve si el
+  propietario lo decide. Todo se cierra el viernes (`docs/plan-estudio-3.md`).
 - Calendario de eventos (bancos centrales, empleo de EE. UU., referendums y elecciones): esos dias no se opera.
 - Dinero real solo si el estudio pasa (ganancia, no suerte y el liston de riesgo de 13.3) y despues el papel.
 
