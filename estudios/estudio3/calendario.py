@@ -238,8 +238,69 @@ def rba() -> list[dict]:
     return out
 
 
+BOC_CALENDARIOS = {  # comunicado de cada verano con las fechas del anyo siguiente (archivo mensual de la web)
+    2003: "2002/08/bank-canada-releases-2003-schedule", 2004: "2003/07/bank-canada-releases-2004-schedule",
+    2005: "2004/07/bank-canada-releases-2005-schedule", 2006: "2005/08/bank-canada-releases-2006-schedule-dates",
+    2007: "2006/07/bank-canada-releases-2007-schedule", 2008: "2007/07/bank-canada-releases-2008-schedule-dates",
+    2009: "2008/07/bank-canada-releases-2009-schedule", 2010: "2009/07/bank-canada-releases-2010-schedule-dates",
+    2011: "2010/07/bank-canada-releases-2011-schedule-dates", 2012: "2011/07/bank-canada-2012-schedule-fad-mpr",
+    2013: "2012/08/2013-schedule-policy-interest-rate-announcements-monetary-policy-report",
+    2014: "2013/07/bofc-publishes-2014-schedule-fad-and-mpr-releases",
+    2015: "2014/07/boc-2015-schedule-fad-mpr-releases", 2016: "2015/07/boc-2016-schedule-fad-mpr-releases",
+    2017: "2016/07/boc-2017-schedule-fad-mpr-releases", 2018: "2017/07/boc-2018-schedule-fad-mpr-releases",
+    2019: "2018/07/bank-canada-publishes-2019-schedule-fad-announcements-release-mpr-bos-slos",
+    2020: "2019/07/bank-canada-publishes-2020-schedule-policy-interest-rate-announcements-release-mpr-other-major-"
+          "publications",
+    2021: "2020/07/2021-schedule-policy-interest-rate-announcements",
+    2022: "2021/07/bank-canada-publishes-its-2022-schedule-policy-interest-rate-announcements-release-monetary-"
+          "policy-report-other-major-publications",
+    2023: "2022/07/2023-schedule-interest-rate-announcements",
+    2024: "2023/07/2024-schedule-policy-interest-rate-announcements-major-publications",
+    2025: "2024/08/bank-canada-publishes-2025-schedule-policy-interest-rate-announcements-other-major-publications",
+    2026: "2025/08/bank-canada-publishes-2026-schedule-policy-interest-rate-announcements-other-major-publications",
+}
+
+
+def boc() -> list[dict]:
+    """Banco de Canada (CAD): fechas fijas de anuncio publicadas cada verano para el anyo siguiente. Al ser el
+    calendario anunciado, las decisiones de urgencia (8/10/2008, 13 y 27/03/2020) no entran (T1).
+
+    El texto da fechas con o sin anyo ("Tuesday 21 January 2003", "Wednesday, January 9"); las que no lo llevan toman
+    el ultimo anyo mencionado antes ("...for 2019 are as follows: ..."). Solo cuenta la parte de los anuncios de tipos
+    (hasta "All ... announcements will"), no la de otras publicaciones."""
+    out = []
+    mes_re = "|".join(m.capitalize() for m in MESES)
+    patron = re.compile(rf"(?P<dmy>\b\d{{1,2}} (?:{mes_re}),? \d{{4}}\b)|(?P<mdy>\b(?:{mes_re}) \d{{1,2}},? \d{{4}}\b)"
+                        rf"|(?P<dm>\b\d{{1,2}} (?:{mes_re})\b)|(?P<md>\b(?:{mes_re}) \d{{1,2}}\b)|(?P<y>\b20\d{{2}}\b)")
+    for y, ruta in BOC_CALENDARIOS.items():
+        url = f"https://www.bankofcanada.ca/{ruta}/"
+        h = re.sub(r"<style.*?</style>|<script.*?</script>", "", bajar(url, f"boc_calendario_{y}.html"), flags=re.S)
+        cuerpo = texto(h)
+        cuerpo = cuerpo[cuerpo.find("Media Relations"):]
+        fin = re.search(r"All (?:interest )?(?:rate )?announcements will|The Monetary Policy Report will|"
+                        r"The scheduled dates for the release", cuerpo)
+        cuerpo = cuerpo[:fin.start()] if fin else cuerpo
+        anyo = None
+        for m in patron.finditer(cuerpo):
+            s = m.group(0).replace(",", "")
+            if m.lastgroup == "y":
+                anyo = int(s)
+                continue
+            partes = s.split()
+            if m.lastgroup in ("dmy", "mdy"):
+                anyo_f = int(partes[-1])
+                partes = partes[:-1]
+                anyo = anyo_f
+            else:
+                anyo_f = anyo
+            d, mes = (partes[0], partes[1]) if partes[0].isdigit() else (partes[1], partes[0])
+            if anyo_f == y:
+                out.append(fila(pd.Timestamp(y, MESES[mes.lower()], int(d)), "CAD", "BoC", url))
+    return list({f["fecha"]: f for f in out}.values())
+
+
 FUENTES_EVENTOS = {"fed": fed, "empleo": empleo_eeuu, "bce": bce, "boe": boe, "boj": boj, "snb": snb, "rbnz": rbnz,
-                   "rba": rba}
+                   "rba": rba, "boc": boc}
 
 
 def main() -> None:
