@@ -365,3 +365,24 @@ Fuentes: [Fed](https://www.federalreserve.gov/monetarypolicy/fomc_historical_yea
 [BoC](https://bankofcanada.ca/?p=8075), [SARB](https://www.resbank.co.za/en/home/what-we-do/monetary-policy/monetary-policy-committee),
 [Banxico (calendario 2016)](https://www.banorte.com/dam/jcr:fbca23fa-d57f-4bf7-b6d3-19be15b67010/0042_20151209_CalendarioBanxico2016.pdf),
 [BLS](https://www.bls.gov/bls/news-release/empsit.htm), [VIX](https://fred.stlouisfed.org/graph/?g=1DU0C).
+
+## 14. Detalles tecnicos del diagnostico (fijados antes de medirlo, 14/10/2026)
+
+Programa: `estudios/estudio3/diagnostico.py` y `simulador3.py` (validados con 30 comprobaciones calculadas a mano).
+
+- Dia de 17:00 a 17:00 de Nueva York, con la fecha de su final. Niveles "de ayer": minimo del ask (compras) y maximo
+  del bid (ventas) del dia anterior; objetivo: mitad del rango de ayer en precios medios; rango medio: media de los 20
+  rangos anteriores (precios medios).
+- Entrada: la primera hora que cruza el nivel en 1 pip (0,01 en los pares con yen); se llena al nivel. Una posicion por
+  par, una entrada por par y dia. Si el objetivo ya queda del lado malo, no hay senyal.
+- Salidas: en la hora de entrada solo el stop; despues, primero el stop (1 diferencial peor, o la apertura si la hora
+  ya abre mas alla) y luego el objetivo; tiempo y viernes al cierre de la hora de las 15:00 de Nueva York.
+- Costes: comision de 35 $ por millon y lado; intereses con los tipos oficiales del BIS menos un recargo del 1,5 % al
+  anyo (no publico: prudente), miercoles x3; 0,1 % del resultado al pasarlo a euros. Sin apalancamiento ni impuestos
+  (no cambian el signo de la media por operacion).
+- Escenarios: (1) evento de las dos divisas del par o empleo de EE. UU. el dia de entrada o el anterior (uno de fin de
+  semana cuenta para el lunes); (2) cierre de ayer por debajo de la media de 200 dias y la media 20 dias antes mas
+  alta (al reves en las ventas); (3) rango de ayer > 2 veces la media de los 20 anteriores; (4) ultimo cierre del VIX
+  antes del dia de entrada en el 10 % mas alto de sus 252 sesiones; (5) en la hora de entrada, el ask rompe el minimo
+  del ask de los 20 dias anteriores (al reves en las ventas).
+- Tramo: todos los datos de los 7 principales (2003-2026). Se mide una vez.
