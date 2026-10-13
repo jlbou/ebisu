@@ -85,8 +85,8 @@ comprar (umbral por decidir). Si no, se para aqui y se le explica al propietario
 ## 7. Cuando pasa (todas, fijadas antes de medir la reserva)
 
 1. Gana dinero neto (TAE > 0 tras costes, intereses e impuestos).
-2. **Objetivo de la decision 1** (ganar al indexado mantenido, o igualarlo con mucha menos caida): **decidir si se
-   aplica igual**: con ~4x y 250 € el riesgo es otro.
+2. **Objetivo de la decision 1, igual que siempre** (decidido el 13/10, opcion A): gana al indexado mundial mantenido,
+   o lo iguala (a menos de 1 punto) con una caida de como mucho 2/3 de la suya. Si no, el riesgo de ~4x no compensa.
 3. No es suerte: Sharpe deflactado >= 0,95 contando **todas** las pruebas (tambien las informales del punto 2.4), y
    PBO < 0,5.
 4. Liston de riesgo M (decision 13).
@@ -116,7 +116,7 @@ Despues: papel (decision 11: para una estrategia diaria, duracion por decidir) y
 
 ## 9. Decisiones pendientes (una por mensaje, en este orden)
 
-1. Si el objetivo de la decision 1 (ganar al indexado) se aplica a las divisas.
+1. ~~Si el objetivo de la decision 1 se aplica a las divisas~~: si, igual (opcion A, 13/10).
 2. Maximo de apalancamiento por par (que pares entran segun el valor de 1.000 unidades).
 3. Umbral de la puerta del diagnostico.
 4. Eventos del calendario y dias alrededor (tras verificar las fuentes).
