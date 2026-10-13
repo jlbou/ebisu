@@ -144,3 +144,17 @@ del propietario), antes de medir nada.**
   en dolares convertidos (horas distintas). Se aceptan; con decision mensual y banda de 2 puntos, un 0,5 % de un dia
   aislado dificilmente cambia una decision.
 - Queda la otra mitad del metodo: unos puntos con el **valor liquidativo oficial** de los informes anuales.
+
+**13/10/2026. Valores oficiales: no se hacen; y un incidente de "mirar" (opcion A del propietario).**
+
+- Los valores liquidativos oficiales diarios ya no se pueden bajar de iShares (la web cambio), los avisos oficiales a la
+  bolsa de Londres no cubren nuestras clases y los informes anuales son PDF por paraguas de fondos: mucho trabajo para
+  confirmar lo que ya confirman dos bolsas independientes. Se cambio a comprobar los repartos de los 4 fondos de
+  distribucion con el historial oficial de iShares (opcion B, 13/10).
+- **Incidente:** al leer el texto de la pagina oficial del fondo de bonos del Estado de la zona euro (IEGA/EUNH), salio
+  tambien su **rentabilidad anual de 2016 a 2025** (dentro de la reserva). La vio la IA; el propietario lo sabe. El
+  criterio ya estaba aprobado y subido antes, la medicion es mecanica y es uno de los 9 activos (el fondo, no la
+  estrategia): efecto minimo, pero se deja escrito.
+- La tabla solo daba las fechas de los 4 ultimos repartos (sin importes), y seguir con los otros 3 fondos habria
+  ensenyado mas rentabilidades de la reserva: **se para la comprobacion** y se da por bueno el contraste diario entre
+  bolsas.
