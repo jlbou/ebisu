@@ -6,7 +6,7 @@ lee; nunca se toca nada**.
 
 **Este repositorio es PUBLICO** (`github.com/jlbou/ebisu`). Ver "Repositorio publico" mas abajo.
 
-**Estado (12/10/2026): paso 1 CERRADO** (`docs/prd-paso-1.md`). No hay codigo, ni cuenta, ni broker, ni claves.
+**Estado (13/10/2026): estudio 1 sin ganadora; estudio 2 aprobado** (`docs/diseno-estudio-2.md`), preparando datos.
 
 ## La leccion de Ploutos que manda aqui
 
@@ -116,6 +116,8 @@ estrategia de operar activamente ganaba. La unica que vale la pena es "L" (rotac
 | 12/10/2026 | **Identidad y panel:** logo cana-grafico con anzuelo en verde mar; social preview; panel de una pagina tipo informe con 6 secciones (solo disenyo, se construye si una estrategia pasa) | `docs/decisiones/09-identidad-y-panel.md`, `assets/logo/` |
 | 12/10/2026 | **Telegram (solo disenyo):** 7 tipos de mensaje (con un todo bien semanal), comandos /estado, /detalle, /pausa y /reanudar; mensajes cortos | `docs/decisiones/10-telegram.md` |
 | 13/10/2026 | **Papel (fijado antes de medir):** semanal 3 meses, mensual 6; pasa con fidelidad al simulador, sin incidencias, sin caer mas que la peor caida historica y con el si del propietario; el freno de la IA en sombra hasta 5 casos con acierto medio | `docs/decisiones/11-papel.md` |
+| 13/10/2026 | **Estudio 1: NO PASA NINGUNA** (H1 protege pero no supera el liston contra la suerte; H2 pierde). Reserva sin tocar | `docs/estudios/estudio1-exploracion.md` |
+| 13/10/2026 | **Criterio del estudio 2 APROBADO:** E2 (9 activos, pesos por riesgo, mensual, banda de 2 puntos) y H1-F a la reserva 2015-2026, una vez; pasan con 1, 2 y Sharpe probabilistico >= 0,95 cada una; si ninguna pasa, se cierra Ebisu | `docs/diseno-estudio-2.md`, `docs/estudios/recerca-mejoras.md` |
 
 ## Pendiente
 

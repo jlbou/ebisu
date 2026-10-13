@@ -1,6 +1,7 @@
-# Diseno del estudio 2: criterio fijado ANTES de medir (BORRADOR desde el 13/10/2026)
+# Diseno del estudio 2: criterio fijado ANTES de medir (APROBADO, 13/10/2026)
 
-**Estado: BORRADOR, se aprueba por partes. No se ha medido nada.** Viene de `docs/estudios/estudio1-exploracion.md`
+**Estado: APROBADO por el propietario el 13/10/2026, por partes. No se ha medido nada.** Desde este commit no se
+cambia nada de lo fijado; cualquier cambio posterior se anota con fecha y motivo. Viene de `docs/estudios/estudio1-exploracion.md`
 (no paso ninguna) y de `docs/estudios/recerca-mejoras.md` (que mejoras tienen evidencia).
 
 ## 0. La idea y las reglas
