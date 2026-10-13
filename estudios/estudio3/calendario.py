@@ -163,7 +163,28 @@ def boe() -> list[dict]:
     return list({f["fecha"]: f for f in out}.values())
 
 
-FUENTES_EVENTOS = {"fed": fed, "empleo": empleo_eeuu, "bce": bce, "boe": boe}
+def boj() -> list[dict]:
+    """Banco de Japon (JPY): tabla de actas por anyo ("Meeting on December 16 and 17"); la decision, el ultimo dia.
+    Las actas salen ~6 semanas despues: las ultimas reuniones de 2026 pueden faltar (el estudio acaba en 09/2026)."""
+    out = []
+    for y in range(DESDE, HASTA + 1):
+        url = f"https://www.boj.or.jp/en/mopo/mpmsche_minu/minu_{y}/index.htm"
+        for mes, dias in re.findall(r"Meeting on (\w+) ([\d]+(?: and \d+)?)", texto(bajar(url, f"boj_{y}.html"))):
+            if mes.lower() in MESES:
+                out.append(fila(pd.Timestamp(y, MESES[mes.lower()], int(dias.split()[-1])), "JPY", "BoJ", url))
+    # Fuera las de urgencia (T1). La tabla no las marca: avisos "Calling of an Unscheduled Monetary Policy Meeting"
+    # de m_ref/index.htm (14/10/2026), mas el 18 y el 29/09/2008, una al dia siguiente de una programada y otra 12 dias
+    # despues, en plena quiebra de Lehman (deducidas, no hay aviso en la lista).
+    urgencia = {"2008-09-18", "2008-09-29", "2008-10-14", "2008-12-02", "2009-12-01", "2010-05-10", "2010-08-30",
+                "2020-03-16", "2020-05-22"}
+    # 2026: las actas de las ultimas reuniones aun no han salido; fechas del calendario oficial publicado el 31/07/2025.
+    url = "https://www.boj.or.jp/en/mopo/mpmsche_minu/m_ref/mref250731a.pdf"
+    for d in ("01-23", "03-19", "04-28", "06-16", "07-31", "09-18", "10-30", "12-18"):
+        out.append(fila(pd.Timestamp(f"2026-{d}"), "JPY", "BoJ", url))
+    return [f for f in {f["fecha"]: f for f in out}.values() if f["fecha"] not in urgencia]
+
+
+FUENTES_EVENTOS = {"fed": fed, "empleo": empleo_eeuu, "bce": bce, "boe": boe, "boj": boj}
 
 
 def main() -> None:
