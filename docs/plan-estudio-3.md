@@ -323,7 +323,7 @@ en Python. FIX: parece pedir un deposito alto (sin confirmar). MT5: "en desarrol
 |---|---|---|
 | 1 | Autorizado en Espanya | **Confirmado (CNMV, consultado el 13/10/2026):** DUKASCOPY EUROPE IBS AS, empresa de servicios de inversion del EEE en libre prestacion, registro n.º 2989 desde el 29/08/2011; autorizada, entre otros, para recibir y ejecutar ordenes de clientes en derivados sobre divisas y **contratos financieros por diferencias** ([ficha](https://www.cnmv.es/portal/Consultas/esi/esisextranjeraslp?tipo=CLP&numero=2989&vista=17)) |
 | 2 | Duracion de la demo | **14 dias**, sin forma documentada de alargarla. El papel de 3 meses no cabe en una demo: habra que decidir como hacerlo antes del papel |
-| 3 | Que pares hay de verdad | **Sin lista publica**: solo en la plataforma. Minimo de 1.000 unidades por par (tablas del banco suizo) |
+| 3 | Que pares hay de verdad | **Comprobado por el propietario en la demo de Dukascopy Europe (14/10/2026):** 298 pares de divisas; estan los 8 dudosos (AUD/NZD, USD/SGD, USD/ZAR, USD/MXN, EUR/NOK, EUR/SEK, USD/NOK, USD/SEK), asi que estan los 25. Importe por defecto: 1.000 unidades. Ordenes de mercado, limite, MIT y stop, con stop y objetivo en la orden. Limite: estar en la demo no garantiza del todo poder operarlo en real (se comprueba al final del papel) |
 | 4 | Cuenta en euros | **Si**: EUR esta entre las divisas de cuenta. Deposito minimo 100 $ o equivalente |
 | 5 | Recargo de los intereses | **No es publico**: depende de la actividad del cliente (mas actividad, mejores condiciones). En el estudio, el caso prudente |
 
