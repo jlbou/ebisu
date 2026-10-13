@@ -130,3 +130,17 @@ indexado mantenido**, sin mas intentos.
 **13/10/2026. Serie de la bolsa europea: SMEA.MI -> EUNK.DE (antes de medir nada).** Misma cartera (mismo ISIN),
 otra bolsa: la linea de Milan tenia huecos de hasta 13 dias en 2013-2014 (justo el calentamiento); la de Xetra no
 pasa de 6 dias y es la que usa Trading 212. Solo se miraron fechas.
+
+**13/10/2026. Contraste diario con otras bolsas (`estudios/estudio2/contraste.py`): se aceptan las series (opcion A
+del propietario), antes de medir nada.**
+
+- Cada serie frente al mismo fondo en otra bolsa en euros (cociente frente a su mediana de 21 dias): **diferencia
+  mediana del 0,02-0,07 %**, sin desplazamientos persistentes.
+- **Materias primas:** la linea de Paris (AIGCP.PA) esta mal en Yahoo de 2022 a 2025 (desplazada un 20-37 %, un 32 %
+  de dias con el precio repetido); la del estudio (AIGC.MI) coincide con la de Londres pasada a euros todos los anyos.
+- **Dias por encima del 0,5 %:** de 3 a 44 por activo en 12 anyos; 67 caen en dia de senyal o de ejecucion.
+  Explicacion: 29-31 de diciembre (medias sesiones y poca liquidez), dias de panico (marzo de 2020: cada bolsa cierra a
+  un precio distinto), 2013-2014 (poca liquidez de una de las lineas) y, en materias primas, la comparacion con Londres
+  en dolares convertidos (horas distintas). Se aceptan; con decision mensual y banda de 2 puntos, un 0,5 % de un dia
+  aislado dificilmente cambia una decision.
+- Queda la otra mitad del metodo: unos puntos con el **valor liquidativo oficial** de los informes anuales.
