@@ -6,8 +6,8 @@ lee; nunca se toca nada**.
 
 **Este repositorio es PUBLICO** (`github.com/jlbou/ebisu`). Ver "Repositorio publico" mas abajo.
 
-**Estado (13/10/2026): estudios 1, 2 y H2 sin ganadora. Estudio 3 (divisas, 5 capas, ~4x) con el plan decidido**
-(`docs/plan-estudio-3.md`, las 8 decisiones tomadas); siguiente: verificaciones y diagnostico (puerta 1). Nada medido.
+**Estado (14/10/2026): estudios 1, 2 y H2 sin ganadora; estudio 3 (divisas): el diagnostico NO pasa la puerta 1**
+(`docs/estudios/estudio3-diagnostico.md`): las perdidas no se concentran en escenarios reconocibles. Plan en `docs/plan-estudio-3.md`.
 
 ## La leccion de Ploutos que manda aqui
 
@@ -124,6 +124,7 @@ estrategia de operar activamente ganaba. La unica que vale la pena es "L" (rotac
 | 13/10/2026 | **H2 en la reserva de divisas (2015-2026, criterio antes): NO PASA**, pierde un 6,01 % al anyo (caida 51,8 %) y pierde en los 7 pares; H2 descartada del todo | `docs/diseno-h2-reserva.md`, `docs/estudios/h2-reserva.md` |
 | 13/10/2026 | **H2 con el orden real de las horas (solo informacion): sigue perdiendo** en los dos tramos, tambien en el mejor caso (2015-2026: -2,9 % a -3,9 % al anyo); idea cerrada | `docs/estudios/h2-horas.md` |
 | 13/10/2026 | **Estudio 3 de divisas con reglas por escenario + modelo + proteccion (5 capas).** El propietario prefiere divisas (no bolsa/bonos/oro). **Apalancamiento solo en divisas** (~4x, el minimo para 1.000 unidades), una posicion, calendario de eventos; pasa solo con el liston de riesgo M: P(perder la mitad en 3 anyos) < 3 %, caida < 30 %, estres < 25 % | `docs/decisiones/13-apalancamiento-divisas.md`, `docs/estudios/estudio3-opciones.md` |
+| 14/10/2026 | **Diagnostico del estudio 3: NO PASA la puerta 1.** 27.315 operaciones en los 7 principales: las no marcadas pierden -0,11 % por operacion (mediana +0,16 %) y son el 34 %; todos los escenarios pierden parecido | `docs/estudios/estudio3-diagnostico.md` |
 
 ## Pendiente
 
