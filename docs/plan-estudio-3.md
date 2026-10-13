@@ -59,7 +59,7 @@ Viene de: `docs/estudios/recerca-divisas.md`, `docs/estudios/estudio3-opciones.m
 ## 4. Diagnostico (puerta 1, antes de disenyar reglas o modelo)
 
 Con los 7 principales (ya vistos), compras en el minimo de ayer con las tres barreras y ~4x: clasificar las perdidas
-grandes por escenario (los 6 de `recerca-divisas.md`) y por cada pitjor perdida, que pasaba ese dia. **Pasa la
+grandes por escenario (los 6 de `recerca-divisas.md`) y de cada peor perdida, que pasaba ese dia. **Pasa la
 puerta** si una parte grande de la perdida total se concentra en escenarios que se pueden reconocer **antes** de
 comprar (umbral por decidir). Si no, se para aqui y se le explica al propietario.
 
