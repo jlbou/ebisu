@@ -8,7 +8,7 @@ Cambia la decision 5 (sin apalancamiento) **solo para el estudio 3 de divisas**.
 - El minimo del sector son 1.000 unidades (~1.000 €; `docs/estudios/verificaciones-vehiculo.md` 7): con 250 €,
   cualquier operacion de divisas es apalancada (~4x).
 - En la UE, un particular no puede perder mas de lo ingresado (proteccion de saldo negativo): el peor caso son los
-  250 €. El propietario lo acepta. Los stops pueden ejecutarse mucho mas abajo en un salto (franc suizo, 2015).
+  250 €. El propietario lo acepta. Los stops pueden ejecutarse mucho mas abajo en un salto (franco suizo, 2015).
 
 ## 13.2 Limites (opcion B del propietario)
 
