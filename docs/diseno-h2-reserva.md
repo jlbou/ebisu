@@ -33,3 +33,11 @@ cambia nada.
   comprueba que Trading 212 deja operar divisas sin CFD; sin comprobar.
 - **Si no pasa:** H2 queda descartada del todo; se vuelve a la decision pendiente (cerrar Ebisu como bot, estudio 3 o
   pausa). La version de la persona conocida, si es distinta, solo se podria probar con datos que no sean 2003-2026.
+
+## Despues: el orden real de las horas (13/10/2026, SOLO INFORMACION; opcion A del propietario)
+
+Tras el veredicto se vio que en el ~23 % de las compras el mismo dia se toca tambien el maximo de ayer, y el criterio
+contaba lo peor. Se calcula H2 con las velas de 1 hora (`estudios/h2reserva/h2_horas.py`, en 2003-2014 y 2015-2026)
+**solo como informacion**: los dos tramos ya estan vistos, asi que **no cambia ningun veredicto** y H2 no puede ir a
+dinero real por este calculo. Si sale claramente negativa, la idea queda cerrada; si sale positiva, lo unico limpio
+seria probar las reglas exactas de la persona conocida hacia adelante. Escrito antes de calcularlo.
