@@ -49,3 +49,15 @@ precios que se usa para el estudio (historia desde 2013 como mucho, para calenta
 | 9 | IWDP, Amsterdam |
 
 Junto a varios salen lineas "5X - CFD": nunca. Las fracciones de cada uno, por comprobar si se llega a operar.
+
+## 2. Como se reparten los pesos (aprobado por el propietario, 13/10/2026, opcion A: segun el riesgo)
+
+- **Senyal (igual que H1):** para cada activo, cuantas de sus medias de 20, 50, 100 y 200 dias estan por debajo del
+  precio, `n` de 0 a 4. Sobre la serie en euros.
+- **Parte de cada activo, inversa a su riesgo:** `p_i = (1 / s_i) / suma_j (1 / s_j)`, donde `s_i` es la desviacion
+  tipica de sus rendimientos diarios en euros de los **ultimos 63 dias habiles** (~3 meses). Las partes suman 1.
+- **Peso objetivo:** `w_i = p_i x n_i / 4`. Lo que no se invierte va al monetario.
+- **Sin apalancamiento:** la suma de los pesos nunca pasa del 100 % (por construccion, como mucho 1).
+- **Apalancamiento:** no ahora (regla dura, decision 5). Como en el estudio 1, se calcula una version 2x **solo como
+  informacion**. El propietario no lo descarta para el futuro: se replantearia solo por la via de la decision 5 (con
+  resultados reales sin apalancamiento que pasen y mas capital) y nunca para rescatar un resultado justo.
