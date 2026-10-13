@@ -39,7 +39,8 @@ Ademas de las condiciones de ganancia, la estrategia pasa solo si cumple las tre
    azar de la historia real (bootstrap por bloques). Los bloques mantienen juntos los dias malos, que vienen en rachas;
    barajar dias sueltos subestimaria el riesgo.
 3. Cada futuro se recorre dia a dia desde 250 €, **aplicando el freno mensual y la perdida maxima**, y se mira si en
-   algun momento la cuenta toca 125 €.
+   algun momento la cuenta toca 125 €. **Sin el freno de la cuenta (175 €)** (13/10, opcion A del propietario): es una red de
+   seguridad y no cuenta para aprobar; las condiciones 2 y 3 tambien se miden sin el.
 4. La probabilidad es la proporcion de futuros que tocan 125 €, con su intervalo de confianza al 95 %; pasa si el
    **extremo alto** del intervalo es menor que el 3 %.
 

@@ -262,4 +262,4 @@ lo ya escrito. Corregidas en el texto: secciones 1, 3, 4, 5 y 10. Ademas:
 
 | # | Agujero | Por que importa |
 |---|---|---|
-| P5 | **El freno de la cuenta (175 €) esconde el riesgo en la condicion 1 del liston M** | Con el freno, la cuenta casi nunca puede llegar a 125 € (solo con un salto), asi que "perder la mitad" saldria casi siempre bien aunque la estrategia fuera muy arriesgada. Hay que decidir si el riesgo se mide con o sin la red |
+| P5 | **El freno de la cuenta (175 €) esconde el riesgo en la condicion 1 del liston M** — **decidido (13/10, opcion A): el riesgo se mide SIN el freno de la cuenta** (con el freno mensual, que es parte de la estrategia); el freno de 175 € es solo red de seguridad. Se informa ademas la probabilidad de que salte en 3 anyos | Con el freno, la cuenta casi nunca puede llegar a 125 € (solo con un salto), asi que "perder la mitad" saldria casi siempre bien aunque la estrategia fuera muy arriesgada. Hay que decidir si el riesgo se mide con o sin la red |
