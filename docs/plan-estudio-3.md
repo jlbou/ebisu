@@ -312,3 +312,22 @@ Fuentes: [CMC Markets, fiscalidad](https://www.cmcmarkets.com/es-es/documentos-l
 - Las series de la OCDE en FRED estan desactualizadas en varios paises: no sirven.
 
 Fuente: [BIS en DBnomics](https://db.nomics.world/BIS/WS_CBPOL).
+
+### 13.4 Broker elegido: Dukascopy Europe (13/10/2026, opcion A del propietario), con 5 comprobaciones
+
+Motivo: los datos del estudio son sus precios (fidelidad), costes menores (comision minima, 0,1 % al pasar a euros).
+La API (JForex, Java) es el inconveniente: la parte que envia ordenes iria en Java; el estudio, el modelo y Telegram,
+en Python. FIX: parece pedir un deposito alto (sin confirmar). MT5: "en desarrollo". Nada de puentes no oficiales.
+
+| # | Comprobacion | Resultado |
+|---|---|---|
+| 1 | Autorizado en Espanya | **Probable, sin confirmar en la CNMV.** Segun el resumen de la busqueda, el registro del Banco de Letonia incluye Espanya entre los paises donde opera en libre prestacion (la pagina no se pudo leer directamente); el registro belga (FSMA) lo lista asi desde 2011. Falta verlo en el registro de la CNMV |
+| 2 | Duracion de la demo | **14 dias**, sin forma documentada de alargarla. El papel de 3 meses no cabe en una demo: habra que decidir como hacerlo antes del papel |
+| 3 | Que pares hay de verdad | **Sin lista publica**: solo en la plataforma. Minimo de 1.000 unidades por par (tablas del banco suizo) |
+| 4 | Cuenta en euros | **Si**: EUR esta entre las divisas de cuenta. Deposito minimo 100 $ o equivalente |
+| 5 | Recargo de los intereses | **No es publico**: depende de la actividad del cliente (mas actividad, mejores condiciones). En el estudio, el caso prudente |
+
+Fuentes: [Dukascopy Europe, cuentas](https://www.dukascopy.com/europe/english/forex/forex_trading_accounts/),
+[demo](https://www.dukascopy.com/swiss/english/forex/demo-fx-account/),
+[registro belga](https://www.fsma.be/en/party/dukascopy-europe-ibs),
+[Banco de Letonia](https://uzraudziba.bank.lv/en//market/investment-service-providers/investment-firms/dukascopy-europe-ibs-as).
