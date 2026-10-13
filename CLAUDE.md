@@ -6,8 +6,8 @@ lee; nunca se toca nada**.
 
 **Este repositorio es PUBLICO** (`github.com/jlbou/ebisu`). Ver "Repositorio publico" mas abajo.
 
-**Estado (13/10/2026): estudio 1 sin ganadora; estudio 2 aprobado y LISTO para medir** (`docs/diseno-estudio-2.md`):
-`estudios/estudio2/medir2.py --reserva --confirmo`, una sola vez, cuando el propietario lo diga.
+**Estado (13/10/2026): estudios 1 y 2 sin ganadora** (reserva 2015-2026 ya usada: `docs/estudios/estudio2-reserva.md`).
+Se aplica `docs/decisiones/12-si-no-pasa.md`: estudio 3 posible solo con datos anteriores al 2000; red de seguridad, el bot del indexado.
 
 ## La leccion de Ploutos que manda aqui
 
@@ -120,6 +120,7 @@ estrategia de operar activamente ganaba. La unica que vale la pena es "L" (rotac
 | 13/10/2026 | **Estudio 1: NO PASA NINGUNA** (H1 protege pero no supera el liston contra la suerte; H2 pierde). Reserva sin tocar | `docs/estudios/estudio1-exploracion.md` |
 | 13/10/2026 | **Criterio del estudio 2 APROBADO:** E2 (9 activos, pesos por riesgo, mensual, banda de 2 puntos) y H1-F a la reserva 2015-2026, una vez; pasan con 1, 2 y Sharpe probabilistico >= 0,95 cada una; si ninguna pasa, se cierra Ebisu (cambiado por la decision 12) | `docs/diseno-estudio-2.md`, `docs/estudios/recerca-mejoras.md` |
 | 13/10/2026 | **Si la reserva del estudio 2 no da ganadora (antes de medir):** estudio 3 con un enfoque distinto, escrito antes, solo con datos anteriores al 2000 y liston mas alto; y Ebisu como bot del indexado como red de seguridad (opcion A + C) | `docs/decisiones/12-si-no-pasa.md` |
+| 13/10/2026 | **Estudio 2: NO PASA NINGUNA** en la reserva: E2 1,59 % (caida 8,9 %, confianza 0,851) y H1-F 2,64 % (14,7 %, 0,928) frente al indexado ~10,5 % (33,6 %) | `docs/estudios/estudio2-reserva.md` |
 
 ## Pendiente
 

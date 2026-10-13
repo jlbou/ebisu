@@ -12,7 +12,8 @@ despues de ~30 estudios ninguna estrategia activa ganaba. Ebisu sigue el orden c
 
 1. **Decisiones de fondo** (mercado, capital, apalancamiento, vehiculo, objetivo). **Hecho.**
 2. **Estrategia probada con la historia**, con el criterio fijado y subido a git **antes** de medir: exploracion,
-   reserva sin mirar (una sola vez) y un liston contra la suerte por el numero de variantes probadas. **En curso.**
+   reserva sin mirar (una sola vez) y un liston contra la suerte por el numero de variantes probadas. **Sin ganadora
+   en los estudios 1 y 2.**
 3. **Solo si alguna estrategia pasa**, papel hacia adelante y despues el bot.
 
 Si ninguna pasa, la conclusion es mantener un fondo indexado, sin bot.
@@ -26,7 +27,8 @@ Si ninguna pasa, la conclusion es mantener un fondo indexado, sin bot.
 | Datos de bolsa, bonos, oro y monetario (2000-2026, en euros) | Listos y contrastados con fuentes oficiales |
 | Simulador, juez y H2, validados con datos inventados | Hechos |
 | Datos de divisas (Dukascopy, 7 pares) | Completos y contrastados con el BCE (13/10) |
-| Medir la exploracion (una vez) | Pendiente de las divisas |
+| Estudio 1 (exploracion 2001-2014) | Ninguna pasa |
+| Estudio 2 (reserva 2015-2026, una vez) | Ninguna pasa: proteger las caidas no compensa lo que se deja de ganar |
 | Panel y Telegram | Solo disenyados: se construyen si una estrategia pasa |
 
 ## Documentos
