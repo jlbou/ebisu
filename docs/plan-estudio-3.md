@@ -263,3 +263,52 @@ lo ya escrito. Corregidas en el texto: secciones 1, 3, 4, 5 y 10. Ademas:
 | # | Agujero | Por que importa |
 |---|---|---|
 | P5 | **El freno de la cuenta (175 €) esconde el riesgo en la condicion 1 del liston M** — **decidido (13/10, opcion A): el riesgo se mide SIN el freno de la cuenta** (con el freno mensual, que es parte de la estrategia); el freno de 175 € es solo red de seguridad. Se informa ademas la probabilidad de que salte en 3 anyos | Con el freno, la cuenta casi nunca puede llegar a 125 € (solo con un salto), asi que "perder la mitad" saldria casi siempre bien aunque la estrategia fuera muy arriesgada. Hay que decidir si el riesgo se mide con o sin la red |
+
+## 13. Verificaciones (paso 1; 13/10/2026, en curso)
+
+### 13.1 Broker de CFD (fuentes de los brokers y terceros, leidas el 13/10/2026)
+
+| | Dukascopy Europe (Letonia, Banco de Letonia) | Capital.com (Chipre, CySEC) |
+|---|---|---|
+| Datos del estudio | **Son sus propios precios** (los de Dukascopy): maxima fidelidad | Precios propios, distintos |
+| Comision | 35 $ por millon y lado con < 5.000 $ depositados: ~0,035 $ por operacion de 1.000 unidades | Ninguna |
+| Diferencial | El de los datos (mercado) | Variable, sin tabla publicada; suele ser mayor |
+| Intereses de cada noche | Tipos de los bancos centrales + su recargo, segun la actividad del cliente (sin cifra publica) | 0,00411 % diario (~1,5 % al anyo) +/- tom-next |
+| Pasar el resultado a euros | 0,1 % | 0,7 % (incluido en el cambio) |
+| Deposito minimo | 100 $ | 20 € |
+| API y demo | JForex (Java) y FIX; MT4 (1:30) y MT5 "en desarrollo"; demo si | REST (facil desde Python) con demo propia |
+| Pares | 300+ cruces desde 06/2025; algunos de los nuestros salieron primero solo en demo; AUD/NZD sin confirmar | 120+ pares; lista exacta sin confirmar |
+| Minimo por operacion | 1.000 unidades | "500" sin unidad clara; 0,01 lotes segun terceros |
+| Saldo negativo | Protegido (no se pierde mas que lo depositado) | Protegido (ESMA) |
+| Autorizado en Espanya (pasaporte UE) | **Sin confirmar** (buscar en el registro de la CNMV) | **Sin confirmar** |
+
+**No se puede cerrar sin una cuenta demo:** la lista exacta de pares, los minimos por par, los diferenciales tipicos y
+los intereses reales solo los da la plataforma (en Capital.com, `GET /markets` de la API con una sesion de demo). Abrir
+una demo es decision del propietario (sin dinero; las claves irian al `.env`).
+
+Fuentes: [Capital.com, API](https://open-api.capital.com/), [Capital.com, comisiones UE](https://capital.com/en-eu/ways-to-trade/fees-and-charges),
+[Capital.com, intereses](https://capital.com/overnight-fees), [Dukascopy Europe, tarifas](https://www.dukascopy.com/europe/english/about/fee-schedule),
+[Dukascopy, intereses](https://www.dukascopy.com/europe/english/forex/forex_trading_accounts/overnight/?ibref=8514),
+[Dukascopy, cruces nuevos](https://www.financemagnates.com/forex/dukascopy-adds-303-cross-instruments-to-let-traders-move-beyond-usd-pairs/).
+
+### 13.2 Fiscalidad de los CFD en Espanya
+
+- Ganancias y perdidas patrimoniales en la **base del ahorro** (DGT, consultas vinculantes V0076-09, V1342/2014 y
+  V0597/2018): 19 % hasta 6.000 €, despues 21 %, etc. (comprobar la tabla vigente en la AEAT).
+- Se imputan por anyo; perdidas compensables los 4 anyos siguientes; las comisiones cuentan. La regla de los dos meses
+  no parece aplicar a los CFD (solo foros: sin confirmar). Los intereses de financiacion: trato distinto segun el lado
+  (sin confirmar). **El simulador aplica: neto anual al 19 %, perdidas 4 anyos, sin regla de dos meses, intereses como
+  coste** (lo prudente si no fueran deducibles es el peor caso: se informara con y sin).
+
+Fuentes: [CMC Markets, fiscalidad](https://www.cmcmarkets.com/es-es/documentos-legales/trading-cfd),
+[Rankia, fiscalidad CFD](https://www.rankia.com/blog/contratos-por-diferencias/1532494-fiscalidad-cfds),
+[consulta DGT](https://www.fiscal-impuestos.com/sites/fiscal-impuestos.com/files/NFC068169.pdf).
+
+### 13.3 Tipos de interes por divisa
+
+- **BIS, tipos oficiales de los bancos centrales, diarios** (`WS_CBPOL`): estan AU, CA, CH, GB, JP, MX, NO, NZ, SE, US,
+  zona euro (XM) y ZA. **Falta SGD** (la autoridad de Singapur no tiene tipo oficial: habria que usar el SORA de la
+  MAS, sin comprobar desde cuando).
+- Las series de la OCDE en FRED estan desactualizadas en varios paises: no sirven.
+
+Fuente: [BIS en DBnomics](https://db.nomics.world/BIS/WS_CBPOL).
