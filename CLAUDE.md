@@ -123,6 +123,7 @@ estrategia de operar activamente ganaba. La unica que vale la pena es "L" (rotac
 | 13/10/2026 | **Estudio 2: NO PASA NINGUNA** en la reserva: E2 1,59 % (caida 8,9 %, confianza 0,851) y H1-F 2,64 % (14,7 %, 0,928) frente al indexado ~10,5 % (33,6 %) | `docs/estudios/estudio2-reserva.md` |
 | 13/10/2026 | **H2 en la reserva de divisas (2015-2026, criterio antes): NO PASA**, pierde un 6,01 % al anyo (caida 51,8 %) y pierde en los 7 pares; H2 descartada del todo | `docs/diseno-h2-reserva.md`, `docs/estudios/h2-reserva.md` |
 | 13/10/2026 | **H2 con el orden real de las horas (solo informacion): sigue perdiendo** en los dos tramos, tambien en el mejor caso (2015-2026: -2,9 % a -3,9 % al anyo); idea cerrada | `docs/estudios/h2-horas.md` |
+| 13/10/2026 | **Estudio 3 de divisas con reglas por escenario + modelo + proteccion (5 capas).** El propietario prefiere divisas (no bolsa/bonos/oro). **Apalancamiento solo en divisas** (~4x, el minimo para 1.000 unidades), una posicion, calendario de eventos; pasa solo con el liston de riesgo M: P(perder la mitad en 3 anyos) < 3 %, caida < 30 %, estres < 25 % | `docs/decisiones/13-apalancamiento-divisas.md`, `docs/estudios/estudio3-opciones.md` |
 
 ## Pendiente
 
