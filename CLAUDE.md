@@ -118,7 +118,8 @@ estrategia de operar activamente ganaba. La unica que vale la pena es "L" (rotac
 | 12/10/2026 | **Telegram (solo disenyo):** 7 tipos de mensaje (con un todo bien semanal), comandos /estado, /detalle, /pausa y /reanudar; mensajes cortos | `docs/decisiones/10-telegram.md` |
 | 13/10/2026 | **Papel (fijado antes de medir):** semanal 3 meses, mensual 6; pasa con fidelidad al simulador, sin incidencias, sin caer mas que la peor caida historica y con el si del propietario; el freno de la IA en sombra hasta 5 casos con acierto medio | `docs/decisiones/11-papel.md` |
 | 13/10/2026 | **Estudio 1: NO PASA NINGUNA** (H1 protege pero no supera el liston contra la suerte; H2 pierde). Reserva sin tocar | `docs/estudios/estudio1-exploracion.md` |
-| 13/10/2026 | **Criterio del estudio 2 APROBADO:** E2 (9 activos, pesos por riesgo, mensual, banda de 2 puntos) y H1-F a la reserva 2015-2026, una vez; pasan con 1, 2 y Sharpe probabilistico >= 0,95 cada una; si ninguna pasa, se cierra Ebisu | `docs/diseno-estudio-2.md`, `docs/estudios/recerca-mejoras.md` |
+| 13/10/2026 | **Criterio del estudio 2 APROBADO:** E2 (9 activos, pesos por riesgo, mensual, banda de 2 puntos) y H1-F a la reserva 2015-2026, una vez; pasan con 1, 2 y Sharpe probabilistico >= 0,95 cada una; si ninguna pasa, se cierra Ebisu (cambiado por la decision 12) | `docs/diseno-estudio-2.md`, `docs/estudios/recerca-mejoras.md` |
+| 13/10/2026 | **Si la reserva del estudio 2 no da ganadora (antes de medir):** estudio 3 con un enfoque distinto, escrito antes, solo con datos anteriores al 2000 y liston mas alto; y Ebisu como bot del indexado como red de seguridad (opcion A + C) | `docs/decisiones/12-si-no-pasa.md` |
 
 ## Pendiente
 

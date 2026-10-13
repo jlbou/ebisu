@@ -97,7 +97,8 @@ medicion. Pasa si cumple las tres, sobre lo que quedaria en el bolsillo tras ven
    `docs/estudios/recerca-mejoras.md` 2); fijado antes de medir.
 
 Si pasa: papel hacia adelante (`docs/decisiones/11-papel.md`: mensual, 6 meses). Si no: **Ebisu se cierra con el
-indexado mantenido**, sin mas intentos.
+indexado mantenido**, sin mas intentos sobre 2001-2026 (ver `docs/decisiones/12-si-no-pasa.md`,
+fijado antes de medir: estudio 3 solo con datos anteriores al 2000, y Ebisu como bot del indexado).
 
 ## 5. Costes, impuestos y referencia (heredados del estudio 1; aprobados con la seccion 4)
 
