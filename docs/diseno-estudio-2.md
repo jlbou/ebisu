@@ -33,3 +33,19 @@ precios que se usa para el estudio (historia desde 2013 como mucho, para calenta
 - Los ISIN se comprueban en Trading 212 (busqueda por ISIN en la app) antes de aprobar el criterio. Las fechas son las
   de Yahoo, solo fechas (no se ha mirado ningun rendimiento).
 - Las series de Yahoo se contrastan con una segunda fuente antes de medir, como en el estudio 1.
+
+**Comprobado en Trading 212 (13/10, busqueda por ISIN del propietario; sin comprar nada):** los 9 estan, en euros.
+
+| # | Linea en Trading 212 (EUR) |
+|---|---|
+| 1 | SXR8, Xetra |
+| 2 | EUNK, Xetra |
+| 3 | IEMA, Amsterdam |
+| 4 | EUNH, Xetra |
+| 5 | IEAC, Londres (cotiza en EUR) |
+| 6 | BTMA, Amsterdam |
+| 7 | SGLD, Milan |
+| 8 | AIGCP, Paris |
+| 9 | IWDP, Amsterdam |
+
+Junto a varios salen lineas "5X - CFD": nunca. Las fracciones de cada uno, por comprobar si se llega a operar.
