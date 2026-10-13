@@ -134,3 +134,17 @@ Despues: papel (decision 11: para una estrategia diaria, duracion por decidir) y
 5. Exploracion (con las pruebas de fugas y de etiquetas al azar).
 6. Reserva, una vez (**puerta 2**).
 7. Papel (**puerta 3**). Despues, el bot.
+
+## Anexo: inicio de los pares nuevos en Dukascopy (13/10/2026; solo tamanyo de ficheros, sin mirar precios)
+
+Primer mes con datos, mirando enero y julio de cada anyo (aproximado a medio anyo):
+
+| Desde | Pares |
+|---|---|
+| 2003 | USDZAR |
+| 2004 | EURGBP, EURJPY, EURCHF, GBPJPY, AUDJPY, CHFJPY, GBPCHF, USDNOK, USDSEK |
+| 2005 | EURCAD, CADJPY, USDSGD, EURNOK, EURSEK |
+| 2006 | EURAUD, NZDJPY, AUDCAD, AUDCHF, GBPAUD, GBPCAD, EURNZD, GBPNZD |
+| 2007 | AUDNZD (enero), USDMXN (julio) |
+
+Los 25 tienen al menos ~7,5 anyos de exploracion (hasta 2014) y los 12 de reserva.
