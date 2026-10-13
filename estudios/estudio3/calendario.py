@@ -201,7 +201,45 @@ def snb() -> list[dict]:
     return list({f["fecha"]: f for f in out}.values())
 
 
-FUENTES_EVENTOS = {"fed": fed, "empleo": empleo_eeuu, "bce": bce, "boe": boe, "boj": boj, "snb": snb}
+def rbnz() -> list[dict]:
+    """Banco de Nueva Zelanda (NZD): cronologia oficial de anuncios del OCR. La web bloquea programas: la tabla se
+    copio con el navegador el 14/10/2026 a var/. Fuera las de urgencia de 2020 (16/03, 23/03 y 7/04; T1)."""
+    url = "https://www.rbnz.govt.nz/monetary-policy/monetary-policy-decisions"
+    urgencia = {"2020-03-16", "2020-03-23", "2020-04-07"}
+    out = []
+    for s in (FUENTES / "rbnz_decisiones.txt").read_text(encoding="utf-8").strip().split("|"):
+        d, mes, y = s.split()
+        f = pd.Timestamp(int(y), MESES[mes.lower()], int(d))
+        if f.date().isoformat() not in urgencia:
+            out.append(fila(f, "NZD", "RBNZ", url))
+    return out
+
+
+def rba() -> list[dict]:
+    """Banco de la Reserva de Australia (AUD). Desde 12/2007: un comunicado tras cada reunion (paginas anuales de
+    decisiones, copiadas con el navegador el 14/10/2026: la web bloquea programas). Antes solo habia comunicado si
+    cambiaba el tipo, asi que 2003-11/2007 se deduce de la regla de entonces: reunion el primer martes de cada mes salvo
+    enero y anuncio el miercoles por la manyana; comprobada con los 11 cambios de 2003-2007 (todos caen en ese
+    miercoles). Fuera la de urgencia del 19/03/2020 (T1)."""
+    url = "https://www.rba.gov.au/monetary-policy/int-rate-decisions/"
+    out = []
+    for y in range(DESDE, 2008):
+        for mes in range(2, 13):
+            if (y, mes) == (2007, 12):
+                continue
+            primer_martes = pd.Timestamp(y, mes, 1) + pd.Timedelta(days=(1 - pd.Timestamp(y, mes, 1).weekday()) % 7)
+            out.append(fila(primer_martes + pd.Timedelta(days=1), "AUD", "RBA", url + "(regla)"))
+    out.append(fila(pd.Timestamp("2007-12-05"), "AUD", "RBA", url + "2007/"))
+    for s in (FUENTES / "rba_decisiones_2008_2026.txt").read_text(encoding="utf-8").strip().split("|"):
+        d, mes, y = s.split()
+        f = pd.Timestamp(int(y), MESES[mes.lower()], int(d))
+        if f.date().isoformat() != "2020-03-19":
+            out.append(fila(f, "AUD", "RBA", url + y + "/"))
+    return out
+
+
+FUENTES_EVENTOS = {"fed": fed, "empleo": empleo_eeuu, "bce": bce, "boe": boe, "boj": boj, "snb": snb, "rbnz": rbnz,
+                   "rba": rba}
 
 
 def main() -> None:
