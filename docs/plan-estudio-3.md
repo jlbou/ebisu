@@ -59,9 +59,22 @@ Viene de: `docs/estudios/recerca-divisas.md`, `docs/estudios/estudio3-opciones.m
 ## 4. Diagnostico (puerta 1, antes de disenyar reglas o modelo)
 
 Con los 7 principales (ya vistos), compras en el minimo de ayer con las tres barreras y ~4x: clasificar las perdidas
-grandes por escenario (los 6 de `recerca-divisas.md`) y de cada peor perdida, que pasaba ese dia. **Pasa la
-puerta** si una parte grande de la perdida total se concentra en escenarios que se pueden reconocer **antes** de
-comprar (umbral por decidir). Si no, se para aqui y se le explica al propietario.
+grandes por escenario y de cada peor perdida, que pasaba ese dia. Barreras provisionales solo para el diagnostico: objetivo
+en la mitad del rango de ayer, stop de un rango medio (20 dias), maximo 5 dias.
+
+Escenarios marcados **antes** de comprar (umbrales de manual, fijados el 13/10):
+1. Evento programado ese dia o el anterior.
+2. Tendencia a la baja: precio por debajo de su media de 200 dias y la media bajando.
+3. Volatilidad disparada: rango de ayer > 2 veces el rango medio de 20 dias.
+4. Huida del riesgo: VIX en el 10 % mas alto de su ultimo anyo.
+5. Rotura del minimo de las ultimas 20 sesiones.
+
+**Pasa la puerta (opcion A del propietario, 13/10)** si se cumplen las tres:
+- las compras no marcadas ganan de media tras costes (resultado medio por operacion > 0);
+- quedan al menos el 40 % de las compras;
+- las marcadas contienen al menos la mitad de las peores perdidas (el 5 % peor de las operaciones).
+
+Si no pasa, se para aqui y se le explica al propietario. Si pasa, solo dice que vale la pena seguir (datos ya vistos).
 
 ## 5. Las capas, una a una
 
@@ -118,7 +131,7 @@ Despues: papel (decision 11: para una estrategia diaria, duracion por decidir) y
 
 1. ~~Si el objetivo de la decision 1 se aplica a las divisas~~: si, igual (opcion A, 13/10).
 2. ~~Maximo de apalancamiento por par~~: 4x sobre la cuenta del dia (opcion A, 13/10).
-3. Umbral de la puerta del diagnostico.
+3. ~~Umbral de la puerta del diagnostico~~: opcion A (13/10).
 4. Eventos del calendario y dias alrededor (tras verificar las fuentes).
 5. Barreras: objetivo, stop, tiempo y freno mensual (rejilla pequenya).
 6. Regla de una posicion.
