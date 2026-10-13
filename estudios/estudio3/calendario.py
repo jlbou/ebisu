@@ -16,6 +16,7 @@ import argparse
 import html
 import re
 import time
+import urllib.error
 import urllib.request
 from pathlib import Path
 
@@ -113,7 +114,56 @@ def bce() -> list[dict]:
     return list({f["fecha"]: f for f in out}.values())  # la pagina repite fechas en los anyos recientes
 
 
-FUENTES_EVENTOS = {"fed": fed, "empleo": empleo_eeuu, "bce": bce}
+def bajar_o_nada(url: str, nombre: str) -> str | None:
+    """Como bajar(), pero una pagina que no existe (404) devuelve None y se recuerda como vacia."""
+    f = FUENTES / nombre
+    if f.exists():
+        t = f.read_text(encoding="utf-8", errors="replace")
+        return t or None
+    try:
+        return bajar(url, nombre)
+    except urllib.error.HTTPError as e:
+        if e.code != 404:
+            raise
+        f.write_text("", encoding="utf-8")
+        return None
+
+
+def boe() -> list[dict]:
+    """Banco de Inglaterra (GBP). Hasta 2015: actas del MPC ("held on 7 and 8 April 2004": la decision, el ultimo dia);
+    fuera las "Special" (p. ej. 8/10/2008). Desde 2015: pagina de cada Monetary Policy Summary, por mes, con su fecha
+    de publicacion (el dia de la decision); las especiales de 2020 tienen otra direccion y no entran (T1)."""
+    out = []
+    url = "https://www.bankofengland.co.uk/sitemap/minutes"
+    anclas = [texto(x) for x in re.findall(r"<a[^>]*>(.*?)</a>", bajar(url, "boe_sitemap_actas.html"), re.S)]
+    for titulo in anclas:
+        if not re.match(r"Minutes of the (MPC|Monetary Policy Committee) Meeting (held on|ending)", titulo)                 or "pdf" in titulo:
+            continue
+        m = re.search(r"(?:held on|ending) (?:\d+ (?:\w+ )?and )?(\d+) (\w+) (\d{4})", titulo)
+        if m and DESDE <= int(m.group(3)) <= 2015:
+            d, mes, y = m.groups()
+            f = pd.Timestamp(int(y), MESES[mes.lower()], int(d))
+            if "ending" in titulo:  # junio y julio de 2015: la reunion acaba el miercoles y se anuncia el jueves
+                f += pd.Timedelta(days=1)
+            out.append(fila(f, "GBP", "BoE", url))
+    for y in range(2015, HASTA + 1):
+        for mes in MESES:
+            for slug in (f"{mes}-{y}", f"mpc-{mes}-{y}"):  # 2015-2016 usan "mpc-noviembre-2016"
+                url = f"https://www.bankofengland.co.uk/monetary-policy-summary-and-minutes/{y}/{slug}"
+                h = bajar_o_nada(url, f"boe_{y}_{slug}.html")
+                if h:
+                    break
+            if not h:
+                continue
+            i = h.find("Published on")
+            m = re.search(r"(\d{1,2}) (\w+) (\d{4})", texto(h[i:i + 400]))
+            if m:
+                out.append(fila(pd.Timestamp(int(m.group(3)), MESES[m.group(2).lower()], int(m.group(1))), "GBP", "BoE",
+                                url))
+    return list({f["fecha"]: f for f in out}.values())
+
+
+FUENTES_EVENTOS = {"fed": fed, "empleo": empleo_eeuu, "bce": bce, "boe": boe}
 
 
 def main() -> None:
