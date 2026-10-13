@@ -13,7 +13,8 @@ Cambia la decision 5 (sin apalancamiento) **solo para el estudio 3 de divisas**.
 ## 13.2 Limites (opcion B del propietario)
 
 - El apalancamiento minimo imprescindible para llegar al minimo de 1.000 unidades (~4x), nunca mas.
-- Una sola posicion abierta a la vez.
+- Una sola posicion abierta a la vez. **Cambiado el 13/10, antes de medir (opcion B del propietario):** exposicion total
+  <= 4 veces la cuenta del dia y ninguna divisa repetida entre posiciones abiertas; con 250 € sigue siendo una sola.
 - Perdida maxima por operacion y freno mensual (el bot se para y avisa): valores por decidir antes de medir.
 - Calendario de eventos (bancos centrales, empleo de EE. UU., referendums y elecciones): esos dias no se opera.
 - Dinero real solo si el estudio pasa (ganancia, no suerte y el liston de riesgo de 13.3) y despues el papel.
