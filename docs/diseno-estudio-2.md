@@ -70,3 +70,45 @@ Junto a varios salen lineas "5X - CFD": nunca. Las fracciones de cada uno, por c
 - **Excepcion para que la banda no estropee la senyal:** si el objetivo es **0** (salir del todo) o la pieza esta a 0
   y el objetivo no (entrar), se ejecuta siempre, aunque la diferencia sea menor de 2 puntos.
 - Al tocar una pieza se lleva exactamente a su objetivo; el monetario absorbe la diferencia (sin apalancamiento).
+
+## 4. Cuando pasa (aprobado por el propietario, 13/10/2026, opcion A)
+
+Tramo: **reserva, 01/01/2015 - 30/09/2026** (las medias y la volatilidad se calientan con datos de 2014). Una sola
+medicion. Pasa si cumple las tres, sobre lo que quedaria en el bolsillo tras venderlo todo y pagar lo pendiente:
+
+1. **Gana a la referencia, o casi la iguala con claramente menos caida:** TAE >= la de la referencia, o TAE >= la de
+   la referencia - 1 punto y caida maxima <= 2/3 de la de la referencia (decision 1, como en el estudio 1).
+2. **No pierde dinero** en el tramo (TAE > 0).
+3. **El exceso sobre el monetario no es cero con un 90 % de confianza:** Sharpe probabilistico contra 0 (Bailey y
+   Lopez de Prado, con la asimetria y la curtosis reales) **>= 0,90**. Sin correccion por numero de pruebas: es una
+   sola. Se baja del 95 % al 90 % porque con ~12 decisiones al anyo y ~12 anyos el test tiene poca potencia (ver
+   `docs/estudios/recerca-mejoras.md` 2); fijado antes de medir.
+
+Si pasa: papel hacia adelante (`docs/decisiones/11-papel.md`: mensual, 6 meses). Si no: **Ebisu se cierra con el
+indexado mantenido**, sin mas intentos.
+
+## 5. Costes, impuestos y referencia (heredados del estudio 1; aprobados con la seccion 4)
+
+- **Series de precios:** las de los propios ETF (o la misma cartera en otra bolsa), con los repartos reinvertidos
+  (precio ajustado). El gasto anual de cada ETF ya va dentro del precio: no se resta otra vez. El oro usa Xetra-Gold
+  (gasto ~0,36 %/anyo frente al 0,12 % de SGLD: conservador).
+- **Repartos de los ETF de distribucion** (4, 5, 6 y 9): tributan al 19 % el anyo en que se cobran y se reinvierte el
+  resto.
+- **Costes:** 0,10 % por lado en cada compra o venta (tambien al entrar y salir del monetario).
+- **Impuestos (19 %):** por lotes, compensacion anual, perdidas arrastradas 4 anyos, regla de los dos meses; al final
+  del tramo se vende todo y se paga lo pendiente.
+- **Monetario:** EONIA y STR del BCE, como en el estudio 1 (vehiculo: XEON).
+- **Referencia:** el indexado mundial mantenido (MSCI World en euros, EUNL/IWDA), comprado el primer dia, sin operar,
+  con todo el impuesto al final.
+- **Informacion que no decide:** la version 2x, los anyos uno a uno, las operaciones, los pesos medios.
+
+## 6. Orden de trabajo (cada paso, con su commit; sin mirar ningun rendimiento hasta el paso 5)
+
+1. Aprobar este documento y subirlo.
+2. Bajar las 9 series (y la referencia) y contrastarlas con una segunda fuente: el valor liquidativo publicado por cada
+   gestora (iShares, Invesco, WisdomTree) en las fechas en que coincidan. Mas de un 0,5 % de diferencia sin
+   explicacion en algun dia: se para y se decide.
+3. Adaptar el simulador (9 activos, pesos por riesgo, banda de 2 puntos, repartos) y **validarlo con datos inventados**
+   (con pesos fijos tiene que dar comprar y mantener).
+4. Adaptar el juez (condiciones 1-3) y validarlo con datos inventados.
+5. Medir la reserva **una vez** (`--confirmo`). Veredicto del juez, sin retoques.
