@@ -52,7 +52,7 @@ Viene de: `docs/estudios/recerca-divisas.md`, `docs/estudios/estudio3-opciones.m
 | Pares nuevos | Dukascopy, velas de 1 hora, compra y venta | Fecha de inicio de cada par (comprobando); huecos; contraste con el BCE en los cruces del euro |
 | Tramos | Exploracion: desde el inicio de cada par hasta 2014; reserva: 2015-2026, una vez | Si un par empieza tarde, tiene poca exploracion: minimo por decidir |
 | Pares principales | Solo para disenyar y para el diagnostico | Ya vistos: nada de lo que digan es una prueba |
-| Apalancamiento por par | 1.000 unidades de la divisa base: EUR ~1.000 €, GBP ~1.150 €, USD ~920 € | Con base GBP pasa de 4x: **decidir el maximo por par** |
+| Apalancamiento por par | **Decidido (13/10, opcion A): un par solo se opera si 1.000 unidades de su divisa base valen como mucho 4 veces lo que hay en la cuenta ESE dia** (cambio del dia). Con el cambio del BCE del 12/10/2026 entran 19 de 25 (fuera los de base GBP y CHFJPY) | Si la cuenta baja, entran menos pares; por debajo de ~150 € no se puede abrir ninguno (freno natural) |
 | Calendario de eventos | Decisiones de bancos centrales (Fed, BCE, BoE, BoJ, SNB, RBA, BoC, RBNZ, Norges, Riksbank), empleo de EE. UU., referendums y elecciones, 2003-2026 | **Sin comprobar que existan calendarios historicos completos y gratuitos** |
 | Tipos de interes por divisa | Para los intereses de cada noche del CFD | Fuentes oficiales por divisa (sin comprobar); el recargo del broker, de su web |
 
@@ -117,7 +117,7 @@ Despues: papel (decision 11: para una estrategia diaria, duracion por decidir) y
 ## 9. Decisiones pendientes (una por mensaje, en este orden)
 
 1. ~~Si el objetivo de la decision 1 se aplica a las divisas~~: si, igual (opcion A, 13/10).
-2. Maximo de apalancamiento por par (que pares entran segun el valor de 1.000 unidades).
+2. ~~Maximo de apalancamiento por par~~: 4x sobre la cuenta del dia (opcion A, 13/10).
 3. Umbral de la puerta del diagnostico.
 4. Eventos del calendario y dias alrededor (tras verificar las fuentes).
 5. Barreras: objetivo, stop, tiempo y freno mensual (rejilla pequenya).
