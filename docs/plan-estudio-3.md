@@ -321,7 +321,7 @@ en Python. FIX: parece pedir un deposito alto (sin confirmar). MT5: "en desarrol
 
 | # | Comprobacion | Resultado |
 |---|---|---|
-| 1 | Autorizado en Espanya | **Probable, sin confirmar en la CNMV.** Segun el resumen de la busqueda, el registro del Banco de Letonia incluye Espanya entre los paises donde opera en libre prestacion (la pagina no se pudo leer directamente); el registro belga (FSMA) lo lista asi desde 2011. Falta verlo en el registro de la CNMV |
+| 1 | Autorizado en Espanya | **Confirmado (CNMV, consultado el 13/10/2026):** DUKASCOPY EUROPE IBS AS, empresa de servicios de inversion del EEE en libre prestacion, registro n.º 2989 desde el 29/08/2011; autorizada, entre otros, para recibir y ejecutar ordenes de clientes en derivados sobre divisas y **contratos financieros por diferencias** ([ficha](https://www.cnmv.es/portal/Consultas/esi/esisextranjeraslp?tipo=CLP&numero=2989&vista=17)) |
 | 2 | Duracion de la demo | **14 dias**, sin forma documentada de alargarla. El papel de 3 meses no cabe en una demo: habra que decidir como hacerlo antes del papel |
 | 3 | Que pares hay de verdad | **Sin lista publica**: solo en la plataforma. Minimo de 1.000 unidades por par (tablas del banco suizo) |
 | 4 | Cuenta en euros | **Si**: EUR esta entre las divisas de cuenta. Deposito minimo 100 $ o equivalente |
