@@ -208,3 +208,13 @@ acaba igual: indexado mantenido.
   v20**; para Espanya solo se ofrece la cuenta de acciones. Se debio verificar antes de proponerlo.
 - **Dukascopy, velas de 1 hora, despacio:** ~3 dias de descarga en segundo plano, que se reanuda donde lo dejo. Cumple
   H2 tal cual (dia de 17:00 a 17:00 de Nueva York, compra y venta reales). Se borra `bajar_oanda.py` y sus variables.
+
+**13/10/2026. Contraste de las divisas de H2 con el BCE (antes de medir nada): pasa.**
+
+- Bajada de Dukascopy completa el 13/10 a las 05:30 (3.990 ficheros, 7 pares; los 4 primeros desde 05/2003, AUD, CAD
+  y NZD desde 08/2003). `estudios/estudio1/contraste_h2.py`: el tipo de referencia del BCE cae dentro del rango del
+  dia de Dukascopy el **99,9-100 % de los dias** en los siete pares.
+- **Un solo dia fuera mas del 0,5 %: AUD/USD el 06/05/2020 (0,84 %). Explicado: el fallo es del BCE**, no de
+  Dukascopy. Ese dia el BCE da 1,7046 dolares australianos por euro (1,6825 el dia antes y 1,6704 el despues); la
+  Reserva Federal (FRED, DEXUSAL) da 0,6414 dolares por dolar australiano, **dentro** del rango de Dukascopy
+  (0,6393-0,6453). No se para: se sigue con Dukascopy tal cual.

@@ -127,6 +127,7 @@ estrategia de operar activamente ganaba. La unica que vale la pena es "L" (rotac
 - **Trading 212 (12/10):** sin cuenta demo para Trading 212 EU; preguntas de la API (tipos de orden, fracciones, clave de
   solo lectura, limites, tasa italiana del oro) enviadas a un agente del chat: respuesta en 1 dia habil. Anotarla en
   `docs/estudios/verificaciones-vehiculo.md` 5.6.
-- **Dukascopy:** bajando en segundo plano (~4-5 dias desde el 12/10); al acabar, contraste con segunda fuente y medir.
+- **Dukascopy: COMPLETO (13/10 05:30)** y contrastado con el BCE (pasa; seccion 9 del criterio). Siguiente: medir la
+  exploracion con `medir.py --exploracion --confirmo` (una sola vez), cuando el propietario lo diga.
 - **Clave para el paso 2:** los impuestos cuentan operacion por operacion, y la referencia es el indexado con
   traspasos (`docs/decisiones/02-mercado.md`).

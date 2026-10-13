@@ -25,7 +25,7 @@ Si ninguna pasa, la conclusion es mantener un fondo indexado, sin bot.
 | Criterio del estudio 1 | Aprobado antes de medir; los cambios posteriores, anotados con fecha y motivo |
 | Datos de bolsa, bonos, oro y monetario (2000-2026, en euros) | Listos y contrastados con fuentes oficiales |
 | Simulador, juez y H2, validados con datos inventados | Hechos |
-| Datos de divisas (Dukascopy, 7 pares) | Bajando |
+| Datos de divisas (Dukascopy, 7 pares) | Completos y contrastados con el BCE (13/10) |
 | Medir la exploracion (una vez) | Pendiente de las divisas |
 | Panel y Telegram | Solo disenyados: se construyen si una estrategia pasa |
 
