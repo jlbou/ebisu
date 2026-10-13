@@ -206,7 +206,7 @@ preguntan uno a uno.
 | # | Agujero | Como se cierra |
 |---|---|---|
 | T1 | El calendario incluiria reuniones de urgencia (p. ej. la Fed en marzo de 2020), que nadie sabia de antemano: seria mirar el futuro | Solo reuniones **programadas** (publicadas antes); las de urgencia cuentan como sorpresa |
-| T2 | Elecciones anticipadas | Cuentan desde el dia en que se anuncian, no antes |
+| T2 | Elecciones anticipadas; eventos en fin de semana | Cuentan desde el dia en que se anuncian, no antes; si el evento cae en sabado o domingo, "el dia antes" es la ultima sesion antes del evento |
 | T3 | Cerca de las 17:00 de Nueva York (cambio de dia) y del 24/12 al 2/1 los diferenciales se disparan | No se abre entre las 16:00 y las 18:00 de Nueva York ni del 24/12 al 2/1 |
 | T4 | No estaba claro que va a la reserva | En la exploracion, cada candidata (5 capas y solo reglas = capas 1, 2 y 4) elige su mejor combinacion de las 9, y solo pasa a la reserva si >= 6 de 9 ganan dinero; a la reserva van las dos (liston de confianza corregido por ser dos, como en el estudio 2) |
 | T5 | Numero de pruebas sin cifrar | N = 30: 5 (estudio 1) + 2 (estudio 2) + 1 (H2 reserva) + 4 (miradas informales) + 18 (9 x 2 candidatas); la varianza, de las 18 de este estudio |
@@ -228,6 +228,6 @@ preguntan uno a uno.
 | # | Agujero | Por que importa |
 |---|---|---|
 | P1 | **Como se define la prueba de estres** — **decidido (13/10, opcion A):** se hace correr la estrategia real (reglas, veto, modelo, stops con salto) por una lista fija de crisis: 2008 (sept.-oct.), 6/05/2010, agosto de 2011, 15/01/2015, 24/06/2016, febrero de 2018, marzo de 2020, agosto de 2024 y abril de 2025; pasa si en ninguna pierde > 25 %. Ademas, **no se operan pares con un tipo de cambio fijado o con suelo oficial** mientras dure (EUR/CHF del 6/09/2011 al 15/01/2015). El peor caso imaginario (posicion en el peor par en el peor momento) se informa, no decide | Si se supone "una posicion abierta en el peor par en el peor momento", EUR/CHF el 15/01/2015 (-30 % en minutos) a 4x deja la cuenta a cero y **ninguna estrategia pasaria nunca**. Hay que definirla de forma justa |
-| P2 | Solo compras, o tambien la version espejo (vender en el maximo de ayer) | Las divisas son simetricas; con solo compras la estrategia es la mitad |
+| P2 | Solo compras, o tambien la version espejo — **decidido (13/10, opcion B): las dos, como una sola estrategia.** Compra si el ask baja 1 pip por debajo del minimo de ayer; vende si el bid sube 1 pip por encima del maximo de ayer; objetivo en la mitad del rango de ayer y stop al otro lado. Los escenarios y las variables se miran en el sentido de cada operacion (tendencia en contra, rotura del maximo de 20 dias para las ventas). El diagnostico informa compras y ventas por separado. Intereses de cada noche con el signo de cada lado | Las divisas son simetricas; con solo compras la estrategia es la mitad |
 | P3 | Fin de semana: mantener o cerrar el viernes | El limite de 3-10 dias cruza fines de semana: riesgo de salto el lunes |
 | P4 | Que pasa si la cuenta baja de ~150 € y ya no se puede abrir nada | El bot se para y avisa; hay que decidir si es el final o si se rehace |
