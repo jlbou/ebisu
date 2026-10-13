@@ -83,7 +83,7 @@ Si no pasa, se para aqui y se le explica al propietario. Si pasa, solo dice que 
 | 1. Senyal | Comprar cuando el ask toca el minimo de ayer | Si se exige que lo cruce (p. ej. 1 pip) para asegurar que se habria llenado la orden | La orden limite no siempre se llena al tocar: regla prudente |
 | Posiciones | **Decidido (13/10, opciones A y B):** exposicion total de todas las posiciones abiertas <= 4 veces la cuenta del dia y **ninguna divisa repetida** entre posiciones abiertas (con 250 €, una sola); si saltan varios pares, se coge **el primero que toca su minimo** (por horas) | - | Sin parametros ni datos del futuro |
 | 2. Reglas (veto) | **Decidido (13/10, opcion A):** si hay evento hoy o manyana, no se abre; si hay una posicion abierta, se cierra el dia antes. Eventos: decisiones de los bancos centrales de las dos divisas del par, empleo de EE. UU. (todos los pares) y **todas** las elecciones generales y referendums nacionales de los paises de esas divisas (ver anexo) | - | Listas completas de fuentes publicas, sin elegir a mano cuales |
-| 3. Modelo | Probabilidad de que la compra salga bien; entra solo por encima de un umbral | Regresion logistica o arboles (dependencia: scikit-learn); variables; umbral | Validacion anidada y purgada, CPCV, PBO, SHAP, prueba con etiquetas al azar |
+| 3. Modelo | **Decidido (13/10, opcion A): regresion logistica** (dependencia nueva: scikit-learn). Entra si la probabilidad supera el porcentaje medio de aciertos del entrenamiento (sin umbral que elegir). Se reentrena cada anyo con todo el pasado | - | Validacion anidada y purgada (purga 10 dias, el limite de tiempo maximo), CPCV, PBO, coeficientes estables, prueba con etiquetas al azar; ninguna variable > 40 % del peso |
 | 4. Proteccion | **Decidido (13/10, opcion A):** objetivo en la mitad del rango de ayer; stop a 0,75 / 1 / 1,5 rangos medios (20 dias) bajo la entrada; limite de 3 / 5 / 10 dias; freno mensual fijo: si el mes pierde > 15 %, no se opera mas ese mes y se avisa | - | Rejilla de 9 combinaciones (cuentan como pruebas); pasa si >= 6 de 9 ganan dinero, sin precipicios ni el optimo en el borde |
 | 5. IA | Lee noticias; solo puede frenar | Que lee y cuando | No se puede probar con la historia: solo en papel, en sombra |
 
@@ -135,7 +135,7 @@ Despues: papel (decision 11: para una estrategia diaria, duracion por decidir) y
 4. ~~Eventos del calendario~~: opcion A (13/10).
 5. ~~Barreras~~: rejilla de 9 y freno del 15 % (opcion A, 13/10).
 6. ~~Regla de una posicion~~: la primera en el tiempo (opcion A, 13/10).
-7. Modelo y variables.
+7. ~~Modelo y variables~~: regresion logistica con combinaciones a mano (opcion A, 13/10).
 8. Duracion del papel.
 
 ## 10. Orden de trabajo (cada paso con su commit; puertas que pueden parar)
@@ -178,3 +178,18 @@ Regla para no elegir a mano: se incluyen **todos** los de cada lista, salgan com
 
 Fuentes: archivos oficiales de cada banco central y del BLS; elecciones, listas publicas por pais. Si alguna lista no se
 puede completar desde 2003, se dice y ese par se marca.
+
+## Anexo: variables del modelo (decision 7, opcion A; 13/10/2026)
+
+Todas con datos de antes de entrar (retrasadas), normalizadas con ventanas moviles de cada par:
+
+1. Tendencia: distancia a la media de 200 dias (en rangos medios) y pendiente de la media.
+2. Volatilidad: rango de ayer / rango medio de 20 dias; percentil de la volatilidad de 20 dias en el ultimo anyo.
+3. Miedo: percentil del VIX en el ultimo anyo.
+4. Minimos: distancia a los minimos de 20 y 60 dias (en rangos medios).
+5. Rendimiento de 1, 5 y 20 dias (en rangos medios).
+6. Eventos: dias hasta el proximo y desde el ultimo.
+7. Movimiento conjunto: cuantos pares mas tocan su minimo ese dia (hasta la hora de entrada).
+8. Hora, dia de la semana y diferencial relativo en la entrada.
+9. Combinaciones dadas a mano (la logistica no las ve sola): tendencia a la baja x volatilidad alta; tendencia a la
+   baja x miedo alto; rotura del minimo de 20 dias x volatilidad alta.
