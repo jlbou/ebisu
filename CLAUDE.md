@@ -122,6 +122,7 @@ estrategia de operar activamente ganaba. La unica que vale la pena es "L" (rotac
 | 13/10/2026 | **Si la reserva del estudio 2 no da ganadora (antes de medir):** estudio 3 con un enfoque distinto, escrito antes, solo con datos anteriores al 2000 y liston mas alto; y Ebisu como bot del indexado como red de seguridad (opcion A + C) | `docs/decisiones/12-si-no-pasa.md` |
 | 13/10/2026 | **Estudio 2: NO PASA NINGUNA** en la reserva: E2 1,59 % (caida 8,9 %, confianza 0,851) y H1-F 2,64 % (14,7 %, 0,928) frente al indexado ~10,5 % (33,6 %) | `docs/estudios/estudio2-reserva.md` |
 | 13/10/2026 | **H2 en la reserva de divisas (2015-2026, criterio antes): NO PASA**, pierde un 6,01 % al anyo (caida 51,8 %) y pierde en los 7 pares; H2 descartada del todo | `docs/diseno-h2-reserva.md`, `docs/estudios/h2-reserva.md` |
+| 13/10/2026 | **H2 con el orden real de las horas (solo informacion): sigue perdiendo** en los dos tramos, tambien en el mejor caso (2015-2026: -2,9 % a -3,9 % al anyo); idea cerrada | `docs/estudios/h2-horas.md` |
 
 ## Pendiente
 
