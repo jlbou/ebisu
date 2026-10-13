@@ -11,6 +11,17 @@
   correccion por muchas variantes.
 - Nada se retoca despues de ver el resultado. Si no pasa, Ebisu se cierra con el indexado mantenido.
 
+## 0b. Dos candidatas en paralelo (aprobado por el propietario, 13/10/2026, opcion B)
+
+- **E2:** la estrategia nueva de este documento (9 activos, pesos por riesgo).
+- **H1-F:** la mejor del estudio 1 (fondos con traspaso, bolsa y bonos sin oro, ejecucion 6 dias habiles despues,
+  impuestos al final), **tal cual** esta definida en `docs/diseno-estudio-1.md`, con sus datos y su referencia; su
+  reserva tampoco la ha mirado nadie.
+- **Liston corregido por ser dos:** cada una necesita la condicion 3 con **>= 0,95** (en vez de 0,90): asi la
+  probabilidad de que al menos una pase por pura suerte sigue en el 10 %.
+- **Si pasan las dos, van las dos al papel en paralelo** y el propietario decide con los resultados del papel. Si pasa
+  una, esa. Si ninguna, Ebisu se cierra con el indexado mantenido.
+
 ## 1. Los 9 activos (aprobado por el propietario, 13/10/2026)
 
 El propietario eligio 9 (frente a 5 o 13: ver la recerca). Cada uno con su ETF en euros (vehiculo) y la serie de
@@ -79,9 +90,9 @@ medicion. Pasa si cumple las tres, sobre lo que quedaria en el bolsillo tras ven
 1. **Gana a la referencia, o casi la iguala con claramente menos caida:** TAE >= la de la referencia, o TAE >= la de
    la referencia - 1 punto y caida maxima <= 2/3 de la de la referencia (decision 1, como en el estudio 1).
 2. **No pierde dinero** en el tramo (TAE > 0).
-3. **El exceso sobre el monetario no es cero con un 90 % de confianza:** Sharpe probabilistico contra 0 (Bailey y
-   Lopez de Prado, con la asimetria y la curtosis reales) **>= 0,90**. Sin correccion por numero de pruebas: es una
-   sola. Se baja del 95 % al 90 % porque con ~12 decisiones al anyo y ~12 anyos el test tiene poca potencia (ver
+3. **El exceso sobre el monetario no es cero con confianza suficiente:** Sharpe probabilistico contra 0 (Bailey y
+   Lopez de Prado, con la asimetria y la curtosis reales) **>= 0,95 para cada una de las dos candidatas** (era 0,90
+   con una sola; ver 0b). Se baja del 95 % al 90 % porque con ~12 decisiones al anyo y ~12 anyos el test tiene poca potencia (ver
    `docs/estudios/recerca-mejoras.md` 2); fijado antes de medir.
 
 Si pasa: papel hacia adelante (`docs/decisiones/11-papel.md`: mensual, 6 meses). Si no: **Ebisu se cierra con el
@@ -111,4 +122,4 @@ indexado mantenido**, sin mas intentos.
 3. Adaptar el simulador (9 activos, pesos por riesgo, banda de 2 puntos, repartos) y **validarlo con datos inventados**
    (con pesos fijos tiene que dar comprar y mantener).
 4. Adaptar el juez (condiciones 1-3) y validarlo con datos inventados.
-5. Medir la reserva **una vez** (`--confirmo`). Veredicto del juez, sin retoques.
+5. Medir la reserva **una vez** (`--confirmo`), las dos candidatas a la vez. Veredicto del juez, sin retoques.
