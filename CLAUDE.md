@@ -6,7 +6,8 @@ lee; nunca se toca nada**.
 
 **Este repositorio es PUBLICO** (`github.com/jlbou/ebisu`). Ver "Repositorio publico" mas abajo.
 
-**Estado (13/10/2026): estudio 1 sin ganadora; estudio 2 aprobado** (`docs/diseno-estudio-2.md`), preparando datos.
+**Estado (13/10/2026): estudio 1 sin ganadora; estudio 2 aprobado y LISTO para medir** (`docs/diseno-estudio-2.md`):
+`estudios/estudio2/medir2.py --reserva --confirmo`, una sola vez, cuando el propietario lo diga.
 
 ## La leccion de Ploutos que manda aqui
 
