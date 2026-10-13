@@ -81,7 +81,7 @@ Si no pasa, se para aqui y se le explica al propietario. Si pasa, solo dice que 
 | Capa | Que hace | Decisiones pendientes | Como no enganyarnos |
 |---|---|---|---|
 | 1. Senyal | Comprar cuando el ask toca el minimo de ayer | Si se exige que lo cruce (p. ej. 1 pip) para asegurar que se habria llenado la orden | La orden limite no siempre se llena al tocar: regla prudente |
-| Una sola posicion | Si saltan varios pares, cual | La primera en el tiempo (por horas) o la de mas probabilidad del modelo | Regla fijada antes |
+| Una sola posicion | **Decidido (13/10, opcion A):** si saltan varios pares, se coge **el primero que toca su minimo** (por horas) | - | Sin parametros ni datos del futuro |
 | 2. Reglas (veto) | **Decidido (13/10, opcion A):** si hay evento hoy o manyana, no se abre; si hay una posicion abierta, se cierra el dia antes. Eventos: decisiones de los bancos centrales de las dos divisas del par, empleo de EE. UU. (todos los pares) y **todas** las elecciones generales y referendums nacionales de los paises de esas divisas (ver anexo) | - | Listas completas de fuentes publicas, sin elegir a mano cuales |
 | 3. Modelo | Probabilidad de que la compra salga bien; entra solo por encima de un umbral | Regresion logistica o arboles (dependencia: scikit-learn); variables; umbral | Validacion anidada y purgada, CPCV, PBO, SHAP, prueba con etiquetas al azar |
 | 4. Proteccion | **Decidido (13/10, opcion A):** objetivo en la mitad del rango de ayer; stop a 0,75 / 1 / 1,5 rangos medios (20 dias) bajo la entrada; limite de 3 / 5 / 10 dias; freno mensual fijo: si el mes pierde > 15 %, no se opera mas ese mes y se avisa | - | Rejilla de 9 combinaciones (cuentan como pruebas); pasa si >= 6 de 9 ganan dinero, sin precipicios ni el optimo en el borde |
@@ -134,7 +134,7 @@ Despues: papel (decision 11: para una estrategia diaria, duracion por decidir) y
 3. ~~Umbral de la puerta del diagnostico~~: opcion A (13/10).
 4. ~~Eventos del calendario~~: opcion A (13/10).
 5. ~~Barreras~~: rejilla de 9 y freno del 15 % (opcion A, 13/10).
-6. Regla de una posicion.
+6. ~~Regla de una posicion~~: la primera en el tiempo (opcion A, 13/10).
 7. Modelo y variables.
 8. Duracion del papel.
 
