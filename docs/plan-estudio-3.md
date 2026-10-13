@@ -331,3 +331,37 @@ Fuentes: [Dukascopy Europe, cuentas](https://www.dukascopy.com/europe/english/fo
 [demo](https://www.dukascopy.com/swiss/english/forex/demo-fx-account/),
 [registro belga](https://www.fsma.be/en/party/dukascopy-europe-ibs),
 [Banco de Letonia](https://uzraudziba.bank.lv/en//market/investment-service-providers/investment-firms/dukascopy-europe-ibs-as).
+
+### 13.5 Calendario de eventos: fuentes por banco central (13/10/2026)
+
+| Banco | Fuente historica | Estado |
+|---|---|---|
+| Fed (USD) | Paginas historicas por anyo del FOMC: "Meeting" (programada) frente a "Conference Call" (urgencia) | Completa desde 2003 |
+| BCE (EUR) | Comunicados de cada decision (archivo de prensa por anyo); mensual hasta 2014, cada 6 semanas desde 2015 | Por montar, existe |
+| Banco de Inglaterra (GBP) | Actas del MPC por anyo desde 1997 y las fechas anuales publicadas cada septiembre | Completa |
+| Banco de Japon (JPY) | Actas por anyo y calendarios anuales | Completa |
+| SNB (CHF) | Evaluaciones trimestrales (marzo, junio, septiembre, diciembre) | Por montar, existe |
+| RBA (AUD) | Comunicados de cada reunion (11 al anyo hasta 2023, 8 desde 2024) | Por montar, existe |
+| BoC (CAD) | Calendarios anuales de anuncios (fechas fijas desde finales de 2000) | Por montar; 2003-2005 sin confirmar |
+| RBNZ (NZD) | Cronologia oficial de anuncios desde 11/1999 | Completa |
+| Norges Bank (NOK) | Archivo de decisiones desde 1986 | Completa |
+| Riksbank (SEK) | Decisiones en su web desde 2017 | **Antes de 2017, sin confirmar** |
+| Banxico (MXN) | Calendario desde 2003 (antes no habia) | **Sin confirmar el archivo completo** |
+| SARB (ZAR) | Comunicados de cada reunion; algunos anyos sueltos | **Sin confirmar el archivo completo** |
+| MAS (SGD) | Tabla oficial de decisiones desde 2001 (semestral hasta 2023, trimestral desde 2024) | Completa |
+| Empleo de EE. UU. | Archivo de la BLS (cada informe con su fecha) | Completa |
+| Elecciones y referendums | Listas publicas por pais (Wikipedia) | Por montar |
+
+Regla ya fijada (anexo de la decision 4): si un calendario no se puede completar desde 2003, se dice y el par se marca
+(SEK, MXN y ZAR, los dudosos).
+
+Fuentes: [Fed](https://www.federalreserve.gov/monetarypolicy/fomc_historical_year.htm),
+[BoE](https://www.bankofengland.co.uk/sitemap/minutes), [RBNZ](https://www.rbnz.govt.nz/monetary-policy/monetary-policy-decisions),
+[Norges Bank](https://www.norges-bank.no/en/topics/monetary-policy/policy-rate/Key-policy-rate-Monetary-policy-meetings-and-changes-in-the-policy-rate/),
+[Riksbank](https://www.riksbank.se/en-gb/monetary-policy/monetary-policy-report/),
+[MAS](https://www.mas.gov.sg/monetary-policy/past-monetary-policy-decisions),
+[SNB](https://www.snb.ch/en/the-snb/mandates-goals/monetary-policy/decisions),
+[RBA](https://www.rba.gov.au/media-releases/2024/mr-24-09.html),
+[BoC](https://bankofcanada.ca/?p=8075), [SARB](https://www.resbank.co.za/en/home/what-we-do/monetary-policy/monetary-policy-committee),
+[Banxico (calendario 2016)](https://www.banorte.com/dam/jcr:fbca23fa-d57f-4bf7-b6d3-19be15b67010/0042_20151209_CalendarioBanxico2016.pdf),
+[BLS](https://www.bls.gov/bls/news-release/empsit.htm), [VIX](https://fred.stlouisfed.org/graph/?g=1DU0C).
