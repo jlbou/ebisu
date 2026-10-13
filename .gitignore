@@ -35,3 +35,6 @@ desktop.ini
 .DS_Store
 .vscode/
 .idea/
+
+# Skills de terceros instaladas solo en local (ml4t/skills, Apache-2.0)
+.claude/skills/
