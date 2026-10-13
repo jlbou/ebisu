@@ -61,3 +61,12 @@ Junto a varios salen lineas "5X - CFD": nunca. Las fracciones de cada uno, por c
 - **Apalancamiento:** no ahora (regla dura, decision 5). Como en el estudio 1, se calcula una version 2x **solo como
   informacion**. El propietario no lo descarta para el futuro: se replantearia solo por la via de la decision 5 (con
   resultados reales sin apalancamiento que pasen y mas capital) y nunca para rescatar un resultado justo.
+
+## 3. Cuando se mueve cada pieza (aprobado por el propietario, 13/10/2026, opcion A)
+
+- Revision **mensual**: senyal el ultimo dia habil del mes, ejecucion al cierre del dia habil siguiente (como H1-M).
+- Una pieza **solo se toca si su peso objetivo se aleja mas de 2 puntos** del que tiene (p. ej. con un 10 %, no se
+  toca si el objetivo es 10,8 %; si es 13 %, si).
+- **Excepcion para que la banda no estropee la senyal:** si el objetivo es **0** (salir del todo) o la pieza esta a 0
+  y el objetivo no (entrar), se ejecuta siempre, aunque la diferencia sea menor de 2 puntos.
+- Al tocar una pieza se lleva exactamente a su objetivo; el monetario absorbe la diferencia (sin apalancamiento).
