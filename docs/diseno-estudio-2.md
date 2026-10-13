@@ -31,7 +31,7 @@ precios que se usa para el estudio (historia desde 2013 como mucho, para calenta
 | # | Activo | ETF (vehiculo) | ISIN | Serie del estudio (Yahoo) |
 |---|---|---|---|---|
 | 1 | Bolsa EE. UU. | iShares Core S&P 500 (Acc) | IE00B5BMR087 | SXR8.DE (2010) |
-| 2 | Bolsa Europa | iShares Core MSCI Europe (Acc) | IE00B4K48X80 | SMEA.MI (2010) |
+| 2 | Bolsa Europa | iShares Core MSCI Europe (Acc) | IE00B4K48X80 | EUNK.DE (2009; era SMEA.MI, ver seccion 7) |
 | 3 | Bolsa emergente | iShares MSCI EM (Acc) | IE00B4L5YC18 | EUNM.DE (2009) |
 | 4 | Bonos del Estado de la zona euro | iShares Core EUR Govt Bond | IE00B4WXJJ64 | EUNH.DE (2009) |
 | 5 | Bonos corporativos en euros | iShares Core EUR Corp Bond | IE00B3F81R35 | EUN5.DE (2009) |
@@ -124,3 +124,9 @@ indexado mantenido**, sin mas intentos.
    (con pesos fijos tiene que dar comprar y mantener).
 4. Adaptar el juez (condiciones 1-3) y validarlo con datos inventados.
 5. Medir la reserva **una vez** (`--confirmo`), las dos candidatas a la vez. Veredicto del juez, sin retoques.
+
+## 7. Cambios despues de aprobar (cada uno con fecha y motivo; ninguno toca reglas ni umbrales)
+
+**13/10/2026. Serie de la bolsa europea: SMEA.MI -> EUNK.DE (antes de medir nada).** Misma cartera (mismo ISIN),
+otra bolsa: la linea de Milan tenia huecos de hasta 13 dias en 2013-2014 (justo el calentamiento); la de Xetra no
+pasa de 6 dias y es la que usa Trading 212. Solo se miraron fechas.
