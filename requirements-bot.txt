@@ -1,0 +1,3 @@
+# Dependencias del bot en papel (docs/plan-bot-papel.md 10, B10): sin scikit-learn. En el VPS: pip install -r requirements-bot.txt
+pandas==3.0.6     # tablas de precios por fechas
+yfinance==1.7.0   # precios diarios gratuitos de Yahoo Finance (no oficial: contrastar en el estudio final)
