@@ -6,8 +6,8 @@ lee; nunca se toca nada**.
 
 **Este repositorio es PUBLICO** (`github.com/jlbou/ebisu`). Ver "Repositorio publico" mas abajo.
 
-**Estado (14/10/2026): estudios 1, 2 y H2 sin ganadora; estudio 3 (divisas): el diagnostico NO pasa la puerta 1**
-(`docs/estudios/estudio3-diagnostico.md`): las perdidas no se concentran en escenarios reconocibles. Plan en `docs/plan-estudio-3.md`.
+**Estado (14/10/2026): replanteamiento (`docs/decisiones/14-replanteamiento.md`).** Divisas: laboratorio en papel con
+la IA. Bolsa, bonos y oro: estudio nuevo desde cero, 1971-2026 por tipos de mercado; disenyando el criterio.
 
 ## La leccion de Ploutos que manda aqui
 
@@ -126,6 +126,7 @@ estrategia de operar activamente ganaba. La unica que vale la pena es "L" (rotac
 | 13/10/2026 | **Estudio 3 de divisas con reglas por escenario + modelo + proteccion (5 capas).** El propietario prefiere divisas (no bolsa/bonos/oro). **Apalancamiento solo en divisas** (~4x, el minimo para 1.000 unidades), una posicion, calendario de eventos; pasa solo con el liston de riesgo M: P(perder la mitad en 3 anyos) < 3 %, caida < 30 %, estres < 25 % | `docs/decisiones/13-apalancamiento-divisas.md`, `docs/estudios/estudio3-opciones.md` |
 | 14/10/2026 | **Diagnostico del estudio 3: NO PASA la puerta 1.** 27.315 operaciones en los 7 principales: las no marcadas pierden -0,11 % por operacion (mediana +0,16 %) y son el 34 %; todos los escenarios pierden parecido | `docs/estudios/estudio3-diagnostico.md` |
 | 14/10/2026 | **Revision de la literatura de divisas** (tendencia desaparecida desde ~2009; carry no pasaria el liston M a 4x; fixings, el unico con margen) y **prueba rapida del fixing 2020-2026: NO SIGUE** (EUR/USD y USD/JPY, efecto por operacion de -0,4 a +0,6 pb frente a los 2,5 pb necesarios) | `docs/estudios/recerca-divisas-2.md`, `docs/estudios/fixing-rapido.md` |
+| 14/10/2026 | **Replanteamiento (tras el council):** divisas solo en papel como laboratorio con la IA (A); los 250 € no van a un indexado; bolsa, bonos y oro desde cero: 4 tipos de mercado (bolsa sube/baja x inflacion alta/baja), se juzga 1971-2026 y ademas tiene que funcionar en 1990-2026 (A+) | `docs/decisiones/14-replanteamiento.md`, `docs/estudios/datos-antes-2000.md` |
 
 ## Pendiente
 
