@@ -37,3 +37,13 @@ Segun el plan, se para y decide el propietario.
 - Empalmes: euro (04/01/1999) 0,1 %; bolsa mundial (02/01/1997) 0,9 %; EAFE con dividendos (02/01/2001) 3,5 %, que es
   la bolsa de EE. UU. de ese dia (-2,8 %) mas el cambio, y el precio de MSCI se mueve igual: no es un salto del empalme;
   GC=F (30/08/2000) 0,3 %.
+
+## Decision del propietario (14/10/2026, opcion A)
+
+Se acepta la serie de bonos (bonos del Tesoro de EE. UU. a 7 anyos cubiertos a euros) y **el vehiculo real cambia para
+que coincida con lo probado**: un ETF de bonos del Tesoro de EE. UU. a 7-10 anyos cubierto a euros, en lugar de EUNA.
+Candidato: iShares $ Treasury Bond 7-10yr UCITS ETF EUR Hedged, acumulacion (IE000K1VI152, Xetra CEMF, gasto 0,10 %
+segun Deutsche Boerse) o reparto (IE00BGPP6697, IBB1). **Sin comprobar** que este en Trading 212: se verifica antes
+del papel. Diferencia conocida: el indice del ETF (7-10 anyos) dura algo mas que la serie (7 anyos).
+Fuentes: [Deutsche Boerse, acumulacion](https://live.deutsche-boerse.com/etf/ishares-treasury-bond-7-10yr-ucits-etf-eur-hedged-acc),
+[Deutsche Boerse, reparto](https://live.deutsche-boerse.com/en/etf/ishares-usd-treasury-bond-7-10yr-ucits-etf-eur-hedged-dist).
