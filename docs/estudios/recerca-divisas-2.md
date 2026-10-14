@@ -87,3 +87,28 @@ fiscalidad espanyola: ¿cual de estas tres estrategias tiene evidencia que (a) s
 | Web | Krohn Mueller Whelan fixing reversal magnitude costs | Documento del Banco de Canada (leido entero) |
 | Web | Kurth/Eisler Bouchaud trend tick size | arXiv 2607.01550 |
 | Web | G10 carry index 2008-2024 performance | Mackenzie, UBS, MUFG (fragmentos) |
+
+## Anexo: comprobacion de costes en las horas de los fixings (14/10/2026; solo costes, sin mirar rendimientos)
+
+Diferencial mediano de Dukascopy (ask - bid al cierre de cada vela de 1 hora), en puntos basicos del precio, 2020-2026,
+por hora de Nueva York (las ventanas del articulo: 17:00-20:55 / 20:55-2:00 / 2:00-8:15 / 11:00-17:00):
+
+| Par | Diferencial (horas liquidas) | + comision (2 x 0,35 pb) = coste por ida y vuelta |
+|---|---|---|
+| EUR/USD | 0,25-0,34 | **~1,0 pb** |
+| USD/JPY | 0,29-0,41 | **~1,0-1,1 pb** |
+| GBP/USD | 0,55-0,79 | ~1,3-1,5 pb |
+| USD/CAD | 0,81-0,97 | ~1,5-1,7 pb |
+| USD/CHF | 0,97-1,15 | ~1,7-1,9 pb |
+| AUD/USD | 1,40-1,52 | ~2,1-2,2 pb |
+| NZD/USD | 1,66-1,85 | ~2,4-2,6 pb |
+
+A las 16:00 y 17:00 de Nueva York el diferencial se multiplica por 5-6 (cambio de dia): ya excluido por T3.
+
+Comparacion con el efecto del articulo (rendimiento anual / 252 dias, sin costes):
+- 1999-2019, euro: antes del BCE ~3,5 pb y despues de Londres ~2,7 pb por dia; Tokio, ~2 pb por ventana.
+- 2014-2019, cartera del dolar: ~1,2 pb (antes del BCE) y ~0,9 pb (despues de Londres) por dia.
+
+La skill `ml4t-horizon-design` pide que la ganancia por operacion sea al menos **2,5 veces el coste**: con ~1 pb de
+coste, harian falta ~2,5 pb por ventana. **Se cumplia en 1999-2014 en EUR/USD y USD/JPY; con los datos de 2014-2019
+ya no** (~1 pb). Los demas pares cuestan demasiado.
