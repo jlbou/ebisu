@@ -7,7 +7,7 @@ lee; nunca se toca nada**.
 **Este repositorio es PUBLICO** (`github.com/jlbou/ebisu`). Ver "Repositorio publico" mas abajo.
 
 **Estado (14/10/2026): replanteamiento (`docs/decisiones/14-replanteamiento.md`).** Divisas: laboratorio en papel con
-la IA. Bolsa, bonos y oro: plan del estudio 4 aprobado (`docs/plan-estudio-4.md`); comprobando fuentes.
+la IA. Bolsa, bonos y oro: estudio 4 medido, NO PASA (`docs/estudios/estudio4-veredicto.md`); H1 protege y no es suerte, pero gana menos.
 
 ## La leccion de Ploutos que manda aqui
 
@@ -128,6 +128,7 @@ estrategia de operar activamente ganaba. La unica que vale la pena es "L" (rotac
 | 14/10/2026 | **Revision de la literatura de divisas** (tendencia desaparecida desde ~2009; carry no pasaria el liston M a 4x; fixings, el unico con margen) y **prueba rapida del fixing 2020-2026: NO SIGUE** (EUR/USD y USD/JPY, efecto por operacion de -0,4 a +0,6 pb frente a los 2,5 pb necesarios) | `docs/estudios/recerca-divisas-2.md`, `docs/estudios/fixing-rapido.md` |
 | 14/10/2026 | **Replanteamiento (tras el council):** divisas solo en papel como laboratorio con la IA (A); los 250 € no van a un indexado; bolsa, bonos y oro desde cero: 4 tipos de mercado (bolsa sube/baja x inflacion alta/baja), se juzga 1971-2026 y ademas tiene que funcionar en 1990-2026 (A+) | `docs/decisiones/14-replanteamiento.md`, `docs/estudios/datos-antes-2000.md` |
 | 14/10/2026 | **Plan del estudio 4 APROBADO** (bolsa, bonos y oro): una medicion 1971-2026 + 1990-2026, 5 variantes (H1-M, H1-F, + volatilidad, + fiscal, + modelo de scikit-learn solo en bolsa), N = 10, tipos de mercado, tramos reales del ahorro; dos revisiones (21 correcciones) | `docs/plan-estudio-4.md`, `docs/estudios/recerca-activos-2.md` |
+| 14/10/2026 | **Estudio 4 (una medicion, 1971-2026): NO PASA NINGUNA.** H1 si pasa el liston contra la suerte (deflactado 0,97-0,98, Sharpe 0,48 frente a 0,36) y cae mucho menos (14-19 % frente al 58 %), pero gana 2-3 puntos menos al anyo (H1-F 6,50 %, H1-M 5,57 % frente al 8,50 %) y en los anyos de subida se queda 10-15 puntos atras. El modelo de scikit-learn no aporta (PBO 0,77). 1971-2026 queda visto | `docs/estudios/estudio4-veredicto.md` |
 
 ## Pendiente
 
