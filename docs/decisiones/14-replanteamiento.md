@@ -33,5 +33,8 @@ mucho en las caidas; el problema fue juzgar con 13,5 anyos (hacian falta ~20-60)
 - **Que cuenta como ganar (opcion A):** contra la bolsa mantenida, como la decision 1: gana o casi iguala con
   claramente menos caida, en 1971-2026 y tambien en 1990-2026. El propietario no invierte en el indexado, pero es la
   vara de medir: si no se supera, una cartera simple lo haria mejor sin bot.
-- Pendiente de decidir antes de medir: los numeros exactos, cuanto es "perder mucho", las hipotesis (pocas, con base
+- **Numeros (opcion A):** en el total (1971-2026 y 1990-2026), TAE >= la de la bolsa, o TAE >= la de la bolsa - 1 punto
+  y caida maxima <= 2/3 de la suya. En los anyos de bolsa a la baja (con inflacion alta o baja), gana a la bolsa en
+  media anual; en los de bolsa al alza, se queda como mucho 5 puntos al anyo por detras en media.
+- Pendiente de decidir antes de medir: los umbrales de los tipos de mercado, cuanto es "perder mucho", las hipotesis (pocas, con base
   academica) y el liston contando **todos** los intentos hechos hasta ahora.
