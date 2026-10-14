@@ -47,6 +47,8 @@ mucho en las caidas; el problema fue juzgar con 13,5 anyos (hacian falta ~20-60)
   H1 se pruebe intacta en 1971-2000. Datos comprobados (14/10): oro diario en marcos de Frankfurt 1968-1998
   (Bundesbank, BBEX3.D.XAU.DEM.EA.AC.C01, 7.622 dias); bolsa de EE. UU. diaria desde 1926 (Kenneth French); bolsa
   fuera de EE. UU. **solo mensual desde 1975** (Kenneth French, International Indices) y **diaria solo desde 1997**
-  (MSCI, gratis desde esa fecha). Hueco por decidir: la bolsa no estadounidense diaria antes de 1997.
+  (MSCI, gratis desde esa fecha). **Hueco (opcion A):** la pieza de bolsa es la de EE. UU. sola hasta 1996 y la
+  mundial (60 % EE. UU. + 40 % resto, MSCI) desde 1997; H1 queda intacta. Solo informacion: la bolsa fuera de EE. UU.
+  mensual 1975-1996.
 - Pendiente de decidir antes de medir: los umbrales de los tipos de mercado, cuanto es "perder mucho", las hipotesis (pocas, con base
   academica) y el liston contando **todos** los intentos hechos hasta ahora.
