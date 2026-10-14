@@ -145,3 +145,12 @@ atras), `ml4t-production-readiness` y revision de seguridad propia. Lo de esta s
 | # | Cuestion |
 |---|---|
 | P6 | **Decidido (15/10, opcion A): copia diaria al ordenador del propietario** con una tarea programada propia de Ebisu (copia adaptada de `deploy/daily-backup.ps1` de Ploutos: por SSH, reintentos cada hora hasta que salga bien, aviso por Telegram si falla). **Se guardan solo las copias de los ultimos 7 dias**; las mas antiguas se borran. La tarea la aprueba e instala el propietario |
+
+## 11. Construccion
+
+- **Paso 1 (15/10): precios** (`ebisu/precios.py`, 8 pruebas). Hallazgo: Yahoo da a veces la fila del dia sin cierre
+  aunque la bolsa ya haya cerrado; se salta y se vuelve a pedir.
+- **Paso 2 (15/10): estrategia** (`ebisu/estrategia.py`, copia exacta de `simulador4.py`; prueba que compara el codigo
+  y el resultado; huella SHA-256 en `ebisu/papel_huella.py`). **Configuracion de H1-M en el bot: sin gasto extra**,
+  porque los precios de los ETF ya lo llevan descontado (en el estudio se sumaba porque las series eran indices); los
+  costes del 0,10 % por lado siguen.
