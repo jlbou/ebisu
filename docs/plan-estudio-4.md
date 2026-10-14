@@ -1,4 +1,4 @@
-# Plan del estudio 4 (bolsa, bonos y oro, desde cero): todo antes de construir nada (14/10/2026, v2, PENDIENTE DE APROBAR)
+# Plan del estudio 4 (bolsa, bonos y oro, desde cero): todo antes de construir nada (14/10/2026, v2, APROBADO por el propietario el 14/10, opcion A)
 
 Recoge la decision 14 (`docs/decisiones/14-replanteamiento.md`), la revision de la literatura
 (`docs/estudios/recerca-activos-2.md`) y los datos (`docs/estudios/datos-antes-2000.md`). Version 2: integra las dos
@@ -37,10 +37,10 @@ revisiones (seccion 12). Skills usadas: `ml4t-case-study-development`, `ml4t-non
 |---|---|---|---|
 | Bolsa | EE. UU. con dividendos (Kenneth French, Mkt-RF + RF, diaria) hasta 1996 | Desde 1997: 60 % EE. UU. + 40 % MSCI EAFE (diaria). EAFE con dividendos solo desde 2001: en 1997-2000, precio diario + la diferencia mensual con el indice con dividendos de Kenneth French (International Indices), repartida por dias | French y MSCI comprobados |
 | Bonos | Rentabilidad del bono de EE. UU. a **7 anyos** (FRED DGS7, diaria desde 07/1969) convertida en rendimiento: devengo + cambio de precio con la duracion de cada dia | Igual todo el periodo (una sola serie, sin empalmes) | DGS7 comprobado; contraste con VBMFX y EUNA |
-| Cobertura a euros de los bonos | + (tipo corto aleman - letra a 3 meses de EE. UU., FRED DTB3) | + (EONIA/STR - DTB3) | DTB3 comprobado; tipo aleman por comprobar |
+| Cobertura a euros de los bonos | + (tipo aleman a un dia - letra a 3 meses de EE. UU., FRED DTB3) | + (EONIA/STR - DTB3) | Comprobado (14/10) |
 | Oro | Fixing de Frankfurt en marcos (Bundesbank, 1968-1998, comprobado) | 2001-2026 como en el estudio 1; **1999-2000 por resolver** | Hueco |
 | Cambio | Marco/dolar diario del Bundesbank (desde 1948, comprobado); 1,95583 marcos por euro | BCE | Comprobado |
-| Monetario | Tipo aleman a un dia (Bundesbank; si solo hay mensual, devengo diario con la media del mes) | EONIA y STR (BCE) | Por comprobar |
+| Monetario | Tipo aleman a un dia, mensual (FRED IRSTCI01DEM156N, OCDE, desde 1960): devengo diario con la media del mes | EONIA y STR (BCE) | Comprobado (14/10) |
 | Sectores (capa 6) | 49 sectores de EE. UU., mensuales desde 1926 (Kenneth French) | Igual | Comprobado |
 
 - Calendario: union de dias habiles de Nueva York y Frankfurt; en festivo, el ultimo precio.
@@ -161,3 +161,11 @@ menos de 3 anyos.
 | F7 | Los tramos de hoy aplicados a 250 € de 1971 | Se dice en el veredicto; no se ajusta |
 | F8 | Lo calculado como informacion podia influir | No se usa para elegir nada; no cuenta como intento |
 | F9 | Faltaba la lista de validaciones | Seccion 10.3 |
+
+## 13. Paso 1: comprobacion de fuentes (14/10/2026)
+
+| Fuente | Resultado |
+|---|---|
+| Tipo aleman a un dia | FRED IRSTCI01DEM156N (OCDE), mensual 01/1960-08/2026. El Bundesbank no lo da por su API con las claves probadas |
+| Tramos del ahorro | **Comprobados en la AEAT** (manual de Renta 2025, 8.4.4): escala estatal y autonomica iguales, 9,5/10,5/11,5/13,5/15 %; juntas, 19/21/23/27/30 % con cortes en 6.000, 50.000, 200.000 y 300.000 € |
+| Oro 1999-2000 | **Sin fuente diaria gratuita:** el Bundesbank deja de publicar el fixing de Frankfurt en 1998; el LBMA exige licencia de ICE para datos historicos (su web lo dice); FRED retiro las series del LBMA en 2022; Stooq pide una comprobacion de navegador. Hay medias mensuales gratuitas (Banco Mundial). Queda para el propietario |
