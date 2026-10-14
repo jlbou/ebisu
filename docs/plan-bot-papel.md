@@ -17,7 +17,7 @@ L" (`scripts/papel_l.py`), Telegram (`notify/`), la IA (`ai/invoke.py`, `deploy/
 
 ## 2. Supuestos y lo que falta
 
-- [Supuesto] Empieza con la senyal del ultimo dia habil de **octubre de 2026** y acaba con la de **abril de 2027**.
+- Empieza con la primera senyal mensual con todo listo (P5) y dura 6 revisiones.
 - [Supuesto] 250 € de papel (los tramos de impuestos se calculan sobre esa cifra, como en el estudio).
 - Decisiones del propietario pendientes: seccion 9 (P1-P5).
 
@@ -52,6 +52,7 @@ pueda corromper: todo sale de los precios guardados.
 | `ebisu/telegram.py` | Envia mensajes; el token nunca sale en un error; si falla, no tumba nada | Copia de `notify/telegram.py` de Ploutos |
 | `ebisu/mensajes.py` | Los textos de la decision 10 ("la IA", nunca "Claude") | Nuevo, con el formato de 10.3 |
 | `ebisu/reglas.py` | Reglas duras | Nuevo (seccion 5) |
+| `ebisu/panel/` | El panel de la decision 9 (una pagina, 6 secciones), solo por Tailscale; pausa sin efecto en papel | Adaptado de `api/` y `ui/` de Ploutos |
 | `deploy/` | Servicio y temporizador diario (systemd), instalacion | Adaptado de los de Ploutos |
 
 ## 5. Reglas duras (en el codigo, con pruebas)
@@ -87,7 +88,7 @@ pueda corromper: todo sale de los precios guardados.
 ## 8. Orden de construccion
 
 1. Precios (y la eleccion de fuente, P1). 2. Estrategia copiada + prueba de igualdad. 3. Papel y juez. 4. Telegram y
-mensajes. 5. IA en sombra. 6. Servicio diario, prueba en seco e instalacion en el VPS. Cada paso con sus pruebas y con
+mensajes. 5. IA en sombra. 6. Panel. 7. Servicios, prueba en seco e instalacion en el VPS. Cada paso con sus pruebas y con
 el OK del propietario.
 
 ## 9. Decisiones del propietario (una por mensaje)
@@ -98,4 +99,4 @@ el OK del propietario.
 | P2 | **Decidido (14/10, opcion A): el mismo VPS que Ploutos, completamente aparte** (usuario `ebisu`, `/opt/ebisu`, entorno, `.env` y servicios propios; no toca ningun fichero ni servicio de Ploutos; usa el binario de la IA ya instalado solo para ejecutarlo, con configuracion propia). **Latido a Healthchecks.io** (copia de `notify/latido.py` de Ploutos): una comprobacion propia de Ebisu, que crea el propietario; su URL va en el `.env` de Ebisu. El latido se manda solo si la vuelta del dia acaba bien; si falta, Healthchecks avisa |
 | P3 | **Decidido (14/10, opcion A): RSS de fuentes oficiales (comunicados del BCE y de la Fed) y de 3-4 medios economicos** (se eligen y se comprueba que funcionan al construir). Se recogen durante el mes y la IA los recibe el dia de la senyal como **texto no confiable** (nunca instrucciones); la IA no navega ni tiene herramientas. Pieza: copia adaptada de `data/medios/rss.py` de Ploutos |
 | P4 | **Decidido (14/10): en Telegram solo `/estado` y `/detalle`** (en papel y despues). **Pausar y reanudar, desde el panel**, no desde Telegram (cambia la decision 10.2). En papel la pausa no actua (romperia la fidelidad, 11.2.1); se activa con dinero real. Escuchar comandos pide un segundo servicio (como `ploutos-telegram`). Piezas: copia adaptada de `notify/comandos.py` (solo esos dos) y de los controles del panel (`api/mando.py`: solo por Tailscale y con la cabecera contra otras paginas) |
-| P5 | El panel (decision 9): ¿ahora o despues del papel? |
+| P5 | **Decidido (15/10, opcion A): el panel se construye antes de lanzar el papel**, con el disenyo de la decision 9, solo por Tailscale y con los botones de pausa visibles pero sin efecto en papel. El papel arranca con la primera senyal mensual en la que todo (panel incluido) este listo: la de octubre (30/10/2026) si da tiempo; si no, la de noviembre. **No se rellena hacia atras**: la IA en sombra no se puede hacer despues (ya sabria las noticias) |
