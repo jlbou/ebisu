@@ -144,4 +144,4 @@ atras), `ml4t-production-readiness` y revision de seguridad propia. Lo de esta s
 
 | # | Cuestion |
 |---|---|
-| P6 | Copias de seguridad: ¿al ordenador del propietario con una tarea programada, como Ploutos, u otra forma? |
+| P6 | **Decidido (15/10, opcion A): copia diaria al ordenador del propietario** con una tarea programada propia de Ebisu (copia adaptada de `deploy/daily-backup.ps1` de Ploutos: por SSH, reintentos cada hora hasta que salga bien, aviso por Telegram si falla). **Se guardan solo las copias de los ultimos 7 dias**; las mas antiguas se borran. La tarea la aprueba e instala el propietario |
