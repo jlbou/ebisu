@@ -125,6 +125,7 @@ estrategia de operar activamente ganaba. La unica que vale la pena es "L" (rotac
 | 13/10/2026 | **H2 con el orden real de las horas (solo informacion): sigue perdiendo** en los dos tramos, tambien en el mejor caso (2015-2026: -2,9 % a -3,9 % al anyo); idea cerrada | `docs/estudios/h2-horas.md` |
 | 13/10/2026 | **Estudio 3 de divisas con reglas por escenario + modelo + proteccion (5 capas).** El propietario prefiere divisas (no bolsa/bonos/oro). **Apalancamiento solo en divisas** (~4x, el minimo para 1.000 unidades), una posicion, calendario de eventos; pasa solo con el liston de riesgo M: P(perder la mitad en 3 anyos) < 3 %, caida < 30 %, estres < 25 % | `docs/decisiones/13-apalancamiento-divisas.md`, `docs/estudios/estudio3-opciones.md` |
 | 14/10/2026 | **Diagnostico del estudio 3: NO PASA la puerta 1.** 27.315 operaciones en los 7 principales: las no marcadas pierden -0,11 % por operacion (mediana +0,16 %) y son el 34 %; todos los escenarios pierden parecido | `docs/estudios/estudio3-diagnostico.md` |
+| 14/10/2026 | **Revision de la literatura de divisas** (tendencia desaparecida desde ~2009; carry no pasaria el liston M a 4x; fixings, el unico con margen) y **prueba rapida del fixing 2020-2026: NO SIGUE** (EUR/USD y USD/JPY, efecto por operacion de -0,4 a +0,6 pb frente a los 2,5 pb necesarios) | `docs/estudios/recerca-divisas-2.md`, `docs/estudios/fixing-rapido.md` |
 
 ## Pendiente
 
