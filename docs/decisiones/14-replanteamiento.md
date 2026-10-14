@@ -30,5 +30,8 @@ mucho en las caidas; el problema fue juzgar con 13,5 anyos (hacian falta ~20-60)
   tiene que funcionar en el tramo **1990-2026** (el mas parecido al mercado de hoy). 1926-1970: solo informacion.
 - Las reglas de la estrategia solo usan datos pasados recientes (ventanas moviles), nunca estadisticas de toda la
   historia (skill `ml4t-non-stationarity`).
-- Pendiente de decidir antes de medir: que cuenta como ganar, cuanto es "perder mucho", las hipotesis (pocas, con base
+- **Que cuenta como ganar (opcion A):** contra la bolsa mantenida, como la decision 1: gana o casi iguala con
+  claramente menos caida, en 1971-2026 y tambien en 1990-2026. El propietario no invierte en el indexado, pero es la
+  vara de medir: si no se supera, una cartera simple lo haria mejor sin bot.
+- Pendiente de decidir antes de medir: los numeros exactos, cuanto es "perder mucho", las hipotesis (pocas, con base
   academica) y el liston contando **todos** los intentos hechos hasta ahora.
