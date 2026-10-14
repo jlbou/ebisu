@@ -36,5 +36,7 @@ mucho en las caidas; el problema fue juzgar con 13,5 anyos (hacian falta ~20-60)
 - **Numeros (opcion A):** en el total (1971-2026 y 1990-2026), TAE >= la de la bolsa, o TAE >= la de la bolsa - 1 punto
   y caida maxima <= 2/3 de la suya. En los anyos de bolsa a la baja (con inflacion alta o baja), gana a la bolsa en
   media anual; en los de bolsa al alza, se queda como mucho 5 puntos al anyo por detras en media.
+- **Como decide el bot (opcion A):** reglas por capas (`docs/estudios/recerca-activos-2.md` 4): H1 intacta como
+  senyal, tamanyo por volatilidad y capa fiscal como variantes contadas, reglas duras y la IA en papel.
 - Pendiente de decidir antes de medir: los umbrales de los tipos de mercado, cuanto es "perder mucho", las hipotesis (pocas, con base
   academica) y el liston contando **todos** los intentos hechos hasta ahora.
