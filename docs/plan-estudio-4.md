@@ -183,3 +183,12 @@ menos de 3 anyos.
     separacion): el de 1971 aprende de 1927-1969.
   - Informacion (no decide): H1 sobre la bolsa de EE. UU. en 1927-1970 (dolares, antes de impuestos) y la bolsa fuera
     de EE. UU. en 1975-1996 con la media de 10 meses (mensual, sin el monetario).
+
+## 15. Revision del codigo antes de medir (14/10/2026, skill `engineering:code-review`)
+
+| # | Hallazgo | Que se hace |
+|---|---|---|
+| R1 | Los gastos anuales se cobraban por fila / 252, y el calendario tiene ~261 dias habiles al anyo (un 3-4 % mas de gasto, en la estrategia y en la referencia) | Corregido: gasto por dias naturales / 365; validacion nueva (0,15 % en un anyo natural) |
+| R2 | El multiplicador del modelo podia salir siempre 1 sin que ninguna prueba lo viera | Validacion nueva: con datos inventados actua alguna vez |
+| R3 | Los dividendos de la bolsa fuera de EE. UU. de enero de 1997 no se suman (no hay precio de diciembre de 1996 para la diferencia) | Se deja: ~0,1 % de la pieza en un mes; dicho aqui |
+| R4 | Revisado sin errores: fechas de fin de mes del modelo, separacion de 12 meses, etiquetas despues de la decision, empalmes, cobertura de los bonos, tramos, regla de los dos meses, eleccion de la ganadora, PBO, tipos de mercado y P3 | - |

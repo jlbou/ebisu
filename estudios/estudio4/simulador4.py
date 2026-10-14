@@ -128,7 +128,8 @@ def simular(piezas: pd.DataFrame, v: Variante, inicio: str, fin: str) -> Resulta
             ejec[fechas[0]] = previas.iloc[-1]  # arranca con la ultima senyal conocida
 
     precios = tramo[activos]
-    gasto = np.array([v.gasto_extra.get(a, 0.0) for a in activos]) / 252
+    gasto_anual = np.array([v.gasto_extra.get(a, 0.0) for a in activos])
+    dias_nat = fechas.to_series().diff().dt.days.fillna(0).to_numpy()  # gasto por dias naturales / 365
     unidades = dict.fromkeys(activos, 0.0)
     unidades["monetario"] = (1.0 - v.coste_lado) / precios["monetario"].iloc[0]
     lotes = {a: deque() for a in activos}
@@ -196,6 +197,7 @@ def simular(piezas: pd.DataFrame, v: Variante, inicio: str, fin: str) -> Resulta
     for k, d in enumerate(fechas):
         p = precios.loc[d]
         if k > 0:
+            gasto = gasto_anual * dias_nat[k] / 365
             for j, a in enumerate(activos):
                 unidades[a] *= 1 - gasto[j]
                 if lotes[a]:
@@ -266,6 +268,7 @@ def simular(piezas: pd.DataFrame, v: Variante, inicio: str, fin: str) -> Resulta
 def referencia(piezas: pd.DataFrame, inicio: str, fin: str, gasto: float = 0.0015, impuestos: bool = True) -> Resultado:
     """La pieza de bolsa en un fondo indexado mantenido: sin operar, impuesto al final con los tramos."""
     b = piezas["bolsa"].loc[inicio:fin]
-    valor = (b / b.iloc[0]) * pd.Series((1 - gasto / 252) ** np.arange(len(b)), index=b.index)
+    dias = b.index.to_series().diff().dt.days.fillna(0).to_numpy()
+    valor = (b / b.iloc[0]) * pd.Series(np.cumprod(1 - gasto * dias / 365), index=b.index)
     imp = cuota(max(valor.iloc[-1] - 1.0, 0.0) * CAPITAL) / CAPITAL if impuestos else 0.0
     return Resultado(valor, valor.iloc[-1] - imp, imp, 0.0, 0)

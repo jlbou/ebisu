@@ -90,6 +90,9 @@ def simulador() -> None:
     fr = pd.bdate_range("2001-01-01", periods=3)
     pzr = pd.DataFrame({"bolsa": [1.0, 50.0, 101.0], "monetario": 1.0}, index=fr)
     r = referencia(pzr, str(fr[0].date()), str(fr[-1].date()), gasto=0.0)
+    fg = pd.DatetimeIndex(["2001-01-01", "2002-01-01"])
+    pzg = pd.DataFrame({"bolsa": [1.0, 1.0], "monetario": 1.0}, index=fg)
+    comprobar("4. gasto del fondo: 0,15 % en un anyo natural", referencia(pzg, "2001-01-01", "2002-01-01", impuestos=False).bolsillo, 1 - 0.0015, 1e-12)
     comprobar("4. referencia con tramos (25.000 € de ganancia)", r.impuestos * CAPITAL, 6000 * 0.19 + 19000 * 0.21, 1e-6)
 
 
@@ -190,6 +193,7 @@ def modelo() -> None:
     senyales = pd.DatetimeIndex(bolsa.groupby(bolsa.index.to_period("M")).apply(lambda s: s.index.max()).to_numpy())
     f, imp = M.multiplicador(bolsa, senyales, range(1970, 1976), sec, rf, infl)
     comprobar("18. el multiplicador solo vale 1 o 0,5", float(f.isin([0.5, 1.0]).all()), 1.0)
+    comprobar("18. el multiplicador no es siempre 1 (el modelo actua)", float((f[f.index.year >= 1970] == 0.5).any()), 1.0)
     comprobar("18. sin modelo antes de 1970 (factor 1)", float((f[f.index.year < 1970] == 1.0).all()), 1.0)
     comprobar("18. importancia entre 0 y 1", float(0 < imp <= 1), 1.0)
     ent = muestras[muestras["fin_etiqueta"] <= pd.Timestamp("1968-12-31")]
