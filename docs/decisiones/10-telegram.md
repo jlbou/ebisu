@@ -38,3 +38,7 @@ chat del propietario (`TELEGRAM_CHAT_ID`).
 - **`/detalle`** (pedido por el propietario): la version larga bajo demanda. Un grafico (imagen) del valor frente al
   indexado y de cada pieza con sus 4 medias; la explicacion completa de la IA; las operaciones del mes; y Hacienda del
   anyo (ganancias, perdidas y lo que tocaria pagar).
+
+## Cambio del 14/10/2026 (plan del bot en papel, P4)
+
+En Telegram solo quedan `/estado` y `/detalle`. **`/pausa` y `/reanudar` se quitan de Telegram y pasan al panel** (decision del propietario), que solo se ve por Tailscale. En papel la pausa no actua; se activa con dinero real. Ver `docs/plan-bot-papel.md` 9.
