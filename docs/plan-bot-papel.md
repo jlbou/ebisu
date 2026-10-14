@@ -46,6 +46,7 @@ pueda corromper: todo sale de los precios guardados.
 | `ebisu/estrategia.py` | H1-M: senyal, pesos, impuestos y costes | **Copia exacta** de `simulador4.py` (una prueba compara las dos) |
 | `ebisu/papel.py` | Rehace el papel y saca operaciones, valor y caida | Idea de `papel_l.py` de Ploutos |
 | `ebisu/juez.py` | Las condiciones de la decision 11.2 | Nuevo |
+| `ebisu/noticias.py` | Lee los RSS cada dia y guarda los titulares nuevos | Copia adaptada de `data/medios/rss.py` de Ploutos |
 | `ebisu/ia.py` | Llama a `claude -p` sin herramientas, sin ver claves, con salida JSON; si falla, nada | Copia adaptada de `ai/invoke.py` y `ai/parser.py` de Ploutos |
 | `ebisu/latido.py` | Latido diario a Healthchecks.io; nunca lanza; la URL es secreta | Copia de `notify/latido.py` de Ploutos |
 | `ebisu/telegram.py` | Envia mensajes; el token nunca sale en un error; si falla, no tumba nada | Copia de `notify/telegram.py` de Ploutos |
@@ -95,6 +96,6 @@ el OK del propietario.
 |---|---|
 | P1 | **Decidido (14/10, opcion A): la senyal sobre los precios reales de los 4 ETF en Yahoo**, con los controles de la seccion 6; si Yahoo da problemas, se anyade una segunda fuente (opcion C). Comprobado: VWCE.DE, CEMF.DE (desde el 04/08/2025: 305 dias, bastan para la media de 200), SGLD.MI y XEON.DE, todos hasta el 14/10/2026 |
 | P2 | **Decidido (14/10, opcion A): el mismo VPS que Ploutos, completamente aparte** (usuario `ebisu`, `/opt/ebisu`, entorno, `.env` y servicios propios; no toca ningun fichero ni servicio de Ploutos; usa el binario de la IA ya instalado solo para ejecutarlo, con configuracion propia). **Latido a Healthchecks.io** (copia de `notify/latido.py` de Ploutos): una comprobacion propia de Ebisu, que crea el propietario; su URL va en el `.env` de Ebisu. El latido se manda solo si la vuelta del dia acaba bien; si falta, Healthchecks avisa |
-| P3 | De donde lee noticias la IA |
+| P3 | **Decidido (14/10, opcion A): RSS de fuentes oficiales (comunicados del BCE y de la Fed) y de 3-4 medios economicos** (se eligen y se comprueba que funcionan al construir). Se recogen durante el mes y la IA los recibe el dia de la senyal como **texto no confiable** (nunca instrucciones); la IA no navega ni tiene herramientas. Pieza: copia adaptada de `data/medios/rss.py` de Ploutos |
 | P4 | Que comandos de Telegram hacen falta en papel |
 | P5 | El panel (decision 9): ¿ahora o despues del papel? |
