@@ -209,6 +209,19 @@ Buscados por ISIN en la app por el propietario (sin comprar nada):
     ficha de la app o en los metadatos de la API. **La tasa italiana del oro sigue sin respuesta concreta**: mirarla en
     la ficha de SGLD si se llega a operar.
 
+## 5.6 bis Bonos del Tesoro cubiertos para H1-M (14/10/2026)
+
+Tras el estudio 4 (decision 15), la pieza de bonos pasa a ser bonos del Tesoro de EE. UU. a 7-10 anyos cubiertos a
+euros. Buscados por ISIN en la app por el propietario (sin comprar nada): **los dos estan disponibles**.
+
+| Instrumento | ISIN | En Trading 212 |
+|---|---|---|
+| iShares $ Treasury Bond 7-10yr UCITS ETF EUR Hedged (Acc), CEMF | IE000K1VI152 | **Si** (preferido) |
+| iShares $ Treasury Bond 7-10yr UCITS ETF EUR Hedged (Dist), IBB1 | IE00BGPP6697 | **Si** (reserva) |
+
+Sin anotar: la bolsa en que cotiza cada uno dentro de Trading 212 y si admite fracciones; se comprueba con los metadatos
+de la API (cantidad minima por instrumento) al construir el bot.
+
 ## 5.7 Fondos indexados con traspaso para H1-F (12/10/2026; solo lectura, fuentes secundarias)
 
 Plataforma de referencia: **MyInvestor** (Andbank Espanya): segun su web, **0 € por comprar, vender, custodiar y
