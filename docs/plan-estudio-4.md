@@ -151,6 +151,6 @@ esta seccion **manda** sobre lo anterior si se contradicen.
 
 | # | Cuestion |
 |---|---|
-| P1 | Impuestos: el 19 % fijo del estudio 1 o los tramos reales del ahorro (19-28 %) en 55 anyos |
+| P1 | **Decidido (14/10, opcion A): tramos reales del ahorro de hoy** (territorio comun, Ley 7/2024): 19 % hasta 6.000 €, 21 % hasta 50.000, 23 % hasta 200.000, 27 % hasta 300.000, 30 % por encima; por anyo, sobre la ganancia neta de cada anyo (la referencia, de una vez al final). Fuentes secundarias ([Roams](https://roams.es/finanzas/academia/declaracion-renta/irpf/), BBVA): se contrasta con la AEAT antes de construir |
 | P2 | La capa 6 (modelo aprendido con sectores de bolsa), ¿solo sobre la pieza de bolsa? |
 | P3 | Que hacer si un tipo de mercado tiene menos de 3 anyos |
