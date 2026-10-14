@@ -38,5 +38,10 @@ mucho en las caidas; el problema fue juzgar con 13,5 anyos (hacian falta ~20-60)
   media anual; en los de bolsa al alza, se queda como mucho 5 puntos al anyo por detras en media.
 - **Como decide el bot (opcion A):** reglas por capas (`docs/estudios/recerca-activos-2.md` 4): H1 intacta como
   senyal, tamanyo por volatilidad y capa fiscal como variantes contadas, reglas duras y la IA en papel.
+- **Capa 6, modelo con scikit-learn (opcion A):** opcional, solo entra si mejora. Despues de medir las reglas, un
+  modelo que aprende cuando fallan las senyales de tendencia (no predice el mercado), entrenado con los 49 sectores de
+  EE. UU. de Kenneth French (mensuales desde 1926). Cuenta como variante; validacion por bloques de tiempo con purga y
+  probabilidad de sobreajuste < 0,5. Dependencia nueva: scikit-learn. Sin estudios academicos serios que lo hayan
+  hecho con datos mensuales (Goyal, Welch y Zafirov 2024: predecir el mercado con indicadores no funciona).
 - Pendiente de decidir antes de medir: los umbrales de los tipos de mercado, cuanto es "perder mucho", las hipotesis (pocas, con base
   academica) y el liston contando **todos** los intentos hechos hasta ahora.
