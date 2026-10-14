@@ -153,4 +153,4 @@ esta seccion **manda** sobre lo anterior si se contradicen.
 |---|---|
 | P1 | **Decidido (14/10, opcion A): tramos reales del ahorro de hoy** (territorio comun, Ley 7/2024): 19 % hasta 6.000 €, 21 % hasta 50.000, 23 % hasta 200.000, 27 % hasta 300.000, 30 % por encima; por anyo, sobre la ganancia neta de cada anyo (la referencia, de una vez al final). Fuentes secundarias ([Roams](https://roams.es/finanzas/academia/declaracion-renta/irpf/), BBVA): se contrasta con la AEAT antes de construir |
 | P2 | **Decidido (14/10, opcion A): la capa 6 actua solo sobre la pieza de bolsa** (aprende de sectores de bolsa); bonos y oro siguen la variante base sin tocar |
-| P3 | Que hacer si un tipo de mercado tiene menos de 3 anyos |
+| P3 | **Decidido (14/10, opcion A): si un tipo de mercado tiene menos de 3 anyos, se junta con el de la misma direccion de bolsa** (p. ej. bajada con inflacion alta + bajada con inflacion baja) y la condicion se aplica al conjunto. Los anyos de bolsa a la baja no se han contado a proposito, para decidir sin mirar |
