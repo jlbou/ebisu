@@ -23,3 +23,10 @@ proposito: no es que H1 haya "pasado"; el criterio fijado antes dice que no pasa
 Cambiar el criterio despues de mirar es lo que el metodo quiere evitar. Se acepta porque: la estrategia no se ha
 retocado; el liston contra la suerte (fijado antes) si se cumple; y lo que cambia es la preferencia del propietario
 (menos rendimiento por menos riesgo), no la prueba.
+
+## Variante para el papel (14/10/2026, opcion A)
+
+**H1-M** (ETF, con oro, 5,57 % al anyo y caida maxima del 14,9 % en 1971-2026): la unica totalmente automatica
+(preferencia del propietario, decision 6) y la que menos cae; frente a H1-F gana ~1 punto menos (~2-3 € al anyo con
+250 €). Vehiculos previstos: bolsa mundial (VWCE o EUNL), bonos del Tesoro de EE. UU. 7-10 anyos cubiertos (CEMF),
+oro (4GLD o Xetra-Gold) y monetario (XEON); **sin comprobar en Trading 212**.
