@@ -124,3 +124,33 @@ UU.; la bolsa fuera de EE. UU. mensual en 1975-1996; anyos por tipo de mercado.
 
 - Comprobar: tipos alemanes diarios, MSCI EAFE con dividendos 1997-2000, oro 1999-2000.
 - Aprobacion del propietario de este plan.
+
+## 11. Revision del plan (14/10/2026): agujeros encontrados
+
+Skills: `ml4t-backtest-overfitting`, `ml4t-point-in-time`, `ml4t-non-stationarity`, `ml4t-regime-awareness`. Lo de
+esta seccion **manda** sobre lo anterior si se contradicen.
+
+### Correcciones tecnicas (aplicadas)
+
+| # | Agujero | Correccion |
+|---|---|---|
+| T1 | No se decia como se mide 1990-2026 | Simulacion aparte que empieza el 01/01/1990 con la cuenta nueva (senyales calentadas con datos anteriores) y liquida al final; la referencia, igual |
+| T2 | Los impuestos al final deforman los rendimientos de cada anyo | Tipos de mercado con rendimientos anuales **antes de impuestos**; condicion = media de (estrategia - referencia) en los anyos del tipo; 2026 (incompleto) fuera de los tipos, dentro del total |
+| T3 | Sobre que se calcula el Sharpe | Rendimientos mensuales sobre el monetario, netos de costes, antes de impuestos; deflactado con asimetria y colas |
+| T4 | La capa 2 pide 10 anyos de historia y el oro empieza en 1968 | Ventana creciente hasta 10 anyos, minimo 2; antes, factor 1 |
+| T5 | Calentar las medias de 1970 en euros pedia el cambio anterior a 1971 | Marco/dolar diario del Bundesbank desde 1948 (BBEX3.D.USD.DEM.AA.AC.000, comprobado) |
+| T6 | El bono a 10 anyos no se parece al indice agregado (VBMFX/EUNA, duracion ~6) | Bono a **7 anyos** (FRED DGS7, diario desde 07/1969, comprobado), duracion calculada cada dia con la rentabilidad |
+| T7 | Festivos distintos en Nueva York y Frankfurt | Calendario de la union de dias habiles; en festivo, el ultimo precio |
+| T8 | La probabilidad de sobreajuste (PBO) no tiene sentido con un solo modelo | PBO entre {base, base + modelo} con validacion combinatoria de 8 grupos |
+| T9 | La pendiente de tipos (10 anyos) no existe antes de 1953 y el modelo aprende con 1927-1970 | Variable eliminada |
+| T10 | Anacronismos | ETF antes de 1993, traspasos de fondos antes de 2003 y la ley espanyola de hoy: se simula el vehiculo y las reglas de hoy; dicho en el veredicto |
+| T11 | Fuentes | Stooq pide una comprobacion de navegador (no se fuerza); falta la clave del tipo aleman a un dia y el oro 1999-2000 |
+| T12 | Tipos de mercado definidos con el anyo entero (despues de pasar) | Correcto solo porque **no** se usan para operar, solo para juzgar (regime-awareness) |
+
+### Decisiones del propietario (una por mensaje)
+
+| # | Cuestion |
+|---|---|
+| P1 | Impuestos: el 19 % fijo del estudio 1 o los tramos reales del ahorro (19-28 %) en 55 anyos |
+| P2 | La capa 6 (modelo aprendido con sectores de bolsa), ¿solo sobre la pieza de bolsa? |
+| P3 | Que hacer si un tipo de mercado tiene menos de 3 anyos |
