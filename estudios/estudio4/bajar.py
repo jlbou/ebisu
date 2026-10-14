@@ -29,7 +29,7 @@ ZIPS = {  # nombre local -> fichero de Kenneth French
     "french_49_sectores": "49_Industry_Portfolios_CSV.zip",
     "french_internacional": "F-F_International_Indices.zip",
 }
-SERIES_FRED = ["DGS7", "DTB3", "IRSTCI01DEM156N", "CPIAUCNS"]
+SERIES_FRED = ["DGS7", "DTB3", "IRSTCI01DEM156N", "CPIAUCNS", "CPIAUCSL"]
 SERIES_BBK = {"bbk_dem_usd": "D.USD.DEM.AA.AC.000", "bbk_oro_frankfurt": "D.XAU.DEM.EA.AC.C01"}
 
 

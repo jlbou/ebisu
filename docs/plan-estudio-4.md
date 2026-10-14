@@ -169,3 +169,17 @@ menos de 3 anyos.
 | Tipo aleman a un dia | FRED IRSTCI01DEM156N (OCDE), mensual 01/1960-08/2026. El Bundesbank no lo da por su API con las claves probadas |
 | Tramos del ahorro | **Comprobados en la AEAT** (manual de Renta 2025, 8.4.4): escala estatal y autonomica iguales, 9,5/10,5/11,5/13,5/15 %; juntas, 19/21/23/27/30 % con cortes en 6.000, 50.000, 200.000 y 300.000 € |
 | Oro 1999-2000 | **Sin fuente diaria gratuita:** el Bundesbank deja de publicar el fixing de Frankfurt en 1998; el LBMA exige licencia de ICE para datos historicos (su web lo dice); FRED retiro las series del LBMA en 2022; Stooq pide una comprobacion de navegador. Hay medias mensuales gratuitas (Banco Mundial). La licencia de ICE cuesta 8.000-31.000 $ al anyo ([tarifas 2026](https://www.ice.com/publicdocs/IBA_MLA_Licensing_Data_Fee_Schedule_2026.pdf), p. 8): descartada. **Decidido (14/10, opcion A): 01/1999-08/2000 con las medias mensuales del Banco Mundial repartidas por dias** (interpolacion lineal entre mitades de mes); dicho en el veredicto |
+
+## 14. Pasos 2 y 3: construccion (14/10/2026)
+
+- Series y comprobaciones: `docs/estudios/estudio4-datos.md` (bonos aceptados con el ETF del Tesoro cubierto, opcion A).
+- Codigo: `estudios/estudio4/` (`bajar.py`, `montar.py`, `simulador4.py`, `modelo4.py`, `juez4.py`, `medir4.py`,
+  `validar4.py`). Validaciones con datos inventados: **todas OK** (39), tambien la trampa de una variable que mira el
+  futuro. `medir4.py --ensayo` (inventado) y `--seco` (datos reales, sin ensenyar ni guardar nada) corren sin errores.
+- Precisiones de la construccion, sin cambiar ninguna regla:
+  - Oro 1999-2000: medias mensuales de DataHub (World Gold Council / Banco Mundial), en CSV; el fichero del Banco
+    Mundial es un Excel con direccion cambiante.
+  - El modelo de cada anyo Y se entrena con etiquetas que acaban como muy tarde el 31/12 de Y-2 (los 12 meses de
+    separacion): el de 1971 aprende de 1927-1969.
+  - Informacion (no decide): H1 sobre la bolsa de EE. UU. en 1927-1970 (dolares, antes de impuestos) y la bolsa fuera
+    de EE. UU. en 1975-1996 con la media de 10 meses (mensual, sin el monetario).

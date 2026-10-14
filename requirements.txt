@@ -1,3 +1,4 @@
 # Dependencias de Ebisu (versiones fijas). Instalar con: .venv/Scripts/python.exe -m pip install -r requirements.txt
 pandas==3.0.6     # tablas de precios por fechas
 yfinance==1.7.0   # precios diarios gratuitos de Yahoo Finance (no oficial: contrastar en el estudio final)
+scikit-learn==1.9.1  # estudio 4, capa 6: regresion logistica (decision 14, opcion A); trae scipy, joblib y threadpoolctl

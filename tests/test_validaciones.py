@@ -13,6 +13,7 @@ E2 = Path(__file__).resolve().parents[1] / "estudios" / "estudio2"
 H2R = Path(__file__).resolve().parents[1] / "estudios" / "h2reserva"
 E3 = Path(__file__).resolve().parents[1] / "estudios" / "estudio3"
 FIX = Path(__file__).resolve().parents[1] / "estudios" / "fixing"
+E4 = Path(__file__).resolve().parents[1] / "estudios" / "estudio4"
 
 CASOS = [
     ("validar.py",),
@@ -26,13 +27,15 @@ CASOS = [
     ("e3:diagnostico.py", "--validar"),
     ("e3:diagnostico.py", "--ensayo"),
     ("fix:rapido.py", "--validar"),
+    ("e4:validar4.py",),
+    ("e4:medir4.py", "--ensayo"),
 ]
 
 
 @pytest.mark.parametrize("args", CASOS, ids=[" ".join(c) for c in CASOS])
 def test_validacion(args: tuple[str, ...]) -> None:
     prefijo, _, nombre = args[0].rpartition(":")
-    base = {"": E1, "e2": E2, "h2r": H2R, "e3": E3, "fix": FIX}[prefijo]
+    base = {"": E1, "e2": E2, "h2r": H2R, "e3": E3, "fix": FIX, "e4": E4}[prefijo]
     r = subprocess.run([sys.executable, str(base / nombre), *args[1:]], capture_output=True, text=True, timeout=900)
     assert r.returncode == 0, r.stdout[-2000:] + r.stderr[-2000:]
     assert "FALLA" not in r.stdout
