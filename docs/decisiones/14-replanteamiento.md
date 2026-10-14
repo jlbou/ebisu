@@ -43,5 +43,10 @@ mucho en las caidas; el problema fue juzgar con 13,5 anyos (hacian falta ~20-60)
   EE. UU. de Kenneth French (mensuales desde 1926). Cuenta como variante; validacion por bloques de tiempo con purga y
   probabilidad de sobreajuste < 0,5. Dependencia nueva: scikit-learn. Sin estudios academicos serios que lo hayan
   hecho con datos mensuales (Goyal, Welch y Zafirov 2024: predecir el mercado con indicadores no funciona).
+- **Piezas (opcion A):** las mismas de H1 (bolsa mundial, bonos cubiertos a euros, oro, monetario en euros), para que
+  H1 se pruebe intacta en 1971-2000. Datos comprobados (14/10): oro diario en marcos de Frankfurt 1968-1998
+  (Bundesbank, BBEX3.D.XAU.DEM.EA.AC.C01, 7.622 dias); bolsa de EE. UU. diaria desde 1926 (Kenneth French); bolsa
+  fuera de EE. UU. **solo mensual desde 1975** (Kenneth French, International Indices) y **diaria solo desde 1997**
+  (MSCI, gratis desde esa fecha). Hueco por decidir: la bolsa no estadounidense diaria antes de 1997.
 - Pendiente de decidir antes de medir: los umbrales de los tipos de mercado, cuanto es "perder mucho", las hipotesis (pocas, con base
   academica) y el liston contando **todos** los intentos hechos hasta ahora.
