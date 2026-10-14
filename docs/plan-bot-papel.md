@@ -47,6 +47,7 @@ pueda corromper: todo sale de los precios guardados.
 | `ebisu/papel.py` | Rehace el papel y saca operaciones, valor y caida | Idea de `papel_l.py` de Ploutos |
 | `ebisu/juez.py` | Las condiciones de la decision 11.2 | Nuevo |
 | `ebisu/ia.py` | Llama a `claude -p` sin herramientas, sin ver claves, con salida JSON; si falla, nada | Copia adaptada de `ai/invoke.py` y `ai/parser.py` de Ploutos |
+| `ebisu/latido.py` | Latido diario a Healthchecks.io; nunca lanza; la URL es secreta | Copia de `notify/latido.py` de Ploutos |
 | `ebisu/telegram.py` | Envia mensajes; el token nunca sale en un error; si falla, no tumba nada | Copia de `notify/telegram.py` de Ploutos |
 | `ebisu/mensajes.py` | Los textos de la decision 10 ("la IA", nunca "Claude") | Nuevo, con el formato de 10.3 |
 | `ebisu/reglas.py` | Reglas duras | Nuevo (seccion 5) |
@@ -93,7 +94,7 @@ el OK del propietario.
 | # | Cuestion |
 |---|---|
 | P1 | **Decidido (14/10, opcion A): la senyal sobre los precios reales de los 4 ETF en Yahoo**, con los controles de la seccion 6; si Yahoo da problemas, se anyade una segunda fuente (opcion C). Comprobado: VWCE.DE, CEMF.DE (desde el 04/08/2025: 305 dias, bastan para la media de 200), SGLD.MI y XEON.DE, todos hasta el 14/10/2026 |
-| P2 | El VPS: ¿el mismo de Ploutos (aparte, sin tocar nada de Ploutos) u otro? |
+| P2 | **Decidido (14/10, opcion A): el mismo VPS que Ploutos, completamente aparte** (usuario `ebisu`, `/opt/ebisu`, entorno, `.env` y servicios propios; no toca ningun fichero ni servicio de Ploutos; usa el binario de la IA ya instalado solo para ejecutarlo, con configuracion propia). **Latido a Healthchecks.io** (copia de `notify/latido.py` de Ploutos): una comprobacion propia de Ebisu, que crea el propietario; su URL va en el `.env` de Ebisu. El latido se manda solo si la vuelta del dia acaba bien; si falta, Healthchecks avisa |
 | P3 | De donde lee noticias la IA |
 | P4 | Que comandos de Telegram hacen falta en papel |
 | P5 | El panel (decision 9): ¿ahora o despues del papel? |
