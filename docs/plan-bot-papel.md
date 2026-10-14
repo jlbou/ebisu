@@ -92,7 +92,7 @@ el OK del propietario.
 
 | # | Cuestion |
 |---|---|
-| P1 | La senyal, ¿sobre los precios de los ETF reales o sobre las series del estudio? |
+| P1 | **Decidido (14/10, opcion A): la senyal sobre los precios reales de los 4 ETF en Yahoo**, con los controles de la seccion 6; si Yahoo da problemas, se anyade una segunda fuente (opcion C). Comprobado: VWCE.DE, CEMF.DE (desde el 04/08/2025: 305 dias, bastan para la media de 200), SGLD.MI y XEON.DE, todos hasta el 14/10/2026 |
 | P2 | El VPS: ¿el mismo de Ploutos (aparte, sin tocar nada de Ploutos) u otro? |
 | P3 | De donde lee noticias la IA |
 | P4 | Que comandos de Telegram hacen falta en papel |
