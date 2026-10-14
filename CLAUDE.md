@@ -141,3 +141,14 @@ estrategia de operar activamente ganaba. La unica que vale la pena es "L" (rotac
   exploracion con `medir.py --exploracion --confirmo` (una sola vez), cuando el propietario lo diga.
 - **Clave para el paso 2:** los impuestos cuentan operacion por operacion, y la referencia es el indexado con
   traspasos (`docs/decisiones/02-mercado.md`).
+
+## graphify (mapa del proyecto; instalado el 14/10/2026, solo para Ebisu, sin avisos automaticos)
+
+Herramienta (`graphify`, version 0.9.72, en un entorno propio fuera del proyecto; ruta en `CLAUDE.local.md`) que
+convierte el proyecto en un grafo consultable en `graphify-out/` (fuera de git). Se usa a mano (opcion A del
+propietario): sin hooks.
+
+- Para preguntas sobre el proyecto, `graphify query "<pregunta>"` si existe `graphify-out/graph.json`;
+  `graphify path "<A>" "<B>"` para relaciones y `graphify explain "<concepto>"` para un concepto.
+- `graphify-out/GRAPH_REPORT.md` solo para una vision general.
+- Despues de cambiar codigo, `graphify update .` (solo analiza el codigo, sin coste).

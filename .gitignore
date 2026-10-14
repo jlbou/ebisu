@@ -38,3 +38,6 @@ desktop.ini
 
 # Skills de terceros instaladas solo en local (ml4t/skills, Apache-2.0)
 .claude/skills/
+
+# Mapa del proyecto de graphify (se regenera)
+graphify-out/
