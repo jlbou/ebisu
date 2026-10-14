@@ -50,5 +50,8 @@ mucho en las caidas; el problema fue juzgar con 13,5 anyos (hacian falta ~20-60)
   (MSCI, gratis desde esa fecha). **Hueco (opcion A):** la pieza de bolsa es la de EE. UU. sola hasta 1996 y la
   mundial (60 % EE. UU. + 40 % resto, MSCI) desde 1997; H1 queda intacta. Solo informacion: la bolsa fuera de EE. UU.
   mensual 1975-1996.
-- Pendiente de decidir antes de medir: los umbrales de los tipos de mercado, cuanto es "perder mucho", las hipotesis (pocas, con base
+- **Tipos de mercado, umbrales (opcion A):** por anyos naturales. Bolsa a la baja: el anyo en que la referencia (bolsa
+  mantenida, en euros) pierde. Inflacion alta: IPC de EE. UU. (FRED CPIAUCSL, diciembre sobre diciembre) > 4 %
+  (17 anyos en 1971-2025), porque las piezas son de EE. UU. y la relacion bolsa-bonos depende de su inflacion.
+- Pendiente de decidir antes de medir: cuanto es "perder mucho", las hipotesis (pocas, con base
   academica) y el liston contando **todos** los intentos hechos hasta ahora.
