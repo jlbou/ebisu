@@ -100,3 +100,48 @@ el OK del propietario.
 | P3 | **Decidido (14/10, opcion A): RSS de fuentes oficiales (comunicados del BCE y de la Fed) y de 3-4 medios economicos** (se eligen y se comprueba que funcionan al construir). Se recogen durante el mes y la IA los recibe el dia de la senyal como **texto no confiable** (nunca instrucciones); la IA no navega ni tiene herramientas. Pieza: copia adaptada de `data/medios/rss.py` de Ploutos |
 | P4 | **Decidido (14/10): en Telegram solo `/estado` y `/detalle`** (en papel y despues). **Pausar y reanudar, desde el panel**, no desde Telegram (cambia la decision 10.2). En papel la pausa no actua (romperia la fidelidad, 11.2.1); se activa con dinero real. Escuchar comandos pide un segundo servicio (como `ploutos-telegram`). Piezas: copia adaptada de `notify/comandos.py` (solo esos dos) y de los controles del panel (`api/mando.py`: solo por Tailscale y con la cabecera contra otras paginas) |
 | P5 | **Decidido (15/10, opcion A): el panel se construye antes de lanzar el papel**, con el disenyo de la decision 9, solo por Tailscale y con los botones de pausa visibles pero sin efecto en papel. El papel arranca con la primera senyal mensual en la que todo (panel incluido) este listo: la de octubre (30/10/2026) si da tiempo; si no, la de noviembre. **No se rellena hacia atras**: la IA en sombra no se puede hacer despues (ya sabria las noticias) |
+
+## 10. Revision del plan (15/10/2026)
+
+Skills: `engineering:testing-strategy` (piramide de pruebas), `engineering:deploy-checklist` (instalacion y vuelta
+atras), `ml4t-production-readiness` y revision de seguridad propia. Lo de esta seccion **manda** sobre lo anterior.
+
+### Correcciones tecnicas (aplicadas al plan)
+
+| # | Agujero | Correccion |
+|---|---|---|
+| B1 | La fidelidad "por construccion" no prueba nada si el bot usa el mismo codigo | **Prueba de oro:** el papel del bot sobre los precios reales de los ETF 2020-2026 tiene que dar exactamente lo mismo que `simulador4.py` con esos precios; y una huella (hash) de `estrategia.py` guardada al empezar: si cambia durante el papel, es una incidencia |
+| B2 | Cierre o cierre ajustado de Yahoo | Cierre (`Close`); los 4 son de acumulacion; se avisa si `Adj Close` difiere mas de un 0,1 % |
+| B3 | Un precio de "hoy" provisional | Solo se guarda el cierre de un dia ya cerrado en su bolsa (despues de las 17:35) y con volumen > 0; reintentos hasta las 23:00 |
+| B4 | El "todo bien" del domingo con un servicio solo de dias habiles | El temporizador corre todos los dias; fines de semana y festivos solo late y, el domingo, manda el "todo bien" |
+| B5 | El binario de la IA es el de Ploutos: si Ploutos lo actualiza, cambia el de Ebisu | Ebisu comprueba la version al arrancar y, si no es la verificada, no llama a la IA y avisa. Token propio de Ebisu en su `.env` (lo genera el propietario) |
+| B6 | Los titulares pueden llevar instrucciones o enlaces que la IA copie al mensaje | La salida de la IA se limpia antes de Telegram y del panel: sin enlaces, longitud maxima, HTML escapado y "Claude" -> "la IA" |
+| B7 | Aislamiento de Ploutos | Usuario `ebisu` sin acceso a `/opt/ploutos`; servicios con `ProtectSystem=strict`, `ProtectHome`, `ReadWritePaths=/opt/ebisu/var`, limite de memoria (como Ploutos); puerto del panel distinto |
+| B8 | Lo que no se puede rehacer (los precios tal como se vieron, el diario de la IA, los titulares) | Copia de seguridad diaria fuera del VPS (decision P6) |
+| B9 | El repositorio es publico | Los ficheros de instalacion sin IP, nombres de maquina ni rutas personales: todo en el `.env` o en `CLAUDE.local.md` |
+| B10 | El bot no necesita scikit-learn | `requirements-bot.txt` aparte (pandas, yfinance): menos memoria y menos superficie en el VPS |
+| B11 | La referencia del resumen mensual | VWCE mantenido desde el primer dia del papel, con su gasto |
+| B12 | Pruebas en GitHub sin red | Fuentes de precios, Telegram, IA y RSS simuladas en las pruebas |
+
+### Piramide de pruebas
+
+- **Unidad (muchas, rapidas):** validacion de precios, reglas duras (una prueba intenta romper cada una), limpieza de
+  la salida de la IA, mensajes, comandos (solo el chat del propietario).
+- **Integracion (algunas):** un dia completo con fuentes simuladas; el papel rehecho dos veces igual; Telegram caido,
+  IA lenta o con salida mala, Yahoo sin precio, precio con salto raro: cada uno da su aviso y nada mas cambia.
+- **Prueba de oro (B1)** y **prueba en seco** en el VPS con datos reales, sin Telegram ni guardar.
+- **Instalacion:** lista de comprobacion (abajo) y vuelta atras.
+
+### Lista de la instalacion (deploy-checklist)
+
+- Antes: pruebas en verde en GitHub; revision del codigo; `.env` puesto por el propietario (permisos 600); copia de
+  seguridad comprobada restaurando una vez.
+- Instalar: usuario, carpeta, entorno, servicios; prueba en seco; un mensaje de prueba a Telegram; un latido de prueba.
+- Despues: 3 dias sin incidencias antes de la primera senyal real del papel.
+- **Vuelta atras:** parar y deshabilitar los servicios de Ebisu y borrar `/opt/ebisu`; Ploutos no se toca en ningun paso.
+
+### Decision pendiente
+
+| # | Cuestion |
+|---|---|
+| P6 | Copias de seguridad: ¿al ordenador del propietario con una tarea programada, como Ploutos, u otra forma? |
