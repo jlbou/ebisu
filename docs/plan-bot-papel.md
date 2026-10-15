@@ -171,3 +171,11 @@ atras), `ml4t-production-readiness` y revision de seguridad propia. Lo de esta s
     para que un corte no deje una linea a medias.
   - (C4, corregido) Cada dia bajaba todo desde 2019: ahora, tras el primer relleno, solo los ultimos 15 dias.
   - Paso 2 sin hallazgos: la copia de la estrategia y la huella estan cubiertas por sus pruebas.
+- **Paso 4 (15/10): avisos** (`ebisu/secretos.py`, `telegram.py`, `cola.py`, `latido.py`, `noticias.py`,
+  `mensajes.py`; 13 pruebas sin red; skills `python-testing`, `python-patterns` y `code-review`). Telegram, cola y
+  latido, copias adaptadas de Ploutos. Fuentes de noticias comprobadas el 15/10 (todas responden): BCE, Fed, FT
+  (mercados), CNBC (finanzas), MarketWatch y Expansion (mercados); prueba real: 150 titulares, sin errores.
+  Los `.env` del bot solo leen TELEGRAM_TOKEN, TELEGRAM_CHAT_ID, HEALTHCHECK_EBISU y CLAUDE_CODE_OAUTH_TOKEN: las
+  claves de Trading 212 que haya en el `.env` no se leen nunca en papel (regla dura 1).
+  Revision: (N1, corregido; el mismo fallo esta en Ploutos) un titular con una etiqueta dentro (`<b>`) se cortaba en
+  la etiqueta: ahora se lee todo el texto del elemento. Los mensajes llevan acentos (son para el propietario).

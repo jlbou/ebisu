@@ -101,3 +101,12 @@ def test_no_pasa_del_ultimo_dia_con_las_4_piezas(cierres):
     c.loc[pd.Timestamp("2026-10-14"):, "oro"] = np.nan  # el oro aun no ha llegado
     papel = P.calcular(c, SENYAL, HASTA)
     assert papel.hasta == pd.Timestamp("2026-10-13")
+
+
+def test_senyales_reales_y_puntos(cierres, papel):
+    piezas = P.piezas_de(cierres)
+    s = P.senyales_reales(piezas, pd.Timestamp("2026-10-15"))
+    assert s[-1] == pd.Timestamp("2026-09-30")
+    assert P.senyales_reales(piezas, pd.Timestamp("2026-09-30"))[-1] == pd.Timestamp("2026-09-30")
+    assert papel.ultima_senyal == pd.Timestamp("2026-09-30")
+    assert set(papel.puntos) == {"bolsa", "bonos", "oro"} and all(0 <= v <= 4 for v in papel.puntos.values())

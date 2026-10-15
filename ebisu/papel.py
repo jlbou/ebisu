@@ -43,6 +43,8 @@ class Papel:
     pesos: dict[str, float]  # pesos objetivo vigentes
     operaciones: list[Operacion] = field(default_factory=list)
     operaciones_estrategia: int = 0  # las que cuenta la estrategia (para la prueba de coherencia)
+    puntos: dict[str, int] = field(default_factory=dict)  # medias superadas (0-4) en la ultima senyal
+    ultima_senyal: pd.Timestamp | None = None
     valor: pd.Series | None = None
 
 
@@ -55,6 +57,15 @@ def piezas_de(cierres: pd.DataFrame) -> pd.DataFrame:
 def ultimo_dia_completo(cierres: pd.DataFrame) -> pd.Timestamp:
     """El ultimo dia hasta el que hay cierre de las 4 piezas (cada una, su ultimo cierre guardado)."""
     return min(cierres[c].last_valid_index() for c in cierres.columns)
+
+
+def senyales_reales(piezas: pd.DataFrame, hasta: pd.Timestamp) -> pd.DatetimeIndex:
+    """Los dias de senyal ya seguros: el ultimo dia con precios de cada mes terminado, y el de hoy si hoy es el ultimo
+    dia habil del mes. (Para la estrategia, el ultimo dia con datos de un mes a medias tambien es "senyal", pero su
+    ejecucion seria manyana y manyana deja de serlo: nunca se ejecuta.)"""
+    s = E.dias_de_senyal(piezas.loc[:hasta].index)
+    fin_de_mes = hasta == (hasta + pd.offsets.BMonthEnd(0))
+    return s if fin_de_mes else s[s.to_period("M") < hasta.to_period("M")]
 
 
 def dia_de_ejecucion(piezas: pd.DataFrame, senyal: pd.Timestamp) -> pd.Timestamp | None:
@@ -93,10 +104,12 @@ def calcular(cierres: pd.DataFrame, primera_senyal: pd.Timestamp, hasta: pd.Time
     ref = E.referencia(piezas, str(inicio.date()), str(hasta.date()), gasto=0.0, impuestos=False)
     ops, pesos = operaciones(piezas, inicio, hasta)
     v = r.valor
+    ultima = senyales_reales(piezas, hasta)[-1]
+    puntos = {pz: int(E.medias_superadas(piezas[pz]).loc[ultima]) for pz in PIEZAS}
     return Papel(hasta=v.index[-1], valor_eur=CAPITAL_EUR * float(v.iloc[-1]),
                  si_vende_hoy_eur=CAPITAL_EUR * r.bolsillo, caida=float((1 - v / v.cummax()).max()),
                  referencia_eur=CAPITAL_EUR * float(ref.valor.iloc[-1]), pesos=pesos, operaciones=ops,
-                 operaciones_estrategia=r.operaciones, valor=v)
+                 operaciones_estrategia=r.operaciones, puntos=puntos, ultima_senyal=ultima, valor=v)
 
 
 def nuevas(hoy: Papel, ayer_hasta: pd.Timestamp | None) -> list[Operacion]:
