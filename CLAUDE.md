@@ -6,8 +6,9 @@ lee; nunca se toca nada**.
 
 **Este repositorio es PUBLICO** (`github.com/jlbou/ebisu`). Ver "Repositorio publico" mas abajo.
 
-**Estado (14/10/2026): replanteamiento (`docs/decisiones/14-replanteamiento.md`).** Divisas: laboratorio en papel con
-la IA. Bolsa, bonos y oro: estudio 4 NO PASA, pero el propietario acepta el intercambio de H1 (decision 15): siguiente, el papel.
+**Estado (15/10/2026): H1-M, bot en papel INSTALADO en el VPS y probado** (`docs/instalacion-bot.md`); 3 dias
+sin incidencias (hasta el 18/10) y despues el propietario decide `--empezar` (primera senyal: 30/10/2026). Divisas:
+laboratorio en papel con la IA, sin empezar.
 
 ## La leccion de Ploutos que manda aqui
 
@@ -130,21 +131,21 @@ estrategia de operar activamente ganaba. La unica que vale la pena es "L" (rotac
 | 14/10/2026 | **Plan del estudio 4 APROBADO** (bolsa, bonos y oro): una medicion 1971-2026 + 1990-2026, 5 variantes (H1-M, H1-F, + volatilidad, + fiscal, + modelo de scikit-learn solo en bolsa), N = 10, tipos de mercado, tramos reales del ahorro; dos revisiones (21 correcciones) | `docs/plan-estudio-4.md`, `docs/estudios/recerca-activos-2.md` |
 | 14/10/2026 | **Estudio 4 (una medicion, 1971-2026): NO PASA NINGUNA.** H1 si pasa el liston contra la suerte (deflactado 0,97-0,98, Sharpe 0,48 frente a 0,36) y cae mucho menos (14-19 % frente al 58 %), pero gana 2-3 puntos menos al anyo (H1-F 6,50 %, H1-M 5,57 % frente al 8,50 %) y en los anyos de subida se queda 10-15 puntos atras. El modelo de scikit-learn no aporta (PBO 0,77). 1971-2026 queda visto | `docs/estudios/estudio4-veredicto.md` |
 | 14/10/2026 | **Aceptar el intercambio de H1 (despues de ver el veredicto, dicho asi):** ganar menos a cambio de caer mucho menos; H1 no "pasa", pero no es suerte; va al papel hacia delante con la IA en sombra; nada mas se mide sobre 1971-2026 (opcion A) | `docs/decisiones/15-aceptar-h1.md` |
+| 14-15/10/2026 | **Plan del bot en papel (H1-M):** precios de los 4 ETF en Yahoo (P1); el VPS de Ploutos pero aparte, con latido a Healthchecks (P2); RSS oficiales y de medios para la IA (P3); Telegram solo `/estado` y `/detalle`, pausa desde el panel (P4); panel antes del papel (P5); copia diaria al portatil, 7 dias (P6) | `docs/plan-bot-papel.md` 9 |
+| 15/10/2026 | **IA del bot: copia propia y verificada** en `/opt/ebisu/bin` (la del VPS es de Ploutos y vive en `/home/ploutos`); sin tocar Ploutos (opcion A) | `docs/instalacion-bot.md` |
 
 ## Pendiente
 
-- **Paso 1 CERRADO (12/10): `docs/prd-paso-1.md`.** Verificaciones hechas (`docs/estudios/verificaciones-vehiculo.md`):
-  con fondos no hay oro (solo mineras) ni API; Trading 212 (probablemente la alemana, BaFin) tiene API y ETF en euros
-  sin comision. Inventario hecho (ventana comun desde 2000). **Criterio del estudio 1 aprobado**; siguiente: bajar
-  BCE, Dukascopy y la segunda fuente y montar las series en euros (`docs/diseno-estudio-1.md` 7). Faltan
-  dos puntos en la app o el demo de Trading 212 (cuenta abierta, esperando la verificacion de identidad).
-- **Trading 212 (12/10):** sin cuenta demo para Trading 212 EU; preguntas de la API (tipos de orden, fracciones, clave de
-  solo lectura, limites, tasa italiana del oro) enviadas a un agente del chat: respuesta en 1 dia habil. Anotarla en
-  `docs/estudios/verificaciones-vehiculo.md` 5.6.
-- **Dukascopy: COMPLETO (13/10 05:30)** y contrastado con el BCE (pasa; seccion 9 del criterio). Siguiente: medir la
-  exploracion con `medir.py --exploracion --confirmo` (una sola vez), cuando el propietario lo diga.
-- **Clave para el paso 2:** los impuestos cuentan operacion por operacion, y la referencia es el indexado con
-  traspasos (`docs/decisiones/02-mercado.md`).
+- **Bot en papel (H1-M), instalado el 15/10** (`docs/instalacion-bot.md`, `deploy/`): 3 dias sin incidencias hasta el
+  18/10; revisar avisos y registros con el propietario y que decida `--empezar` (primera senyal: 30/10/2026). Despues,
+  6 meses de papel (decision 11); la IA en sombra hasta 5 casos.
+- **Trading 212** (solo hace falta si el papel pasa): anotar la respuesta del chat sobre la API (tipos de orden,
+  fracciones, clave de solo lectura, limites, tasa italiana del oro) en `docs/estudios/verificaciones-vehiculo.md` 5.6;
+  la cuenta espera la verificacion de identidad.
+- **Divisas como laboratorio en papel con la IA** (decision 14): sin empezar.
+- **Panel de Ploutos:** tiene el mismo hueco de DNS rebinding que se corrigio en Ebisu (S5 de la revision de
+  seguridad); se arregla en una sesion de Ploutos, nunca desde aqui.
+- **Panel de Ebisu:** solo por IP de Tailscale y puerto 8611; por nombre, haria falta `--nombre` en el servicio.
 
 ## graphify (mapa del proyecto; instalado el 14/10/2026, solo para Ebisu, sin avisos automaticos)
 
