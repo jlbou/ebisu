@@ -44,6 +44,7 @@ class Dependencias:
     mandar: Callable[[str], bool] | None = None  # None = Telegram con los secretos
     latido_ok: Callable[[str | None], Any] = latido.todo_bien
     latido_fallo: Callable[[str | None], Any] = latido.fallo
+    comprobar_ia: Callable[[str | None], str | None] = ia.comprobar
     secretos: secretos.Secretos = field(default_factory=secretos.leer)
 
 
@@ -170,15 +171,18 @@ def vuelta(ahora: datetime, base: Path = VAR, dep: Dependencias | None = None) -
             for a in avisos_precios:
                 aviso(f"precios:{a.tipo}:{a.pieza}:{a.texto}", mensajes.incidencia(juez.Incidencia(False, "precios", f"{a.pieza}: {a.texto}")))
     estado["titulares_nuevos"] = n_titulares
+    estado["ia_version"] = dep.comprobar_ia(dep.secretos.claude_token)  # salud del panel; no gasta cuota
     _escribir_json(base / "estado.json", estado)
-    try:  # el panel no puede tumbar la vuelta
-        panel.escribir(base, ahora)
-    except Exception as exc:
-        aviso(f"panel:{hoy.date()}", mensajes.incidencia(juez.Incidencia(False, "panel", f"{type(exc).__name__}")))
     mandar = dep.mandar or (lambda t: telegram.enviar(dep.secretos.telegram_token, dep.secretos.telegram_chat_id, t).ok)
     enviados, descartados = cola.enviar_pendientes(f_cola, mandar, ahora)
     apuntar_vuelta(base, ahora, True, f"avisos nuevos {len(apuntados)}, enviados {enviados}, descartados {descartados}")
-    dep.latido_ok(dep.secretos.healthcheck)
+    estado["latido"] = dep.latido_ok(dep.secretos.healthcheck)
+    _escribir_json(base / "estado.json", estado)
+    try:  # el panel, lo ultimo (ya con el latido) y sin poder tumbar la vuelta: si falla, se avisa manyana
+        panel.escribir(base, ahora)
+    except Exception as exc:
+        cola.apuntar(f_cola, f"panel:{hoy.date()}",
+                     mensajes.incidencia(juez.Incidencia(False, "panel", f"{type(exc).__name__}")), ahora)
     return estado
 
 

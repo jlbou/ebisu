@@ -121,6 +121,12 @@ def version(binario: str, token: str, _run: Any = subprocess.run) -> str | None:
         return None
 
 
+def comprobar(token: str | None, _run: Any = subprocess.run) -> str | None:
+    """La version de la IA que se llamaria (para la salud del panel). Solo `--version`: no gasta cuota. Nunca lanza."""
+    binario = str(PROPIO) if PROPIO.exists() else shutil.which("claude")
+    return version(binario, token, _run) if token and binario else None
+
+
 def preguntar(mes: dict[str, Any], titulares: list[dict], compras: set[str], *, token: str | None,
               binario: str | None = None, modelo: str = "sonnet", timeout_s: float = 120.0,
               _run: Any = subprocess.run) -> Respuesta:

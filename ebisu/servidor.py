@@ -30,6 +30,7 @@ from ebisu import panel, precios
 
 RAIZ = Path(__file__).resolve().parents[1]
 VAR = RAIZ / "var" / "bot"
+VENDOR = Path(__file__).with_name("vendor")
 ESTATICOS = {"/panel.js": (Path(__file__).with_name("panel.js"), "text/javascript; charset=utf-8"),
              "/favicon.svg": (RAIZ / "assets" / "logo" / "favicon.svg", "image/svg+xml"),
              "/favicon-32.png": (RAIZ / "assets" / "logo" / "favicon-32.png", "image/png"),
@@ -37,7 +38,11 @@ ESTATICOS = {"/panel.js": (Path(__file__).with_name("panel.js"), "text/javascrip
              "/icono-android-192.png": (RAIZ / "assets" / "logo" / "icono-android-192.png", "image/png"),
              "/icono-android-512.png": (RAIZ / "assets" / "logo" / "icono-android-512.png", "image/png"),
              "/manifest.webmanifest": (RAIZ / "assets" / "logo" / "manifest.webmanifest",
-                                       "application/manifest+json; charset=utf-8")}
+                                       "application/manifest+json; charset=utf-8"),
+             "/vendor/lightweight-charts.js": (VENDOR / "lightweight-charts.standalone.production.js",
+                                              "text/javascript; charset=utf-8"),
+             "/vendor/atkinson-400.woff2": (VENDOR / "atkinson-hyperlegible-latin-400-normal.woff2", "font/woff2"),
+             "/vendor/atkinson-700.woff2": (VENDOR / "atkinson-hyperlegible-latin-700-normal.woff2", "font/woff2")}
 CABECERAS = {"Content-Security-Policy": "default-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; "
                                         "script-src 'self'; frame-ancestors 'none'; base-uri 'none'; form-action 'none'",
              "X-Content-Type-Options": "nosniff", "Referrer-Policy": "no-referrer", "X-Frame-Options": "DENY",

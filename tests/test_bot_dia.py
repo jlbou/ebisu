@@ -45,7 +45,8 @@ class Mundo:
         return dia.Dependencias(
             fuente_precios=lambda s, d: self.datos[s], bajar_rss=lambda url: RSS, preguntar_ia=preguntar,
             mandar=lambda t: self.enviados.append(t) or True,
-            latido_ok=lambda u: self.latidos.append("ok"), latido_fallo=lambda u: self.latidos.append("fallo"),
+            latido_ok=lambda u: self.latidos.append("ok") or True, latido_fallo=lambda u: self.latidos.append("fallo"),
+            comprobar_ia=lambda t: ia.VERSION_VERIFICADA,
             secretos=secretos.Secretos("t", "1", "https://hc", "tok"))
 
 

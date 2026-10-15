@@ -28,11 +28,26 @@ def mundo(tmp_path):
 
 def test_el_panel_tiene_las_secciones_y_nunca_el_nombre_del_modelo(mundo):
     pagina = (mundo.base / "panel.html").read_text(encoding="utf-8")
-    for s in ("Resumen", "1. Valor frente al indexado", "2. Cada pieza con sus 4 medias", "3. Operaciones",
-              "4. Historial de la IA", "5. Con y sin la IA", "6. Hacienda"):
+    for s in ("Este mes", "Valor frente al indexado", "Cada pieza con sus medias", "Operaciones",
+              "La IA, mes a mes", "Con y sin la IA", "Hacienda"):
         assert s in pagina
     assert "claude" not in pagina.lower() and "Pausar" in pagina
-    assert pagina.count("<svg") >= 4  # logo + las 3 piezas (el valor necesita al menos 2 dias de papel)
+    for g in ("g-valor", "g-caida", "g-bolsa", "g-bonos", "g-oro"):
+        assert f'id="{g}"' in pagina
+    datos = json.loads(pagina.split('id="datos">')[1].split("</script>")[0])
+    assert datos["valor"] and set(datos["piezas"]) == {"bolsa", "bonos", "oro"}
+    assert "La IA responde" in pagina and "Latido enviado" in pagina  # la franja de salud
+
+
+def test_antes_de_empezar_dice_que_haria_la_regla_hoy(tmp_path):
+    from tests.test_bot_dia import Mundo, correr
+
+    m = Mundo()
+    m.base = tmp_path
+    correr(m, 2026, 10, 1, 20, 0)
+    pagina = (tmp_path / "panel.html").read_text(encoding="utf-8")
+    assert "Si hoy fuera día de señal" in pagina and "El papel aún no ha empezado" in pagina
+    assert pagina.count('class="boya') >= 12  # 3 piezas x 4 medias
 
 
 @pytest.fixture
@@ -120,7 +135,9 @@ def test_iconos_y_manifest_para_el_movil(web):
     url, _ = web
     for ruta, tipo in [("/favicon.svg", "image/svg+xml"), ("/favicon-32.png", "image/png"),
                        ("/apple-touch-icon.png", "image/png"), ("/icono-android-192.png", "image/png"),
-                       ("/icono-android-512.png", "image/png"), ("/manifest.webmanifest", "application/manifest+json")]:
+                       ("/icono-android-512.png", "image/png"), ("/manifest.webmanifest", "application/manifest+json"),
+                       ("/vendor/lightweight-charts.js", "text/javascript"), ("/vendor/atkinson-400.woff2", "font/woff2"),
+                       ("/vendor/atkinson-700.woff2", "font/woff2")]:
         codigo, cab, cuerpo = pedir(url + ruta)
         assert codigo == 200 and cab["Content-Type"].startswith(tipo) and cuerpo, ruta
     m = json.loads(pedir(url + "/manifest.webmanifest")[2])
