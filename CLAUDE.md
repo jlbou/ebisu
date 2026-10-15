@@ -140,9 +140,9 @@ estrategia de operar activamente ganaba. La unica que vale la pena es "L" (rotac
 - **Bot en papel (H1-M), instalado el 15/10** (`docs/instalacion-bot.md`, `deploy/`): 3 dias sin incidencias hasta el
   18/10; revisar avisos y registros con el propietario y que decida `--empezar` (primera senyal: 30/10/2026). Despues,
   6 meses de papel (decision 11); la IA en sombra hasta 5 casos.
-- **Trading 212** (solo hace falta si el papel pasa): anotar la respuesta del chat sobre la API (tipos de orden,
-  fracciones, clave de solo lectura, limites, tasa italiana del oro) en `docs/estudios/verificaciones-vehiculo.md` 5.6;
-  la cuenta espera la verificacion de identidad.
+- **Trading 212** (solo si el papel pasa y se opera con dinero real): la respuesta del agente sobre la API ya esta en
+  `docs/estudios/verificaciones-vehiculo.md` 5.6 (13/10) y la identidad ya esta verificada (5.5). Queda solo la tasa
+  italiana sobre el ETC de oro (SGLD): mirarla en su ficha de la app antes de operar.
 - **Divisas como laboratorio en papel con la IA** (decision 14): sin empezar.
 - **Panel de Ploutos:** tiene el mismo hueco de DNS rebinding que se corrigio en Ebisu (S5 de la revision de
   seguridad); se arregla en una sesion de Ploutos, nunca desde aqui. Tambien alli: las comprobaciones de
