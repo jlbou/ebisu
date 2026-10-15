@@ -195,3 +195,12 @@ atras), `ml4t-production-readiness` y revision de seguridad propia. Lo de esta s
   `--seco` con datos reales: corre sin errores (sin guardar ni enviar). `/estado` y `/detalle` solo leen el estado y
   solo responden al chat del propietario. **Sin grafico en `/detalle` por ahora**: necesitaria una dependencia nueva
   (matplotlib); el grafico ira en el panel.
+- **Paso 7 (15/10): el panel** (`ebisu/panel.py`, `ebisu/servidor.py`, `ebisu/panel.js`; 5 pruebas; skills `dataviz`,
+  `python-testing` y `code-review`). Sin dependencias nuevas (opcion A del propietario): pagina tipo informe con los
+  graficos en SVG, rehecha al final de cada vuelta y al pulsar un boton. Resumen y las 6 secciones de la decision 9.
+  Servidor: solo en la IP de Tailscale (si no la hay, no arranca; nunca 0.0.0.0), solo sirve la pagina, `panel.js` y
+  el icono (nada de rutas a ficheros), cabeceras de seguridad (CSP propia, sin marcos), botones con la cabecera
+  `X-Ebisu-Panel` y el Origin del propio panel; la pausa se apunta en `control.json` y **no cambia el papel** (prueba).
+  Graficos: dos series tambien por trazo (continuo / discontinuo) y etiqueta directa; las 4 medias con una rampa de
+  verde de clara a oscura. **El validador de colores de la skill no se pudo correr (no hay Node en el portatil)**: por
+  eso la segunda codificacion. Comprobado a ojo con precios reales (resumen y grafico de valor) y sin desbordar en movil.

@@ -46,6 +46,8 @@ class Papel:
     puntos: dict[str, int] = field(default_factory=dict)  # medias superadas (0-4) en la ultima senyal
     ultima_senyal: pd.Timestamp | None = None
     valor: pd.Series | None = None
+    referencia: pd.Series | None = None  # VWCE mantenido, por euro inicial
+    impuestos_eur: float = 0.0  # impuestos simulados pagados hasta hoy
 
 
 def piezas_de(cierres: pd.DataFrame) -> pd.DataFrame:
@@ -109,7 +111,8 @@ def calcular(cierres: pd.DataFrame, primera_senyal: pd.Timestamp, hasta: pd.Time
     return Papel(hasta=v.index[-1], valor_eur=CAPITAL_EUR * float(v.iloc[-1]),
                  si_vende_hoy_eur=CAPITAL_EUR * r.bolsillo, caida=float((1 - v / v.cummax()).max()),
                  referencia_eur=CAPITAL_EUR * float(ref.valor.iloc[-1]), pesos=pesos, operaciones=ops,
-                 operaciones_estrategia=r.operaciones, puntos=puntos, ultima_senyal=ultima, valor=v)
+                 operaciones_estrategia=r.operaciones, puntos=puntos, ultima_senyal=ultima, valor=v,
+                 referencia=ref.valor, impuestos_eur=CAPITAL_EUR * r.impuestos)
 
 
 def nuevas(hoy: Papel, ayer_hasta: pd.Timestamp | None) -> list[Operacion]:

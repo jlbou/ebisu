@@ -27,7 +27,7 @@ from typing import Any
 
 import pandas as pd
 
-from ebisu import cola, ia, juez, latido, mensajes, noticias, papel, precios, secretos, telegram
+from ebisu import cola, ia, juez, latido, mensajes, noticias, panel, papel, precios, secretos, telegram
 from ebisu.papel_huella import huella
 
 RAIZ = Path(__file__).resolve().parents[1]
@@ -171,6 +171,10 @@ def vuelta(ahora: datetime, base: Path = VAR, dep: Dependencias | None = None) -
                 aviso(f"precios:{a.tipo}:{a.pieza}:{a.texto}", mensajes.incidencia(juez.Incidencia(False, "precios", f"{a.pieza}: {a.texto}")))
     estado["titulares_nuevos"] = n_titulares
     _escribir_json(base / "estado.json", estado)
+    try:  # el panel no puede tumbar la vuelta
+        panel.escribir(base, ahora)
+    except Exception as exc:
+        aviso(f"panel:{hoy.date()}", mensajes.incidencia(juez.Incidencia(False, "panel", f"{type(exc).__name__}")))
     mandar = dep.mandar or (lambda t: telegram.enviar(dep.secretos.telegram_token, dep.secretos.telegram_chat_id, t).ok)
     enviados, descartados = cola.enviar_pendientes(f_cola, mandar, ahora)
     apuntar_vuelta(base, ahora, True, f"avisos nuevos {len(apuntados)}, enviados {enviados}, descartados {descartados}")
