@@ -10,6 +10,8 @@ User=ebisu
 Group=ebisu
 WorkingDirectory=/opt/ebisu
 Environment=PYTHONUNBUFFERED=1
+# Cache de yfinance (zona horaria y cookie de Yahoo) en var/: la casa del usuario (/opt/ebisu) es de solo lectura.
+Environment=XDG_CACHE_HOME=/opt/ebisu/var/cache
 ExecStart=/opt/ebisu/.venv/bin/python -m ebisu.dia
 TimeoutStartSec=15min
 # Aislamiento (B7): solo escribe en su var/; Ploutos, ni verlo.

@@ -67,3 +67,8 @@ def test_las_copias_laten_cada_una_con_su_url():
     portatil = (DEPLOY / "copia-diaria.ps1").read_text(encoding="utf-8")
     assert "Read-Env 'HEALTHCHECK_EBISU_COPIA_PORTATIL'" in portatil and "Send-Latido -Fallo" in portatil
     assert not re.search(r"HEALTHCHECK_EBISU(_COPIA)?'", portatil)  # nunca late con una URL del VPS
+
+
+def test_la_cache_de_yfinance_va_a_var():
+    t = sin_comentarios(DEPLOY / "ebisu-dia.service")
+    assert "Environment=XDG_CACHE_HOME=/opt/ebisu/var/cache" in t and "ReadWritePaths=/opt/ebisu/var" in t
