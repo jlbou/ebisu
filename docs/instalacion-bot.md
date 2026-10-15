@@ -1,14 +1,14 @@
-# Instalacion del bot en papel en el VPS (15/10/2026, preparada; NO instalada)
+# Instalacion del bot en papel en el VPS (INSTALADO el 15/10/2026, commit ba59bea)
 
 Plan: `docs/plan-bot-papel.md` (P2, P6 y seccion 10). Ficheros: `deploy/`. Ploutos no se toca en ningun paso.
 
 ## Antes (lista de comprobacion, skill `engineering:deploy-checklist`)
 
-- [ ] Pruebas en verde en el portatil y en GitHub (hay que **subir los commits a GitHub**: el VPS baja el codigo del
+- [x] Pruebas en verde en el portatil y en GitHub (hay que **subir los commits a GitHub**: el VPS baja el codigo del
       repositorio publico, a un commit concreto).
-- [ ] Revision de seguridad hecha (seccion de abajo).
-- [ ] El propietario crea en Healthchecks.io una comprobacion **nueva, solo de Ebisu** (periodo 1 dia, gracia 4 h).
-- [ ] El propietario genera el token de la IA para Ebisu (`claude setup-token`).
+- [x] Revision de seguridad hecha (seccion de abajo).
+- [x] El propietario crea en Healthchecks.io una comprobacion **nueva, solo de Ebisu** (periodo 1 dia, gracia 4 h).
+- [x] El propietario genera el token de la IA para Ebisu (`claude setup-token`).
 
 ## Instalar (con el propietario)
 
@@ -24,6 +24,16 @@ Plan: `docs/plan-bot-papel.md` (P2, P6 y seccion 10). Ficheros: `deploy/`. Plout
 3. Un mensaje de prueba por Telegram, un latido de prueba y `/estado`.
 4. En el portatil: `.\deploy\instalar-tarea-copia.ps1` (la copia diaria, 7 dias).
 5. **3 dias sin incidencias**; despues, `--empezar` con la primera senyal (la del 30/10/2026 si da tiempo).
+
+## Estado (15/10/2026)
+
+- Instalado con `instalar.sh ba59bea root` (el usuario admin del VPS es root). Prueba en seco: OK (150 titulares).
+- `.env` del VPS: solo las 4 claves, de `ebisu` y permisos 600 (el mismo fichero que en el portatil).
+- Probado dentro del aislamiento de los servicios: mensaje de Telegram, latido de Healthchecks (en verde), IA propia
+  2.1.266, y `/estado` responde. Ploutos sigue con sus 8 servicios.
+- Copias: `ebisu-copia.service` probado en el VPS; la tarea del portatil registrada y probada (resultado 0).
+- El panel solo se abre por la IP de Tailscale y el puerto 8611 (el servicio no lleva `--nombre`).
+- Siguiente: **3 dias sin incidencias** (hasta el 18/10/2026) y despues `--empezar` (decide el propietario).
 
 ## Vuelta atras
 
