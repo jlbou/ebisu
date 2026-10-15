@@ -31,6 +31,10 @@ Plan: `docs/plan-bot-papel.md` (P2, P6 y seccion 10). Ficheros: `deploy/`. Plout
 - `.env` del VPS: solo las 4 claves, de `ebisu` y permisos 600 (el mismo fichero que en el portatil).
 - Probado dentro del aislamiento de los servicios: mensaje de Telegram, latido de Healthchecks (en verde), IA propia
   2.1.266, y `/estado` responde. Ploutos sigue con sus 8 servicios.
+- **La IA, con una pregunta de verdad** (15/10, una llamada de la cuota, con datos de prueba): dentro del aislamiento
+  exacto de `ebisu-dia.service` (incluido `PrivateTmp=true`, que la IA necesita para escribir en `/tmp`, y
+  `MemoryMax=600M`): respuesta valida en 5,2 s; el proceso mas grande, **224 MB** (en Ploutos se midieron 380-410 MB
+  en el portatil). Cabe de sobra: el limite no se toca.
 - Copias: `ebisu-copia.service` probado en el VPS; la tarea del portatil registrada y probada (resultado 0).
 - El panel se abre por Tailscale en el puerto 8611, por IP o por el nombre de la maquina (MagicDNS; el panel se lo
   pregunta a Tailscale al arrancar, no se escribe en ningun fichero).

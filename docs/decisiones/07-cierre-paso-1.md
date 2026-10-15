@@ -11,6 +11,7 @@
 ## Pendiente
 
 4. **El papel de la IA:** el propietario quiere que Ebisu tenga IA, no solo codigo. Se decide aparte.
+   **Resuelto el 12/10/2026 en la decision 8** (`docs/decisiones/08-ia.md`): la IA como analista con freno.
 
 ## Para saber (sin decidir)
 

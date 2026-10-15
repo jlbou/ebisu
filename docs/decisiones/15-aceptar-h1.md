@@ -30,3 +30,5 @@ retocado; el liston contra la suerte (fijado antes) si se cumple; y lo que cambi
 (preferencia del propietario, decision 6) y la que menos cae; frente a H1-F gana ~1 punto menos (~2-3 € al anyo con
 250 €). Vehiculos previstos: bolsa mundial (VWCE o EUNL), bonos del Tesoro de EE. UU. 7-10 anyos cubiertos (CEMF),
 oro (4GLD o Xetra-Gold) y monetario (XEON); **sin comprobar en Trading 212**.
+**Nota (15/10/2026):** comprobado despues: bolsa VWCE, bonos CEMF, oro **SGLD (Borsa Italiana)** y monetario XEON,
+todos en euros en Trading 212 (`docs/estudios/verificaciones-vehiculo.md` 5.6, 5.6 bis y 5.6 ter).

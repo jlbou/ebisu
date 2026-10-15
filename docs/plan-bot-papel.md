@@ -19,7 +19,7 @@ L" (`scripts/papel_l.py`), Telegram (`notify/`), la IA (`ai/invoke.py`, `deploy/
 
 - Empieza con la primera senyal mensual con todo listo (P5) y dura 6 revisiones.
 - [Supuesto] 250 € de papel (los tramos de impuestos se calculan sobre esa cifra, como en el estudio).
-- Decisiones del propietario pendientes: seccion 9 (P1-P5).
+- Decisiones del propietario: seccion 9 (P1-P6), **todas decididas** (14-15/10/2026).
 
 ## 3. Como funciona (una vez al dia, sin estado que importe)
 
@@ -140,7 +140,7 @@ atras), `ml4t-production-readiness` y revision de seguridad propia. Lo de esta s
 - Despues: 3 dias sin incidencias antes de la primera senyal real del papel.
 - **Vuelta atras:** parar y deshabilitar los servicios de Ebisu y borrar `/opt/ebisu`; Ploutos no se toca en ningun paso.
 
-### Decision pendiente
+### Decision (ya tomada)
 
 | # | Cuestion |
 |---|---|
