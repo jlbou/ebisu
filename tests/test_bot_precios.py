@@ -96,3 +96,45 @@ def test_vigilancia_sin_precio_y_sin_volumen(tmp_path):
     _, avisos = P.actualizar(f, tarde, fuente_fija(todas(volumen=0.0)))
     assert sum(a.tipo == "sin_precio" for a in avisos) == 4
     assert sum(a.tipo == "sin_volumen" for a in avisos) == 4
+
+
+def test_un_dia_sin_cierre_corta_y_se_vuelve_a_pedir(tmp_path):
+    f = tmp_path / "precios.csv"
+    P.actualizar(f, datetime(2026, 10, 13, 20, 0, tzinfo=P.MADRID), fuente_fija(todas()))  # hasta el 13
+    datos = todas()
+    datos["XEON.DE"].loc[pd.Timestamp("2026-10-14"), "Close"] = float("nan")
+    t, avisos = P.actualizar(f, AHORA, fuente_fija(datos))
+    assert t["monetario"].last_valid_index() == pd.Timestamp("2026-10-13")  # el 15 espera al 14
+    assert any(a.tipo == "hueco" and a.pieza == "monetario" for a in avisos)
+    t, _ = P.actualizar(f, AHORA, fuente_fija(todas()))  # al dia siguiente la fuente ya lo tiene
+    assert t["monetario"].last_valid_index() == pd.Timestamp("2026-10-15")
+
+
+def test_un_dia_anterior_que_llega_tarde_no_se_guarda(tmp_path):
+    f = tmp_path / "precios.csv"
+    datos = todas()
+    datos["XEON.DE"] = datos["XEON.DE"].drop(pd.Timestamp("2026-10-13"))
+    P.actualizar(f, AHORA, fuente_fija(datos))
+    t, avisos = P.actualizar(f, AHORA, fuente_fija(todas()))
+    assert pd.isna(t.loc[pd.Timestamp("2026-10-13"), "monetario"])
+    assert any(a.tipo == "tarde" for a in avisos)
+
+
+def test_volumen_vacio_cuenta_como_cero(tmp_path):
+    f = tmp_path / "precios.csv"
+    _, avisos = P.actualizar(f, AHORA, fuente_fija(todas(volumen=float("nan"))))
+    assert sum(a.tipo == "sin_volumen" for a in avisos) == 4
+
+
+def test_despues_del_primer_relleno_pide_solo_lo_reciente(tmp_path):
+    f = tmp_path / "precios.csv"
+    pedidos = []
+    datos = todas()
+
+    def fuente(simbolo, desde):
+        pedidos.append(desde)
+        return datos[simbolo]
+
+    P.actualizar(f, AHORA, fuente)
+    P.actualizar(f, AHORA, fuente)
+    assert pedidos[0].year == 2019 and all(d.isoformat() == "2026-09-30" for d in pedidos[4:])

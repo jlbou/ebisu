@@ -13,6 +13,8 @@ Guardado: un CSV de solo anyadir (`fecha,pieza,cierre,ajustado,volumen,visto`).
 from __future__ import annotations
 
 import csv
+import io
+import os
 from collections.abc import Callable
 from dataclasses import dataclass
 from datetime import date, datetime, time
@@ -41,7 +43,7 @@ Fuente = Callable[[str, date], pd.DataFrame]
 
 @dataclass
 class Aviso:
-    tipo: str  # "salto", "revision", "ajuste", "sin_volumen", "sin_precio", "fuente"
+    tipo: str  # "salto", "revision", "tarde", "hueco", "ajuste", "sin_volumen", "sin_precio", "fuente"
     pieza: str
     texto: str
 
@@ -82,23 +84,41 @@ def cerrado(dia: date, pieza: str, ahora: datetime) -> bool:
 
 
 def nuevos_de(pieza: str, bajados: pd.DataFrame, guardados: pd.DataFrame, ahora: datetime) -> tuple[list[dict], list[Aviso]]:
-    """Filas nuevas que se pueden guardar y los avisos (sin escribir nada)."""
+    """Filas nuevas que se pueden guardar y los avisos (sin escribir nada).
+
+    Una vez hay precios guardados, solo se anyade DESPUES del ultimo y en orden: un dia sin cierre corta la vuelta (se
+    vuelve a pedir manyana) y un dia anterior al ultimo que llega tarde no se guarda (cambiaria el pasado del papel).
+    En el primer relleno, los huecos antiguos de la fuente se saltan (solo sirven para calentar las medias)."""
     avisos: list[Aviso] = []
     previos = guardados[guardados["pieza"] == pieza].set_index("fecha").sort_index()
     ultimo = float(previos["cierre"].iloc[-1]) if len(previos) else None
+    ultimo_dia = previos.index.max() if len(previos) else None
     filas = []
     for fecha, f in bajados.sort_index().iterrows():
         dia = pd.Timestamp(fecha).normalize()
+        if not cerrado(dia.date(), pieza, ahora):
+            continue
         cierre = f.get("Close")
-        if pd.isna(cierre) or not cerrado(dia.date(), pieza, ahora):
-            continue
-        cierre, ajustado = float(cierre), float(f.get("Adj Close", cierre))
-        volumen = float(f.get("Volume", 0) or 0)
         if dia in previos.index:
-            antes = float(previos.loc[dia, "cierre"])
-            if abs(cierre / antes - 1) > 1e-9:
-                avisos.append(Aviso("revision", pieza, f"{dia:%d/%m/%Y}: la fuente dice {cierre} y se guardo {antes}"))
+            if pd.notna(cierre) and abs(float(cierre) / float(previos.loc[dia, "cierre"]) - 1) > 1e-9:
+                avisos.append(Aviso("revision", pieza, f"{dia:%d/%m/%Y}: la fuente dice {float(cierre)} y se guardo "
+                                                       f"{float(previos.loc[dia, 'cierre'])}"))
             continue
+        if ultimo_dia is not None and dia < ultimo_dia:
+            if pd.notna(cierre):
+                avisos.append(Aviso("tarde", pieza, f"{dia:%d/%m/%Y} llega despues del {ultimo_dia:%d/%m/%Y}; "
+                                                    "no se guarda"))
+            continue
+        if pd.isna(cierre):
+            if ultimo_dia is None:
+                continue
+            avisos.append(Aviso("hueco", pieza, f"{dia:%d/%m/%Y} sin cierre en la fuente; se vuelve a pedir"))
+            break
+        cierre = float(cierre)
+        ajustado = f.get("Adj Close")
+        ajustado = cierre if pd.isna(ajustado) else float(ajustado)
+        v = f.get("Volume")
+        volumen = 0.0 if pd.isna(v) else float(v)
         if ultimo is not None and abs(cierre / ultimo - 1) > SALTO_MAX:
             avisos.append(Aviso("salto", pieza, f"{dia:%d/%m/%Y}: {ultimo} -> {cierre} (> 15 %); no se guarda"))
             break  # lo que venga despues depende de este dia: se decide a mano
@@ -106,7 +126,7 @@ def nuevos_de(pieza: str, bajados: pd.DataFrame, guardados: pd.DataFrame, ahora:
             avisos.append(Aviso("ajuste", pieza, f"{dia:%d/%m/%Y}: cierre {cierre}, ajustado {ajustado}"))
         filas.append({"fecha": dia, "pieza": pieza, "cierre": cierre, "ajustado": ajustado, "volumen": volumen,
                       "visto": ahora.isoformat(timespec="seconds")})
-        ultimo = cierre
+        ultimo, ultimo_dia = cierre, dia
     return filas, avisos
 
 
@@ -135,8 +155,10 @@ def actualizar(fichero: Path, ahora: datetime, fuente: Fuente = yahoo,
     avisos: list[Aviso] = []
     nuevas: list[dict] = []
     for pieza, (_, simbolo, _) in INSTRUMENTOS.items():
+        previos = guardados.loc[guardados["pieza"] == pieza, "fecha"]
+        inicio = (previos.max() - pd.Timedelta(days=15)).date() if len(previos) else desde  # solo lo reciente
         try:
-            bajados = fuente(simbolo, desde)
+            bajados = fuente(simbolo, inicio)
         except Exception as exc:  # una fuente caida no tumba el dia: se avisa
             avisos.append(Aviso("fuente", pieza, f"{simbolo}: {type(exc).__name__}"))
             continue
@@ -145,13 +167,16 @@ def actualizar(fichero: Path, ahora: datetime, fuente: Fuente = yahoo,
         avisos += av
     if nuevas:
         fichero.parent.mkdir(parents=True, exist_ok=True)
-        existe = fichero.exists()
-        with fichero.open("a", newline="", encoding="utf-8") as f:
-            w = csv.DictWriter(f, fieldnames=CAMPOS)
-            if not existe:
-                w.writeheader()
-            for fila in nuevas:
-                w.writerow({**fila, "fecha": fila["fecha"].date().isoformat()})
+        texto = io.StringIO()
+        w = csv.DictWriter(texto, fieldnames=CAMPOS, lineterminator="\n")
+        if not fichero.exists():
+            w.writeheader()
+        for fila in nuevas:
+            w.writerow({**fila, "fecha": fila["fecha"].date().isoformat()})
+        with fichero.open("a", newline="", encoding="utf-8") as f:  # una sola escritura, y a disco
+            f.write(texto.getvalue())
+            f.flush()
+            os.fsync(f.fileno())
         guardados = leer(fichero)
     avisos += vigilancia(guardados, ahora)
     return tabla(guardados), avisos

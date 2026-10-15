@@ -161,3 +161,13 @@ atras), `ml4t-production-readiness` y revision de seguridad propia. Lo de esta s
   Revision del codigo: (R1, corregido) si una pieza llega tarde, el papel no pasa del ultimo dia con las 4 piezas
   (antes rellenaba con el cierre de ayer y la senyal del mes podia salir con un precio viejo); (R2, se deja) si la
   estrategia no pudiera comprar por falta de caja, el juez lo veria como incidencia de coherencia: es lo que se quiere.
+- **Revision del codigo de los pasos 1 y 2 (15/10, skills `python-patterns`, `python-testing` y `code-review`):**
+  - (C1, corregido) Un dia sin cierre se saltaba y se guardaba el siguiente; si el que faltaba llegaba despues,
+    cambiaba el pasado del papel (podia ser el dia de la senyal). Ahora, con precios ya guardados, se anyade solo
+    despues del ultimo y en orden: un dia sin cierre corta la vuelta (aviso "hueco", se vuelve a pedir) y un dia
+    anterior que llega tarde no se guarda (aviso "tarde"). En el primer relleno, los huecos antiguos se saltan.
+  - (C2, corregido) Un volumen vacio se guardaba como "nan" y no contaba para el aviso de sin volumen: ahora es 0.
+  - (C3, corregido) La escritura del CSV era fila a fila: ahora es una sola escritura, llevada a disco (`fsync`),
+    para que un corte no deje una linea a medias.
+  - (C4, corregido) Cada dia bajaba todo desde 2019: ahora, tras el primer relleno, solo los ultimos 15 dias.
+  - Paso 2 sin hallazgos: la copia de la estrategia y la huella estan cubiertas por sus pruebas.
