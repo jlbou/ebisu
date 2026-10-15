@@ -100,3 +100,17 @@ def test_host_ajeno_no_se_atiende(mundo):
         assert pedir(url + "/control", "POST", {"X-Ebisu-Panel": "1", "Host": "malo.example"}, cuerpo)[0] == 421
     finally:
         srv.shutdown()
+
+
+def test_nombre_de_tailscale():
+    class P:
+        def __init__(self, stdout):
+            self.stdout = stdout
+    salida = json.dumps({"Self": {"DNSName": "Maquina.tailnet-ejemplo.ts.net."}})
+    assert servidor.nombre_tailscale(lambda *a, **k: P(salida)) == "maquina.tailnet-ejemplo.ts.net"
+    assert servidor.nombre_tailscale(lambda *a, **k: P("no es json")) is None
+    assert servidor.nombre_tailscale(lambda *a, **k: P(json.dumps({"Self": {"DNSName": "malo.example."}}))) is None
+
+    def falla(*a, **k):
+        raise OSError("sin tailscale")
+    assert servidor.nombre_tailscale(falla) is None

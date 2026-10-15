@@ -32,7 +32,8 @@ Plan: `docs/plan-bot-papel.md` (P2, P6 y seccion 10). Ficheros: `deploy/`. Plout
 - Probado dentro del aislamiento de los servicios: mensaje de Telegram, latido de Healthchecks (en verde), IA propia
   2.1.266, y `/estado` responde. Ploutos sigue con sus 8 servicios.
 - Copias: `ebisu-copia.service` probado en el VPS; la tarea del portatil registrada y probada (resultado 0).
-- El panel solo se abre por la IP de Tailscale y el puerto 8611 (el servicio no lleva `--nombre`).
+- El panel se abre por Tailscale en el puerto 8611, por IP o por el nombre de la maquina (MagicDNS; el panel se lo
+  pregunta a Tailscale al arrancar, no se escribe en ningun fichero).
 - Siguiente: **3 dias sin incidencias** (hasta el 18/10/2026) y despues `--empezar` (decide el propietario).
 
 ## Healthchecks: tres comprobaciones de Ebisu (decision del propietario, 15/10/2026)

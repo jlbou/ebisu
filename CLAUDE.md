@@ -148,7 +148,6 @@ estrategia de operar activamente ganaba. La unica que vale la pena es "L" (rotac
   seguridad); se arregla en una sesion de Ploutos, nunca desde aqui. Tambien alli: las comprobaciones de
   Healthchecks se renombraron el 15/10 (`ploutos-...`, con la clave del `.env` en la descripcion; las URL van por UUID
   y no cambian); su documentacion aun usa los nombres antiguos.
-- **Panel de Ebisu:** solo por IP de Tailscale y puerto 8611; por nombre, haria falta `--nombre` en el servicio.
 
 ## graphify (mapa del proyecto; instalado el 14/10/2026, solo para Ebisu, sin avisos automaticos)
 

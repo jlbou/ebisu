@@ -8,7 +8,8 @@
   (otra pagina no puede pulsar los botones). Se apunta en `control.json` con su hora; en papel no actua.
 - Cabeceras de seguridad: CSP solo propia, sin marcos, sin adivinar tipos, sin Referer.
 - **Solo responde si la cabecera Host es la del propio panel** (su IP:puerto o su nombre de Tailscale): asi una web de
-  fuera no puede leerlo ni pulsar los botones apuntando su dominio a esta IP (DNS rebinding).
+  fuera no puede leerlo ni pulsar los botones apuntando su dominio a esta IP (DNS rebinding). El nombre (MagicDNS) se
+  le pregunta a Tailscale al arrancar: no se escribe en ningun fichero (el repositorio es publico).
 
     python -m ebisu.servidor [--host 100.x.y.z] [--puerto 8611]
 """
@@ -51,6 +52,17 @@ def ip_tailscale() -> str | None:
         except ValueError:
             continue
     return None
+
+
+def nombre_tailscale(_run=subprocess.run) -> str | None:
+    """El nombre de esta maquina en Tailscale (MagicDNS), para entrar por nombre. Sin el, solo por IP."""
+    try:
+        salida = _run(["tailscale", "status", "--json"], capture_output=True, text=True, timeout=10).stdout
+        nombre = (json.loads(salida).get("Self") or {}).get("DNSName") or ""
+    except (OSError, subprocess.TimeoutExpired, ValueError, AttributeError):
+        return None
+    nombre = nombre.rstrip(".").lower()
+    return nombre if nombre.endswith(".ts.net") else None
 
 
 def permitido(cabeceras: dict[str, str]) -> bool:
@@ -141,12 +153,13 @@ def main() -> None:
     ap = argparse.ArgumentParser()
     ap.add_argument("--host", help="IP de Tailscale (por defecto, la de esta maquina)")
     ap.add_argument("--puerto", type=int, default=8611)
-    ap.add_argument("--nombre", help="nombre de la maquina en Tailscale (MagicDNS), si se entra por nombre")
+    ap.add_argument("--nombre", help="nombre en Tailscale (MagicDNS); por defecto, el que da Tailscale")
     a = ap.parse_args()
     host = a.host or ip_tailscale()
     if not host or ipaddress.ip_address(host) not in TAILSCALE:
         raise SystemExit("Sin IP de Tailscale: el panel no arranca (solo se ve por Tailscale).")
-    hosts = {f"{host}:{a.puerto}"} | ({f"{a.nombre.lower()}:{a.puerto}"} if a.nombre else set())
+    nombre = (a.nombre or nombre_tailscale() or "").lower()
+    hosts = {f"{host}:{a.puerto}"} | ({f"{nombre}:{a.puerto}"} if nombre else set())
     ThreadingHTTPServer((host, a.puerto), manejador(VAR, hosts)).serve_forever()
 
 
