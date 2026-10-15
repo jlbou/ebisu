@@ -1,0 +1,26 @@
+[Unit]
+# El panel (P5): SOLO en la IP de Tailscale de esta maquina. Si Tailscale no esta, no arranca (y reintenta).
+Description=Ebisu - panel (solo por Tailscale)
+After=network-online.target tailscaled.service
+Wants=network-online.target tailscaled.service
+
+[Service]
+Type=simple
+User=ebisu
+Group=ebisu
+WorkingDirectory=/opt/ebisu
+Environment=PYTHONUNBUFFERED=1
+ExecStart=/opt/ebisu/.venv/bin/python -m ebisu.servidor --puerto 8611
+Restart=on-failure
+RestartSec=30
+NoNewPrivileges=true
+PrivateTmp=true
+ProtectSystem=strict
+ProtectHome=true
+ReadWritePaths=/opt/ebisu/var
+InaccessiblePaths=-/opt/ploutos
+MemoryMax=300M
+SyslogIdentifier=ebisu-panel
+
+[Install]
+WantedBy=multi-user.target

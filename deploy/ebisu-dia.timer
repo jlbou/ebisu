@@ -1,0 +1,17 @@
+[Unit]
+Description=Ebisu - vuelta del dia (bot en papel)
+
+[Timer]
+# Todos los dias (B4: el domingo manda el "todo bien"). Despues del cierre de Xetra y Milan, y reintentos hasta las
+# 23:00 por si Yahoo tarda (B3): la vuelta se puede repetir sin repetir avisos.
+OnCalendar=*-*-* 20:05:00 Europe/Madrid
+OnCalendar=*-*-* 20:35:00 Europe/Madrid
+OnCalendar=*-*-* 21:05:00 Europe/Madrid
+OnCalendar=*-*-* 21:35:00 Europe/Madrid
+OnCalendar=*-*-* 22:05:00 Europe/Madrid
+OnCalendar=*-*-* 22:35:00 Europe/Madrid
+OnCalendar=*-*-* 23:05:00 Europe/Madrid
+Persistent=true
+
+[Install]
+WantedBy=timers.target

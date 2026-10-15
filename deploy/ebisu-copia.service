@@ -1,0 +1,18 @@
+[Unit]
+# Copia diaria de lo que no se puede rehacer (B8, P6): precios tal como se vieron, titulares, diario de la IA, estado.
+Description=Ebisu - copia de seguridad diaria en el VPS (las baja el portatil)
+
+[Service]
+Type=oneshot
+User=ebisu
+Group=ebisu-copias
+UMask=0027
+ExecStart=/bin/bash /opt/ebisu/deploy/copia-vps.sh
+NoNewPrivileges=true
+PrivateTmp=true
+ProtectSystem=strict
+ProtectHome=true
+ReadOnlyPaths=/opt/ebisu
+ReadWritePaths=/var/backups/ebisu
+InaccessiblePaths=-/opt/ploutos
+SyslogIdentifier=ebisu-copia

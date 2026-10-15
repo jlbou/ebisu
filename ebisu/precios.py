@@ -112,7 +112,8 @@ def nuevos_de(pieza: str, bajados: pd.DataFrame, guardados: pd.DataFrame, ahora:
         if pd.isna(cierre):
             if ultimo_dia is None:
                 continue
-            avisos.append(Aviso("hueco", pieza, f"{dia:%d/%m/%Y} sin cierre en la fuente; se vuelve a pedir"))
+            if dia.date() < ahora.astimezone(MADRID).date():  # hoy sin cierre es normal un rato: sin aviso
+                avisos.append(Aviso("hueco", pieza, f"{dia:%d/%m/%Y} sin cierre en la fuente; se vuelve a pedir"))
             break
         cierre = float(cierre)
         ajustado = f.get("Adj Close")

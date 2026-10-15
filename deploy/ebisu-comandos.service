@@ -1,0 +1,26 @@
+[Unit]
+# /estado y /detalle por Telegram (P4). Solo lee el estado; solo responde al chat del propietario.
+Description=Ebisu - comandos de Telegram (bot en papel)
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+User=ebisu
+Group=ebisu
+WorkingDirectory=/opt/ebisu
+Environment=PYTHONUNBUFFERED=1
+ExecStart=/opt/ebisu/.venv/bin/python -m ebisu.comandos
+Restart=always
+RestartSec=30
+NoNewPrivileges=true
+PrivateTmp=true
+ProtectSystem=strict
+ProtectHome=true
+ReadOnlyPaths=/opt/ebisu
+InaccessiblePaths=-/opt/ploutos
+MemoryMax=200M
+SyslogIdentifier=ebisu-comandos
+
+[Install]
+WantedBy=multi-user.target

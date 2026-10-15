@@ -1,0 +1,23 @@
+[Unit]
+# La vuelta del dia del bot en papel (docs/plan-bot-papel.md 3). La lanza ebisu-dia.timer.
+Description=Ebisu - vuelta del dia (bot en papel)
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=oneshot
+User=ebisu
+Group=ebisu
+WorkingDirectory=/opt/ebisu
+Environment=PYTHONUNBUFFERED=1
+ExecStart=/opt/ebisu/.venv/bin/python -m ebisu.dia
+TimeoutStartSec=15min
+# Aislamiento (B7): solo escribe en su var/; Ploutos, ni verlo.
+NoNewPrivileges=true
+PrivateTmp=true
+ProtectSystem=strict
+ProtectHome=true
+ReadWritePaths=/opt/ebisu/var
+InaccessiblePaths=-/opt/ploutos
+MemoryMax=600M
+SyslogIdentifier=ebisu-dia

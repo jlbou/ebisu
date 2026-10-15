@@ -138,3 +138,12 @@ def test_despues_del_primer_relleno_pide_solo_lo_reciente(tmp_path):
     P.actualizar(f, AHORA, fuente)
     P.actualizar(f, AHORA, fuente)
     assert pedidos[0].year == 2019 and all(d.isoformat() == "2026-09-30" for d in pedidos[4:])
+
+
+def test_hoy_sin_cierre_no_avisa(tmp_path):
+    f = tmp_path / "precios.csv"
+    P.actualizar(f, datetime(2026, 10, 14, 20, 0, tzinfo=P.MADRID), fuente_fija(todas()))
+    datos = todas()
+    datos["XEON.DE"].loc[pd.Timestamp("2026-10-15"), "Close"] = float("nan")
+    _, avisos = P.actualizar(f, AHORA, fuente_fija(datos))
+    assert not any(a.tipo == "hueco" for a in avisos)

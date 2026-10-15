@@ -7,6 +7,8 @@
 - POST /control: pausar o reanudar. Solo con la cabecera `X-Ebisu-Panel: 1` y, si trae Origin, el del propio panel
   (otra pagina no puede pulsar los botones). Se apunta en `control.json` con su hora; en papel no actua.
 - Cabeceras de seguridad: CSP solo propia, sin marcos, sin adivinar tipos, sin Referer.
+- **Solo responde si la cabecera Host es la del propio panel** (su IP:puerto o su nombre de Tailscale): asi una web de
+  fuera no puede leerlo ni pulsar los botones apuntando su dominio a esta IP (DNS rebinding).
 
     python -m ebisu.servidor [--host 100.x.y.z] [--puerto 8611]
 """
@@ -73,7 +75,8 @@ def aplicar(base: Path, accion: str, ahora: datetime) -> dict:
     return c
 
 
-def manejador(base: Path):
+def manejador(base: Path, hosts: set[str] | None = None):
+    """hosts = valores permitidos de la cabecera Host (None solo en pruebas locales)."""
     class Manejador(BaseHTTPRequestHandler):
         server_version = "ebisu"
         sys_version = ""
@@ -87,7 +90,12 @@ def manejador(base: Path):
             self.end_headers()
             self.wfile.write(cuerpo)
 
+        def _host_valido(self) -> bool:
+            return hosts is None or (self.headers.get("Host") or "").lower() in hosts
+
         def do_GET(self) -> None:  # noqa: N802
+            if not self._host_valido():
+                return self._responder(421, b"host no permitido")
             ruta = urlparse(self.path).path
             if ruta == "/":
                 f = base / "panel.html"
@@ -101,12 +109,17 @@ def manejador(base: Path):
                 self._responder(404, b"no existe")
 
         def do_POST(self) -> None:  # noqa: N802
+            if not self._host_valido():
+                return self._responder(421, b"host no permitido")
             if urlparse(self.path).path != "/control":
                 return self._responder(404, b"no existe")
             if not permitido({k.lower(): v for k, v in self.headers.items()}):
                 return self._responder(403, b"no permitido")
-            n = int(self.headers.get("Content-Length") or 0)
-            if n > MAX_CUERPO:
+            try:
+                n = int(self.headers.get("Content-Length") or 0)
+            except ValueError:
+                return self._responder(400, b"longitud invalida")
+            if n < 0 or n > MAX_CUERPO:
                 return self._responder(413, b"demasiado grande")
             try:
                 accion = json.loads(self.rfile.read(n) or b"{}").get("accion")
@@ -126,11 +139,13 @@ def main() -> None:
     ap = argparse.ArgumentParser()
     ap.add_argument("--host", help="IP de Tailscale (por defecto, la de esta maquina)")
     ap.add_argument("--puerto", type=int, default=8611)
+    ap.add_argument("--nombre", help="nombre de la maquina en Tailscale (MagicDNS), si se entra por nombre")
     a = ap.parse_args()
     host = a.host or ip_tailscale()
     if not host or ipaddress.ip_address(host) not in TAILSCALE:
         raise SystemExit("Sin IP de Tailscale: el panel no arranca (solo se ve por Tailscale).")
-    ThreadingHTTPServer((host, a.puerto), manejador(VAR)).serve_forever()
+    hosts = {f"{host}:{a.puerto}"} | ({f"{a.nombre.lower()}:{a.puerto}"} if a.nombre else set())
+    ThreadingHTTPServer((host, a.puerto), manejador(VAR, hosts)).serve_forever()
 
 
 if __name__ == "__main__":

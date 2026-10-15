@@ -88,3 +88,15 @@ def test_el_servidor_no_arranca_fuera_de_tailscale(monkeypatch):
     monkeypatch.setattr("sys.argv", ["servidor", "--host", "0.0.0.0"])
     with pytest.raises(SystemExit):
         servidor.main()
+
+
+def test_host_ajeno_no_se_atiende(mundo):
+    srv = ThreadingHTTPServer(("127.0.0.1", 0), servidor.manejador(mundo.base, {"127.0.0.1:1"}))
+    threading.Thread(target=srv.serve_forever, daemon=True).start()
+    url = f"http://127.0.0.1:{srv.server_address[1]}"
+    try:
+        assert pedir(url + "/")[0] == 421  # el Host real no esta en la lista
+        cuerpo = json.dumps({"accion": "pausa"}).encode()
+        assert pedir(url + "/control", "POST", {"X-Ebisu-Panel": "1", "Host": "malo.example"}, cuerpo)[0] == 421
+    finally:
+        srv.shutdown()
