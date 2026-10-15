@@ -154,3 +154,10 @@ atras), `ml4t-production-readiness` y revision de seguridad propia. Lo de esta s
   y el resultado; huella SHA-256 en `ebisu/papel_huella.py`). **Configuracion de H1-M en el bot: sin gasto extra**,
   porque los precios de los ETF ya lo llevan descontado (en el estudio se sumaba porque las series eran indices); los
   costes del 0,10 % por lado siguen.
+- **Paso 3 (15/10): papel y juez** (`ebisu/papel.py`, `ebisu/juez.py`, 10 pruebas; skills `python-testing`,
+  `python-patterns` y `code-review`). El papel empieza el dia de ejecucion de la primera senyal, en el monetario.
+  **Prueba de oro con precios reales** (`python -m ebisu.prueba_oro`, primera senyal 30/06/2026, hasta el 13/10/2026):
+  valor diario, liquidacion y numero de operaciones **identicos** al simulador del estudio 4.
+  Revision del codigo: (R1, corregido) si una pieza llega tarde, el papel no pasa del ultimo dia con las 4 piezas
+  (antes rellenaba con el cierre de ayer y la senyal del mes podia salir con un precio viejo); (R2, se deja) si la
+  estrategia no pudiera comprar por falta de caja, el juez lo veria como incidencia de coherencia: es lo que se quiere.
