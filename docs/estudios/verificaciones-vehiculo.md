@@ -222,6 +222,41 @@ euros. Buscados por ISIN en la app por el propietario (sin comprar nada): **los 
 Sin anotar: la bolsa en que cotiza cada uno dentro de Trading 212 y si admite fracciones; se comprueba con los metadatos
 de la API (cantidad minima por instrumento) al construir el bot.
 
+## 5.6 ter Verificaciones de Trading 212 para H1-M (15/10/2026)
+
+Hecho sin cuenta ni claves, con la documentacion oficial de la API y la de Hacienda de Italia (leidas el 15/10/2026).
+
+**1. La API (documentacion oficial, [docs.trading212.com/api](https://docs.trading212.com/api), version 0, en "beta"):**
+- **Ordenes por la API: de mercado, limitadas, stop y stop limitadas** (las cuatro tienen su punto en la seccion
+  *Orders*). Coincide con lo que dijo el agente del chat (5.6).
+- **Cantidad con decimales** (el ejemplo de la orden de mercado es `quantity: 0.1`). **Por importe en euros, no**: "Placing
+  orders by value is not currently supported via the API". Coincide con el agente.
+- **Solo en la moneda principal de la cuenta** y sin multidivisa por la API: con la cuenta en euros y los cuatro ETF en
+  euros, encaja.
+- **Una orden de mercado repetida puede duplicarse** ("this endpoint is not idempotent"). **Para el bot (si se llega a
+  dinero real): regla dura**, nunca reintentar una orden sin comprobar antes en las pendientes y el historial que no
+  se haya ejecutado.
+- Las claves se pueden **restringir a unas IP** desde los ajustes de la cuenta.
+- **El listado de instrumentos (`/equity/metadata/instruments`) NO dice si un ETF admite fracciones ni la cantidad
+  minima** (da ticker, ISIN, moneda, tipo, cantidad maxima y horario de la bolsa). Lo que decia 5.6 bis ("se comprueba con
+  los metadatos de la API") **ya no vale**: las fracciones se miran en la app (abajo).
+
+**2. La tasa italiana sobre transacciones financieras y el oro (SGLD): NO se aplica.**
+- Grava el traspaso de **acciones y otros instrumentos financieros participativos emitidos por sociedades residentes en
+  Italia** (y los titulos que los representan), y los derivados cuyo subyacente son sobre todo esos instrumentos
+  (ley 228/2012, art. 1, comas 491 y 492; [Agenzia delle Entrate, "Imposta sulle transazioni finanziarie - Che cos'e"](https://www.agenziaentrate.gov.it/portale/schede/pagamenti/imposta-sulle-transazioni-finanziarie/infogen-imposta-transazioni-finanziarie),
+  actualizada el 17/03/2026; desde el 01/01/2026, el 0,4 % sobre acciones). Tambien
+  [Borsa Italiana](https://www.borsaitaliana.it/azioni/notiziedettaglio/iftt.en.htm) (actualizacion de 12/2015).
+- **SGLD (ISIN IE00B579F325) es un ETC de oro emitido por una sociedad irlandesa** (Invesco Physical Markets plc): no
+  es una accion ni un instrumento participativo de una sociedad italiana, y su subyacente es oro. **Cotizar en Milan no
+  lo mete en la tasa**: lo que cuenta es quien lo emite.
+- No comprobado: la ficha de SGLD en la app de Trading 212 (por si Trading 212 cobrara algo propio). Mirarla antes de
+  operar con dinero real.
+
+**3. Queda por mirar en la app (el propietario, sin comprar nada):** en VWCE, CEMF, SGLD y XEON, **en que bolsa
+cotiza** cada uno dentro de Trading 212 y **si admite fracciones** (en la pantalla de compra, si deja poner una cantidad
+con decimales, por ejemplo 0,01; sin confirmar la orden). Solo hace falta si el papel pasa y se opera con dinero real.
+
 ## 5.7 Fondos indexados con traspaso para H1-F (12/10/2026; solo lectura, fuentes secundarias)
 
 Plataforma de referencia: **MyInvestor** (Andbank Espanya): segun su web, **0 € por comprar, vender, custodiar y

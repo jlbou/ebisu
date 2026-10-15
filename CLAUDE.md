@@ -141,8 +141,10 @@ estrategia de operar activamente ganaba. La unica que vale la pena es "L" (rotac
   18/10; revisar avisos y registros con el propietario y que decida `--empezar` (primera senyal: 30/10/2026). Despues,
   6 meses de papel (decision 11); la IA en sombra hasta 5 casos.
 - **Trading 212** (solo si el papel pasa y se opera con dinero real): la respuesta del agente sobre la API ya esta en
-  `docs/estudios/verificaciones-vehiculo.md` 5.6 (13/10) y la identidad ya esta verificada (5.5). Queda solo la tasa
-  italiana sobre el ETC de oro (SGLD): mirarla en su ficha de la app antes de operar.
+  `docs/estudios/verificaciones-vehiculo.md` 5.6 (13/10) y la identidad ya esta verificada (5.5). El 15/10 (5.6 ter):
+  API confirmada en su documentacion (4 tipos de orden, decimales, nunca por importe, ordenes no idempotentes: regla dura
+  si hay dinero real) y la tasa italiana NO se aplica al oro (SGLD lo emite una sociedad irlandesa). Queda que el
+  propietario mire en la app la bolsa y las fracciones de VWCE, CEMF, SGLD y XEON (el listado de la API no lo dice).
 - **Divisas como laboratorio en papel con la IA** (decision 14): sin empezar.
 - **Panel de Ploutos:** tiene el mismo hueco de DNS rebinding que se corrigio en Ebisu (S5 de la revision de
   seguridad); se arregla en una sesion de Ploutos, nunca desde aqui. Tambien alli: las comprobaciones de
