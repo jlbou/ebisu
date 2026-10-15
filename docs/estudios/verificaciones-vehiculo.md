@@ -253,9 +253,23 @@ Hecho sin cuenta ni claves, con la documentacion oficial de la API y la de Hacie
 - No comprobado: la ficha de SGLD en la app de Trading 212 (por si Trading 212 cobrara algo propio). Mirarla antes de
   operar con dinero real.
 
-**3. Queda por mirar en la app (el propietario, sin comprar nada):** en VWCE, CEMF, SGLD y XEON, **en que bolsa
-cotiza** cada uno dentro de Trading 212 y **si admite fracciones** (en la pantalla de compra, si deja poner una cantidad
-con decimales, por ejemplo 0,01; sin confirmar la orden). Solo hace falta si el papel pasa y se opera con dinero real.
+**3. Bolsa, moneda y fracciones de las cuatro piezas (15/10/2026).** Buscadas por ISIN en la app por el propietario
+(sin comprar nada) y en las paginas publicas de cada instrumento de Trading 212:
+
+| Pieza | Linea correcta en Trading 212 | Bolsa | Moneda | Precio (15/10) | Pagina publica |
+|---|---|---|---|---|---|
+| Bolsa | VWCE · XETR | Deutsche Börse Xetra | EUR | 170,94 € | `/trading-instruments/invest/VWCE.DE` |
+| Bonos | CEMF · XETR | Deutsche Börse Xetra | EUR | 4,9135 € | `/trading-instruments/invest/CEMF.DE` |
+| Oro | SGLD · MIL | Borsa Italiana | EUR | 356,59 € | `/trading-instruments/invest/SGLD.IT` |
+| Monetario | XEON · XETR | Deutsche Börse Xetra | EUR | 150,504 € | `/trading-instruments/invest/XEON.DE` |
+
+- Coinciden con los precios del bot en papel (VWCE.DE, CEMF.DE, SGLD.MI y XEON.DE en Yahoo).
+- **Fracciones:** la pagina publica de las cuatro dice "Compra y vende acciones fraccionarias desde solo 1 €". **No
+  comprobado en la pantalla de la orden**: con la cuenta a cero, la app pide anyadir fondos antes de dejar ver la orden,
+  y el texto de la pagina podria ser comun a todos los instrumentos. **Si se decide pasar a dinero real, lo primero
+  (antes del bot): con el primer ingreso, comprobar en la orden que cada una admite una cantidad con decimales.** Sin
+  fracciones, con 250 € no se podrian comprar VWCE, SGLD ni XEON en la proporcion de la regla.
+- Al buscar VWCE sale tambien **"VWCE 5X · CFD"**, de nombre y precio casi iguales: **nunca**. Regla dura en el codigo.
 
 ## 5.7 Fondos indexados con traspaso para H1-F (12/10/2026; solo lectura, fuentes secundarias)
 
