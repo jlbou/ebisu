@@ -35,6 +35,21 @@ Plan: `docs/plan-bot-papel.md` (P2, P6 y seccion 10). Ficheros: `deploy/`. Plout
 - El panel solo se abre por la IP de Tailscale y el puerto 8611 (el servicio no lleva `--nombre`).
 - Siguiente: **3 dias sin incidencias** (hasta el 18/10/2026) y despues `--empezar` (decide el propietario).
 
+## Healthchecks: tres comprobaciones de Ebisu (decision del propietario, 15/10/2026)
+
+Coordinadas con las de Ploutos (mismo canal de avisos, nombres `ebisu-...`, etiqueta `ebisu`):
+
+| Comprobacion | La late | Clave y donde va | Periodo / gracia |
+|---|---|---|---|
+| `ebisu-dia` | la vuelta del dia (VPS) | `HEALTHCHECK_EBISU`, solo en el `.env` del VPS | 1 dia / 4 h |
+| `ebisu-copia` | `copia-vps.sh` (VPS, 23:30); `/fail` si falla | `HEALTHCHECK_EBISU_COPIA`, solo en el `.env` del VPS | 1 dia / 4 h |
+| `ebisu-copia-portatil` | `copia-diaria.ps1` (portatil); `/fail` si falla | `HEALTHCHECK_EBISU_COPIA_PORTATIL`, solo en el `.env` del portatil | 1 dia / 1 dia |
+
+**Cada URL solo en la maquina que late** (leccion de Ploutos): si el portatil tuviera una URL del VPS, podria latir en
+su nombre y tapar una caida. El portatil se queda sin `HEALTHCHECK_EBISU` ni el token de la IA (no los usa).
+No se vigila `ebisu-comandos` (solo `/estado` y `/detalle`; systemd lo reinicia). Si cae el VPS entero, avisan a la
+vez las de los dos bots: eso ya dice que es el servidor.
+
 ## Vuelta atras
 
 `sudo bash desinstalar.sh` (para y quita solo los servicios de Ebisu); con `--borrar`, tambien `/opt/ebisu` y las

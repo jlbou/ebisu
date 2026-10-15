@@ -58,3 +58,12 @@ def test_las_dependencias_del_bot_estan_fijadas():
               if x and not x.startswith("#")]
     assert lineas and all(re.fullmatch(r"[A-Za-z0-9_.\-]+==[\w.]+", x) for x in lineas)
     assert not any(x.lower().startswith(("scikit-learn", "scipy")) for x in lineas)
+
+
+def test_las_copias_laten_cada_una_con_su_url():
+    vps = sin_comentarios(DEPLOY / "copia-vps.sh")
+    assert "^HEALTHCHECK_EBISU_COPIA=" in vps and "latido /fail" in vps and "trap" in vps
+    assert "source" not in vps and "PORTATIL" not in vps
+    portatil = (DEPLOY / "copia-diaria.ps1").read_text(encoding="utf-8")
+    assert "Read-Env 'HEALTHCHECK_EBISU_COPIA_PORTATIL'" in portatil and "Send-Latido -Fallo" in portatil
+    assert not re.search(r"HEALTHCHECK_EBISU(_COPIA)?'", portatil)  # nunca late con una URL del VPS

@@ -58,9 +58,10 @@ if [[ ! -f "${APP_DIR}/.env" ]]; then
 fi
 chown "${APP_USER}:${APP_USER}" "${APP_DIR}/.env"
 chmod 600 "${APP_DIR}/.env"
-for clave in TELEGRAM_TOKEN TELEGRAM_CHAT_ID HEALTHCHECK_EBISU CLAUDE_CODE_OAUTH_TOKEN; do
+for clave in TELEGRAM_TOKEN TELEGRAM_CHAT_ID HEALTHCHECK_EBISU HEALTHCHECK_EBISU_COPIA CLAUDE_CODE_OAUTH_TOKEN; do
     grep -Eq "^${clave}=.+" "${APP_DIR}/.env" || avisa "falta ${clave} en el .env (no se ensenya ningun valor)"
 done
+grep -Eq "^HEALTHCHECK_EBISU_COPIA_PORTATIL=.+" "${APP_DIR}/.env"     && avisa "HEALTHCHECK_EBISU_COPIA_PORTATIL es del portatil: quitala del .env del VPS (late en su nombre)"
 
 log "Copia propia de la IA (${VERSION_IA}) en ${APP_DIR}/bin"
 bash "${APP_DIR}/deploy/instalar-ia.sh"

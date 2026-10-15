@@ -133,6 +133,7 @@ estrategia de operar activamente ganaba. La unica que vale la pena es "L" (rotac
 | 14/10/2026 | **Aceptar el intercambio de H1 (despues de ver el veredicto, dicho asi):** ganar menos a cambio de caer mucho menos; H1 no "pasa", pero no es suerte; va al papel hacia delante con la IA en sombra; nada mas se mide sobre 1971-2026 (opcion A) | `docs/decisiones/15-aceptar-h1.md` |
 | 14-15/10/2026 | **Plan del bot en papel (H1-M):** precios de los 4 ETF en Yahoo (P1); el VPS de Ploutos pero aparte, con latido a Healthchecks (P2); RSS oficiales y de medios para la IA (P3); Telegram solo `/estado` y `/detalle`, pausa desde el panel (P4); panel antes del papel (P5); copia diaria al portatil, 7 dias (P6) | `docs/plan-bot-papel.md` 9 |
 | 15/10/2026 | **IA del bot: copia propia y verificada** en `/opt/ebisu/bin` (la del VPS es de Ploutos y vive en `/home/ploutos`); sin tocar Ploutos (opcion A) | `docs/instalacion-bot.md` |
+| 15/10/2026 | **Healthchecks coordinado con Ploutos:** 3 comprobaciones de Ebisu (`ebisu-dia`, `ebisu-copia`, `ebisu-copia-portatil`), cada URL solo en la maquina que late, mismo canal de avisos y etiqueta por bot; `ebisu-comandos` sin vigilar | `docs/instalacion-bot.md` |
 
 ## Pendiente
 

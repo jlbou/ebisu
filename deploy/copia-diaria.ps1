@@ -10,6 +10,9 @@
       * borra las de mas de 7 dias (decision del propietario, 15/10/2026);
       * un fallo se avisa por Telegram UNA vez al dia (lee TELEGRAM_TOKEN y TELEGRAM_CHAT_ID del .env de Ebisu del
         portatil; nunca escribe el token en el registro);
+      * latido a Healthchecks (comprobacion ebisu-copia-portatil, HEALTHCHECK_EBISU_COPIA_PORTATIL, la UNICA URL de
+        Healthchecks del .env del portatil): bien -> latido; fallo -> /fail. Si el portatil no baja la copia en dos dias,
+        avisa Healthchecks aunque el portatil este apagado;
       * con -SoloSiFalta no hace nada si la de hoy ya salio bien o si aun no es la hora (la tarea se lanza cada hora).
 
 .EXAMPLE
@@ -65,6 +68,15 @@ function Send-Fallo([string] $Text) {
     } catch { Write-Log "AVISO: no se pudo avisar por Telegram ($($_.Exception.Message -replace [regex]::Escape($token), '***'))" }
 }
 
+# El latido de la copia del portatil. La URL es secreta (quien la tenga puede tapar una caida).
+function Send-Latido([switch] $Fallo) {
+    $url = Read-Env 'HEALTHCHECK_EBISU_COPIA_PORTATIL'
+    if (-not $url) { Write-Log '(sin HEALTHCHECK_EBISU_COPIA_PORTATIL en .env: no se late)'; return }
+    if ($Fallo) { $url = "$url/fail" }
+    try { Invoke-RestMethod -Method Get -Uri $url -TimeoutSec 10 | Out-Null; Write-Log 'latido enviado a Healthchecks' }
+    catch { Write-Log 'AVISO: no se pudo latir a Healthchecks' }
+}
+
 $ssh = 'C:\Windows\System32\OpenSSH\ssh.exe'; $scp = 'C:\Windows\System32\OpenSSH\scp.exe'  # el que ve el agente
 $opts = @('-o', 'BatchMode=yes', '-o', 'ConnectTimeout=20')
 
@@ -90,9 +102,11 @@ try {
     Get-ChildItem $destino -Filter 'ebisu-*.tar.gz' | Sort-Object Name -Descending | Select-Object -Skip $Dias | Remove-Item -Force
     Set-Content -Path $ultimaOk -Value $hoy -Encoding ascii
     Write-Log "OK: $(Split-Path -Leaf $copia); se guardan las de los ultimos $Dias dias"
+    Send-Latido
     exit 0
 } catch {
     Write-Log "FALLO: $($_.Exception.Message)"
+    Send-Latido -Fallo
     Send-Fallo "Ebisu: la copia de seguridad diaria ha FALLADO: $($_.Exception.Message). Se reintenta cada hora."
     exit 1
 }
