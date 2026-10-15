@@ -185,3 +185,13 @@ atras), `ml4t-production-readiness` y revision de seguridad propia. Lo de esta s
   fijada a la verificada en Ploutos (2.1.266, por comprobar en el VPS). Contrato propio sin dependencias nuevas
   (Ploutos usa pydantic): `explicacion` (600 caracteres) y `frenos` (hasta 3, solo sobre piezas que se compran ese
   mes); cualquier otra cosa descarta la respuesta entera. Salida limpiada (B6) y diario de la IA para la decision 11.3.
+- **Paso 6 (15/10): la vuelta del dia y los comandos** (`ebisu/dia.py`, `ebisu/comandos.py`, `papel.revision`;
+  7 pruebas de principio a fin con todo inventado; skills `python-testing`, `python-patterns` y `code-review`).
+  Orden de la vuelta: precios, titulares, la IA en sombra (una vez por senyal; si el bot no corrio ese dia, en la
+  vuelta siguiente y con incidencia), papel, juez, avisos a la cola (con clave: rehacer el dia no repite nada),
+  estado, cola a Telegram, latido. Si algo revienta: latido de fallo y aviso directo, sin secretos.
+  Incidencias que duran (caida, huella, coherencia): como mucho un aviso por semana. Resumen del mes: el dia de la
+  ejecucion de la senyal, con la explicacion de la IA. `--empezar` fija la primera senyal y la huella una sola vez.
+  `--seco` con datos reales: corre sin errores (sin guardar ni enviar). `/estado` y `/detalle` solo leen el estado y
+  solo responden al chat del propietario. **Sin grafico en `/detalle` por ahora**: necesitaria una dependencia nueva
+  (matplotlib); el grafico ira en el panel.

@@ -115,3 +115,17 @@ def calcular(cierres: pd.DataFrame, primera_senyal: pd.Timestamp, hasta: pd.Time
 def nuevas(hoy: Papel, ayer_hasta: pd.Timestamp | None) -> list[Operacion]:
     """Operaciones ejecutadas despues del dia del ultimo papel (para avisar solo de las nuevas)."""
     return [o for o in hoy.operaciones if ayer_hasta is None or o.fecha > ayer_hasta]
+
+
+def revision(cierres: pd.DataFrame, senyal: pd.Timestamp, primera: pd.Timestamp) -> dict:
+    """Lo que decide la senyal de un mes (se ejecuta el dia habil siguiente): pesos nuevos, los de antes, compras,
+    ventas y puntos. Antes de la primera senyal del papel no habia nada (todo en el monetario)."""
+    piezas = piezas_de(cierres).loc[:senyal]
+    objetivo = E.pesos_objetivo(piezas, H1M)
+    nuevo = {p: float(objetivo.loc[senyal, p]) for p in PIEZAS}
+    previas = objetivo.loc[(objetivo.index < senyal) & (objetivo.index >= primera)]
+    anterior = {p: float(previas.iloc[-1][p]) for p in PIEZAS} if senyal > primera and len(previas) else dict.fromkeys(PIEZAS, 0.0)
+    return {"senyal": senyal.date().isoformat(), "pesos_nuevos": nuevo, "pesos_antes": anterior,
+            "compras": [p for p in PIEZAS if nuevo[p] > anterior[p] + 1e-12],
+            "ventas": [p for p in PIEZAS if nuevo[p] < anterior[p] - 1e-12],
+            "puntos": {p: int(E.medias_superadas(piezas[p]).loc[senyal]) for p in PIEZAS}}
