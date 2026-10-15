@@ -62,9 +62,10 @@ for clave in TELEGRAM_TOKEN TELEGRAM_CHAT_ID HEALTHCHECK_EBISU CLAUDE_CODE_OAUTH
     grep -Eq "^${clave}=.+" "${APP_DIR}/.env" || avisa "falta ${clave} en el .env (no se ensenya ningun valor)"
 done
 
+log "Copia propia de la IA (${VERSION_IA}) en ${APP_DIR}/bin"
+bash "${APP_DIR}/deploy/instalar-ia.sh"
+
 log "Comprobaciones"
-v="$(claude --version 2>/dev/null | grep -Eo '[0-9]+\.[0-9]+\.[0-9]+' | head -1 || true)"
-[[ "${v}" == "${VERSION_IA}" ]] || avisa "la IA instalada es '${v:-ninguna}', no ${VERSION_IA}: el bot no la llamara"
 tailscale ip -4 >/dev/null 2>&1 || avisa "Tailscale no da IP: el panel no arrancara hasta que la de"
 
 log "Servicios (solo los de Ebisu)"

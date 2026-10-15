@@ -74,6 +74,15 @@ def test_sin_token_ni_programa():
     assert not ia.preguntar(MES, TITULARES, {"oro"}, token=None).ok
 
 
+def test_usa_la_copia_propia_si_existe(tmp_path, monkeypatch):
+    propio = tmp_path / "claude"
+    propio.write_text("")
+    monkeypatch.setattr(ia, "PROPIO", propio)
+    llamadas = []
+    ia.preguntar(MES, TITULARES, {"oro"}, token=TOKEN, _run=ia_falsa({"explicacion": "x", "frenos": []}, llamadas=llamadas))
+    assert all(args[0] == str(propio) for args, _ in llamadas)
+
+
 def test_la_ia_no_hereda_claves_ni_tiene_herramientas(monkeypatch):
     monkeypatch.setenv("T212_API_KEY", "clave-de-broker")
     monkeypatch.setenv("TELEGRAM_TOKEN", "otro-secreto")

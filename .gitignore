@@ -41,3 +41,6 @@ desktop.ini
 
 # Mapa del proyecto de graphify (se regenera)
 graphify-out/
+
+# Copia propia del programa de la IA en el VPS (deploy/instalar-ia.sh)
+/bin/

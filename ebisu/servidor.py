@@ -109,6 +109,14 @@ def manejador(base: Path, hosts: set[str] | None = None):
                 self._responder(404, b"no existe")
 
         def do_POST(self) -> None:  # noqa: N802
+            try:
+                n = int(self.headers.get("Content-Length") or 0)
+            except ValueError:
+                return self._responder(400, b"longitud invalida")
+            if n < 0 or n > MAX_CUERPO:
+                return self._responder(413, b"demasiado grande")
+            # El cuerpo se lee ANTES de rechazar: un rechazo sin leerlo puede cortar la conexion antes de la respuesta.
+            cuerpo = self.rfile.read(n)
             if not self._host_valido():
                 return self._responder(421, b"host no permitido")
             if urlparse(self.path).path != "/control":
@@ -116,13 +124,7 @@ def manejador(base: Path, hosts: set[str] | None = None):
             if not permitido({k.lower(): v for k, v in self.headers.items()}):
                 return self._responder(403, b"no permitido")
             try:
-                n = int(self.headers.get("Content-Length") or 0)
-            except ValueError:
-                return self._responder(400, b"longitud invalida")
-            if n < 0 or n > MAX_CUERPO:
-                return self._responder(413, b"demasiado grande")
-            try:
-                accion = json.loads(self.rfile.read(n) or b"{}").get("accion")
+                accion = json.loads(cuerpo or b"{}").get("accion")
                 aplicar(base, accion, datetime.now(precios.MADRID))
                 panel.escribir(base, datetime.now(precios.MADRID))
             except (ValueError, AttributeError) as exc:

@@ -44,6 +44,15 @@ def test_instalar_no_toca_ploutos():
     assert all(u.startswith("ebisu-") for u in re.findall(r"(\S+\.(?:service|timer))", t))
 
 
+def test_la_ia_propia_es_la_version_verificada():
+    from ebisu import ia
+    t = sin_comentarios(DEPLOY / "instalar-ia.sh")
+    assert f'VERSION_IA="{ia.VERSION_VERIFICADA}"' in t and "VALIDSIG" in t and "sha256sum" in t
+    assert "/opt/ploutos" not in t and "/home/" not in t  # no depende de ninguna otra instalacion
+    assert ia.PROPIO.relative_to(ia.RAIZ).as_posix() == "bin/claude"
+    assert 'bash "${APP_DIR}/deploy/instalar-ia.sh"' in (DEPLOY / "instalar.sh").read_text(encoding="utf-8")
+
+
 def test_las_dependencias_del_bot_estan_fijadas():
     lineas = [x for x in (DEPLOY / "requirements-bot.lock").read_text(encoding="utf-8").splitlines()
               if x and not x.startswith("#")]

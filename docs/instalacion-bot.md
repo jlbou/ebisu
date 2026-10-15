@@ -13,7 +13,12 @@ Plan: `docs/plan-bot-papel.md` (P2, P6 y seccion 10). Ficheros: `deploy/`. Plout
 ## Instalar (con el propietario)
 
 1. `sudo bash instalar.sh <commit> <usuario-admin>` en el VPS (crea el usuario `ebisu`, `/opt/ebisu`, el entorno con
-   las versiones exactas de `deploy/requirements-bot.lock`, los servicios, y hace la prueba en seco).
+   las versiones exactas de `deploy/requirements-bot.lock`, la copia propia de la IA, los servicios, y hace la prueba
+   en seco).
+   **La IA, copia propia (decision del propietario del 15/10/2026, opcion A):** la del VPS es de Ploutos (vive en
+   `/home/ploutos`, que los servicios de Ebisu no pueden ver). `deploy/instalar-ia.sh` (lo lanza `instalar.sh`) baja la
+   version verificada de la web oficial, la comprueba contra el manifiesto firmado y la deja en `/opt/ebisu/bin`, de
+   root y solo lectura para el bot. Ploutos no se toca.
 2. El propietario rellena `/opt/ebisu/.env` (TELEGRAM_TOKEN, TELEGRAM_CHAT_ID, HEALTHCHECK_EBISU,
    CLAUDE_CODE_OAUTH_TOKEN; permisos 600) y vuelve a lanzar `instalar.sh`.
 3. Un mensaje de prueba por Telegram, un latido de prueba y `/estado`.

@@ -4,7 +4,8 @@ compra. El bot NO le hace caso: se apunta en el diario para juzgar el freno con 
 Copia adaptada de `ai/invoke.py` de Ploutos (solo lectura de Ploutos). Lo delicado, igual que alli:
 - **La IA nunca ve claves:** el entorno del proceso se CONSTRUYE desde cero (lista cerrada) y solo lleva su token.
 - **Sin herramientas** (`--restricted` y compania), sin sesiones, desde un directorio vacio y con stdin cerrado.
-- **Version fijada (B5):** el binario es el que instalo Ploutos; si no es la version verificada, no se llama y se avisa.
+- **Version fijada (B5):** en el VPS, la copia propia de `bin/claude` (deploy/instalar-ia.sh, comprobada contra el
+  manifiesto firmado); si no es la version verificada, no se llama y se avisa.
 - **Nunca lanza.** Salida invalida, tardia o con un freno sobre una pieza que no se compra = no hacer nada.
 - **Los titulares son datos no confiables**, delimitados; la salida se limpia antes de Telegram y del panel (B6).
 """
@@ -27,7 +28,8 @@ from ebisu.secretos import tapar
 RAIZ = Path(__file__).resolve().parents[1]
 RUNTIME = RAIZ / "var" / "bot" / "ia_runtime"  # vacio a proposito
 CONFIG = RAIZ / "var" / "bot" / "ia_config"
-VERSION_VERIFICADA = "2.1.266"  # la de Ploutos (deploy/install-claude.sh); cambiarla = volver a verificar
+PROPIO = RAIZ / "bin" / "claude"  # la copia de Ebisu en el VPS; sin ella (portatil), la del PATH
+VERSION_VERIFICADA = "2.1.266"  # = deploy/instalar-ia.sh (hay prueba); cambiarla = volver a verificar
 MAX_EXPLICACION = 600
 MAX_MOTIVO = 300
 PIEZAS = ("bolsa", "bonos", "oro")
@@ -125,7 +127,7 @@ def preguntar(mes: dict[str, Any], titulares: list[dict], compras: set[str], *, 
     """Una llamada. Nunca lanza."""
     if not token:
         return Respuesta(False, "sin CLAUDE_CODE_OAUTH_TOKEN en .env")
-    binario = binario or shutil.which("claude")
+    binario = binario or (str(PROPIO) if PROPIO.exists() else shutil.which("claude"))
     if binario is None:
         return Respuesta(False, "no se encuentra el programa de la IA")
     v = version(binario, token, _run)
