@@ -2,7 +2,7 @@
 
 - Escucha solo en la IP de Tailscale de esta maquina (100.x.y.z), como el panel de Ploutos; si no la hay, no arranca.
   Nunca en todas las interfaces.
-- GET: la pagina (`var/bot/panel.html`), `panel.js` y el icono. Nada mas (sin rutas de ficheros: sin recorrer
+- GET: la pagina (`var/bot/panel.html`), `panel.js`, los iconos y el manifest (icono en el movil). Nada mas (sin rutas de ficheros: sin recorrer
   carpetas).
 - POST /control: pausar o reanudar. Solo con la cabecera `X-Ebisu-Panel: 1` y, si trae Origin, el del propio panel
   (otra pagina no puede pulsar los botones). Se apunta en `control.json` con su hora; en papel no actua.
@@ -31,7 +31,13 @@ from ebisu import panel, precios
 RAIZ = Path(__file__).resolve().parents[1]
 VAR = RAIZ / "var" / "bot"
 ESTATICOS = {"/panel.js": (Path(__file__).with_name("panel.js"), "text/javascript; charset=utf-8"),
-             "/favicon.svg": (RAIZ / "assets" / "logo" / "favicon.svg", "image/svg+xml")}
+             "/favicon.svg": (RAIZ / "assets" / "logo" / "favicon.svg", "image/svg+xml"),
+             "/favicon-32.png": (RAIZ / "assets" / "logo" / "favicon-32.png", "image/png"),
+             "/apple-touch-icon.png": (RAIZ / "assets" / "logo" / "favicon-180.png", "image/png"),
+             "/icono-android-192.png": (RAIZ / "assets" / "logo" / "icono-android-192.png", "image/png"),
+             "/icono-android-512.png": (RAIZ / "assets" / "logo" / "icono-android-512.png", "image/png"),
+             "/manifest.webmanifest": (RAIZ / "assets" / "logo" / "manifest.webmanifest",
+                                       "application/manifest+json; charset=utf-8")}
 CABECERAS = {"Content-Security-Policy": "default-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; "
                                         "script-src 'self'; frame-ancestors 'none'; base-uri 'none'; form-action 'none'",
              "X-Content-Type-Options": "nosniff", "Referrer-Policy": "no-referrer", "X-Frame-Options": "DENY",

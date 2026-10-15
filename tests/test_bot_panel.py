@@ -114,3 +114,16 @@ def test_nombre_de_tailscale():
     def falla(*a, **k):
         raise OSError("sin tailscale")
     assert servidor.nombre_tailscale(falla) is None
+
+
+def test_iconos_y_manifest_para_el_movil(web):
+    url, _ = web
+    for ruta, tipo in [("/favicon.svg", "image/svg+xml"), ("/favicon-32.png", "image/png"),
+                       ("/apple-touch-icon.png", "image/png"), ("/icono-android-192.png", "image/png"),
+                       ("/icono-android-512.png", "image/png"), ("/manifest.webmanifest", "application/manifest+json")]:
+        codigo, cab, cuerpo = pedir(url + ruta)
+        assert codigo == 200 and cab["Content-Type"].startswith(tipo) and cuerpo, ruta
+    m = json.loads(pedir(url + "/manifest.webmanifest")[2])
+    assert m["name"] == "Ebisu" and {i["sizes"] for i in m["icons"]} == {"192x192", "512x512"}
+    html = pedir(url + "/")[2].decode()
+    assert "<title>Ebisu</title>" in html and 'rel="apple-touch-icon"' in html and 'rel="manifest"' in html

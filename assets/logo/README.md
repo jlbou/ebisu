@@ -11,7 +11,9 @@ rondas (concepto, forma del anzuelo y color).
 | `ebisu.svg`, `ebisu-512.png` | web y README: el circulo |
 | `ebisu-perfil.svg`, `ebisu-perfil-512.png` | foto de perfil (GitHub, Telegram): cuadrado lleno; ellos lo recortan en circulo y el dibujo cabe |
 | `ebisu-signo.svg` | solo el dibujo, del color del texto (`currentColor`): sobre cualquier fondo |
-| `favicon.svg`, `favicon-32.png`, `favicon-180.png` | pestanya del navegador e icono del movil: trazos mas gruesos y sin el remate del anzuelo, para que se lea a 16-32 px |
+| `favicon.svg`, `favicon-32.png` | pestanya del navegador: **cuadrado con las esquinas redondeadas** y el MISMO dibujo que el logo (el propietario, 15/10/2026: nada de version simplificada), centrado por su caja exacta |
+| `icono-movil.svg` -> `favicon-180.png` | iPhone (*apple-touch-icon*): cuadrado lleno; el iPhone redondea las esquinas |
+| `icono-android.svg` -> `icono-android-192.png`, `icono-android-512.png` | Android (`manifest.webmanifest`, *maskable*): el dibujo mas pequenyo, dentro de la zona segura, para que ningun recorte lo corte |
 | `social-preview-1280x640.png` (de `social-preview.html`) | GitHub, *Settings -> Social preview*: lo que se ve al compartir el enlace del repositorio. Texto elegido el 12/10: "Bolsa, bonos y oro. Un bot que sigue la tendencia; no la adivina." |
 
 Los PNG salen de los SVG con Chrome sin ventana (sin dependencias nuevas). Si se cambia un SVG, regenerarlos. En lo que

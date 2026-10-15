@@ -199,7 +199,7 @@ def generar(base: Path, ahora: datetime) -> str:
     boton = ('<button data-accion="reanudar">Reanudar</button>' if pausa else '<button data-accion="pausa">Pausar</button>')
     cuerpo = "".join(f"<section><h2>{e(t)}</h2>{c}</section>" for t, c in secciones)
     return f"""<!doctype html><html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Ebisu · papel</title><link rel="icon" href="/favicon.svg"><style>
+<title>Ebisu</title><link rel="icon" href="/favicon.svg" type="image/svg+xml"><link rel="icon" href="/favicon-32.png" sizes="32x32" type="image/png"><link rel="apple-touch-icon" href="/apple-touch-icon.png"><link rel="manifest" href="/manifest.webmanifest"><meta name="theme-color" content="#1E5E57"><meta name="apple-mobile-web-app-title" content="Ebisu"><style>
 :root{{--verde:{VERDE};--oro:{ORO};--crema:{CREMA};--tinta:{TINTA};--gris:{GRIS}}}
 body{{margin:0;background:var(--crema);color:var(--tinta);font:15px/1.45 system-ui,-apple-system,Segoe UI,sans-serif}}
 header{{background:var(--verde);color:var(--crema);display:flex;align-items:center;gap:14px;padding:12px 16px}}
@@ -214,7 +214,7 @@ table{{width:100%;border-collapse:collapse;font-size:14px}} th,td{{text-align:le
 .vacio{{color:var(--gris)}} .ia{{background:var(--crema);border-left:4px solid var(--oro);padding:8px 10px;border-radius:4px}}
 button{{background:var(--verde);color:var(--crema);border:0;border-radius:6px;padding:8px 14px;font-size:14px;cursor:pointer}}
 footer{{text-align:center;color:var(--gris);font-size:12px}}
-</style></head><body><header>{logo}<div><h1>Ebisu · papel</h1><div class="sub">H1-M · actualizado el {ahora:%d/%m/%Y %H:%M}</div></div>
+</style></head><body><header>{logo}<div><h1>Ebisu</h1><div class="sub">H1-M · actualizado el {ahora:%d/%m/%Y %H:%M}</div></div>
 <div style="margin-left:auto">{boton}</div></header><main>{cuerpo}</main>
 <footer>Papel: sin dinero real. La pausa no actúa en papel.</footer><script src="/panel.js"></script></body></html>"""
 
