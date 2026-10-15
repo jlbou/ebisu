@@ -15,7 +15,7 @@ from ebisu.papel import CAPITAL_EUR, Operacion, Papel
 NOMBRES = {"bolsa": "Bolsa (VWCE)", "bonos": "Bonos (CEMF)", "oro": "Oro (SGLD)", "monetario": "Monetario (XEON)"}
 MESES = ["enero", "febrero", "marzo", "abril", "mayo", "junio", "julio", "agosto", "septiembre", "octubre",
          "noviembre", "diciembre"]
-CABECERA = "<b>Ebisu · papel</b>"
+CABECERA = "<b>Ebisu</b>"
 
 
 def e(texto: object) -> str:
@@ -43,7 +43,7 @@ def operaciones(ops: list[Operacion], papel: Papel) -> str:
 
 def resumen_mensual(papel: Papel, ia: str | None, proxima: pd.Timestamp) -> str:
     mes = MESES[papel.ultima_senyal.month - 1]
-    lineas = [f"<b>Ebisu · papel · resumen de {mes}</b>",
+    lineas = [f"<b>Ebisu: resumen de {mes}</b>",
               f"Valor: {eur(papel.valor_eur)} ({pct(papel.valor_eur / CAPITAL_EUR - 1, True)} desde el inicio)",
               f"VWCE mantenido: {eur(papel.referencia_eur)} ({pct(papel.referencia_eur / CAPITAL_EUR - 1, True)})",
               f"Peor caída: {pct(papel.caida)} (límite {pct(CAIDA_MAX)})",
