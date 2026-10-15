@@ -179,3 +179,9 @@ atras), `ml4t-production-readiness` y revision de seguridad propia. Lo de esta s
   claves de Trading 212 que haya en el `.env` no se leen nunca en papel (regla dura 1).
   Revision: (N1, corregido; el mismo fallo esta en Ploutos) un titular con una etiqueta dentro (`<b>`) se cortaba en
   la etiqueta: ahora se lee todo el texto del elemento. Los mensajes llevan acentos (son para el propietario).
+- **Paso 5 (15/10): la IA en sombra** (`ebisu/ia.py`, 12 pruebas con una IA inventada: nunca se llama a la real;
+  skills `python-testing`, `python-patterns` y `code-review`). Copia adaptada de `ai/invoke.py` de Ploutos: entorno
+  construido desde cero (solo su token), sin herramientas, sin sesiones, directorio vacio, stdin cerrado; version
+  fijada a la verificada en Ploutos (2.1.266, por comprobar en el VPS). Contrato propio sin dependencias nuevas
+  (Ploutos usa pydantic): `explicacion` (600 caracteres) y `frenos` (hasta 3, solo sobre piezas que se compran ese
+  mes); cualquier otra cosa descarta la respuesta entera. Salida limpiada (B6) y diario de la IA para la decision 11.3.
