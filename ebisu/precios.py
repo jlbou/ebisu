@@ -2,6 +2,9 @@
 
 - Fuente: Yahoo (P1). La funcion que baja es inyectable: las pruebas usan una fuente inventada (sin red).
 - **Un precio guardado no se cambia nunca.** Si la fuente lo revisa despues, manda el guardado y se avisa.
+- **Un dia que falta** (la fuente no lo dio y llega mas tarde): ANTES de empezar el papel se rellena (no cambia nada ya
+  visto: no hay decisiones todavia; decision del propietario, 16/10/2026); con el papel en marcha no se guarda y se avisa
+  (cambiaria el calculo de un mes ya decidido).
 - Solo se guarda el cierre de un dia ya cerrado en su bolsa (B3) y con cierre de verdad (Yahoo da a veces la fila de
   hoy sin cierre). Un salto de mas del 15 % en un dia no se guarda: se avisa y se decide a mano.
 - Avisos (no lanzan): salto raro, revision de la fuente, cierre ajustado distinto del cierre (B2), sin volumen 3 dias
@@ -83,11 +86,13 @@ def cerrado(dia: date, pieza: str, ahora: datetime) -> bool:
     return dia == hoy.date() and hoy.time() >= INSTRUMENTOS[pieza][2]
 
 
-def nuevos_de(pieza: str, bajados: pd.DataFrame, guardados: pd.DataFrame, ahora: datetime) -> tuple[list[dict], list[Aviso]]:
+def nuevos_de(pieza: str, bajados: pd.DataFrame, guardados: pd.DataFrame, ahora: datetime,
+              rellenar_huecos: bool = False) -> tuple[list[dict], list[Aviso]]:
     """Filas nuevas que se pueden guardar y los avisos (sin escribir nada).
 
     Una vez hay precios guardados, solo se anyade DESPUES del ultimo y en orden: un dia sin cierre corta la vuelta (se
-    vuelve a pedir manyana) y un dia anterior al ultimo que llega tarde no se guarda (cambiaria el pasado del papel).
+    vuelve a pedir manyana) y un dia anterior al ultimo que llega tarde no se guarda (cambiaria el pasado del papel),
+    salvo con `rellenar_huecos` (antes de empezar el papel): entonces se guarda si no estaba y no da un salto raro.
     En el primer relleno, los huecos antiguos de la fuente se saltan (solo sirven para calentar las medias)."""
     avisos: list[Aviso] = []
     previos = guardados[guardados["pieza"] == pieza].set_index("fecha").sort_index()
@@ -105,9 +110,22 @@ def nuevos_de(pieza: str, bajados: pd.DataFrame, guardados: pd.DataFrame, ahora:
                                                        f"{float(previos.loc[dia, 'cierre'])}"))
             continue
         if ultimo_dia is not None and dia < ultimo_dia:
-            if pd.notna(cierre):
+            if pd.isna(cierre):
+                continue
+            if not rellenar_huecos:
                 avisos.append(Aviso("tarde", pieza, f"{dia:%d/%m/%Y} llega despues del {ultimo_dia:%d/%m/%Y}; "
                                                     "no se guarda"))
+                continue
+            antes = previos.loc[:dia, "cierre"]  # el ultimo guardado antes del hueco, para el control de saltos
+            if len(antes) and abs(float(cierre) / float(antes.iloc[-1]) - 1) > SALTO_MAX:
+                avisos.append(Aviso("salto", pieza, f"{dia:%d/%m/%Y} (hueco): {float(antes.iloc[-1])} -> "
+                                                    f"{float(cierre)} (> 15 %); no se guarda"))
+                continue
+            ajustado = f.get("Adj Close")
+            v = f.get("Volume")
+            filas.append({"fecha": dia, "pieza": pieza, "cierre": float(cierre),
+                          "ajustado": float(cierre) if pd.isna(ajustado) else float(ajustado),
+                          "volumen": 0.0 if pd.isna(v) else float(v), "visto": ahora.isoformat(timespec="seconds")})
             continue
         if pd.isna(cierre):
             if ultimo_dia is None:
@@ -149,9 +167,10 @@ def vigilancia(guardados: pd.DataFrame, ahora: datetime) -> list[Aviso]:
     return avisos
 
 
-def actualizar(fichero: Path, ahora: datetime, fuente: Fuente = yahoo,
-               desde: date = date(2019, 1, 1)) -> tuple[pd.DataFrame, list[Aviso]]:
-    """Baja, valida y anyade al CSV lo nuevo. Devuelve la tabla de cierres y los avisos. Nunca reescribe lo guardado."""
+def actualizar(fichero: Path, ahora: datetime, fuente: Fuente = yahoo, desde: date = date(2019, 1, 1),
+               rellenar_huecos: bool = False) -> tuple[pd.DataFrame, list[Aviso]]:
+    """Baja, valida y anyade al CSV lo nuevo. Devuelve la tabla de cierres y los avisos. Nunca reescribe lo guardado.
+    `rellenar_huecos`: solo antes de empezar el papel (ver `nuevos_de`)."""
     guardados = leer(fichero)
     avisos: list[Aviso] = []
     nuevas: list[dict] = []
@@ -163,7 +182,7 @@ def actualizar(fichero: Path, ahora: datetime, fuente: Fuente = yahoo,
         except Exception as exc:  # una fuente caida no tumba el dia: se avisa
             avisos.append(Aviso("fuente", pieza, f"{simbolo}: {type(exc).__name__}"))
             continue
-        filas, av = nuevos_de(pieza, bajados, guardados, ahora)
+        filas, av = nuevos_de(pieza, bajados, guardados, ahora, rellenar_huecos)
         nuevas += filas
         avisos += av
     if nuevas:

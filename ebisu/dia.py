@@ -99,7 +99,9 @@ def vuelta(ahora: datetime, base: Path = VAR, dep: Dependencias | None = None) -
         if cola.apuntar(f_cola, clave, texto, ahora):
             apuntados.append(clave)
 
-    cierres, avisos_precios = precios.actualizar(base / "precios.csv", ahora, dep.fuente_precios)
+    empezado = bool(_leer_json(base / "papel.json"))  # antes de empezar se rellenan los dias que falten (16/10)
+    cierres, avisos_precios = precios.actualizar(base / "precios.csv", ahora, dep.fuente_precios,
+                                                 rellenar_huecos=not empezado)
     n_titulares, errores_rss = noticias.recoger(base / "noticias.csv", ahora, dep.bajar_rss)
     if len(errores_rss) == len(noticias.FUENTES):
         aviso(f"rss:{hoy.date()}", mensajes.incidencia(juez.Incidencia(False, "noticias", "ninguna fuente respondio")))

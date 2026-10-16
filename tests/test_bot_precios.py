@@ -120,6 +120,28 @@ def test_un_dia_anterior_que_llega_tarde_no_se_guarda(tmp_path):
     assert any(a.tipo == "tarde" for a in avisos)
 
 
+def test_antes_de_empezar_el_dia_que_faltaba_se_rellena(tmp_path):
+    f = tmp_path / "precios.csv"
+    datos = todas()
+    datos["XEON.DE"] = datos["XEON.DE"].drop(pd.Timestamp("2026-10-13"))
+    P.actualizar(f, AHORA, fuente_fija(datos), rellenar_huecos=True)
+    t, avisos = P.actualizar(f, AHORA, fuente_fija(todas()), rellenar_huecos=True)
+    assert t.loc[pd.Timestamp("2026-10-13"), "monetario"] == 10.1 and not any(a.tipo == "tarde" for a in avisos)
+    t, avisos = P.actualizar(f, AHORA, fuente_fija(todas()), rellenar_huecos=True)  # no se repite ni se cambia
+    assert len(P.leer(f)) == 16 and not avisos
+
+
+def test_el_relleno_no_guarda_un_salto_raro(tmp_path):
+    f = tmp_path / "precios.csv"
+    datos = todas()
+    datos["XEON.DE"] = datos["XEON.DE"].drop(pd.Timestamp("2026-10-13"))
+    P.actualizar(f, AHORA, fuente_fija(datos), rellenar_huecos=True)
+    datos = todas()
+    datos["XEON.DE"].loc[pd.Timestamp("2026-10-13"), "Close"] = 20.0
+    t, avisos = P.actualizar(f, AHORA, fuente_fija(datos), rellenar_huecos=True)
+    assert pd.isna(t.loc[pd.Timestamp("2026-10-13"), "monetario"]) and any(a.tipo == "salto" for a in avisos)
+
+
 def test_volumen_vacio_cuenta_como_cero(tmp_path):
     f = tmp_path / "precios.csv"
     _, avisos = P.actualizar(f, AHORA, fuente_fija(todas(volumen=float("nan"))))
