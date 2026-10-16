@@ -4,7 +4,8 @@
 
 .DESCRIPTION
     Como la de Ploutos: para TU usuario y solo con la sesion iniciada (asi no se guarda ninguna contrasenya y el SSH ve
-    tu clave). A las $At, cada hora hasta medianoche, al iniciar sesion y al desbloquear, siempre con -SoloSiFalta.
+    tu clave). A las $At, cada hora hasta medianoche, al iniciar sesion y al desbloquear, siempre con -SoloSiFalta y solo
+    con red (al despertar sin red no se lanza).
 
 .EXAMPLE
     .\deploy\instalar-tarea-copia.ps1
@@ -36,7 +37,7 @@ $diaria.Repetition = (New-ScheduledTaskTrigger -Once -At $At -RepetitionInterval
 $alEntrar = New-ScheduledTaskTrigger -AtLogOn -User $usuario
 $clase = Get-CimClass -Namespace 'Root/Microsoft/Windows/TaskScheduler' -ClassName 'MSFT_TaskSessionStateChangeTrigger'
 $alDesbloquear = New-CimInstance -CimClass $clase -ClientOnly -Property @{ StateChange = 8; UserId = $usuario }
-$settings = New-ScheduledTaskSettingsSet -StartWhenAvailable -DontStopIfGoingOnBatteries -AllowStartIfOnBatteries `
+$settings = New-ScheduledTaskSettingsSet -StartWhenAvailable -RunOnlyIfNetworkAvailable -DontStopIfGoingOnBatteries -AllowStartIfOnBatteries `
     -ExecutionTimeLimit (New-TimeSpan -Minutes 15) -MultipleInstances IgnoreNew
 $principal = New-ScheduledTaskPrincipal -UserId $usuario -LogonType Interactive -RunLevel Limited
 Register-ScheduledTask -TaskName $taskName -Action $action -Trigger @($diaria, $alEntrar, $alDesbloquear) `

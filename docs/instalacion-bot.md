@@ -48,7 +48,7 @@ Coordinadas con las de Ploutos (mismo canal de avisos, nombres `ebisu-...`, etiq
 |---|---|---|---|
 | `ebisu-dia` | la vuelta del dia (VPS) | `HEALTHCHECK_EBISU`, solo en el `.env` del VPS | 1 dia / 4 h |
 | `ebisu-copia` | `copia-vps.sh` (VPS, 23:30); `/fail` si falla | `HEALTHCHECK_EBISU_COPIA`, solo en el `.env` del VPS | 1 dia / 4 h |
-| `ebisu-copia-portatil` | `copia-diaria.ps1` (portatil); `/fail` si falla | `HEALTHCHECK_EBISU_COPIA_PORTATIL`, solo en el `.env` del portatil | 1 dia / 1 dia |
+| `ebisu-copia-portatil` | `copia-diaria.ps1` (portatil), solo cuando sale bien (un fallo suelto no avisa: 3 reintentos, la tarea vuelve cada hora y solo con red, y Telegram solo en el ultimo intento del dia; decision del 16/10) | `HEALTHCHECK_EBISU_COPIA_PORTATIL`, solo en el `.env` del portatil | 1 dia / 1 dia |
 
 **Cada URL solo en la maquina que late** (leccion de Ploutos): si el portatil tuviera una URL del VPS, podria latir en
 su nombre y tapar una caida. El portatil se queda sin `HEALTHCHECK_EBISU` ni el token de la IA (no los usa).
