@@ -301,15 +301,12 @@ CSS = """
 *{box-sizing:border-box}
 html{-webkit-text-size-adjust:100%}
 body{margin:0;background:var(--fondo);color:var(--tinta);font:16px/1.5 "Atkinson Hyperlegible",system-ui,sans-serif}
-body::before{content:"";position:fixed;right:0;bottom:-2vh;width:min(760px,88vh);aspect-ratio:1;z-index:0;pointer-events:none;opacity:.9;
-background:url(/fondo-ebisu.png) no-repeat center/contain}
-header,main,footer{position:relative;z-index:1}
 a{color:var(--verde)}
 :focus-visible{outline:3px solid var(--oro);outline-offset:2px}
 .saltar{position:absolute;left:-999px}.saltar:focus{left:16px;top:8px;background:var(--blanco);padding:6px 10px;z-index:9}
 header{background:var(--verde);color:var(--crema);box-shadow:inset 0 -3px 0 var(--oro)}
-.dentro,main,footer{max-width:780px;margin-left:clamp(16px,4vw,90px);margin-right:16px}
-.dentro{display:flex;align-items:center;gap:16px;flex-wrap:wrap;padding:12px 0 14px}
+.dentro,main,footer{max-width:1120px;margin-left:auto;margin-right:auto;padding-left:16px;padding-right:16px}
+.dentro{display:flex;align-items:center;gap:16px;flex-wrap:wrap;padding-top:12px;padding-bottom:14px}
 .marca{display:flex;align-items:center;gap:12px}
 .marca svg{width:40px;height:40px;display:block;color:var(--crema)}
 h1,h2,h3{text-wrap:balance}
@@ -321,7 +318,7 @@ button{font:inherit;font-weight:700;background:transparent;color:var(--crema);bo
 border-radius:6px;padding:5px 16px;cursor:pointer;min-height:38px;touch-action:manipulation;
 -webkit-tap-highlight-color:transparent;transition:background-color .15s,color .15s}
 button:hover{background:var(--crema);color:var(--verde-hondo)}
-main{padding:18px 0 40px}
+main{padding-top:18px;padding-bottom:40px}
 .regla{background:var(--verde);color:var(--crema);border-radius:10px;padding:20px 22px 16px;margin:0 0 12px;
 border:1px solid var(--verde-hondo);box-shadow:0 2px 0 var(--verde-hondo)}
 .regla h2{color:var(--crema);font-size:19px;margin:0 0 10px}
@@ -370,11 +367,7 @@ th{color:var(--gris);font-weight:700;font-size:14px;background:rgba(201,218,212,
 .ia-lista time{font-family:var(--f-num);font-weight:700;color:var(--verde-hondo)}
 .ia-lista p{margin:4px 0 0;overflow-wrap:break-word}.ia-lista .freno{color:var(--rojo)}
 .vacio{color:var(--gris);margin:0;max-width:70ch}
-footer{padding:0 0 30px;color:var(--gris);font-size:14px}
-@media (max-width:900px){
-  .dentro,main,footer{margin-left:16px;margin-right:16px;max-width:none}
-  body::before{right:-30vw;width:130vw;opacity:.85}
-}
+footer{padding-bottom:30px;color:var(--gris);font-size:14px}
 @media (max-width:600px){
   h1{font-size:24px}.regla{padding:16px 14px}.dentro{row-gap:6px}.actualizado{order:3;width:100%;font-size:12px}
   .fila{grid-template-columns:minmax(0,1fr) 60px;font-size:17px;row-gap:6px}

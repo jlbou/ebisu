@@ -134,7 +134,7 @@ estrategia de operar activamente ganaba. La unica que vale la pena es "L" (rotac
 | 14-15/10/2026 | **Plan del bot en papel (H1-M):** precios de los 4 ETF en Yahoo (P1); el VPS de Ploutos pero aparte, con latido a Healthchecks (P2); RSS oficiales y de medios para la IA (P3); Telegram solo `/estado` y `/detalle`, pausa desde el panel (P4); panel antes del papel (P5); copia diaria al portatil, 7 dias (P6) | `docs/plan-bot-papel.md` 9 |
 | 15/10/2026 | **IA del bot: copia propia y verificada** en `/opt/ebisu/bin` (la del VPS es de Ploutos y vive en `/home/ploutos`); sin tocar Ploutos (opcion A) | `docs/instalacion-bot.md` |
 | 15/10/2026 | **Healthchecks coordinado con Ploutos:** 3 comprobaciones de Ebisu (`ebisu-dia`, `ebisu-copia`, `ebisu-copia-portatil`), cada URL solo en la maquina que late, mismo canal de avisos y etiqueta por bot; `ebisu-comandos` sin vigilar | `docs/instalacion-bot.md` |
-| 17/10/2026 | **Panel mas parecido al de Ploutos** (banda verde con ratlla dorada, paneles con borde, numeros en letra monoespaciada, fondo de color) **con Ebisu en relieve, fijo, al fondo** (el dibujo de lineas de todo el personaje, con la roca, a partir de una ilustracion sin copyright del propietario) | `assets/fondo/README.md` |
+| 17/10/2026 | **Panel mas parecido al de Ploutos** (banda verde con ratlla dorada, paneles con borde y a todo el ancho, numeros en letra monoespaciada, fondo de color). Se probo el dibujo de Ebisu en relieve al fondo y el propietario lo quito: no le gusto | `ebisu/panel.py` |
 
 ## Pendiente
 

@@ -137,7 +137,7 @@ def test_iconos_y_manifest_para_el_movil(web):
                        ("/apple-touch-icon.png", "image/png"), ("/icono-android-192.png", "image/png"),
                        ("/icono-android-512.png", "image/png"), ("/manifest.webmanifest", "application/manifest+json"),
                        ("/vendor/lightweight-charts.js", "text/javascript"), ("/vendor/atkinson-400.woff2", "font/woff2"),
-                       ("/vendor/atkinson-700.woff2", "font/woff2"), ("/fondo-ebisu.png", "image/png")]:
+                       ("/vendor/atkinson-700.woff2", "font/woff2")]:
         codigo, cab, cuerpo = pedir(url + ruta)
         assert codigo == 200 and cab["Content-Type"].startswith(tipo) and cuerpo, ruta
     m = json.loads(pedir(url + "/manifest.webmanifest")[2])
@@ -146,8 +146,7 @@ def test_iconos_y_manifest_para_el_movil(web):
     assert "<title>Ebisu</title>" in html and 'rel="apple-touch-icon"' in html and 'rel="manifest"' in html
 
 
-def test_el_fondo_y_los_ficheros_fijos_se_guardan_y_la_pagina_no(web):
+def test_los_ficheros_fijos_se_guardan_y_la_pagina_no(web):
     url, _ = web
-    assert pedir(url + "/fondo-ebisu.png")[1]["Cache-Control"] == "public, max-age=86400"
     assert pedir(url + "/vendor/atkinson-400.woff2")[1]["Cache-Control"] == "public, max-age=86400"
     assert pedir(url + "/")[1]["Cache-Control"] == "no-store"

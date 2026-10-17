@@ -39,7 +39,6 @@ ESTATICOS = {"/panel.js": (Path(__file__).with_name("panel.js"), "text/javascrip
              "/icono-android-512.png": (RAIZ / "assets" / "logo" / "icono-android-512.png", "image/png"),
              "/manifest.webmanifest": (RAIZ / "assets" / "logo" / "manifest.webmanifest",
                                        "application/manifest+json; charset=utf-8"),
-             "/fondo-ebisu.png": (RAIZ / "assets" / "fondo" / "ebisu-relieve.png", "image/png"),
              "/vendor/lightweight-charts.js": (VENDOR / "lightweight-charts.standalone.production.js",
                                               "text/javascript; charset=utf-8"),
              "/vendor/atkinson-400.woff2": (VENDOR / "atkinson-hyperlegible-latin-400-normal.woff2", "font/woff2"),
@@ -129,7 +128,7 @@ def manejador(base: Path, hosts: set[str] | None = None):
                 self._responder(200, f.read_bytes(), "text/html; charset=utf-8")
             elif ruta in ESTATICOS:
                 fichero, tipo = ESTATICOS[ruta]
-                fijo = ruta == "/fondo-ebisu.png" or ruta.startswith("/vendor/")  # no cambian: se guardan un dia
+                fijo = ruta.startswith("/vendor/")  # no cambian: se guardan un dia
                 self._responder(200, fichero.read_bytes(), tipo, "public, max-age=86400" if fijo else None)
             else:
                 self._responder(404, b"no existe")
