@@ -28,7 +28,7 @@ from ebisu import papel as P
 from ebisu import precios
 
 RAIZ = Path(__file__).resolve().parents[1]
-LOGO = RAIZ / "assets" / "logo" / "favicon.svg"
+LOGO = RAIZ / "assets" / "logo" / "ebisu-signo.svg"
 COPIAS = Path("/var/backups/ebisu")
 DIAS_GRAFICO_PIEZAS = 260  # un anyo de bolsa
 NOMBRES_CORTOS = {"bolsa": "Bolsa mundial", "bonos": "Bonos de EE. UU. en euros", "oro": "Oro",
@@ -281,10 +281,10 @@ def generar(base: Path, ahora: datetime, copias: Path = COPIAS) -> str:
     cuerpo = "".join(f'<section aria-labelledby="{i}"><h2 id="{i}">{e(t)}</h2>{c}</section>' for i, t, c in secciones)
     datos_json = json.dumps(datos, ensure_ascii=False, separators=(",", ":")).replace("<", "\\u003c")
     return f"""<!doctype html><html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Ebisu</title><link rel="icon" href="/favicon.svg" type="image/svg+xml"><link rel="icon" href="/favicon-32.png" sizes="32x32" type="image/png"><link rel="apple-touch-icon" href="/apple-touch-icon.png"><link rel="manifest" href="/manifest.webmanifest"><meta name="theme-color" content="#F2F5F3"><meta name="apple-mobile-web-app-title" content="Ebisu">
+<title>Ebisu</title><link rel="icon" href="/favicon.svg" type="image/svg+xml"><link rel="icon" href="/favicon-32.png" sizes="32x32" type="image/png"><link rel="apple-touch-icon" href="/apple-touch-icon.png"><link rel="manifest" href="/manifest.webmanifest"><meta name="theme-color" content="#1E5E57"><meta name="apple-mobile-web-app-title" content="Ebisu">
 <link rel="preload" href="/vendor/atkinson-400.woff2" as="font" type="font/woff2" crossorigin><style>{CSS}</style></head>
 <body><a class="saltar" href="#contenido">Ir al contenido</a>
-<header><div class="marca">{logo}<h1 translate="no">Ebisu</h1></div><p class="actualizado">Actualizado el {ahora:%d/%m/%Y} a las {ahora:%H:%M}</p>{boton}</header>
+<header><div class="dentro"><div class="marca">{logo}<h1 translate="no">Ebisu</h1></div><p class="actualizado">Actualizado el {ahora:%d/%m/%Y} a las {ahora:%H:%M}</p>{boton}</div></header>
 <main id="contenido">{regla}{franja}{cuerpo}</main>
 <footer>En papel: sin dinero real. Pausar no tiene efecto mientras dure el papel.</footer>
 <script type="application/json" id="datos">{datos_json}</script>
@@ -294,78 +294,92 @@ def generar(base: Path, ahora: datetime, copias: Path = COPIAS) -> str:
 CSS = """
 @font-face{font-family:"Atkinson Hyperlegible";src:url(/vendor/atkinson-400.woff2) format("woff2");font-weight:400;font-display:swap}
 @font-face{font-family:"Atkinson Hyperlegible";src:url(/vendor/atkinson-700.woff2) format("woff2");font-weight:700;font-display:swap}
-:root{--verde:#1E5E57;--verde-hondo:#143F3A;--verde-medio:#2F786D;--verde-claro:#9CC7BF;--agua:#DCE7E3;--fondo:#F2F5F3;
---oro:#E3B341;--oro-hondo:#9A7317;--oro-claro:#FBF1D6;--crema:#F3F1EA;--tinta:#1F2A28;--gris:#53625E;--rojo:#B5483B;
---rojo-claro:#F7E4E0;--blanco:#FFFFFF}
+:root{--verde:#1E5E57;--verde-hondo:#143F3A;--verde-medio:#2F786D;--verde-claro:#9CC7BF;--agua:#C9DAD4;--fondo:#D3E3DD;
+--hoja:#F7FAF9;--oro:#E3B341;--oro-hondo:#9A7317;--oro-claro:#FBF1D6;--crema:#F3F1EA;--tinta:#1F2A28;--gris:#4A5B57;
+--rojo:#B5483B;--rojo-claro:#F7E4E0;--blanco:#FFFFFF;
+--f-num:ui-monospace,"Cascadia Mono","SF Mono",Consolas,"Liberation Mono",monospace}
 *{box-sizing:border-box}
 html{-webkit-text-size-adjust:100%}
 body{margin:0;background:var(--fondo);color:var(--tinta);font:16px/1.5 "Atkinson Hyperlegible",system-ui,sans-serif}
+body::before{content:"";position:fixed;right:0;bottom:-2vh;width:min(760px,88vh);aspect-ratio:1;z-index:0;pointer-events:none;opacity:.9;
+background:url(/fondo-ebisu.png) no-repeat center/contain}
+header,main,footer{position:relative;z-index:1}
 a{color:var(--verde)}
 :focus-visible{outline:3px solid var(--oro);outline-offset:2px}
 .saltar{position:absolute;left:-999px}.saltar:focus{left:16px;top:8px;background:var(--blanco);padding:6px 10px;z-index:9}
-header{display:flex;align-items:center;gap:16px;flex-wrap:wrap;max-width:1040px;margin:0 auto;padding:20px 16px 12px}
+header{background:var(--verde);color:var(--crema);box-shadow:inset 0 -3px 0 var(--oro)}
+.dentro,main,footer{max-width:780px;margin-left:clamp(16px,4vw,90px);margin-right:16px}
+.dentro{display:flex;align-items:center;gap:16px;flex-wrap:wrap;padding:12px 0 14px}
 .marca{display:flex;align-items:center;gap:12px}
-.marca svg{width:44px;height:44px;display:block}
+.marca svg{width:40px;height:40px;display:block;color:var(--crema)}
 h1,h2,h3{text-wrap:balance}
 h2{scroll-margin-top:16px}
-h1{font-size:30px;line-height:1;margin:0;color:var(--verde-hondo);letter-spacing:-.01em}
-.actualizado{margin:0;color:var(--gris);font-size:14px}
-header button{margin-left:auto}
-button{font:inherit;font-weight:700;background:var(--blanco);color:var(--verde-hondo);border:2px solid var(--verde);
-border-radius:999px;padding:6px 18px;cursor:pointer;min-height:40px;touch-action:manipulation;
+h1{font-size:28px;line-height:1;margin:0;color:var(--crema);letter-spacing:-.01em}
+.actualizado{margin:0;color:var(--verde-claro);font-size:14px;font-family:var(--f-num)}
+.dentro button{margin-left:auto}
+button{font:inherit;font-weight:700;background:transparent;color:var(--crema);border:2px solid var(--verde-claro);
+border-radius:6px;padding:5px 16px;cursor:pointer;min-height:38px;touch-action:manipulation;
 -webkit-tap-highlight-color:transparent;transition:background-color .15s,color .15s}
-button:hover{background:var(--verde);color:var(--crema)}
-main{max-width:1040px;margin:0 auto;padding:0 16px 40px}
-.regla{background:var(--verde);color:var(--crema);border-radius:20px;padding:24px 28px 20px;margin:4px 0 14px}
-.regla h2{color:var(--crema);font-size:22px;margin:0 0 14px}
-.fila{display:grid;grid-template-columns:minmax(0,1fr) auto 72px;align-items:center;gap:16px;padding:10px 0;
-border-bottom:1px solid rgba(243,241,234,.18);font-size:19px}
+button:hover{background:var(--crema);color:var(--verde-hondo)}
+main{padding:18px 0 40px}
+.regla{background:var(--verde);color:var(--crema);border-radius:10px;padding:20px 22px 16px;margin:0 0 12px;
+border:1px solid var(--verde-hondo);box-shadow:0 2px 0 var(--verde-hondo)}
+.regla h2{color:var(--crema);font-size:19px;margin:0 0 10px}
+.fila{display:grid;grid-template-columns:minmax(0,1fr) auto 76px;align-items:center;gap:16px;padding:9px 0;
+border-bottom:1px solid rgba(243,241,234,.18);font-size:18px}
 .fila.monetario{border-bottom:0;color:rgba(243,241,234,.85)}
-.peso{font-weight:700;text-align:right;font-variant-numeric:tabular-nums}
-.regla p{margin:12px 0 0;color:rgba(243,241,234,.85);font-size:15px;max-width:70ch}
+.peso{font-family:var(--f-num);font-weight:700;text-align:right;font-variant-numeric:tabular-nums}
+.regla p{margin:10px 0 0;color:rgba(243,241,234,.85);font-size:14px;max-width:70ch}
 .boyas{display:inline-flex;gap:8px;vertical-align:middle}
-.boya{width:20px;height:20px;border-radius:50%;border:2px solid rgba(243,241,234,.55)}
+.boya{width:18px;height:18px;border-radius:50%;border:2px solid rgba(243,241,234,.55)}
 .boya.llena{background:var(--oro);border-color:var(--oro)}
 .boyas.sin{font-size:14px;opacity:.8}
-.salud{list-style:none;margin:0 0 28px;padding:0;display:flex;flex-wrap:wrap;gap:8px}
-.chip{display:flex;flex-direction:column;padding:8px 14px 8px 32px;border-radius:12px;background:var(--blanco);
+.salud{list-style:none;margin:0 0 14px;padding:0;display:flex;flex-wrap:wrap;gap:8px}
+.chip{display:flex;flex-direction:column;padding:7px 12px 7px 30px;border-radius:6px;background:var(--hoja);
 border:1px solid var(--agua);position:relative;font-size:14px;min-width:150px}
 .chip b,.chip span{overflow-wrap:anywhere}.chip b{font-weight:700}.chip span{color:var(--gris);font-size:13px}
-.chip::before{content:"";position:absolute;left:12px;top:14px;width:10px;height:10px;border-radius:50%;background:var(--gris)}
+.chip::before{content:"";position:absolute;left:11px;top:13px;width:9px;height:9px;border-radius:50%;background:var(--gris)}
 .chip.ok::before{background:var(--verde-medio)}
-.chip.aviso{background:var(--oro-claro);border-color:#EED9A0}.chip.aviso::before{background:var(--oro-hondo)}
-.chip.mal{background:var(--rojo-claro);border-color:#E9BDB5}.chip.mal::before{background:var(--rojo)}
+.chip.aviso{background:var(--oro-claro);border-color:#E3C677}.chip.aviso::before{background:var(--oro-hondo)}
+.chip.mal{background:var(--rojo-claro);border-color:#E0A99F}.chip.mal::before{background:var(--rojo)}
 .chip.nada::before{background:transparent;border:2px solid var(--gris);width:6px;height:6px}
-section{margin:0 0 32px}
-section>h2{font-size:22px;color:var(--verde-hondo);margin:0 0 12px}
-h3{font-size:17px;margin:18px 0 6px;display:flex;align-items:center;gap:12px;flex-wrap:wrap}
-h3 .boya{width:14px;height:14px;border-color:var(--verde-claro)}h3 .boya.llena{border-color:var(--oro)}
-.cifras{display:flex;flex-wrap:wrap;gap:8px 28px;margin:0 0 12px;max-width:none}
-.cifras b{font-size:22px;font-variant-numeric:tabular-nums;margin-right:6px}
-.grafico{height:240px;background:var(--blanco);border:1px solid var(--agua);border-radius:14px;overflow:hidden}
-.grafico.grande{height:340px}.grafico.bajo{height:150px}
+section{margin:0 0 12px;background:var(--hoja);border:1px solid var(--agua);border-radius:8px;padding:14px 18px 16px;
+box-shadow:0 1px 0 rgba(20,63,58,.12)}
+section>h2{font-size:18px;color:var(--verde-hondo);margin:0 0 12px;padding-bottom:8px;border-bottom:1px solid var(--agua);
+display:flex;align-items:center;gap:10px}
+section>h2::before{content:"";width:4px;height:18px;border-radius:2px;background:var(--oro)}
+h3{font-size:16px;margin:16px 0 6px;display:flex;align-items:center;gap:12px;flex-wrap:wrap}
+h3 .boya{width:13px;height:13px;border-color:var(--verde-claro)}h3 .boya.llena{border-color:var(--oro)}
+.cifras{display:flex;flex-wrap:wrap;gap:8px 26px;margin:0 0 12px;max-width:none}
+.cifras b{font-family:var(--f-num);font-size:20px;font-variant-numeric:tabular-nums;margin-right:6px}
+.grafico{height:240px;background:var(--blanco);border:1px solid var(--agua);border-radius:6px;overflow:hidden}
+.grafico.grande{height:320px}.grafico.bajo{height:150px}
 .leyenda{display:flex;flex-wrap:wrap;gap:6px 18px;font-size:14px;color:var(--gris);margin:0 0 8px}
 .leyenda span::before{content:"";display:inline-block;width:18px;height:0;border-top:3px solid;vertical-align:middle;margin-right:6px}
 .l-ebisu::before{color:#C9971F}.l-ref::before{color:var(--gris);border-top-style:dashed!important}
 .l-precio::before{color:var(--tinta)}.l-m20::before{color:#A9D2C8}.l-m50::before{color:#6FB0A3}.l-m100::before{color:#2F786D}
 .l-m200::before{color:#C9971F}
-.tabla{overflow-x:auto;background:var(--blanco);border:1px solid var(--agua);border-radius:14px}
+.tabla{overflow-x:auto}
 table{width:100%;border-collapse:collapse;font-size:15px}
-th,td{text-align:left;padding:10px 14px;border-bottom:1px solid var(--agua);vertical-align:top;white-space:nowrap}
+th,td{text-align:left;padding:9px 12px;border-bottom:1px solid var(--agua);vertical-align:top;white-space:nowrap}
 tbody tr:last-child td{border-bottom:0}
-th{color:var(--gris);font-weight:700;font-size:14px}
-.num{text-align:right;font-variant-numeric:tabular-nums}
+th{color:var(--gris);font-weight:700;font-size:14px;background:rgba(201,218,212,.35)}
+.num{text-align:right;font-family:var(--f-num);font-variant-numeric:tabular-nums}
 .ia-lista{list-style:none;margin:0;padding:0;border-left:3px solid var(--oro);max-width:75ch}
-.ia-lista li{padding:0 0 16px 18px}
-.ia-lista time{font-weight:700;color:var(--verde-hondo)}
+.ia-lista li{padding:0 0 14px 18px}
+.ia-lista time{font-family:var(--f-num);font-weight:700;color:var(--verde-hondo)}
 .ia-lista p{margin:4px 0 0;overflow-wrap:break-word}.ia-lista .freno{color:var(--rojo)}
 .vacio{color:var(--gris);margin:0;max-width:70ch}
-footer{max-width:1040px;margin:0 auto;padding:0 16px 32px;color:var(--gris);font-size:14px}
+footer{padding:0 0 30px;color:var(--gris);font-size:14px}
+@media (max-width:900px){
+  .dentro,main,footer{margin-left:16px;margin-right:16px;max-width:none}
+  body::before{right:-30vw;width:130vw;opacity:.85}
+}
 @media (max-width:600px){
-  h1{font-size:26px}.regla{padding:18px 16px;border-radius:16px}
-  .fila{grid-template-columns:minmax(0,1fr) 56px;font-size:17px;row-gap:6px}
+  h1{font-size:24px}.regla{padding:16px 14px}.dentro{row-gap:6px}.actualizado{order:3;width:100%;font-size:12px}
+  .fila{grid-template-columns:minmax(0,1fr) 60px;font-size:17px;row-gap:6px}
   .fila .boyas{grid-column:1;grid-row:2}.fila .peso{grid-column:2;grid-row:1/span 2}
-  .boya{width:18px;height:18px}.grafico.grande{height:260px}.chip{min-width:0;flex:1 1 140px}
+  .grafico.grande{height:260px}.chip{min-width:0;flex:1 1 140px}section{padding:12px 12px 14px}
 }
 @media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}}
 """
