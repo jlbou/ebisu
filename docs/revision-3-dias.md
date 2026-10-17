@@ -40,6 +40,7 @@ un cierre ajustado distinto, un corte breve de conexion con Telegram que el bot 
 |---|---|---|---|
 | 15/10 | Antes de rellenar el `.env`, `ebisu-comandos` se reiniciaba sin token (esperado en la instalacion) | - | Resuelto el 15/10 |
 | 16/10 | 4 avisos "14/10 llega despues del 15/10" (Yahoo no dio el 14/10 en el primer relleno) | Leve | Resuelto: antes del papel se rellenan los dias que faltan (commit `d69a21e`); el 14/10 ya esta |
+| 17/10 | Causa del hueco del 14/10, encontrada: si se pide a Yahoo la historia entera (desde 2019), el ultimo dia habil llega sin cierre; si se piden solo los ultimos dias, llega bien. La primera carga fue la historia entera. Las vueltas normales piden 15 dias: no les afecta. La prueba de oro y la prueba en seco bajan la historia entera: por eso dan 4 avisos de "hueco" y terminan un dia antes | Leve | Entendido; cubierto por el relleno antes del papel |
 | 16/10 | Copia del portatil: falso aviso a las 12:00 | Leve (no es del bot) | Resuelto: fallo del script (commit `f6c4714`) |
 | 16/10 | Dos cortes breves de conexion con Telegram en `ebisu-comandos` | Leve | Lo supero solo, sin reiniciarse |
 
