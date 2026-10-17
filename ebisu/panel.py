@@ -2,7 +2,7 @@
 cada vuelta y al pulsar un boton. Disenyo del 15/10/2026 (skill `frontend-design`, plan aprobado por el propietario).
 
 Arriba, lo que hace la regla este mes (las tres piezas con sus 4 medias como boyas y su peso; antes de empezar el papel,
-lo que haria si hoy fuera dia de senyal) y una franja de salud (ultima vuelta, la IA, la copia, el latido). Debajo, por
+lo que haria si hoy fuera dia de senyal) y, dentro del mismo panel verde, el apartado de salud (ultima vuelta, la IA, la copia, el latido). Debajo, por
 orden: el valor frente al indexado y las caidas; cada pieza con sus 4 medias; operaciones; la IA mes a mes; con y sin la
 IA (cada freno, en sombra: acerto si la pieza bajo); Hacienda (simulada). En castellano y "la IA", nunca el modelo.
 
@@ -185,12 +185,13 @@ def generar(base: Path, ahora: datetime, copias: Path = COPIAS) -> str:
                       f'<span class="peso">{m.pct(pesos.get(k, 0.0))}</span></div>')
         filas += (f'<div class="fila monetario"><span class="pieza">{e(NOMBRES_CORTOS["monetario"])}</span><span></span>'
                   f'<span class="peso">{m.pct(max(0.0, 1 - sum(pesos.values())))}</span></div>')
-    regla = f'<section class="regla" aria-labelledby="t-regla"><h2 id="t-regla">{e(titulo)}</h2>{filas}<p>{e(nota)}</p></section>'
-
     chips = "".join(f'<li class="chip {c}"><b>{e(t)}</b><span>{e(d)}</span></li>' for c, t, d in salud(base, estado, ahora, copias))
     if pausa:
         chips += '<li class="chip aviso"><b>Pausa activada</b><span>En papel no tiene efecto.</span></li>'
-    franja = f'<ul class="salud" aria-label="Salud del bot">{chips}</ul>'
+    # la salud va DENTRO del panel verde, como un subapartado debajo de las piezas
+    regla = (f'<section class="regla" aria-labelledby="t-regla"><h2 id="t-regla">{e(titulo)}</h2>{filas}<p>{e(nota)}</p>'
+             f'<div class="subsalud"><h3 id="t-salud">Salud del bot</h3><ul class="salud" aria-labelledby="t-salud">{chips}</ul></div>'
+             '</section>')
 
     secciones = []
     # Valor frente al indexado, y caidas
@@ -285,7 +286,7 @@ def generar(base: Path, ahora: datetime, copias: Path = COPIAS) -> str:
 <link rel="preload" href="/vendor/atkinson-400.woff2" as="font" type="font/woff2" crossorigin><style>{CSS}</style></head>
 <body><a class="saltar" href="#contenido">Ir al contenido</a>
 <header><div class="dentro"><div class="marca">{logo}<h1 translate="no">Ebisu</h1></div><p class="actualizado">Actualizado el {ahora:%d/%m/%Y} a las {ahora:%H:%M}</p>{boton}</div></header>
-<main id="contenido">{regla}{franja}{cuerpo}</main>
+<main id="contenido">{regla}{cuerpo}</main>
 <footer>En papel: sin dinero real. Pausar no tiene efecto mientras dure el papel.</footer>
 <script type="application/json" id="datos">{datos_json}</script>
 <script src="/vendor/lightweight-charts.js"></script><script src="/panel.js"></script></body></html>"""
@@ -331,15 +332,18 @@ border-bottom:1px solid rgba(243,241,234,.18);font-size:18px}
 .boya{width:18px;height:18px;border-radius:50%;border:2px solid rgba(243,241,234,.55)}
 .boya.llena{background:var(--oro);border-color:var(--oro)}
 .boyas.sin{font-size:14px;opacity:.8}
-.salud{list-style:none;margin:0 0 14px;padding:0;display:flex;flex-wrap:wrap;gap:8px}
-.chip{display:flex;flex-direction:column;padding:7px 12px 7px 30px;border-radius:6px;background:var(--hoja);
-border:1px solid var(--agua);position:relative;font-size:14px;min-width:150px}
-.chip b,.chip span{overflow-wrap:anywhere}.chip b{font-weight:700}.chip span{color:var(--gris);font-size:13px}
-.chip::before{content:"";position:absolute;left:11px;top:13px;width:9px;height:9px;border-radius:50%;background:var(--gris)}
-.chip.ok::before{background:var(--verde-medio)}
-.chip.aviso{background:var(--oro-claro);border-color:#E3C677}.chip.aviso::before{background:var(--oro-hondo)}
-.chip.mal{background:var(--rojo-claro);border-color:#E0A99F}.chip.mal::before{background:var(--rojo)}
-.chip.nada::before{background:transparent;border:2px solid var(--gris);width:6px;height:6px}
+.subsalud{margin-top:16px;padding-top:12px;border-top:1px solid rgba(243,241,234,.18)}
+.subsalud h3{margin:0 0 10px;font-size:16px;color:var(--crema)}
+.salud{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:8px}
+.chip{display:flex;flex-direction:column;padding:7px 12px 7px 30px;border-radius:6px;background:rgba(243,241,234,.09);
+border:1px solid rgba(243,241,234,.20);position:relative;font-size:14px;min-width:150px;flex:1 1 150px}
+.chip b,.chip span{overflow-wrap:anywhere}.chip b{font-weight:700;color:var(--crema)}
+.chip span{color:rgba(243,241,234,.75);font-size:13px}
+.chip::before{content:"";position:absolute;left:11px;top:13px;width:9px;height:9px;border-radius:50%;background:rgba(243,241,234,.6)}
+.chip.ok::before{background:#A6E6BE}
+.chip.aviso{background:rgba(227,179,65,.18);border-color:rgba(227,179,65,.55)}.chip.aviso::before{background:var(--oro)}
+.chip.mal{background:rgba(255,183,177,.18);border-color:rgba(255,183,177,.6)}.chip.mal::before{background:#FFB7B1}
+.chip.nada::before{background:transparent;border:2px solid rgba(243,241,234,.6);width:6px;height:6px}
 section{margin:0 0 12px;background:var(--hoja);border:1px solid var(--agua);border-radius:8px;padding:14px 18px 16px;
 box-shadow:0 1px 0 rgba(20,63,58,.12)}
 section>h2{font-size:18px;color:var(--verde-hondo);margin:0 0 12px;padding-bottom:8px;border-bottom:1px solid var(--agua);
