@@ -64,3 +64,11 @@ Si el informe y lo que se mira a mano estan bien:
 
 Si hay algo grave: se arregla y se cuentan de nuevo 3 dias sin incidencias (si da tiempo, aun con la senyal del 30/10;
 si no, la de noviembre, el 30/11/2026). **No se rellena hacia atras** (P5).
+
+## Resultado (18/10/2026)
+
+Informe del VPS: 0 graves (vueltas del 15, 16 y 17/10 sin fallos; precios sin huecos; IA y latido bien; prueba de oro
+igual al simulador). A mano: Healthchecks en verde, Telegram solo con los 4 avisos leves del 14/10 y panel correcto (la
+copia sale con un dia de retraso porque el panel se regenera en la vuelta, antes de la copia de las 23:30).
+**Decision del propietario: empezar (opcion A).** Ejecutado por el propietario el 18/10: `--empezar 2026-10-30`;
+primera senyal y huella de la estrategia fijadas (`var/bot/papel.json`).
