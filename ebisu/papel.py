@@ -71,6 +71,8 @@ def senyales_reales(piezas: pd.DataFrame, hasta: pd.Timestamp) -> pd.DatetimeInd
 
 
 def dia_de_ejecucion(piezas: pd.DataFrame, senyal: pd.Timestamp) -> pd.Timestamp | None:
+    if senyal not in piezas.index:  # senyal futura (antes de su dia) o dia sin precios: aun no hay ejecucion
+        return None
     i = piezas.index.get_loc(senyal) + H1M.retraso
     return piezas.index[i] if i < len(piezas.index) else None
 

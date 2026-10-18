@@ -79,6 +79,13 @@ def test_sin_dia_de_ejecucion_todavia(cierres):
         P.calcular(cierres, HASTA, HASTA)
 
 
+def test_primera_senyal_futura_no_rompe(cierres):
+    futura = HASTA + pd.Timedelta(days=12)  # 18/10/2026: la primera senyal (30/10) aun no esta en los precios
+    assert P.dia_de_ejecucion(P.piezas_de(cierres), futura) is None
+    with pytest.raises(ValueError):  # el bot lo trata como "el papel aun no ha empezado"
+        P.calcular(cierres, futura, HASTA)
+
+
 def test_juez_sin_incidencias(papel):
     senyales = [pd.Timestamp("2026-09-30")]
     assert J.juzgar(papel, "h", "h", senyales, {pd.Timestamp("2026-09-30")}, []) == []
