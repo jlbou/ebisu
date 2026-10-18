@@ -72,3 +72,14 @@ igual al simulador). A mano: Healthchecks en verde, Telegram solo con los 4 avis
 copia sale con un dia de retraso porque el panel se regenera en la vuelta, antes de la copia de las 23:30).
 **Decision del propietario: empezar (opcion A).** Ejecutado por el propietario el 18/10: `--empezar 2026-10-30`;
 primera senyal y huella de la estrategia fijadas (`var/bot/papel.json`).
+
+## Incidencia grave posterior (18/10/2026), resuelta
+
+Tras `--empezar 2026-10-30`, las 6 vueltas del 18/10 (20:05 a 22:35) fallaron con `KeyError: Timestamp('2026-10-30')` y
+llego un aviso de incidencia grave por Telegram. Causa: el papel buscaba en los precios el dia de una primera senyal
+aun futura y solo capturaba `ValueError`; nunca se habia probado empezar con una senyal futura. Arreglo: commit
+`d1c39d9` (`dia_de_ejecucion` devuelve `None` si la senyal no esta en los precios) con su prueba, instalado en el VPS el
+mismo dia; la vuelta de las 23:05 salio bien. No se perdieron datos (los precios se guardan antes del paso del papel) y
+`ebisu/estrategia.py` no se toco (la huella sigue valida). **Decision del propietario: no repetir los 3 dias**; el
+error era solo del dia de `--empezar`, no de la rutina diaria. El informe del 18/10 seguira marcando 1 grave por esas
+6 vueltas fallidas hasta el 19/10.
