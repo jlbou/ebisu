@@ -51,6 +51,10 @@ Un banco de pruebas de ideas de divisas, en papel y hacia delante, con precios r
 2. **Reglas del paso a dinero real** (decision 14.1: se fijan antes de arrancar; capital ~1.000 € sin apalancar o
    liston de riesgo M con los limites reales).
 3. **Verificar que da Yahoo ahora** para divisas a 1 minuto (limites, huecos, ritmo de peticiones desde el VPS).
+   **Hecho a medias (19/10/2026, yfinance, EUR/USD):** 1 minuto llega ~8 dias hacia atras (7d: 9.405 filas; 8d: 10.844);
+   5 minutos, ~60 dias (16.968 filas desde el 28/07); 1 hora, ~730 dias (17.289 filas desde el 02/01/2024). **El
+   volumen siempre es 0** (no hay volumen en divisas) y no hay spread: el coste se simula. **Sin comprobar:** huecos
+   dentro de los minutos, otros pares, limites de peticiones desde el VPS.
 
 ## 5. Flujo
 
