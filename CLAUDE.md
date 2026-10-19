@@ -8,7 +8,7 @@ lee; nunca se toca nada**.
 
 **Estado (18/10/2026): H1-M, bot en papel INSTALADO en el VPS y EMPEZADO** (`docs/instalacion-bot.md`): revision de
 los 3 dias hecha (0 graves) y `--empezar 2026-10-30` ejecutado el 18/10 (primera senyal: 30/10/2026). Divisas:
-laboratorio en papel con la IA, sin empezar.
+laboratorio en papel con la IA, con plan escrito (19/10) y sin construir.
 
 ## La leccion de Ploutos que manda aqui
 
@@ -134,9 +134,9 @@ estrategia de operar activamente ganaba. La unica que vale la pena es "L" (rotac
 | 14-15/10/2026 | **Plan del bot en papel (H1-M):** precios de los 4 ETF en Yahoo (P1); el VPS de Ploutos pero aparte, con latido a Healthchecks (P2); RSS oficiales y de medios para la IA (P3); Telegram solo `/estado` y `/detalle`, pausa desde el panel (P4); panel antes del papel (P5); copia diaria al portatil, 7 dias (P6) | `docs/plan-bot-papel.md` 9 |
 | 15/10/2026 | **IA del bot: copia propia y verificada** en `/opt/ebisu/bin` (la del VPS es de Ploutos y vive en `/home/ploutos`); sin tocar Ploutos (opcion A) | `docs/instalacion-bot.md` |
 | 15/10/2026 | **Healthchecks coordinado con Ploutos:** 3 comprobaciones de Ebisu (`ebisu-dia`, `ebisu-copia`, `ebisu-copia-portatil`), cada URL solo en la maquina que late, mismo canal de avisos y etiqueta por bot; `ebisu-comandos` sin vigilar | `docs/instalacion-bot.md` |
-| 19/10/2026 | **Plan del laboratorio de divisas (en papel):** banco de ideas, la IA propone y el propietario aprueba, hasta 2 a la vez, ~4x con 250 €, minutos gratis guardados desde el VPS, IA diaria a prueba 2 semanas; bloqueos previos: broker y costes, reglas de dinero real | `docs/plan-laboratorio-divisas.md` |
-| 18/10/2026 | **Revision de los 3 dias: 0 graves** (vueltas sin fallos, precios sin huecos, prueba de oro igual al simulador, Healthchecks en verde); el propietario decide empezar (opcion A) y ejecuta `--empezar 2026-10-30` (huella fijada) | `docs/revision-3-dias.md` |
 | 17/10/2026 | **Panel mas parecido al de Ploutos** (banda verde con ratlla dorada, paneles con borde y a todo el ancho, numeros en letra monoespaciada, fondo de color). Se probo el dibujo de Ebisu en relieve al fondo y el propietario lo quito: no le gusto | `ebisu/panel.py` |
+| 18/10/2026 | **Revision de los 3 dias: 0 graves** (vueltas sin fallos, precios sin huecos, prueba de oro igual al simulador, Healthchecks en verde); el propietario decide empezar (opcion A) y ejecuta `--empezar 2026-10-30` (huella fijada) | `docs/revision-3-dias.md` |
+| 19/10/2026 | **Plan del laboratorio de divisas (en papel):** banco de ideas, la IA propone y el propietario aprueba, hasta 2 a la vez, ~4x con 250 €, minutos gratis guardados desde el VPS, IA diaria a prueba 2 semanas; bloqueos previos: broker y costes, reglas de dinero real | `docs/plan-laboratorio-divisas.md` |
 
 ## Pendiente
 
