@@ -55,6 +55,11 @@ Un banco de pruebas de ideas de divisas, en papel y hacia delante, con precios r
    5 minutos, ~60 dias (16.968 filas desde el 28/07); 1 hora, ~730 dias (17.289 filas desde el 02/01/2024). **El
    volumen siempre es 0** (no hay volumen en divisas) y no hay spread: el coste se simula. **Sin comprobar:** huecos
    dentro de los minutos, otros pares, limites de peticiones desde el VPS.
+   **Segunda prueba (19/10/2026, 5 dias de 1 minuto, los 7 pares):** GBP/USD, USD/JPY, USD/CHF y USD/CAD dan ~6.600
+   filas (casi completos, solo el hueco del fin de semana). **AUD/USD y NZD/USD dan solo ~3.300: un precio cada 2
+   minutos**, no cada uno. **EUR/USD repite el mismo precio en el 49 % de los minutos** (en los demas, 3-24 %): los
+   minutos parecen rellenados o con poca actividad, y eso afecta a cualquier regla que mire el minuto. Es una muestra
+   de 5 dias: hay que repetirla antes de fiarse. Sin comprobar: limites de peticiones desde el VPS.
 
 ## 5. Flujo
 
