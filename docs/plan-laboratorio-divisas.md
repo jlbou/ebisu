@@ -123,3 +123,27 @@ de terceros, sin verificar en la fuente:
 peticiones desde el VPS, que no se prueba hasta despues del 02/11 (no tocar el VPS antes de las primeras operaciones).
 Dado que AUD/USD y NZD/USD dan un precio cada 2 minutos y EUR/USD repite precio en el 49 % de los minutos, conviene
 que las primeras ideas trabajen a 5 minutos o 1 hora, no a 1 minuto, hasta repetir la prueba con mas dias.
+
+## 11. Bloqueo 1 resuelto: broker objetivo FOREX.com (19/10/2026)
+
+**Decision del propietario:** el broker objetivo del laboratorio es **FOREX.com** (entidad europea de StoneX; oferta de
+Irlanda/UE). Se decide asi tras descartar los otros dos:
+
+- **Trading 212: descartado.** La clave API solo existe en cuentas Invest, no en CFD, y no hay cuenta demo para su
+  entidad europea (respuesta del servicio de atencion al propietario, 19/10/2026): un bot no podria operar CFD de divisas.
+- **IBKR al contado: descartado.** 0,2 pb con minimo de 2-2,50 $ por orden: ~35 pb por viaje con 1.000 unidades.
+- **FOREX.com: elegido.** Tiene API REST para minoristas (cuentas Standard y Commission): se abre una cuenta real, se
+  fondea y se pide a soporte que habiliten la API; la API demo solo se obtiene teniendo una cuenta real abierta.
+
+**Costes que usa el simulador (de la web oficial de FOREX.com, leidos en una busqueda; verificar con cuenta):**
+sin comision en CFD de divisas; spread EUR/USD desde 0,7 pips (pagina antigua, puede estar desfasada; otra pagina
+anuncia 0,0 en cuenta RAW); financiacion nocturna de CFD en la UE: €STR +/- 3 % anual, base 360 dias (tabla de la web
+australiana, por confirmar para la UE). **Todo se marca "sin verificar" hasta tener cuenta.**
+
+**No hace falta cuenta de broker hasta que una idea pase** (todo el papel corre en el VPS). Cuando una idea pase y el
+propietario quiera ir a real, se confirma con su cuenta: tamanyo minimo de operacion (si llega a 1.000 unidades),
+proteccion de saldo negativo, porcentaje de cuentas minoristas que pierden, tabla de financiacion de la UE y la
+activacion de la API.
+
+**Estado final de los bloqueos:** 1 resuelto (esta seccion); 2 resuelto (seccion 10); 3 casi: falta solo el limite de
+peticiones desde el VPS, que se prueba despues del 02/11.
