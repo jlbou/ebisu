@@ -93,3 +93,33 @@ Un banco de pruebas de ideas de divisas, en papel y hacia delante, con precios r
 
 Cuando el propietario diga: verificar los bloqueos de la seccion 4 (en este orden), escribir la primera idea y
 construir lo minimo para jugarla.
+
+## 10. Estado de los bloqueos previos (19/10/2026)
+
+**Bloqueo 2, reglas del paso a dinero real: RESUELTO** (decision del propietario, 19/10/2026).
+
+1. Una idea que pasa su criterio en papel hace **3 meses mas de papel de confirmacion**, con la misma regla sin tocarla.
+2. Si se sostiene, el propietario da su **si explicito** y se empieza con **la mitad del capital (125 €)**, mismo
+   apalancamiento (~4x).
+3. Tras **3 meses sin incidencias** a mitad de capital (propuesta, a confirmar), se sube a 250 €.
+4. **Parada automatica en dinero real:** al perder el 30 % del capital asignado el bot deja de abrir operaciones y solo
+   el propietario puede reanudarlo (mismo limite que la caida de la decision 13). Ademas, cada mes se compara el
+   resultado real con el intervalo del papel; si cae fuera, se avisa y se pausa.
+
+**Bloqueo 1, broker y costes: PARCIAL.** Las paginas oficiales de IBKR y de Trading 212 dieron error 403; solo hay resenyas
+de terceros, sin verificar en la fuente:
+
+- IBKR, divisas al contado: 0,2 pb del valor con minimo entre 2 $ y 2,50 $ por orden (dos fuentes discrepan). Con
+  1.000 unidades (~1.160 $) son ~4 $ por viaje, **~35 pb: inviable** para ideas de corto plazo.
+- Trading 212, CFD de divisas: sin comision declarada, el coste va en el spread (EUR/USD ~0,9-1,0 pips, ~1-2 pb por
+  viaje) mas la financiacion nocturna (tasa de referencia mas un margen que no se ha encontrado). El limite de
+  apalancamiento minorista de la UE en pares mayores es 30:1; ~4x queda por debajo.
+- **Falta:** que el propietario confirme en la aplicacion (especificacion del producto EUR/USD en CFD) el spread, la
+  financiacion nocturna y el apalancamiento de su cuenta, y que ofrece CFD de divisas. Hasta entonces, el simulador
+  usara costes de tercero marcados como "sin verificar". El CFD es el vehiculo donde pierden el 70-90 % de los
+  minoristas (CNMV): el apalancamiento sigue sin rescatar ningun resultado.
+
+**Bloqueo 3, Yahoo: PARCIAL.** Hecho: ventanas, volumen y calidad de los minutos (seccion 4). **Falta** el limite de
+peticiones desde el VPS, que no se prueba hasta despues del 02/11 (no tocar el VPS antes de las primeras operaciones).
+Dado que AUD/USD y NZD/USD dan un precio cada 2 minutos y EUR/USD repite precio en el 49 % de los minutos, conviene
+que las primeras ideas trabajen a 5 minutos o 1 hora, no a 1 minuto, hasta repetir la prueba con mas dias.
