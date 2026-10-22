@@ -41,7 +41,7 @@ delante.
 
 **ml4t-lookahead-bias:**
 - El "dia" de las divisas no tiene cierre natural: hay que fijar la **hora de corte** que define el rango de ayer
-  (pendiente, ver 6). Los niveles se calculan **solo con datos anteriores al corte** y las ordenes se colocan despues.
+  (decidida: seccion 6). Los niveles se calculan **solo con datos anteriores al corte** y las ordenes se colocan despues.
 - La orden se considera ejecutada **solo si el precio la atraviesa mas alla del spread**, no si solo la toca (la compra
   entra al precio de venta y la venta al de compra del broker; Yahoo da precios orientativos sin spread).
 - Los niveles no pueden usar el rango del propio dia.
@@ -73,10 +73,17 @@ Pasa solo si se cumplen **las tres**:
 
 Si falla una, se descarta. Si pasa: 3 meses mas de confirmacion en papel y las reglas del paso a dinero real del plan.
 
-## 6. Pendiente por decidir (propietario)
+## 6. Decidido el 22/10/2026
 
-- **Hora de corte del dia** (propuesta: cierre de Nueva York, 22:00 UTC en invierno / 21:00 UTC en verano).
-- **Tamanyo y solapes:** 1.000 unidades (~4x con 250 €); si se permiten posiciones abiertas en EUR/USD y USD/JPY a la vez
-  (ambas dependen del dolar: tienden a moverse juntas).
-- **Aprobar el criterio de paso y la parada temprana** (seccion 5 y de la seccion 4).
-- **Verificar:** spread de USD/JPY y el de EUR/USD con cuenta de FOREX.com.
+- **Hora de corte del dia:** cierre de Nueva York, **22:00 UTC en invierno y 21:00 UTC en verano**. Define el rango de
+  ayer y es la hora antes de la cual se cierra todo (asi no hay financiacion nocturna).
+- **Tamanyo:** 1.000 unidades (~4x con 250 €). **Una sola posicion abierta en total** (EUR/USD y USD/JPY dependen del
+  dolar y tienden a moverse juntos; dos posiciones serian ~8x, el doble del limite de la decision 13). Si una orden
+  llega con otra posicion abierta, no se ejecuta.
+- **Minimo de FOREX.com verificado en su web (22/10/2026):** 1.000 unidades (un micro-lote) en EUR/USD; no existe un
+  tamanyo menor, asi que no se puede partir la posicion. El minimo de USD/JPY no se ha encontrado aparte.
+
+## 7. Pendiente
+
+- **Aprobar el criterio de paso y la parada temprana** (seccion 5 y seccion 4): decision del propietario.
+- **Verificar con cuenta de FOREX.com:** spread de EUR/USD y de USD/JPY, y el minimo de USD/JPY (panel "Market Info").
