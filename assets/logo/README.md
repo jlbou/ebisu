@@ -18,3 +18,6 @@ rondas (concepto, forma del anzuelo y color).
 
 Los PNG salen de los SVG con Chrome sin ventana (sin dependencias nuevas). Si se cambia un SVG, regenerarlos. En lo que
 ve el propietario no se nombra a Claude: se dice "la IA".
+
+**Origen:** los SVG se hicieron en una sesion de trabajo anterior (octubre de 2026). La skill concreta que se uso para
+disenyarlos **no quedo registrada** en el repositorio; no se anyade aqui sin confirmarla.
