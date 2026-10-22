@@ -137,6 +137,7 @@ estrategia de operar activamente ganaba. La unica que vale la pena es "L" (rotac
 | 17/10/2026 | **Panel mas parecido al de Ploutos** (banda verde con ratlla dorada, paneles con borde y a todo el ancho, numeros en letra monoespaciada, fondo de color). Se probo el dibujo de Ebisu en relieve al fondo y el propietario lo quito: no le gusto | `ebisu/panel.py` |
 | 18/10/2026 | **Revision de los 3 dias: 0 graves** (vueltas sin fallos, precios sin huecos, prueba de oro igual al simulador, Healthchecks en verde); el propietario decide empezar (opcion A) y ejecuta `--empezar 2026-10-30` (huella fijada) | `docs/revision-3-dias.md` |
 | 19/10/2026 | **Plan del laboratorio de divisas (en papel):** banco de ideas, la IA propone y el propietario aprueba, hasta 2 a la vez, ~4x con 250 €, minutos gratis guardados desde el VPS, IA diaria a prueba 2 semanas; bloqueos previos: broker y costes, reglas de dinero real | `docs/plan-laboratorio-divisas.md` |
+| 22/10/2026 | **Idea 1 del laboratorio de divisas APROBADA:** rango del dia anterior (compra a `minimo + x*rango`, venta a `maximo - x*rango`; x = 0 % y 20 %), EUR/USD y USD/JPY, 1.000 unidades y una sola posicion, corte a las 22:00/21:00 UTC, 200 operaciones y 3 meses; broker objetivo FOREX.com; no activa hasta construir | `docs/laboratorio/idea-01-rango-del-dia-anterior.md` |
 
 ## Pendiente
 

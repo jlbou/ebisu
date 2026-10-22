@@ -1,7 +1,8 @@
 # Idea 1 del laboratorio de divisas: rango del dia anterior (borrador, 22/10/2026)
 
-Pertenece al plan `docs/plan-laboratorio-divisas.md` y desarrolla la hipotesis 2 de `docs/hipotesis.md`. **Borrador: aun no
-esta aprobada ni fijada en git como idea activa.** Ninguna cifra de este documento se ha medido.
+Pertenece al plan `docs/plan-laboratorio-divisas.md` y desarrolla la hipotesis 2 de `docs/hipotesis.md`. **APROBADA por el
+propietario el 22/10/2026** (regla, variantes, pares, criterio de paso y parada temprana). **No esta activa:** empieza
+cuando se construya el laboratorio. Ninguna cifra de este documento se ha medido.
 
 ## 1. La regla (decidida por el propietario, 22/10/2026)
 
@@ -62,7 +63,7 @@ delante.
 - **Criterio de parada temprana (propuesta):** a las 100 operaciones, si el limite superior del intervalo de confianza de
   la media neta por operacion es negativo, se descarta sin esperar a las 200.
 
-## 5. Criterio de paso (PROPUESTA, a aprobar por el propietario antes de empezar)
+## 5. Criterio de paso (APROBADO el 22/10/2026, junto con la parada temprana de la seccion 4)
 
 Pasa solo si se cumplen **las tres**:
 
@@ -85,5 +86,4 @@ Si falla una, se descarta. Si pasa: 3 meses mas de confirmacion en papel y las r
 
 ## 7. Pendiente
 
-- **Aprobar el criterio de paso y la parada temprana** (seccion 5 y seccion 4): decision del propietario.
 - **Verificar con cuenta de FOREX.com:** spread de EUR/USD y de USD/JPY, y el minimo de USD/JPY (panel "Market Info").
