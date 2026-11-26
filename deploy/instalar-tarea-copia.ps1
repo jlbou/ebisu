@@ -27,8 +27,9 @@ if ($Remove) {
 
 $repo = Split-Path -Parent $PSScriptRoot
 $script = Join-Path $PSScriptRoot 'copia-diaria.ps1'
-$action = New-ScheduledTaskAction -Execute 'powershell.exe' -WorkingDirectory $repo `
-    -Argument "-NoProfile -NonInteractive -ExecutionPolicy Bypass -File `"$script`" -Target $Target -TargetAlternativo $TargetAlternativo -SoloSiFalta -Desde $At"
+# conhost --headless: sin ventana (con powershell.exe a secas, cada hora se veia una terminal parpadear; 26/11/2026).
+$action = New-ScheduledTaskAction -Execute 'conhost.exe' -WorkingDirectory $repo `
+    -Argument "--headless powershell.exe -NoProfile -NonInteractive -ExecutionPolicy Bypass -File `"$script`" -Target $Target -TargetAlternativo $TargetAlternativo -SoloSiFalta -Desde $At"
 $usuario = "$env:USERDOMAIN\$env:USERNAME"
 $diaria = New-ScheduledTaskTrigger -Daily -At $At
 $horas = 24 - [datetime]::ParseExact($At, 'HH:mm', $null).Hour
